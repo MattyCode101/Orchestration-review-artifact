@@ -1,0 +1,137 @@
+# source: Paper_Tables_Engineering.md, part 1; computed by tr_eng_test.py from the released TEST episode results (cells.json, episodes.json, refs.json, graph4.json) and the recomputed ceilings of the tables note; data scope: TEST (5 designs); goal gain in ps, LUTs or mW; LUT change in percent of start, WNS change in ps, power change in mW; protected-metric median and range are over the designs (cell value = mean over repeats)
+table,row_key,row,brief,goal_metric,unit,cells_head,cells_all,repeats,gain_mean_head,gain_mean_all,pct_of_start_mean_head,pct_of_start_mean_all,prot1_metric,prot1_unit,prot1_median_all,prot1_min_all,prot1_max_all,prot1_median_head,prot1_min_head,prot1_max_head,prot2_metric,prot2_unit,prot2_median_all,prot2_min_all,prot2_max_all,prot2_median_head,prot2_min_head,prot2_max_head
+1a,ref3,Exhaustive 3-step (reference),T0,wns_ns,ps,3,5,1,400,246.4,,,packed_luts,percent_of_start,-3.38112,-11.2769,0,-3.38112,-11.2769,-0.484159,dynamic_power_w,mW,0,-22,1665,-4,-22,1665
+1a,ceiling,"Hindsight ceiling, 6 runs",T0,wns_ns,ps,3,5,1,250.667,156.8,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+1a,ref2,Exhaustive 2-step,T0,wns_ns,ps,3,5,1,240.667,150.2,,,packed_luts,percent_of_start,-0.0151005,-1.98758,0,-1.16086,-1.98758,-0.0151005,dynamic_power_w,mW,0,-129,18,3,-129,18
+1a,fixed,Best fixed order,T0,wns_ns,ps,3,5,1,178.333,107,,,packed_luts,percent_of_start,-0.512472,-16.7496,0,-3.064,-16.7496,-0.512472,dynamic_power_w,mW,0,-7,1657,-5,-7,1657
+1a,grid,Grid search,T0,wns_ns,ps,3,5,1,143.667,91.6,,,packed_luts,percent_of_start,0,-0.0893296,0,-0.0151005,-0.0893296,0,dynamic_power_w,mW,0,0,20,13,0,20
+1a,beam,Beam search,T0,wns_ns,ps,3,5,1,125.667,81.2,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+1a,v1,Goal-repair v1,T0,wns_ns,ps,3,5,1,160.333,101.6,,,packed_luts,percent_of_start,-0.0151005,-1.16086,0,-0.0893296,-1.16086,-0.0151005,dynamic_power_w,mW,3,0,21,13,3,21
+1a,v2,Goal-repair v2,T0,wns_ns,ps,3,5,1,167,105.6,,,packed_luts,percent_of_start,-0.0151005,-2.15731,0,-1.16086,-2.15731,-0.0151005,dynamic_power_w,mW,0,-194,21,3,-194,21
+1a,bandit,Learned bandit,T0,wns_ns,ps,3,5,1,66.3333,45.2,,,packed_luts,percent_of_start,0,-1.83572,0,-0.393556,-1.83572,0,dynamic_power_w,mW,0,-130,0,-32,-130,0
+1a,random,Random (3 seeds),T0,wns_ns,ps,3,5,3,114.111,70.2667,,,packed_luts,percent_of_start,-0.0103816,-3.75898,0,-0.942427,-3.75898,-0.0103816,dynamic_power_w,mW,0,-0.666667,517,13,-0.666667,517
+1a,V9,LLM V9 (main),T0,wns_ns,ps,3,5,3,165.889,104.933,,,packed_luts,percent_of_start,-0.0151005,-1.16086,0,-1.00198,-1.16086,-0.0151005,dynamic_power_w,mW,3,0,525.667,20.3333,3,525.667
+1a,F1-R1,LLM F1-R1,T0,wns_ns,ps,3,5,3,126.444,81.6667,,,packed_luts,percent_of_start,0,-1.16086,0,-0.0151005,-1.16086,0,dynamic_power_w,mW,1,0,20.3333,3,1,20.3333
+1a,v2.1,LLM v2.1,T0,wns_ns,ps,3,5,3,132,84.7333,,,packed_luts,percent_of_start,-0.0157297,-0.914139,0,-0.386954,-0.914139,-0.0157297,dynamic_power_w,mW,1,0,513.333,19.3333,1,513.333
+1a,V3,LLM V3,T0,wns_ns,ps,3,5,3,137.667,88.2667,,,packed_luts,percent_of_start,-0.0151005,-0.386954,0,-0.0297765,-0.386954,-0.0151005,dynamic_power_w,mW,1,0,20,5.33333,1,20
+1a,V6,LLM V6,T0,wns_ns,ps,3,5,3,118.778,77.0667,,,packed_luts,percent_of_start,0,-0.0818854,0,-0.0151005,-0.0818854,0,dynamic_power_w,mW,0,0,21,5.66667,0,21
+1a,GA-R1,Direct LLM control (GA-R1),T0,wns_ns,ps,3,5,3,141,90.4,,,packed_luts,percent_of_start,0,-1.3267,0,-0.0151005,-1.3267,0,dynamic_power_w,mW,0,0,18,1,0,18
+1a,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",T0,wns_ns,ps,3,5,1,103.667,67.6,,,packed_luts,percent_of_start,0,-1.16086,0,0,-1.16086,0,dynamic_power_w,mW,0,0,3,1,0,3
+1a,ref3,Exhaustive 3-step (reference),A0,packed_luts,LUTs,4,5,1,418.75,335,6.69391,5.35513,wns_ns,ps,32,0,125,35,27,125,dynamic_power_w,mW,0,-19,1499,17.5,-19,1499
+1a,ceiling,"Hindsight ceiling, 6 runs",A0,packed_luts,LUTs,4,5,1,412,329.6,6.66464,5.33171,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+1a,ref2,Exhaustive 2-step,A0,packed_luts,LUTs,4,5,1,404.5,323.6,5.34976,4.27981,wns_ns,ps,27,0,390,32.5,0,390,dynamic_power_w,mW,0,-19,1466,-2,-19,1466
+1a,fixed,Best fixed order,A0,packed_luts,LUTs,4,5,1,332.75,266.2,5.08263,4.06611,wns_ns,ps,92,0,260,96,0,260,dynamic_power_w,mW,0,-7,1523,-2.5,-7,1523
+1a,grid,Grid search,A0,packed_luts,LUTs,4,5,1,120,96,0.521887,0.417509,wns_ns,ps,27,0,218,47,0,218,dynamic_power_w,mW,0,0,1623,10,0,1623
+1a,beam,Beam search,A0,packed_luts,LUTs,4,5,1,208,166.4,3.67233,2.93787,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+1a,v1,Goal-repair v1,A0,packed_luts,LUTs,4,5,1,332.25,265.8,5.02894,4.02316,wns_ns,ps,52,0,81,54,27,81,dynamic_power_w,mW,0,-36,1460,-3,-36,1460
+1a,v2,Goal-repair v2,A0,packed_luts,LUTs,4,5,1,334,267.2,5.20836,4.16669,wns_ns,ps,50,0,312,71,27,312,dynamic_power_w,mW,0,-7,1658,-2,-7,1658
+1a,bandit,Learned bandit,A0,packed_luts,LUTs,4,5,1,343.25,274.6,0.989742,0.791794,wns_ns,ps,12,0,212,19.5,0,212,dynamic_power_w,mW,0,-140,0,0,-140,0
+1a,random,Random (3 seeds),A0,packed_luts,LUTs,4,5,3,145.333,116.267,1.91496,1.53197,wns_ns,ps,68.3333,0,133,89.3333,27.6667,133,dynamic_power_w,mW,0,-8.66667,0.666667,-2.5,-8.66667,0.666667
+1a,V9,LLM V9 (main),A0,packed_luts,LUTs,4,5,3,352,281.6,5.04758,4.03807,wns_ns,ps,52,0,300,72,0,300,dynamic_power_w,mW,0,-7,1460,-3,-7,1460
+1a,F1-R1,LLM F1-R1,A0,packed_luts,LUTs,4,5,3,307.583,246.067,4.61217,3.68974,wns_ns,ps,40.6667,0,128.667,44.3333,18,128.667,dynamic_power_w,mW,0,-15.6667,1571,-2.16667,-15.6667,1571
+1a,v2.1,LLM v2.1,A0,packed_luts,LUTs,4,5,3,260.917,208.733,4.95986,3.96789,wns_ns,ps,2.66667,0,207.333,27.3333,0,207.333,dynamic_power_w,mW,0,-6,1459.33,-2.33333,-6,1459.33
+1a,V3,LLM V3,A0,packed_luts,LUTs,4,5,3,306.25,245,5.00264,4.00212,wns_ns,ps,52,0,212.667,56.6667,0,212.667,dynamic_power_w,mW,0,-6,1459.33,-2.33333,-6,1459.33
+1a,V6,LLM V6,A0,packed_luts,LUTs,4,5,3,217.083,173.667,4.60556,3.68445,wns_ns,ps,5.33333,0,97,28.6667,0,97,dynamic_power_w,mW,-6,-130,0,-7,-130,0
+1a,GA-R1,Direct LLM control (GA-R1),A0,packed_luts,LUTs,4,5,3,276.667,221.333,3.60152,2.88121,wns_ns,ps,18.3333,0,133.667,47.6667,0,133.667,dynamic_power_w,mW,0,-153,12.6667,-1,-153,12.6667
+1a,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",A0,packed_luts,LUTs,4,5,1,352,281.6,5.04758,4.03807,wns_ns,ps,52,0,300,72,0,300,dynamic_power_w,mW,0,-7,1460,-3,-7,1460
+1b,ref3,Exhaustive 3-step (reference),T,wns_ns,ps,3,5,1,400,246.4,,,packed_luts,percent_of_start,-3.38112,-11.2769,0,-3.38112,-11.2769,-0.484159,dynamic_power_w,mW,0,-22,1665,-4,-22,1665
+1b,ceiling,"Hindsight ceiling, 6 runs (Section 7 frame, not recomputed)",T,wns_ns,ps,3,5,1,232,145,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+1b,ref2,Exhaustive 2-step,T,wns_ns,ps,3,5,1,240.667,150.2,,,packed_luts,percent_of_start,-0.0151005,-1.98758,0,-1.16086,-1.98758,-0.0151005,dynamic_power_w,mW,0,-129,18,3,-129,18
+1b,fixed,Best fixed order,T,wns_ns,ps,3,5,1,178.333,107,,,packed_luts,percent_of_start,-0.512472,-16.7496,0,-3.064,-16.7496,-0.512472,dynamic_power_w,mW,0,-7,1657,-5,-7,1657
+1b,grid,Grid search,T,wns_ns,ps,3,5,1,153,97.2,,,packed_luts,percent_of_start,0,-0.0151005,0.187592,0,-0.0151005,0.187592,dynamic_power_w,mW,0,0,931,20,0,931
+1b,beam,Beam search,T,wns_ns,ps,3,5,1,159,101.2,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+1b,v1,Goal-repair v1,T,wns_ns,ps,3,5,1,178.667,112.6,,,packed_luts,percent_of_start,0,-1.16086,0.187592,-0.0151005,-1.16086,0.187592,dynamic_power_w,mW,3,0,931,21,3,931
+1b,v2,Goal-repair v2,T,wns_ns,ps,3,5,1,178.667,112.6,,,packed_luts,percent_of_start,0,-1.16086,0.187592,-0.0151005,-1.16086,0.187592,dynamic_power_w,mW,3,0,931,21,3,931
+1b,bandit,Learned bandit,T,wns_ns,ps,3,5,1,130.333,78.2,,,packed_luts,percent_of_start,0,-11.2769,0,-3.064,-11.2769,0,dynamic_power_w,mW,0,-6,1657,0,-6,1657
+1b,random,Random (3 seeds),T,wns_ns,ps,3,5,3,127,82,,,packed_luts,percent_of_start,-0.161072,-9.56329,0,-1.05409,-9.56329,-0.161072,dynamic_power_w,mW,0,-2,553.667,7.33333,-2,553.667
+1b,V9,LLM V9 (main),T,wns_ns,ps,3,5,3,136.667,87.6667,,,packed_luts,percent_of_start,0,-1.16086,0.0357318,-0.0151005,-1.16086,0.0357318,dynamic_power_w,mW,3,0,473,20,3,473
+1b,F1-R1,LLM F1-R1,T,wns_ns,ps,3,5,3,121.889,78.6667,,,packed_luts,percent_of_start,0,-0.773908,0,-0.0154151,-0.773908,0,dynamic_power_w,mW,1,0,20,2,1,20
+1b,v2.1,LLM v2.1,T,wns_ns,ps,3,5,3,120.889,77.9333,,,packed_luts,percent_of_start,0,-0.773908,0,-0.0151005,-0.773908,0,dynamic_power_w,mW,1,0,20,2,1,20
+1b,V3,LLM V3,T,wns_ns,ps,3,5,3,149.889,95.4667,,,packed_luts,percent_of_start,0,-1.16086,0.0655084,-0.0154151,-1.16086,0.0655084,dynamic_power_w,mW,3,0,311.667,19.3333,3,311.667
+1b,V6,LLM V6,T,wns_ns,ps,3,5,3,130,83.5333,,,packed_luts,percent_of_start,0,-1.16086,0.00148883,-0.0151005,-1.16086,0.00148883,dynamic_power_w,mW,1.33333,0,20,3,1.33333,20
+1b,GA-R1,Direct LLM control (GA-R1),T,wns_ns,ps,3,5,3,143.444,91.8667,,,packed_luts,percent_of_start,0,-1.3267,0.00446648,-0.0151005,-1.3267,0.00446648,dynamic_power_w,mW,0,0,19,2,0,19
+1b,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",T,wns_ns,ps,3,5,1,134.333,86,,,packed_luts,percent_of_start,0,-0.0151005,0.0669972,0,-0.0151005,0.0669972,dynamic_power_w,mW,0,0,42,21,0,42
+1b,ref3,Exhaustive 3-step (reference),A,packed_luts,LUTs,5,5,1,378.8,378.8,7.12115,7.12115,wns_ns,ps,-44,-72,125,-44,-72,125,dynamic_power_w,mW,-4,-43,1499,-4,-43,1499
+1b,ceiling,"Hindsight ceiling, 6 runs (Section 7 frame, not recomputed)",A,packed_luts,LUTs,5,5,1,322.4,322.4,4.27445,4.27445,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+1b,ref2,Exhaustive 2-step,A,packed_luts,LUTs,5,5,1,362,362,6.72126,6.72126,wns_ns,ps,27,-100,390,27,-100,390,dynamic_power_w,mW,-4,-19,1466,-4,-19,1466
+1b,fixed,Best fixed order,A,packed_luts,LUTs,5,5,1,282.2,282.2,4.23439,4.23439,wns_ns,ps,0,-54,92,0,-54,92,dynamic_power_w,mW,0,-7,1458,0,-7,1458
+1b,grid,Grid search,A,packed_luts,LUTs,5,5,1,258,258,4.01368,4.01368,wns_ns,ps,-11,-54,27,-11,-54,27,dynamic_power_w,mW,0,-6,1458,0,-6,1458
+1b,beam,Beam search,A,packed_luts,LUTs,5,5,1,316.2,316.2,4.26648,4.26648,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+1b,v1,Goal-repair v1,A,packed_luts,LUTs,5,5,1,299.6,299.6,4.25293,4.25293,wns_ns,ps,27,-8,58,27,-8,58,dynamic_power_w,mW,0,-35,1457,0,-35,1457
+1b,v2,Goal-repair v2,A,packed_luts,LUTs,5,5,1,299.6,299.6,4.25293,4.25293,wns_ns,ps,27,-8,58,27,-8,58,dynamic_power_w,mW,0,-35,1457,0,-35,1457
+1b,bandit,Learned bandit,A,packed_luts,LUTs,5,5,1,304.4,304.4,5.24957,5.24957,wns_ns,ps,0,-76,58,0,-76,58,dynamic_power_w,mW,0,-4,1457,0,-4,1457
+1b,random,Random (3 seeds),A,packed_luts,LUTs,5,5,3,193.133,193.133,3.77327,3.77327,wns_ns,ps,28.3333,0,180.667,28.3333,0,180.667,dynamic_power_w,mW,0,-6,983.667,0,-6,983.667
+1b,V9,LLM V9 (main),A,packed_luts,LUTs,5,5,3,293.667,293.667,4.24662,4.24662,wns_ns,ps,0,-2.66667,27,0,-2.66667,27,dynamic_power_w,mW,0,-27.3333,1457.33,0,-27.3333,1457.33
+1b,F1-R1,LLM F1-R1,A,packed_luts,LUTs,5,5,3,273.533,273.533,4.16237,4.16237,wns_ns,ps,4,0,71.3333,4,0,71.3333,dynamic_power_w,mW,0,-20,1457,0,-20,1457
+1b,v2.1,LLM v2.1,A,packed_luts,LUTs,5,5,3,286.2,286.2,4.2073,4.2073,wns_ns,ps,9,-10.6667,58,9,-10.6667,58,dynamic_power_w,mW,0,-17.6667,1457,0,-17.6667,1457
+1b,V3,LLM V3,A,packed_luts,LUTs,5,5,3,293.667,293.667,4.21435,4.21435,wns_ns,ps,9,-2.66667,58,9,-2.66667,58,dynamic_power_w,mW,0,-27.3333,1457,0,-27.3333,1457
+1b,V6,LLM V6,A,packed_luts,LUTs,5,5,3,296,296,4.58023,4.58023,wns_ns,ps,0,-16.3333,58,0,-16.3333,58,dynamic_power_w,mW,0,-33.3333,1457,0,-33.3333,1457
+1b,GA-R1,Direct LLM control (GA-R1),A,packed_luts,LUTs,5,5,3,218.933,218.933,4.03213,4.03213,wns_ns,ps,0,-34,127.333,0,-34,127.333,dynamic_power_w,mW,0,-117.667,12,0,-117.667,12
+1b,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",A,packed_luts,LUTs,5,5,1,360.2,360.2,6.71322,6.71322,wns_ns,ps,-54,-100,38,-54,-100,38,dynamic_power_w,mW,-4,-19,1458,-4,-19,1458
+2a,ref2p,Exhaustive 2-step over 14 recipes (reference),W2R,wns_ns,ps,3,5,1,279.333,179.2,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+2a,ceiling,"Hindsight ceiling, 6 runs",W2R,wns_ns,ps,3,5,1,267.333,175.2,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+2a,fixed,Best fixed order,W2R,wns_ns,ps,3,5,1,135.333,81.2,,,packed_luts,percent_of_start,-0.0151005,-16.2521,0,-0.0893296,-16.2521,-0.0151005,dynamic_power_w,mW,0,-1,20,13,-1,20
+2a,grid,Grid search,W2R,wns_ns,ps,3,5,1,143.667,91.6,,,packed_luts,percent_of_start,0,-0.0893296,0,-0.0151005,-0.0893296,0,dynamic_power_w,mW,0,0,20,13,0,20
+2a,beam,Beam search,W2R,wns_ns,ps,3,5,1,125.667,81.2,,,packed_luts,percent_of_start,,,,,,,dynamic_power_w,mW,,,,,,
+2a,v1,Goal-repair v1,W2R,wns_ns,ps,3,5,1,160.333,101.6,,,packed_luts,percent_of_start,-0.0151005,-1.16086,0,-0.0893296,-1.16086,-0.0151005,dynamic_power_w,mW,3,0,21,13,3,21
+2a,v2,Goal-repair v2,W2R,wns_ns,ps,3,5,1,167,105.6,,,packed_luts,percent_of_start,-0.0151005,-2.15731,0,-1.16086,-2.15731,-0.0151005,dynamic_power_w,mW,0,-194,21,3,-194,21
+2a,random,Random (3 seeds),W2R,wns_ns,ps,3,5,3,101.222,66.8,,,packed_luts,percent_of_start,-0.00597727,-3.75898,0,-0.107195,-3.75898,-0.00597727,dynamic_power_w,mW,-0.666667,-4.66667,4.66667,-0.666667,-1,4.66667
+2a,V9,LLM V9 (main),W2R,wns_ns,ps,3,5,3,166.111,105.2,,,packed_luts,percent_of_start,-0.0151005,-0.386954,0,-0.0893296,-0.386954,-0.0151005,dynamic_power_w,mW,1,0,20,13.6667,1,20
+2a,F1-R1,LLM F1-R1,W2R,wns_ns,ps,3,5,3,117.111,76.0667,,,packed_luts,percent_of_start,0,-0.386954,0,-0.0151005,-0.386954,0,dynamic_power_w,mW,1,0,21,1,1,21
+2a,v2.1,LLM v2.1,W2R,wns_ns,ps,3,5,3,186.889,117.533,,,packed_luts,percent_of_start,-0.0151005,-0.386954,0,-0.0893296,-0.386954,-0.0151005,dynamic_power_w,mW,1,0,19.6667,14,1,19.6667
+2a,GA-R1,Direct LLM control (GA-R1),W2R,wns_ns,ps,3,5,3,127.889,82.5333,,,packed_luts,percent_of_start,0,-1.16086,0,-0.0147859,-1.16086,0,dynamic_power_w,mW,1,0,16.6667,3,1,16.6667
+2a,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",W2R,wns_ns,ps,3,5,1,160.667,102.2,,,packed_luts,percent_of_start,-0.0151005,-1.16086,0,-0.0893296,-1.16086,-0.0151005,dynamic_power_w,mW,3,0,21,13,3,21
+2a,ref2p,Exhaustive 2-step over 14 recipes (reference),L2R,packed_luts,LUTs,3,5,1,505,303.6,6.97966,4.21519,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+2a,ceiling,"Hindsight ceiling, 6 runs",L2R,packed_luts,LUTs,3,5,1,533.667,320.2,7.1077,4.26462,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+2a,fixed,Best fixed order,L2R,packed_luts,LUTs,3,5,1,261.333,156.8,6.4199,3.85194,wns_ns,ps,32,0,243,67,32,243,dynamic_power_w,mW,0,-206,20,-1,-206,20
+2a,grid,Grid search,L2R,packed_luts,LUTs,3,5,1,141,84.6,0.610986,0.366591,wns_ns,ps,27,0,87,67,0,87,dynamic_power_w,mW,0,-130,20,0,-130,20
+2a,beam,Beam search,L2R,packed_luts,LUTs,3,5,1,22.6667,13.6,3.75898,2.25539,wns_ns,ps,,,,,,,dynamic_power_w,mW,,,,,,
+2a,v1,Goal-repair v1,L2R,packed_luts,LUTs,3,5,1,199.333,119.6,5.61693,3.37016,wns_ns,ps,52,0,85,56,52,85,dynamic_power_w,mW,-2,-36,0,-6,-36,-2
+2a,v2,Goal-repair v2,L2R,packed_luts,LUTs,3,5,1,228,136.8,5.97377,3.58426,wns_ns,ps,50,0,92,85,50,92,dynamic_power_w,mW,-2,-7,0,-4,-7,-2
+2a,bandit,Learned bandit,L2R,packed_luts,LUTs,3,5,1,0,0,0,0,wns_ns,ps,0,0,0,0,0,0,dynamic_power_w,mW,0,0,0,0,0,0
+2a,random,Random (3 seeds),L2R,packed_luts,LUTs,3,5,3,26.8889,16.1333,3.09023,1.85414,wns_ns,ps,54.6667,0,168.667,72.3333,54.6667,168.667,dynamic_power_w,mW,-0.666667,-21.3333,0,-0.666667,-21.3333,-0.333333
+2a,V9,LLM V9 (main),L2R,packed_luts,LUTs,3,5,3,232.333,139.4,5.75839,3.45504,wns_ns,ps,67,0,137.333,91.3333,67,137.333,dynamic_power_w,mW,-3.33333,-15,0,-5,-15,-3.33333
+2a,F1-R1,LLM F1-R1,L2R,packed_luts,LUTs,3,5,3,154.333,92.6,4.44698,2.66819,wns_ns,ps,27,0,41.3333,28.3333,13,41.3333,dynamic_power_w,mW,-0.666667,-4,0,-3,-4,-0.666667
+2a,v2.1,LLM v2.1,L2R,packed_luts,LUTs,3,5,3,100.222,60.1333,5.56035,3.33621,wns_ns,ps,30.6667,0,133,68,30.6667,133,dynamic_power_w,mW,-2.33333,-5.66667,7.40149e-14,-2.33333,-5.66667,7.40149e-14
+2a,GA-R1,Direct LLM control (GA-R1),L2R,packed_luts,LUTs,3,5,3,364.889,218.933,4.78494,2.87096,wns_ns,ps,17,0,194.667,73,17,194.667,dynamic_power_w,mW,0,-84,12,-2,-84,12
+2a,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",L2R,packed_luts,LUTs,3,5,1,332,199.2,6.20948,3.72569,wns_ns,ps,52,0,111,56,52,111,dynamic_power_w,mW,-6,-166,0,-36,-166,-6
+2a,ref2p,Exhaustive 2-step over 14 recipes (reference),P0,dynamic_power_w,mW,3,5,1,44.6667,70.6,1.11115,4.49245,wns_ns,ps,,,,,,,packed_luts,percent_of_start,,,,,,
+2a,ceiling,"Hindsight ceiling, 6 runs",P0,dynamic_power_w,mW,3,5,1,48.6667,73.4,0.730149,4.29153,wns_ns,ps,,,,,,,packed_luts,percent_of_start,,,,,,
+2a,fixed,Best fixed order,P0,dynamic_power_w,mW,3,5,1,43,28.6,0.626749,0.511446,wns_ns,ps,14,0,100,14,0,100,packed_luts,percent_of_start,0,-16.7496,0,0,-16.7496,0
+2a,grid,Grid search,P0,dynamic_power_w,mW,3,5,1,41.3333,28,0.309289,0.356973,wns_ns,ps,15,0,85,14,0,57,packed_luts,percent_of_start,0,-0.160793,0,0,0,0
+2a,beam,Beam search,P0,dynamic_power_w,mW,3,5,1,41.6667,28.6,0.311783,0.394473,wns_ns,ps,,,,,,,packed_luts,percent_of_start,,,,,,
+2a,v1,Goal-repair v1,P0,dynamic_power_w,mW,3,5,1,41.3333,28.4,0.309289,0.392977,wns_ns,ps,14,0,23,0,0,14,packed_luts,percent_of_start,0,0,0,0,0,0
+2a,v2,Goal-repair v2,P0,dynamic_power_w,mW,3,5,1,41.3333,28.4,0.309289,0.392977,wns_ns,ps,14,0,23,0,0,14,packed_luts,percent_of_start,0,0,0,0,0,0
+2a,bandit,Learned bandit,P0,dynamic_power_w,mW,3,5,1,0,3.6,0,0.207404,wns_ns,ps,0,0,88,0,0,0,packed_luts,percent_of_start,0,0,0,0,0,0
+2a,random,Random (3 seeds),P0,dynamic_power_w,mW,3,5,3,15.4444,24.4,0.176565,1.4292,wns_ns,ps,14.6667,0,190.667,13.3333,0,35.3333,packed_luts,percent_of_start,-0.171139,-3.75898,0,-0.171139,-3.75898,0
+2a,V9,LLM V9 (main),P0,dynamic_power_w,mW,3,5,3,41.3333,28.4,0.309289,0.392977,wns_ns,ps,14,0,88,0,0,14,packed_luts,percent_of_start,0,0,0,0,0,0
+2a,F1-R1,LLM F1-R1,P0,dynamic_power_w,mW,3,5,3,41.3333,28.4,0.309289,0.392977,wns_ns,ps,14.6667,0,88,14,0,14.6667,packed_luts,percent_of_start,0,-0.884467,0,0,-0.884467,0
+2a,v2.1,LLM v2.1,P0,dynamic_power_w,mW,3,5,3,41.3333,28.2,0.309289,0.374975,wns_ns,ps,14,0,110,0,0,14,packed_luts,percent_of_start,0,0,0,0,0,0
+2a,GA-R1,Direct LLM control (GA-R1),P0,dynamic_power_w,mW,3,5,3,43.2222,29.5333,0.323423,0.401457,wns_ns,ps,33,0,72.3333,19,0,72.3333,packed_luts,percent_of_start,0,-0.0863519,0,0,-0.0044043,0
+2a,V9 (ChatGPT),"ChatGPT, V9 template (1 repeat)",P0,dynamic_power_w,mW,3,5,1,41.3333,28.4,0.309289,0.392977,wns_ns,ps,15,0,88,14,0,57,packed_luts,percent_of_start,0,0,0,0,0,0
+3,V0,F1-R1 (round-1 prompt),T0,wns_ns,ps,3,5,3,126.444,81.6667,,,packed_luts,percent_of_start,0,-1.16086,0,-0.0151005,-1.16086,0,dynamic_power_w,mW,1,0,20.3333,3,1,20.3333
+3,V0,F1-R1 (round-1 prompt),A0,packed_luts,LUTs,4,5,3,307.583,246.067,4.61217,3.68974,wns_ns,ps,40.6667,0,128.667,44.3333,18,128.667,dynamic_power_w,mW,0,-15.6667,1571,-2.16667,-15.6667,1571
+3,V1,v2.1,T0,wns_ns,ps,3,5,3,132,84.7333,,,packed_luts,percent_of_start,-0.0157297,-0.914139,0,-0.386954,-0.914139,-0.0157297,dynamic_power_w,mW,1,0,513.333,19.3333,1,513.333
+3,V1,v2.1,A0,packed_luts,LUTs,4,5,3,260.917,208.733,4.95986,3.96789,wns_ns,ps,2.66667,0,207.333,27.3333,0,207.333,dynamic_power_w,mW,0,-6,1459.33,-2.33333,-6,1459.33
+3,V2,V2,T0,wns_ns,ps,3,5,1,160,101.4,,,packed_luts,percent_of_start,-0.0151005,-16.7496,0,-0.142927,-16.7496,-0.0151005,dynamic_power_w,mW,0,-5,20,14,-5,20
+3,V2,V2,A0,packed_luts,LUTs,4,5,1,352.25,281.8,5.16973,4.13578,wns_ns,ps,92,0,388,96,0,388,dynamic_power_w,mW,0,-7,1492,-2.5,-7,1492
+3,V3,V3,T0,wns_ns,ps,3,5,3,137.667,88.2667,,,packed_luts,percent_of_start,-0.0151005,-0.386954,0,-0.0297765,-0.386954,-0.0151005,dynamic_power_w,mW,1,0,20,5.33333,1,20
+3,V3,V3,A0,packed_luts,LUTs,4,5,3,306.25,245,5.00264,4.00212,wns_ns,ps,52,0,212.667,56.6667,0,212.667,dynamic_power_w,mW,0,-6,1459.33,-2.33333,-6,1459.33
+3,V4,V4,T0,wns_ns,ps,3,5,1,126,81.4,,,packed_luts,percent_of_start,0,-1.16086,0,-0.0151005,-1.16086,0,dynamic_power_w,mW,1,0,20,3,1,20
+3,V4,V4,A0,packed_luts,LUTs,4,5,1,263,210.4,4.65007,3.72005,wns_ns,ps,52,0,92,69.5,27,92,dynamic_power_w,mW,-6,-130,0,-6.5,-130,0
+3,V5,V5,T0,wns_ns,ps,3,5,1,127.667,82,,,packed_luts,percent_of_start,-0.0151005,-2.82728,0,-1.16086,-2.82728,-0.0151005,dynamic_power_w,mW,3,0,1549,21,3,1549
+3,V5,V5,A0,packed_luts,LUTs,4,5,1,216.25,173,4.91947,3.93557,wns_ns,ps,0,0,300,26,0,300,dynamic_power_w,mW,0,-6,1460,0,-6,1460
+3,V6,V6,T0,wns_ns,ps,3,5,3,118.778,77.0667,,,packed_luts,percent_of_start,0,-0.0818854,0,-0.0151005,-0.0818854,0,dynamic_power_w,mW,0,0,21,5.66667,0,21
+3,V6,V6,A0,packed_luts,LUTs,4,5,3,217.083,173.667,4.60556,3.68445,wns_ns,ps,5.33333,0,97,28.6667,0,97,dynamic_power_w,mW,-6,-130,0,-7,-130,0
+3,V7,V7,T0,wns_ns,ps,3,5,1,147,93.6,,,packed_luts,percent_of_start,0,-0.142927,0,-0.0151005,-0.142927,0,dynamic_power_w,mW,0,0,21,14,0,21
+3,V7,V7,A0,packed_luts,LUTs,4,5,1,351.5,281.2,5.04711,4.03769,wns_ns,ps,8,0,300,30,0,300,dynamic_power_w,mW,0,-12,1460,-3,-12,1460
+3,V8,V8,T0,wns_ns,ps,3,5,1,111.667,72.8,,,packed_luts,percent_of_start,0,-1.16086,0,0,-1.16086,0,dynamic_power_w,mW,0,0,3,1,0,3
+3,V8,V8,A0,packed_luts,LUTs,4,5,1,215.5,172.4,4.91612,3.93289,wns_ns,ps,0,0,161,26,0,161,dynamic_power_w,mW,0,-6,1459,0,-6,1459
+3,V9,V9 (main),T0,wns_ns,ps,3,5,3,165.889,104.933,,,packed_luts,percent_of_start,-0.0151005,-1.16086,0,-1.00198,-1.16086,-0.0151005,dynamic_power_w,mW,3,0,525.667,20.3333,3,525.667
+3,V9,V9 (main),A0,packed_luts,LUTs,4,5,3,352,281.6,5.04758,4.03807,wns_ns,ps,52,0,300,72,0,300,dynamic_power_w,mW,0,-7,1460,-3,-7,1460
+3,V10,V10,T0,wns_ns,ps,3,5,1,159.333,95.6,,,packed_luts,percent_of_start,-0.0151005,-16.7496,0,-0.0893296,-16.7496,-0.0151005,dynamic_power_w,mW,0,-5,21,13,-5,21
+3,V10,V10,A0,packed_luts,LUTs,4,5,1,216.25,173,4.91947,3.93557,wns_ns,ps,0,0,300,26,0,300,dynamic_power_w,mW,0,-6,1460,0,-6,1460
+3,V11,V11,T0,wns_ns,ps,3,5,3,121.556,78.6,,,packed_luts,percent_of_start,-0.0151005,-1.88485,0,-0.773908,-1.88485,-0.0151005,dynamic_power_w,mW,2,0,1033,20.3333,2,1033
+3,V11,V11,A0,packed_luts,LUTs,4,5,3,227.833,182.267,4.8118,3.84944,wns_ns,ps,30.6667,0,180,41.3333,0,180,dynamic_power_w,mW,0,-6,392.333,-1.16667,-6,392.333
+3,ChatGPT-V9,V9 on ChatGPT,T0,wns_ns,ps,3,5,1,103.667,67.6,,,packed_luts,percent_of_start,0,-1.16086,0,0,-1.16086,0,dynamic_power_w,mW,0,0,3,1,0,3
+3,ChatGPT-V9,V9 on ChatGPT,A0,packed_luts,LUTs,4,5,1,352,281.6,5.04758,4.03807,wns_ns,ps,52,0,300,72,0,300,dynamic_power_w,mW,0,-7,1460,-3,-7,1460

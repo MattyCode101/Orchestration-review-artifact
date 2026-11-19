@@ -1,0 +1,531 @@
+common:
+  cache_snapshot_keys_sha256: a4d8982ec94154e43decc39cb5aa819927f7dc5da4e2e91cfcb9f1e692b85c9e
+  designs:
+  - vexriscv_re-place
+  - logicnets_jscl
+  - rosetta_spam-filter
+  - rosetta_3d-rendering
+  - finn_radioml
+  final_model_sha256:
+    area: bab0120208195f6cb0e0cc2782c0936901058676743354aed8639257e41b3b06
+    timing: eb1cc3f9eeef0ec939fb23a266d98b4d6c86e865013ac5cf7a39c0a751afd932
+  generator_sha256:
+    orch/analysis/profiles.py: ba7d99632af6f7178d2afc6fddd5c595cf0ac6d2beb8b7b96557d2db07727895
+    scripts/saturday_profiles.py: eb4b7331cb6649a4ea3b99a8ef73a1f2aa8a84c4e5e5c1e15eb923f8f8656f82
+  meter_version: 0dd0cf9424bbb7ab20dc5cf981bc35068c4ba08612ecd0f6c46098e6bf880bbe
+  oracle_miss_reasons:
+    not_in_snapshot: 35
+  outputs_with_stored_amd_pass: 92
+  outputs_without_amd_record_accepted: 143
+  training_designs_only: true
+  worker_c_ranking_sha256: 4d851baaa59a013599a2dc3f62ef5cd268ab43c8989f3f48c4b298a52050ae04
+generator: orch/analysis/profiles.py
+kind: recipes
+recipes:
+  A_E_DUPL_Q1000:
+    replaces: false
+    stats:
+      calls: 24
+      designs: 4
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          large_gain: 0.375
+          within_noise: 0.625
+        packed_luts:
+          large_gain: 0.3333
+          small_gain: 0.0417
+          within_noise: 0.625
+        power:
+          large_gain: 0.1667
+          small_gain: 0.0417
+          small_loss: 0.0417
+          within_noise: 0.75
+        wns:
+          small_gain: 0.0417
+          within_noise: 0.9583
+      no_change_rate: 0.5833
+    targets: packed_luts
+    text: 'A_E_DUPL_Q1000: targets packed_luts; keeps the placement. Observed: ffs
+      within_noise usually; netlist_luts within_noise often, large_gain sometimes;
+      packed_luts within_noise often, large_gain sometimes; power within_noise usually,
+      large_gain sometimes; wns within_noise usually; no change often; invalid rarely.'
+    text_sha256: a5502ab7495c0f1a8b971b9a5059bfb33eb5502106a58ed0df2ff24147b69d4a
+    worker: area
+  A_R_EA:
+    replaces: true
+    stats:
+      calls: 24
+      designs: 4
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_gain: 0.0417
+          large_loss: 0.25
+          small_gain: 0.0417
+          small_loss: 0.0417
+          within_noise: 0.625
+        netlist_luts:
+          large_gain: 0.75
+          small_gain: 0.0417
+          within_noise: 0.2083
+        packed_luts:
+          large_gain: 0.75
+          large_loss: 0.0417
+          small_gain: 0.0417
+          small_loss: 0.0417
+          within_noise: 0.125
+        power:
+          large_gain: 0.125
+          large_loss: 0.2917
+          small_gain: 0.0417
+          small_loss: 0.3333
+          within_noise: 0.2083
+        wns:
+          large_loss: 0.125
+          small_gain: 0.125
+          small_loss: 0.125
+          within_noise: 0.625
+      no_change_rate: 0.0417
+    targets: packed_luts
+    text: 'A_R_EA: targets packed_luts; re-places the design. Observed: ffs within_noise
+      often, large_loss sometimes; netlist_luts large_gain usually, within_noise sometimes;
+      packed_luts large_gain usually; power small_loss sometimes, large_loss sometimes,
+      within_noise sometimes; wns within_noise often; no change rarely; invalid rarely.'
+    text_sha256: a56ba3dd1ce059da49e9bae5abc0aaa5a09d7178405dcb5ec41173da3e85662c
+    worker: area
+  A_R_RSA_AREM:
+    replaces: true
+    stats:
+      calls: 24
+      designs: 4
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_gain: 0.2083
+          large_loss: 0.25
+          small_gain: 0.1667
+          small_loss: 0.0417
+          within_noise: 0.3333
+        netlist_luts:
+          large_gain: 0.875
+          small_gain: 0.0417
+          within_noise: 0.0833
+        packed_luts:
+          large_gain: 0.875
+          small_gain: 0.0833
+          within_noise: 0.0417
+        power:
+          large_gain: 0.1667
+          large_loss: 0.125
+          small_gain: 0.0833
+          small_loss: 0.4583
+          within_noise: 0.1667
+        wns:
+          large_loss: 0.125
+          small_gain: 0.125
+          small_loss: 0.1667
+          within_noise: 0.5833
+      no_change_rate: 0.0417
+    targets: packed_luts
+    text: 'A_R_RSA_AREM: targets packed_luts; re-places the design. Observed: ffs
+      within_noise sometimes, large_loss sometimes, large_gain sometimes, small_gain
+      sometimes; netlist_luts large_gain usually; packed_luts large_gain usually;
+      power small_loss often, large_gain sometimes, within_noise sometimes; wns within_noise
+      often, small_loss sometimes; no change rarely; invalid rarely.'
+    text_sha256: 54373f798ecfb59f09d12e8c83adb5235f17e606c397d752cc34a6cc414768c7
+    worker: area
+  A_R_RSA_MED:
+    replaces: true
+    stats:
+      calls: 24
+      designs: 4
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_gain: 0.25
+          large_loss: 0.4167
+          small_gain: 0.0417
+          small_loss: 0.0417
+          within_noise: 0.25
+        netlist_luts:
+          large_gain: 0.7917
+          small_gain: 0.0417
+          within_noise: 0.1667
+        packed_luts:
+          large_gain: 0.8333
+          large_loss: 0.0417
+          small_gain: 0.0417
+          small_loss: 0.0417
+          within_noise: 0.0417
+        power:
+          large_gain: 0.125
+          large_loss: 0.1667
+          small_gain: 0.1667
+          small_loss: 0.1667
+          within_noise: 0.375
+        wns:
+          large_gain: 0.125
+          large_loss: 0.125
+          small_gain: 0.0833
+          small_loss: 0.2917
+          within_noise: 0.375
+      no_change_rate: 0.0
+    targets: packed_luts
+    text: 'A_R_RSA_MED: targets packed_luts; re-places the design. Observed: ffs large_loss
+      often, large_gain sometimes, within_noise sometimes; netlist_luts large_gain
+      usually, within_noise sometimes; packed_luts large_gain usually; power within_noise
+      sometimes, large_loss sometimes, small_gain sometimes, small_loss sometimes;
+      wns within_noise sometimes, small_loss sometimes; no change rarely; invalid
+      rarely.'
+    text_sha256: 52f17a5b2878dbe845c201afcc6df6b2939487ac0987d4b5f3e142708300bfde
+    worker: area
+  A_R_RSA_SRLM:
+    replaces: true
+    stats:
+      calls: 24
+      designs: 4
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_loss: 0.625
+          small_gain: 0.125
+          small_loss: 0.0417
+          within_noise: 0.2083
+        netlist_luts:
+          large_gain: 0.75
+          small_gain: 0.0417
+          within_noise: 0.2083
+        packed_luts:
+          large_gain: 0.7917
+          large_loss: 0.0417
+          small_gain: 0.0417
+          small_loss: 0.0833
+          within_noise: 0.0417
+        power:
+          large_gain: 0.1667
+          large_loss: 0.1667
+          small_gain: 0.0833
+          small_loss: 0.25
+          within_noise: 0.3333
+        wns:
+          large_loss: 0.0833
+          small_gain: 0.125
+          small_loss: 0.2917
+          within_noise: 0.5
+      no_change_rate: 0.0
+    targets: packed_luts
+    text: 'A_R_RSA_SRLM: targets packed_luts; re-places the design. Observed: ffs
+      large_loss often, within_noise sometimes; netlist_luts large_gain usually, within_noise
+      sometimes; packed_luts large_gain usually; power within_noise sometimes, small_loss
+      sometimes, large_gain sometimes, large_loss sometimes; wns within_noise often,
+      small_loss sometimes; no change rarely; invalid rarely.'
+    text_sha256: 483bb5b30645c00b96ab15b8e4a5b46b790e60597c5a7f90bca67d46503f17ee
+    worker: area
+  LATCH.auto_pblock:
+    replaces: true
+    stats:
+      calls: 26
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          small_loss: 0.0417
+          within_noise: 0.9583
+        netlist_luts:
+          within_noise: 1.0
+        packed_luts:
+          large_loss: 0.0417
+          small_gain: 0.0417
+          within_noise: 0.9167
+        power:
+          large_gain: 0.0333
+          small_gain: 0.0333
+          within_noise: 0.9333
+        wns:
+          small_gain: 0.125
+          within_noise: 0.875
+      no_change_rate: 0.8667
+    targets: wns
+    text: 'LATCH.auto_pblock: targets wns; re-places the design. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually; packed_luts within_noise usually;
+      power within_noise usually; wns within_noise usually; no change usually; invalid
+      rarely.'
+    text_sha256: f2050e7add30ca1eec72286b4b23342aaec7744f05d09cbbee0263a86e0276d0
+    worker: timing
+  LATCH.hardblock_relocate:
+    replaces: true
+    stats:
+      calls: 26
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_loss: 0.1964
+          small_loss: 0.2381
+          within_noise: 0.5655
+        netlist_luts:
+          large_loss: 0.3155
+          small_loss: 0.1607
+          within_noise: 0.5238
+        packed_luts:
+          large_gain: 0.0417
+          large_loss: 0.3214
+          small_gain: 0.0833
+          small_loss: 0.0774
+          within_noise: 0.4762
+        power:
+          large_gain: 0.0333
+          large_loss: 0.1
+          small_gain: 0.0905
+          small_loss: 0.0952
+          within_noise: 0.681
+        wns:
+          large_gain: 0.0417
+          small_gain: 0.1667
+          within_noise: 0.7917
+      no_change_rate: 0.519
+    targets: wns
+    text: 'LATCH.hardblock_relocate: targets wns; re-places the design. Observed:
+      ffs within_noise often, small_loss sometimes, large_loss sometimes; netlist_luts
+      within_noise often, large_loss sometimes, small_loss sometimes; packed_luts
+      within_noise often, large_loss sometimes; power within_noise often; wns within_noise
+      usually, small_gain sometimes; no change often; invalid rarely.'
+    text_sha256: 6db98b059946358eea1c977c9f46063ed5b3226e4b7493e0fb83e88a559050ad
+    worker: timing
+  LATCH.memory_path_opt:
+    replaces: true
+    stats:
+      calls: 26
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_loss: 0.125
+          small_gain: 0.0417
+          small_loss: 0.0833
+          within_noise: 0.75
+        netlist_luts:
+          small_loss: 0.0417
+          within_noise: 0.9583
+        packed_luts:
+          large_gain: 0.0357
+          large_loss: 0.1667
+          small_gain: 0.0833
+          small_loss: 0.125
+          within_noise: 0.5893
+        power:
+          large_loss: 0.1
+          small_gain: 0.0619
+          small_loss: 0.1952
+          within_noise: 0.6429
+        wns:
+          large_gain: 0.0833
+          small_gain: 0.0833
+          within_noise: 0.8333
+      no_change_rate: 0.5095
+    targets: wns
+    text: 'LATCH.memory_path_opt: targets wns; re-places the design. Observed: ffs
+      within_noise usually; netlist_luts within_noise usually; packed_luts within_noise
+      often, large_loss sometimes; power within_noise often, small_loss sometimes;
+      wns within_noise usually; no change often; invalid rarely.'
+    text_sha256: e2b5bddaa0b634afaaa76a4ce29b1350e8e1e78620ef101af087fb3f4994117e
+    worker: timing
+  LATCH.phys_opt:
+    replaces: false
+    stats:
+      calls: 26
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          large_loss: 0.125
+          within_noise: 0.875
+        packed_luts:
+          large_loss: 0.0833
+          small_loss: 0.0417
+          within_noise: 0.875
+        power:
+          large_loss: 0.1
+          within_noise: 0.9
+        wns:
+          small_gain: 0.2917
+          within_noise: 0.7083
+      no_change_rate: 0.7333
+    targets: wns
+    text: 'LATCH.phys_opt: targets wns; keeps the placement. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually; packed_luts within_noise usually;
+      power within_noise usually; wns within_noise usually, small_gain sometimes;
+      no change usually; invalid rarely.'
+    text_sha256: 24d6151a0229fe46f22d8324ec77c494cf6037922c7fde3c684dd8d51e3d9f46
+    worker: timing
+  LATCH.retime:
+    replaces: false
+    stats:
+      calls: 26
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          large_loss: 0.125
+          within_noise: 0.875
+        packed_luts:
+          large_loss: 0.0833
+          small_loss: 0.0417
+          within_noise: 0.875
+        power:
+          small_loss: 0.1
+          within_noise: 0.9
+        wns:
+          small_gain: 0.0833
+          within_noise: 0.9167
+      no_change_rate: 0.7667
+    targets: wns
+    text: 'LATCH.retime: targets wns; keeps the placement. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually; packed_luts within_noise usually;
+      power within_noise usually; wns within_noise usually; no change usually; invalid
+      rarely.'
+    text_sha256: a4208db5405403504f0352b61020a322a8eb9daa5529f464cebb26a50e51b52e
+    worker: timing
+  P_POST_ALL:
+    replaces: false
+    stats:
+      calls: 44
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          large_loss: 0.25
+          within_noise: 0.75
+        packed_luts:
+          large_loss: 0.25
+          within_noise: 0.75
+        power:
+          large_gain: 0.15
+          large_loss: 0.05
+          small_gain: 0.1111
+          within_noise: 0.6889
+        wns:
+          small_gain: 0.0278
+          small_loss: 0.0903
+          within_noise: 0.8819
+      no_change_rate: 0.6444
+    targets: power
+    text: 'P_POST_ALL: targets power; keeps the placement. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually, large_loss sometimes; packed_luts
+      within_noise usually, large_loss sometimes; power within_noise often, large_gain
+      sometimes; wns within_noise usually; no change often; invalid rarely.'
+    text_sha256: 1d7ec5a3c3ac099eb97f2583748a70ff4d5290869997dd419d1a899d0af79e9a
+    worker: power
+  P_POST_BRAM:
+    replaces: false
+    stats:
+      calls: 44
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          within_noise: 1.0
+        packed_luts:
+          within_noise: 1.0
+        power:
+          large_loss: 0.1
+          small_gain: 0.1611
+          small_loss: 0.05
+          within_noise: 0.6889
+        wns:
+          small_gain: 0.0278
+          small_loss: 0.1181
+          within_noise: 0.8542
+      no_change_rate: 0.6222
+    targets: power
+    text: 'P_POST_BRAM: targets power; keeps the placement. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually; packed_luts within_noise usually;
+      power within_noise often, small_gain sometimes; wns within_noise usually; no
+      change often; invalid rarely.'
+    text_sha256: 829a7cefd333c837b0badbdda5886f6282f59af7a5a5aeacdba332580d778078
+    worker: power
+  P_PRE_ALL:
+    replaces: true
+    stats:
+      calls: 44
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          large_loss: 0.2083
+          small_gain: 0.025
+          small_loss: 0.1111
+          within_noise: 0.6556
+        netlist_luts:
+          large_loss: 0.25
+          small_loss: 0.5639
+          within_noise: 0.1861
+        packed_luts:
+          large_gain: 0.0625
+          large_loss: 0.4569
+          small_gain: 0.0278
+          small_loss: 0.1611
+          within_noise: 0.2917
+        power:
+          large_gain: 0.1944
+          large_loss: 0.05
+          small_gain: 0.0867
+          small_loss: 0.1544
+          within_noise: 0.5144
+        wns:
+          large_gain: 0.025
+          large_loss: 0.05
+          small_gain: 0.1056
+          small_loss: 0.1896
+          within_noise: 0.6299
+      no_change_rate: 0.1922
+    targets: power
+    text: 'P_PRE_ALL: targets power; re-places the design. Observed: ffs within_noise
+      often, large_loss sometimes; netlist_luts small_loss often, large_loss sometimes,
+      within_noise sometimes; packed_luts large_loss often, within_noise sometimes,
+      small_loss sometimes; power within_noise often, large_gain sometimes, small_loss
+      sometimes; wns within_noise often, small_loss sometimes; no change sometimes;
+      invalid rarely.'
+    text_sha256: 29e262c0ac55eea143f69a754038754b3758fed276a5bb6f34ebce3d93e4c00b
+    worker: power
+  P_ROUTE_HIGHDELAY:
+    replaces: false
+    stats:
+      calls: 44
+      designs: 5
+      invalid_rate: 0.0
+      metrics:
+        ffs:
+          within_noise: 1.0
+        netlist_luts:
+          within_noise: 1.0
+        packed_luts:
+          within_noise: 1.0
+        power:
+          large_gain: 0.2
+          small_gain: 0.1111
+          within_noise: 0.6889
+        wns:
+          small_gain: 0.0556
+          small_loss: 0.1715
+          within_noise: 0.7729
+      no_change_rate: 0.6044
+    targets: power
+    text: 'P_ROUTE_HIGHDELAY: targets power; keeps the placement. Observed: ffs within_noise
+      usually; netlist_luts within_noise usually; packed_luts within_noise usually;
+      power within_noise often, large_gain sometimes; wns within_noise usually, small_loss
+      sometimes; no change often; invalid rarely.'
+    text_sha256: bb8cecda236c229ec26a9f56c5b3ae8283b5bcb6a4a6d9a42be359ff9b4fae53
+    worker: power
+schema_version: behaviour-profile-v1

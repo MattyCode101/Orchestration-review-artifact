@@ -1,0 +1,27 @@
+# Round-2 TEST noise bands, written 2026-11-13 (test-run preparation). NEW file; configs/noise_round2.yaml is pinned and untouched.
+# Base: configs/noise_round2.yaml sha256 88e342d3e9ca56c369a3451e6123cde7064519edd7dfc6d08db6721b4a3607eb (its entries for the TEST designs are copied verbatim).
+# Supplement: only values that already exist in recorded round-1 files, each with source and file SHA-256; none computed or invented.
+#   WNS and packed LUTs: data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json sha256 5d928a856073b8d4cd22b3dc937c409d6405a96a68babb29904a5d9502f07d64 (method max_abs_control_minus_b2)
+#   dynamic power: data/scratch_saturday_2026-11-07/test_power_noise_bands.json sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc (dynamic_power_w_band, unit W)
+# Same schema as noise_round2.yaml (orch.config.load_noise).
+bands:
+  rosetta_digit-recognition:
+    wns_ns: {value: 0.496, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:35,196,207,216,226,235"}
+    packed_luts: {value: 0.00156, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:35,196,207,216,226,235"}
+    dynamic_power_w: {value: 0.3, basis: W, relative: false, samples: 5, source: "data/scratch_saturday_2026-11-07/test_power_noise_bands.json bands.rosetta_digit-recognition.dynamic_power_w_band (sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc)"}
+  corescore_500_mod:
+    wns_ns: {value: 0.034, basis: ns, relative: false, samples: 4, source: "R1/report.md:81-99; R1/results.csv:30,191,203,222"}
+    packed_luts: {value: 0.00006, basis: fraction_of_start, relative: true, samples: 4, source: "R1/results.csv:30,191,203,222"}
+    dynamic_power_w: {value: 0.054, basis: W, relative: false, samples: 5, source: "data/scratch_saturday_2026-11-07/test_power_noise_bands.json bands.corescore_500_mod.dynamic_power_w_band (sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc)"}
+  vexriscv_re-place_v2:
+    wns_ns: {value: 0.057, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:39,200,211,220,230,239"}
+    packed_luts: {value: 0.00548, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:39,200,211,220,230,239"}
+    dynamic_power_w: {value: 0.001, basis: W, relative: false, samples: 5, source: "data/scratch_saturday_2026-11-07/test_power_noise_bands.json bands.vexriscv_re-place_v2.dynamic_power_w_band (sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc)"}
+  fir_symmetric_systolic:
+    wns_ns: {value: 0.234, basis: ns, relative: false, samples: 5, source: "data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json bands.fir_symmetric_systolic.wns_ns (sha256 5d928a856073b8d4cd22b3dc937c409d6405a96a68babb29904a5d9502f07d64; method max_abs_control_minus_b2)"}
+    packed_luts: {value: 3.0, basis: packed_luts, relative: false, samples: 5, source: "data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json bands.fir_symmetric_systolic.packed_luts (sha256 5d928a856073b8d4cd22b3dc937c409d6405a96a68babb29904a5d9502f07d64; method max_abs_control_minus_b2)"}
+    dynamic_power_w: {value: 0.022, basis: W, relative: false, samples: 5, source: "data/scratch_saturday_2026-11-07/test_power_noise_bands.json bands.fir_symmetric_systolic.dynamic_power_w_band (sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc)"}
+  fir_systolic_transposed:
+    wns_ns: {value: 0.056, basis: ns, relative: false, samples: 5, source: "data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json bands.fir_systolic_transposed.wns_ns (sha256 5d928a856073b8d4cd22b3dc937c409d6405a96a68babb29904a5d9502f07d64; method max_abs_control_minus_b2)"}
+    packed_luts: {value: 3.0, basis: packed_luts, relative: false, samples: 5, source: "data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json bands.fir_systolic_transposed.packed_luts (sha256 5d928a856073b8d4cd22b3dc937c409d6405a96a68babb29904a5d9502f07d64; method max_abs_control_minus_b2)"}
+    dynamic_power_w: {value: 0.003, basis: W, relative: false, samples: 5, source: "data/scratch_saturday_2026-11-07/test_power_noise_bands.json bands.fir_systolic_transposed.dynamic_power_w_band (sha256 15483f41f3dc8b852f604e7ce6013513b0afcdd3d5fce5d334ece8f662422cdc)"}

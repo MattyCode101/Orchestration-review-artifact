@@ -1,0 +1,68 @@
+# DRAFT briefs_round2.yaml. NOT FROZEN and NOT referenced by any code. Written 2026-11-11 (power-readiness task).
+# Blocks marked 'byte copy' are copied by line range from configs/briefs.yaml (SHA-256 9d4ae92f3dd4ccaff322b23a700196cf85aab1e5c4e83cfaa916fae9df39d878) and are
+# re-checked by scripts/power_readiness_2026-11-11/pr_briefs_draft.py. The loader orch/contract/brief_text.py is byte-pinned and does
+# not know the rule "<= start + power_band"; a round-2 loader must map it to comparison '<=', factor 1.0 and an offset equal to the
+# design's band in W (the power_band block). Nothing here changes a frozen file.
+schema_version: 1
+# common: byte copy of configs/briefs.yaml lines 2-18
+common:
+  start_state: B2
+  budget: {recipe_runs: 6}
+  final_pick: best brief-valid state visited; ties broken by the better non-objective metric, then by fewer runs; if none, the start (no change)
+  validity:
+    - fully_routed
+    - zero_route_and_drc_errors
+    - constraint_fingerprint_equals_start
+    - clock_digest_equals_start
+    - no_leftover_dont_touch_or_fixed_loc_bel
+    - amd_simulation_pass
+  metrics: {timing: wns_ns, area: packed_clb_luts}
+  reporting:
+    timing_gain: fmax_percent
+    area_gain: lut_cut_percent
+    also: tns_ns, netlist_lut_cells, ffs
+  noise: flagged only, never used to accept or reject
+power_band:
+  rule: "<= start + power_band"
+  definition: power_band = noise_power_pct / 100 * B2 dynamic power, the recorded design-wide power noise band that the change categories use
+  source: data/sweeps/thursday_overnight_power_2026-11-05/selection.json (training); test designs take the same field of their own power selection at launch
+  wns_and_lut_limits: stay strict ("<= start" / ">= start"), as in round 1
+  training_values:
+    vexriscv_re-place: {noise_power_pct: 1.1407, b2_dynamic_power_w: 0.263, band_w: 0.0030}
+    logicnets_jscl: {noise_power_pct: 7.3525, b2_dynamic_power_w: 3.577, band_w: 0.2630}
+    rosetta_spam-filter: {noise_power_pct: 4.6108, b2_dynamic_power_w: 1.670, band_w: 0.0770}
+    rosetta_3d-rendering: {noise_power_pct: 4.8954, b2_dynamic_power_w: 2.104, band_w: 0.1030}
+    finn_radioml: {noise_power_pct: 0.0367, b2_dynamic_power_w: 5.452, band_w: 0.0020}
+briefs:
+  # T0: byte copy of configs/briefs.yaml lines 20-23
+  T0:
+    role: main
+    objective: {metric: wns_ns, direction: maximise}
+    limit: {metric: packed_clb_luts, rule: "<= start"}
+  # A0: byte copy of configs/briefs.yaml lines 24-27
+  A0:
+    role: main
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limit: {metric: wns_ns, rule: ">= start"}
+  # L2 (new): minimise packed LUTs; WNS at the start; power within the design's power band
+  L2:
+    role: secondary
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limits:
+      - {metric: wns_ns, rule: ">= start"}
+      - {metric: dynamic_power_w, rule: "<= start + power_band"}
+  # P0: byte copy of configs/briefs.yaml lines 37-42. Unchanged: it has no power limit, so the band rule does not change which
+  # states are valid; the band is what a power gain is judged against when results are reported.
+  P0:
+    role: secondary
+    objective: {metric: dynamic_power_w, direction: minimise}
+    limits:
+      - {metric: wns_ns, rule: ">= start"}
+      - {metric: packed_clb_luts, rule: "<= start"}
+  # W2 (new, optional): maximise WNS; packed LUTs at the start; power within the design's power band
+  W2:
+    role: optional_control
+    objective: {metric: wns_ns, direction: maximise}
+    limits:
+      - {metric: packed_clb_luts, rule: "<= start"}
+      - {metric: dynamic_power_w, rule: "<= start + power_band"}

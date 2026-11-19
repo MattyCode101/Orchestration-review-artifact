@@ -1,0 +1,15 @@
+table_ii_name,worker,keeps_placement,registry_id,note
+phys_opt,timing,Y,LATCH.phys_opt,"published timing recipe (LATCH), unmodified"
+retime,timing,Y,LATCH.retime,"published timing recipe (LATCH), unmodified"
+auto_pblock,timing,N,LATCH.auto_pblock,"published timing recipe (LATCH), unmodified"
+hardblock_relocate,timing,N,LATCH.hardblock_relocate,"published timing recipe (LATCH), unmodified"
+memory_path_opt,timing,N,LATCH.memory_path_opt,"published timing recipe (LATCH), unmodified"
+area_explore,area,N,A_R_EA,opt_design -directive ExploreArea
+shift_reg_remap,area,N,A_R_RSA_SRLM,opt_design -resynth_seq_area -srl_remap_modes
+lut_merge,area,N,A_R_RSA_AREM,opt_design -resynth_seq_area -aggressive_remap
+driver_merge,area,N,A_R_RSA_MED,opt_design -resynth_seq_area -merge_equivalent_drivers
+safe_dup_merge,area,Y,A_E_DUPL_Q1000,"new Tcl: merge duplicate LUT drivers in place; skip the 1000 worst setup paths"
+clock_gate_post,power,Y,P_POST_ALL,power_opt_design on the routed design
+bram_gate,power,Y,P_POST_BRAM,set_power_opt -cell_types bram; power_opt_design on the routed design
+clock_gate_pre,power,N,P_PRE_ALL,power_opt_design before placement
+delay_cost_reroute,power,Y,P_ROUTE_HIGHDELAY,route_design -directive HigherDelayCost

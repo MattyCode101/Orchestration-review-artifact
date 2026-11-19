@@ -1,0 +1,50 @@
+# Development split: screened designs used as orchestrator development designs (D3, Thu 12 Nov 2026). NOT frozen.
+# Workers are NOT refitted: configs/workers/A_fit.json and B_fit.json (FINAL) and configs/workers/power.yaml are used as they are.
+# Separate from the training split (scripts/thursday_night_pilot.py DESIGNS) and the test split (configs/campaign/campaign.yaml test_designs).
+schema_version: development-split-v1
+split: development
+noise_file: configs/noise_development.yaml
+never_use:   # sealed or round-1 test designs; no script of this task opens them
+  - t2_or1200
+  - rosetta_digit-recognition
+  - corescore_500_mod
+  - vexriscv_re-place_v2
+  - fir_symmetric_systolic
+  - fir_systolic_transposed
+briefs:   # T0, A0, P0 are the frozen briefs (configs/briefs.yaml); W2R and L2R follow the power study's kind R
+  T0: {objective: 'maximise wns_ns', limits: ['packed_clb_luts <= start']}
+  A0: {objective: 'minimise packed_clb_luts', limits: ['wns_ns >= start']}
+  W2R: {objective: 'maximise wns_ns', limits: ['packed_clb_luts <= start', 'dynamic_power_w <= start + power_band (inclusive, whole mW)']}
+  L2R: {objective: 'minimise packed_clb_luts', limits: ['wns_ns >= start', 'dynamic_power_w <= start + power_band (inclusive, whole mW)']}
+  P0: {objective: 'minimise dynamic_power_w', limits: ['wns_ns >= start', 'packed_clb_luts <= start']}
+headroom_classes: {none: 'exhaustive gain under 1 band', low: '1 to 3 bands', high: 'over 3 bands'}
+selection_rule: 'keep a screened candidate if its stored, AMD-checked exhaustive gain is at least 1 band in at least 2 of T0, A0, W2R, L2R, P0 (a lower bound: the screen explored depth 2 only partly)'
+designs:
+  t2_cordic_s:
+    b2_state_id: 4a99440324c83ddb54546673661bef7874e71b5f5bc9fbf8be88b4b229283eb7
+    screen_engine_root: external/benchmark_expansion/data/engine/t2_cordic_s
+    screen_b2_wall_s: 136.9
+    start: {wns_ns: -0.416, packed_luts: 730, dynamic_power_w: 0.25}
+    bands: {wns_ns: 0.033, packed_luts: 2.0, dynamic_power_w: 0.008}
+    power_band_offset_w: 0.008
+    stored_room_briefs: [T0, A0, W2R, L2R, P0]
+  vtr_mcml_v2:
+    b2_state_id: fcf3d382fd1cdc24d99fb45c46a280eb6aa6e2c70215b9f35ae63054014be46b
+    screen_engine_root: external/benchmark_expansion/data/engine/vtr_mcml_v2
+    screen_b2_wall_s: 955.0
+    start: {wns_ns: -13.421, packed_luts: 45673, dynamic_power_w: 8.319}
+    bands: {wns_ns: 0.47, packed_luts: 10.0, dynamic_power_w: 0.012}
+    power_band_offset_w: 0.012
+    stored_room_briefs: [T0, A0, W2R, L2R, P0]
+  amd_mini-isp:
+    b2_state_id: 83bf1c34fcdb22fcd2396237d4b66b5924b73bdb965a5659776e7eb8fd303818
+    screen_engine_root: external/benchmark_expansion/data/engine/amd_mini-isp
+    screen_b2_wall_s: 168.1
+    start: {wns_ns: -0.904, packed_luts: 3059, dynamic_power_w: 0.537}
+    bands: {wns_ns: 0.047, packed_luts: 31.0, dynamic_power_w: 0.011}
+    power_band_offset_w: 0.011
+    stored_room_briefs: [A0, W2R, L2R, P0]
+dropped:   # screened candidates not registered; reasons from the stored AMD-checked room
+  t2_aes: 'stored AMD-checked room in 1 of 5 briefs (W2R)'
+  rosetta_optical-flow: 'stored AMD-checked room in 0 of 5 briefs (none)'
+  t2_raygentop: 'stored AMD-checked room in 0 of 5 briefs (none); its area recipes fail the AMD check'

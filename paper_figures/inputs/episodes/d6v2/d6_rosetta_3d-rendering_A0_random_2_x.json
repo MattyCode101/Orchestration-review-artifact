@@ -1,0 +1,85 @@
+{
+ "approach": "random_2",
+ "brief": "A0",
+ "cache_hits": 4,
+ "charged_cpu_s": 1798.65,
+ "charged_wall_s": 4456.922231560573,
+ "completed_at_utc": "2026-11-13T01:22:52.809982+00:00",
+ "descriptions_served": null,
+ "design": "rosetta_3d-rendering",
+ "episode_id": "d6_rosetta_3d-rendering_A0_random_2_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 2.32,
+  "ffs": 5355.0,
+  "netlist_luts": 4868.0,
+  "packed_luts": 13936.0,
+  "tns_ns": -62835.613,
+  "wns_ns": -2.353
+ },
+ "final_state_id": "0743e2b5323b9c53c6e3307a48f3169e8a05321aadf12f368d026737f6492570",
+ "finished_at_utc": "2026-11-13T01:22:52+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 5,
+  "empty_calls": 0,
+  "mandates": 5,
+  "nothing_selected_calls": 0,
+  "placement_kept": 3,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "area",
+   "area",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 2,
+ "noise": {
+  "packed_luts": 6.004519999999999,
+  "wns_ns": 0.113
+ },
+ "policy_version": "1.0-frozen-seed-2",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 2.104,
+  "ffs": 5355.0,
+  "netlist_luts": 4891.0,
+  "packed_luts": 13964.0,
+  "tns_ns": -69686.586,
+  "wns_ns": -2.385
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "random_2",
+  "brief": "A0",
+  "design": "rosetta_3d-rendering",
+  "episode_id": "d6_rosetta_3d-rendering_A0_random_2_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": null,
+  "tag": "x",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

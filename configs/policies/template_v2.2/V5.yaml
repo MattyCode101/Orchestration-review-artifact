@@ -1,0 +1,30 @@
+# Template v2.2 variant V5: v2.1 with C, S and R.
+# Independent switches on top of the frozen template v2.1 (orch/policies/v22_*.py). Nothing frozen is edited.
+name: template_v2.2_V5
+variant: V5
+schema: template-v22-variant-v1
+base: template_v2.1
+base_definition: configs/policies/template_v2.1.yaml
+base_definition_sha256: 8a4a471329cb6f0c8bc6651d017f77491df9ae7e39c7c1923bc9a16b1504c5de
+switches:
+  E: true
+  P: true
+  H: full
+  R: true
+  C: true
+  S: true
+switch_texts: configs/prompts/template_v22/switch_texts.yaml
+sequence_table: configs/experience/sequences_v22.json
+candidate_rules: 'goal-repair v2 (g05) rules: push the goal from the best valid state; repair each broken limit from the best
+  limit-breaking state with a goal gain; one gentle move with placement kept'
+candidate_seed_rule: 'seeded shuffle of the candidate order per decision: sha256(seed|episode id|decision index)'
+model: gemini-3.1-flash-lite
+temperature: 0.3
+seeds:
+- 0
+- 1
+- 2
+noise: configs/noise_round2.yaml
+loop: orch.episode_r2.run_episode_r2 with ROUND2 (both options on)
+wording_schema_truncation: as template v2.1 (orch.policies.round2_harness TEXT_LIMITS); no power-specific wording
+note: v2.1 with C, S and R

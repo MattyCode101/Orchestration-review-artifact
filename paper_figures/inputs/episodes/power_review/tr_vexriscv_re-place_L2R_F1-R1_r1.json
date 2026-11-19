@@ -1,0 +1,114 @@
+{
+ "approach": "F1-R1",
+ "brief": "L2R",
+ "cache_hits": 6,
+ "charged_cpu_s": 1338.55,
+ "charged_wall_s": 1889.0339099634439,
+ "completed_at_utc": "2026-11-13T22:12:56.076196+00:00",
+ "descriptions_served": null,
+ "design": "vexriscv_re-place",
+ "episode_id": "tr_vexriscv_re-place_L2R_F1-R1_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.265,
+  "ffs": 1229.0,
+  "netlist_luts": 1896.0,
+  "packed_luts": 1831.0,
+  "tns_ns": -498.802,
+  "wns_ns": -0.759
+ },
+ "final_state_id": "ce95a06fd3ba67f9095d84e68420d241067a2e258c95587dea2a358b65f4e763",
+ "finished_at_utc": "2026-11-13T22:12:56+00:00",
+ "group": "TRAINING",
+ "llm": {
+  "kind": "orchestrator",
+  "model": "gemini-3.1-flash-lite",
+  "profile_sha256": {
+   "area": "2d1433bc31e5e7a3a930115aaf6f2bf65c7af8b03aa5f0161b5fcf7793903975",
+   "power": "b9fb2053373cbacec7316038db742fe14b948ea1d834c5c97b90b95bc3fb273d",
+   "timing": "44284346ab8ad1f077a9f331c0927a0cd2a0dfee7354b01aabf3c123ba2ca82b"
+  },
+  "template": "configs/prompts/orchestrator_v2.txt",
+  "template_sha256": "c94f81ac34079803cbf89951979ffcd513fc32ca519ad30b887a50151abd7682",
+  "workers_seen": [
+   "area",
+   "power",
+   "timing"
+  ]
+ },
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 592,
+   "prompt": 7302,
+   "thoughts": 0,
+   "total": 7894
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 3,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.003,
+  "packed_luts": 6.9925500000000005,
+  "wns_ns": 0.14
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-d7e4eeed3f-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "tr-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 0.263,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -498.982,
+  "wns_ns": -0.785
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r1",
+ "task": {
+  "approach": "F1-R1",
+  "brief": "L2R",
+  "design": "vexriscv_re-place",
+  "episode_id": "tr_vexriscv_re-place_L2R_F1-R1_r1",
+  "group": "TRAINING",
+  "model": "gemini-3.1-flash-lite",
+  "scope": "train",
+  "seed": 0,
+  "tag": "r1",
+  "temperature": 0.3,
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

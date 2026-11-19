@@ -1,0 +1,23 @@
+# Template v2, package P4 (reply format): change 20 (evidence, options, rationale, then the mandate), the authors'
+# decision 8 (the provider's structured output with a JSON schema instead of the schema written into the prompt;
+# a free-text reasoning field first) and the forecast field.
+# gemini-3.1-flash-lite supports structured output (Gemini API model page, capability "Structured outputs:
+# Supported"); the bridge already sends response_mime_type application/json with response_json_schema on every
+# call since round 1, so the prompt no longer needs the schema text. The round-1 parser stays as the fallback.
+package: P4
+changes: [20, "decision 8", "forecast"]
+edits:
+  - change: 20
+    after: "Reply format\n"
+    new: "Reply in the structured output format you are given: one JSON object whose fields come in this order.\n{{REPLY_FIELDS}}\n{{ATTEMPTS_RULE}} The mandate and the forecast must be present exactly when the action is INVOKE_WORKER and null when the action is STOP.\n"
+texts:
+  reasoning: "your reasoning in free text, written first, under 80 words"
+  evidence: "the lines your decision rests on, each cited by its label: a saved state (its alias), an experience line (worker and placement setting) or the brief"
+  evidence_physical: "; include any physical facts that bear on this choice (there may be none)"
+  options: "at least two options you considered (a mandate, or stopping), each with its expected effect on the goal and on each limit"
+  strategy: "the strategy, one of the listed values"
+  conflict_check: "whether the chosen setting could undo gains already made on the base state, under 40 words"
+  rationale: "why you chose this option, under 200 characters"
+  action: "INVOKE_WORKER or STOP"
+  mandate: "the worker call, or null when you stop"
+  forecast: "the change you expect from this call on the goal and on each limit (the worker's selected result against its base state), or nothing selectable; null when you stop"

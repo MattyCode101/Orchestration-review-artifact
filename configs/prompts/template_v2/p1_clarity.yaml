@@ -1,0 +1,38 @@
+# Template v2, package P1 (clarity): prompt-improvement changes 1 to 10 plus the authors' decisions 1 and 2.
+# Applied to configs/prompts/orchestrator2_v1.txt (round-1 wording) as exact text edits, in order.
+# Code-rendered parts of P1 (they hold digits, so they cannot sit in the template; see orch/policies/v2_text.py
+# and v2_view.py): the vocabulary block (change 8, very-large tier), the brief without "B2", without the noise
+# line and with validity in one line (decision 1, changes 2 and 10), the state-list labels and "no options left"
+# (changes 3 and 5), and one description line per worker (change 7, decision 2; wording in
+# worker_descriptions.yaml).
+package: P1
+changes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "decision 1", "decision 2"]
+edits:
+  - change: 1  # intro states what is actually shown; decision 2 setting paragraph and recipe definition; change 5
+    old: "Workers are black boxes. You never see recipes, tool output, design names or raw measurements: you see only categories relative to measurement noise and statuses relative to the limits of the brief."
+    new: "Workers are black boxes: you never see their recipes, their tool output or the design's name. You do see the brief, what each worker aims at, every saved state with its exact goal and limit values and how they changed, measured physical facts about each saved state, and experience with the workers on other designs.\n\nSetting\n- The design is an AMD FPGA design, already placed and routed in Vivado. Each run re-optimises a saved checkpoint, and every result is measured by the same Vivado reports.\n- A recipe is one fixed optimisation flow (a script of tool steps) that a worker can run on a saved checkpoint. Each run of one recipe costs one unit of the run budget and produces a new checkpoint.\n- {{START_ALIAS}} is the placed-and-routed checkpoint you were given. Each new result is saved under the next free alias, so the list of saved states grows as you go.\n\n{{VOCABULARY}}"
+  - change: 9  # mandate fields
+    old: "- A mandate names a worker, a saved state to start from (use its alias), whether the worker must preserve the existing placement, how many attempts it may spend (each attempt costs one run of the budget), and whether it should select only results that respect the limits of the brief."
+    new: "- A mandate names a worker, a saved state to start from (its alias), whether the worker must preserve the existing placement, how many attempts it may spend, and whether it must select a result that respects the limits of the brief."
+  - change: 9  # attempts (change 3: one repeat rule), respect-limits with "nothing selectable", what a broken saved state is for
+    old: "- If the worker is asked to respect the limits, it picks only a result inside the limits; if not, it picks its best result for its own objective even when a limit is broken. A result that breaks a limit is not a dead end: it stays available as a saved state, only the final answer has to satisfy every limit, and a later call can repair it."
+    new: "- Attempts: how many of the worker's untried options it tries in this call; each attempt is one run of the budget. A worker never reuses an option on the same state. Calling the same worker on the same state with the same placement setting again tries its remaining options; when it has none left, the view says no options left.\n- Respect limits: when true, the worker selects only a result inside every limit of the brief, and the call returns nothing selectable when no result qualifies (about one call in four); when false, the worker selects its best result for its own objective even if a limit is broken.\n- A saved state that breaks a limit is not a dead end: a later call can start from it to repair it. Only the final answer has to satisfy every limit."
+  - change: 8  # one word for the worker's choice ("selected"), as in the state list
+    old: "- Every valid result a worker produces becomes a saved state you can start from later, whether or not the worker picked it; the view says which one the worker picked."
+    new: "- Every valid result a worker produces becomes a saved state you can start from later, whether or not the worker selected it; the view says which one it selected."
+  - change: 3  # the option-exhaustion sentence is replaced by the attempts bullet above
+    old: "- A worker can use each of its options only once on a given state, so repeated calls from the same state eventually run out of new options.\n"
+    new: ""
+  - change: 3  # removes "never repeat", which contradicted option exhaustion
+    old: "- Never repeat a combination of worker, state and placement setting that is listed as tried.\n"
+    new: ""
+  - change: 2  # the one noise rule is in the vocabulary; this line no longer restates it
+    old: "- Changes within noise are not progress; do not build further on them alone."
+    new: "- Do not build further on changes within noise alone."
+  - change: 3  # consistent with the repeat rule
+    old: "- A request that returned no change spent budget for nothing; do not repeat it."
+    new: "- A call that returned no change still spent its runs; calling it again only tries the options it has not used yet."
+  - change: 4  # leftover text: no section shows profile variance
+    old: "- Spend fewer attempts on moves whose profiles show high variance or frequent no-change, and more on reliable ones."
+    new: "- Spend fewer attempts on moves whose experience lines show frequent no change or nothing selectable, and more on reliable ones."
+texts: {}

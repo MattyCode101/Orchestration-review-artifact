@@ -1,0 +1,33 @@
+{
+ "approach": "random_0",
+ "brief": "T0",
+ "cache_hits": 5,
+ "cell_brief_for_workers": "T0",
+ "charged_cpu_s": 96.31,
+ "charged_wall_s": 3318.1215214636177,
+ "completed_at_utc": "2026-11-12T15:28:20.939736+00:00",
+ "design": "amd_mini-isp",
+ "design_split": "development",
+ "episode_id": "dev_amd_mini-isp_T0_random_0_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3202.0,
+  "packed_luts": 3059.0,
+  "tns_ns": -327.374,
+  "wns_ns": -0.904
+ },
+ "final_state_id": "83bf1c34fcdb22fcd2396237d4b66b5924b73bdb965a5659776e7eb8fd303818",
+ "llm": null,
+ "new_real_runs": 0,
+ "policy_version": "1.0-frozen-seed-0",
+ "run_no": 0,
+ "runs_used": 5,
+ "schema_version": "campaign-result-v1",
+ "scope": "development",
+ "stop_reason": "no_recipes_available",
+ "tag": "x",
+ "tier": 2,
+ "validation_status": "pass"
+}

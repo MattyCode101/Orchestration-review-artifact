@@ -1,0 +1,105 @@
+{
+ "approach": "V9",
+ "brief": "A0",
+ "cache_hits": 6,
+ "charged_cpu_s": 2351.4900000000002,
+ "charged_wall_s": 2843.9066222272813,
+ "completed_at_utc": "2026-11-14T13:30:20.261790+00:00",
+ "descriptions_served": {
+  "cache": 0,
+  "live": 0,
+  "v3": 0
+ },
+ "design": "logicnets_jscl",
+ "episode_id": "v22t3_logicnets_jscl_A0_V9_t2",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "final_state_id": "d7671ae14d9a3800dc416a2eb29494a2378e4119efdcac4ecde9eb28c58e8fa4",
+ "finished_at_utc": "2026-11-14T13:30:20+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 5,
+  "fallbacks": 0,
+  "model_calls": 5,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 2288,
+   "prompt": 14711,
+   "thoughts": 0,
+   "total": 16999
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 5,
+  "empty_calls": 1,
+  "mandates": 5,
+  "nothing_selected_calls": 4,
+  "placement_kept": 4,
+  "respect_limits": 5,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "timing",
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.263,
+  "packed_luts": 37.0,
+  "wns_ns": 0.779
+ },
+ "policy_version": "template_v2.2_V9-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1-v22a-EpHrcsTU",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "v22-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "t2",
+ "task": {
+  "approach": "V9",
+  "brief": "A0",
+  "design": "logicnets_jscl",
+  "episode_id": "v22t3_logicnets_jscl_A0_V9_t2",
+  "group": "TRAINING",
+  "scope": "train",
+  "scored_cell": true,
+  "seed": 4,
+  "sub": "2",
+  "tag": "t2",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

@@ -1,0 +1,208 @@
+data_scope,row,design,brief,repeat,cell_has_headroom,goal_gain,gain_unit,share_of_reference_pct,reference_gain,noise_band
+TRAINING,"GA-R1, Gemini",finn_radioml,T0,1,True,29.0000,ps,30.5263,95.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,T0,2,True,29.0000,ps,30.5263,95.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,T0,3,True,29.0000,ps,30.5263,95.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,A0,1,True,4812.0000,LUTs,65.0886,7393.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,A0,2,True,4812.0000,LUTs,65.0886,7393.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,A0,3,True,4812.0000,LUTs,65.0886,7393.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,W2R,1,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,W2R,2,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,W2R,3,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,L2R,1,True,4785.0000,LUTs,65.7642,7276.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,L2R,2,True,4785.0000,LUTs,65.7642,7276.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,L2R,3,True,4785.0000,LUTs,65.7642,7276.0000,6.3516
+TRAINING,"GA-R1, Gemini",finn_radioml,P0,1,True,13.0000,mW,2.0635,630.0000,2.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,P0,2,True,-0.0000,mW,-0.0000,630.0000,2.0000
+TRAINING,"GA-R1, Gemini",finn_radioml,P0,3,True,-0.0000,mW,-0.0000,630.0000,2.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,T0,1,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,T0,2,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,T0,3,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,A0,1,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,A0,2,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,A0,3,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,W2R,1,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,W2R,2,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,W2R,3,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,L2R,1,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,L2R,2,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,L2R,3,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,P0,1,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,P0,2,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"GA-R1, Gemini",logicnets_jscl,P0,3,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,T0,1,True,51.0000,ps,8.0442,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,T0,2,True,51.0000,ps,8.0442,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,T0,3,True,0.0000,ps,0.0000,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,A0,1,True,526.0000,LUTs,93.5943,562.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,A0,2,True,526.0000,LUTs,93.5943,562.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,A0,3,True,526.0000,LUTs,93.5943,562.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,W2R,1,True,74.0000,ps,11.6719,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,W2R,2,True,0.0000,ps,0.0000,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,W2R,3,True,0.0000,ps,0.0000,634.0000,113.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,L2R,1,True,-0.0000,LUTs,-0.0000,564.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,L2R,2,True,399.0000,LUTs,70.7447,564.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,L2R,3,True,399.0000,LUTs,70.7447,564.0000,6.0045
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,P0,1,False,5.0000,mW,7.1429,70.0000,103.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,P0,2,False,5.0000,mW,7.1429,70.0000,103.0000
+TRAINING,"GA-R1, Gemini",rosetta_3d-rendering,P0,3,False,5.0000,mW,7.1429,70.0000,103.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,T0,1,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,T0,2,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,T0,3,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,A0,1,True,-0.0000,LUTs,-0.0000,698.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,A0,2,True,-0.0000,LUTs,-0.0000,698.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,A0,3,True,-0.0000,LUTs,-0.0000,698.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,W2R,1,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,W2R,2,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,W2R,3,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,L2R,1,True,-0.0000,LUTs,-0.0000,689.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,L2R,2,True,-0.0000,LUTs,-0.0000,689.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,L2R,3,True,-0.0000,LUTs,-0.0000,689.0000,11.0003
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,P0,1,True,-0.0000,mW,-0.0000,91.0000,77.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,P0,2,True,-0.0000,mW,-0.0000,91.0000,77.0000
+TRAINING,"GA-R1, Gemini",rosetta_spam-filter,P0,3,True,-0.0000,mW,-0.0000,91.0000,77.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,T0,1,True,49.0000,ps,34.5070,142.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,T0,2,True,49.0000,ps,34.5070,142.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,T0,3,True,49.0000,ps,34.5070,142.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,A0,1,True,75.0000,LUTs,59.0551,127.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,A0,2,True,75.0000,LUTs,59.0551,127.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,A0,3,True,75.0000,LUTs,59.0551,127.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,W2R,1,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,W2R,2,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,W2R,3,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,L2R,1,True,66.0000,LUTs,55.0000,120.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,L2R,2,True,66.0000,LUTs,55.0000,120.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,L2R,3,True,66.0000,LUTs,55.0000,120.0000,6.9925
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,P0,1,True,-0.0000,mW,-0.0000,8.0000,3.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,P0,2,True,-0.0000,mW,-0.0000,8.0000,3.0000
+TRAINING,"GA-R1, Gemini",vexriscv_re-place,P0,3,True,-0.0000,mW,-0.0000,8.0000,3.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",finn_radioml,W2R,1,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",finn_radioml,L2R,1,True,4916.0000,LUTs,67.5646,7276.0000,6.3516
+TRAINING,"V9, ChatGPT gpt-5.6-terra",finn_radioml,P0,1,True,38.0000,mW,6.0317,630.0000,2.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",logicnets_jscl,W2R,1,False,35.0000,ps,100.0000,35.0000,779.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",logicnets_jscl,L2R,1,True,78.0000,LUTs,2.8603,2727.0000,37.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",logicnets_jscl,P0,1,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_3d-rendering,W2R,1,True,115.0000,ps,18.1388,634.0000,113.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_3d-rendering,L2R,1,True,452.0000,LUTs,80.1418,564.0000,6.0045
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_spam-filter,W2R,1,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_spam-filter,L2R,1,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,"V9, ChatGPT gpt-5.6-terra",rosetta_spam-filter,P0,1,True,-0.0000,mW,-0.0000,91.0000,77.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",vexriscv_re-place,W2R,1,False,127.0000,ps,100.0000,127.0000,140.0000
+TRAINING,"V9, ChatGPT gpt-5.6-terra",vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9925
+TRAINING,"V9, ChatGPT gpt-5.6-terra",vexriscv_re-place,P0,1,True,-0.0000,mW,-0.0000,8.0000,3.0000
+TRAINING,"V9, Gemini",finn_radioml,W2R,2,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"V9, Gemini",finn_radioml,W2R,3,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"V9, Gemini",finn_radioml,L2R,2,True,4915.0000,LUTs,67.5509,7276.0000,6.3516
+TRAINING,"V9, Gemini",finn_radioml,L2R,3,True,4790.0000,LUTs,65.8329,7276.0000,6.3516
+TRAINING,"V9, Gemini",finn_radioml,P0,2,True,-0.0000,mW,-0.0000,630.0000,2.0000
+TRAINING,"V9, Gemini",finn_radioml,P0,3,True,-0.0000,mW,-0.0000,630.0000,2.0000
+TRAINING,"V9, Gemini",logicnets_jscl,W2R,2,False,29.0000,ps,82.8571,35.0000,779.0000
+TRAINING,"V9, Gemini",logicnets_jscl,W2R,3,False,29.0000,ps,82.8571,35.0000,779.0000
+TRAINING,"V9, Gemini",logicnets_jscl,L2R,2,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"V9, Gemini",logicnets_jscl,L2R,3,True,-0.0000,LUTs,-0.0000,2727.0000,37.0000
+TRAINING,"V9, Gemini",logicnets_jscl,P0,2,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"V9, Gemini",logicnets_jscl,P0,3,True,-0.0000,mW,-0.0000,314.0000,263.0000
+TRAINING,"V9, Gemini",rosetta_3d-rendering,W2R,2,True,17.0000,ps,2.6814,634.0000,113.0000
+TRAINING,"V9, Gemini",rosetta_3d-rendering,W2R,3,True,0.0000,ps,0.0000,634.0000,113.0000
+TRAINING,"V9, Gemini",rosetta_3d-rendering,L2R,2,True,-0.0000,LUTs,-0.0000,564.0000,6.0045
+TRAINING,"V9, Gemini",rosetta_3d-rendering,L2R,3,True,-0.0000,LUTs,-0.0000,564.0000,6.0045
+TRAINING,"V9, Gemini",rosetta_3d-rendering,P0,2,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"V9, Gemini",rosetta_3d-rendering,P0,3,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"V9, Gemini",rosetta_spam-filter,W2R,2,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"V9, Gemini",rosetta_spam-filter,W2R,3,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,"V9, Gemini",rosetta_spam-filter,L2R,2,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,"V9, Gemini",rosetta_spam-filter,L2R,3,True,689.0000,LUTs,100.0000,689.0000,11.0003
+TRAINING,"V9, Gemini",rosetta_spam-filter,P0,2,True,-0.0000,mW,-0.0000,91.0000,77.0000
+TRAINING,"V9, Gemini",rosetta_spam-filter,P0,3,True,35.0000,mW,38.4615,91.0000,77.0000
+TRAINING,"V9, Gemini",vexriscv_re-place,W2R,2,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,"V9, Gemini",vexriscv_re-place,W2R,3,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,"V9, Gemini",vexriscv_re-place,L2R,2,True,64.0000,LUTs,53.3333,120.0000,6.9925
+TRAINING,"V9, Gemini",vexriscv_re-place,L2R,3,True,120.0000,LUTs,100.0000,120.0000,6.9925
+TRAINING,"V9, Gemini",vexriscv_re-place,P0,2,True,-0.0000,mW,-0.0000,8.0000,3.0000
+TRAINING,"V9, Gemini",vexriscv_re-place,P0,3,True,-0.0000,mW,-0.0000,8.0000,3.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,T0,1,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,T0,2,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,T0,3,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,A0,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,A0,2,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,A0,3,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,W2R,1,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,W2R,2,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,W2R,3,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,L2R,2,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,L2R,3,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,P0,1,True,22.0000,mW,45.8333,48.0000,11.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,P0,2,True,22.0000,mW,45.8333,48.0000,11.0000
+VALIDATION,"GA-R1, Gemini",amd_mini-isp,P0,3,True,22.0000,mW,45.8333,48.0000,11.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,T0,1,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,T0,2,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,T0,3,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,A0,1,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,A0,2,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,A0,3,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,W2R,1,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,W2R,2,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,W2R,3,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,L2R,1,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,L2R,2,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,L2R,3,True,1.0000,LUTs,14.2857,7.0000,2.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,P0,1,True,2.0000,mW,8.0000,25.0000,8.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,P0,2,True,2.0000,mW,8.0000,25.0000,8.0000
+VALIDATION,"GA-R1, Gemini",t2_cordic_s,P0,3,True,2.0000,mW,8.0000,25.0000,8.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,T0,1,True,952.0000,ps,92.4272,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,T0,2,True,997.0000,ps,96.7961,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,T0,3,True,723.0000,ps,70.1942,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,A0,1,True,390.0000,LUTs,24.0000,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,A0,2,True,390.0000,LUTs,24.0000,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,A0,3,True,390.0000,LUTs,24.0000,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,W2R,1,True,805.0000,ps,78.1553,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,W2R,2,True,0.0000,ps,0.0000,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,W2R,3,True,0.0000,ps,0.0000,1030.0000,470.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,L2R,1,True,384.0000,LUTs,23.6308,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,L2R,2,True,1384.0000,LUTs,85.1692,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,L2R,3,True,1438.0000,LUTs,88.4923,1625.0000,10.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,P0,1,True,-0.0000,mW,-0.0000,1280.0000,12.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,P0,2,True,-0.0000,mW,-0.0000,1280.0000,12.0000
+VALIDATION,"GA-R1, Gemini",vtr_mcml_v2,P0,3,True,118.0000,mW,9.2188,1280.0000,12.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",amd_mini-isp,W2R,1,True,0.0000,ps,0.0000,54.0000,47.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",amd_mini-isp,P0,1,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",t2_cordic_s,W2R,1,True,186.0000,ps,72.9412,255.0000,33.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",t2_cordic_s,L2R,1,True,7.0000,LUTs,100.0000,7.0000,2.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",t2_cordic_s,P0,1,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",vtr_mcml_v2,W2R,1,True,649.0000,ps,63.0097,1030.0000,470.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",vtr_mcml_v2,L2R,1,True,1117.0000,LUTs,68.7385,1625.0000,10.0000
+VALIDATION,"V9, ChatGPT gpt-5.6-terra",vtr_mcml_v2,P0,1,True,118.0000,mW,9.2188,1280.0000,12.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,W2R,2,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,W2R,3,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,L2R,2,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,L2R,3,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,P0,2,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,"V9, Gemini",amd_mini-isp,P0,3,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,W2R,2,True,0.0000,ps,0.0000,255.0000,33.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,W2R,3,True,191.0000,ps,74.9020,255.0000,33.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,L2R,2,True,7.0000,LUTs,100.0000,7.0000,2.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,L2R,3,True,3.0000,LUTs,42.8571,7.0000,2.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,P0,2,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,"V9, Gemini",t2_cordic_s,P0,3,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,W2R,2,True,24.0000,ps,2.3301,1030.0000,470.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,W2R,3,True,24.0000,ps,2.3301,1030.0000,470.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,L2R,2,True,1595.0000,LUTs,98.1538,1625.0000,10.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,L2R,3,True,1086.0000,LUTs,66.8308,1625.0000,10.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,P0,2,True,77.0000,mW,6.0156,1280.0000,12.0000
+VALIDATION,"V9, Gemini",vtr_mcml_v2,P0,3,True,118.0000,mW,9.2188,1280.0000,12.0000
+TRAINING,exhaustive 2-step (14 recipes),vexriscv_re-place,W2R,1,False,127.0000,ps,100.0000,127.0000,140.0000
+TRAINING,exhaustive 2-step (14 recipes),vexriscv_re-place,L2R,1,True,109.0000,LUTs,90.8333,120.0000,6.9925
+TRAINING,exhaustive 2-step (14 recipes),vexriscv_re-place,P0,1,True,7.0000,mW,87.5000,8.0000,3.0000
+TRAINING,exhaustive 2-step (14 recipes),logicnets_jscl,W2R,1,False,35.0000,ps,100.0000,35.0000,779.0000
+TRAINING,exhaustive 2-step (14 recipes),logicnets_jscl,L2R,1,True,78.0000,LUTs,2.8603,2727.0000,37.0000
+TRAINING,exhaustive 2-step (14 recipes),logicnets_jscl,P0,1,True,5.0000,mW,1.5924,314.0000,263.0000
+TRAINING,exhaustive 2-step (14 recipes),rosetta_spam-filter,W2R,1,True,87.0000,ps,93.5484,93.0000,75.0000
+TRAINING,exhaustive 2-step (14 recipes),rosetta_spam-filter,L2R,1,True,686.0000,LUTs,99.5646,689.0000,11.0003
+TRAINING,exhaustive 2-step (14 recipes),rosetta_spam-filter,P0,1,True,91.0000,mW,100.0000,91.0000,77.0000
+TRAINING,exhaustive 2-step (14 recipes),rosetta_3d-rendering,W2R,1,True,634.0000,ps,100.0000,634.0000,113.0000
+TRAINING,exhaustive 2-step (14 recipes),rosetta_3d-rendering,L2R,1,True,453.0000,LUTs,80.3191,564.0000,6.0045
+TRAINING,exhaustive 2-step (14 recipes),rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,exhaustive 2-step (14 recipes),finn_radioml,W2R,1,False,56.0000,ps,74.6667,75.0000,81.0000
+TRAINING,exhaustive 2-step (14 recipes),finn_radioml,L2R,1,True,5130.0000,LUTs,70.5058,7276.0000,6.3516
+TRAINING,exhaustive 2-step (14 recipes),finn_radioml,P0,1,True,276.0000,mW,43.8095,630.0000,2.0000

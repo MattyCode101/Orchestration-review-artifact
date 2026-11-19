@@ -1,0 +1,102 @@
+{
+ "approach": "V10",
+ "brief": "A0",
+ "cache_hits": 6,
+ "charged_cpu_s": 3832.84,
+ "charged_wall_s": 3756.7305632252246,
+ "completed_at_utc": "2026-11-14T13:52:44.335057+00:00",
+ "descriptions_served": {
+  "cache": 0,
+  "live": 0,
+  "v3": 0
+ },
+ "design": "rosetta_spam-filter",
+ "episode_id": "v22t3_rosetta_spam-filter_A0_V10_t3",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 1.777,
+  "ffs": 15644.0,
+  "netlist_luts": 2889.0,
+  "packed_luts": 4684.0,
+  "tns_ns": -1652.966,
+  "wns_ns": -0.629
+ },
+ "final_state_id": "d15a496ea54e7e7996eacc1aca4b08d14937ca7b51427c519eb6499627bad4de",
+ "finished_at_utc": "2026-11-14T13:52:44+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1438,
+   "prompt": 6590,
+   "thoughts": 0,
+   "total": 8028
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 3,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 11.000300000000001,
+  "wns_ns": 0.075
+ },
+ "policy_version": "template_v2.2_V10-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1-v22a-epHrcsTU",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "v22-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 1.67,
+  "ffs": 13339.0,
+  "netlist_luts": 3018.0,
+  "packed_luts": 5366.0,
+  "tns_ns": -800.583,
+  "wns_ns": -0.675
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "t3",
+ "task": {
+  "approach": "V10",
+  "brief": "A0",
+  "design": "rosetta_spam-filter",
+  "episode_id": "v22t3_rosetta_spam-filter_A0_V10_t3",
+  "group": "TRAINING",
+  "scope": "train",
+  "scored_cell": true,
+  "seed": 5,
+  "sub": "2",
+  "tag": "t3",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

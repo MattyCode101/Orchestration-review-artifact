@@ -1,0 +1,24 @@
+{
+ "base": {
+  "path": "configs/prompts/orchestrator2_v1.txt",
+  "sha256": "20a299ae8e959a505a34dd422a196a1cfaf2a92d81fbe53cf61172967c4bcf7b"
+ },
+ "packages": {
+  "p1_clarity.yaml": "88e6b8357930954a0d7e89e123f8703785dd7a25534c29609af75add8e74ab9e",
+  "p2_neutral.yaml": "b28340c8521d3f2d1a8a8cc3ede1fcf8870b1709d28967cb1dc810f7ec363e46",
+  "p3_physical.yaml": "2b5f0482b018ad13218c4a059dbc13b8450763a11ea544d54d0332e796ce07b2",
+  "p4_reply.yaml": "4535a264784834da4cb5504c7733096690b2db29840ed428287a36c0b5104468",
+  "p4_reply_rev1.yaml": "6cd3b0495d11939ce19efcf1c2cbd0528f61fc708287b5ee4ad730c323cb80d0",
+  "worker_descriptions.yaml": "639f997deb152ec09df9e0c53a80917e109ebcbfc4654a002326e2340aa2e718"
+ },
+ "templates": {
+  "orchestrator3_p1.txt": "c45bfa61ac8f2b1a66244f49b3888a68924826920176abff1269a205c83b8ea5",
+  "orchestrator3_p12.txt": "93186c8fce57742f74a0f3dab98c67c6ac9b0cc973e7f1d08c7a13abadc93f6e",
+  "orchestrator3_p123.txt": "13045c6beceb99903a69ffed061e583bb40190ffe389932c98e9ec087db81e5a",
+  "orchestrator3_p1234.txt": "ed30564abde76a5f3d1f36d6c0755fc17510a2121f58074f1168a481224d5f34",
+  "orchestrator3_p1234r.txt": "ed30564abde76a5f3d1f36d6c0755fc17510a2121f58074f1168a481224d5f34",
+  "orchestrator3_p124.txt": "ed30564abde76a5f3d1f36d6c0755fc17510a2121f58074f1168a481224d5f34",
+  "orchestrator3_p134.txt": "e517bf0b0faf3349bf828acd15f7437d91f91d4dd026e3fa82cea68b099ded4c",
+  "orchestrator3_p234.txt": "e3d22cd0a5dfe659968a9d04edb95ba9686ab762cb1ea9d4fed790db56f3c557"
+ }
+}

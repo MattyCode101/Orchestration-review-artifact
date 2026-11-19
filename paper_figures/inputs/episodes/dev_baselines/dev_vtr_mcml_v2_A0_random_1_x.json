@@ -1,0 +1,33 @@
+{
+ "approach": "random_1",
+ "brief": "A0",
+ "cache_hits": 5,
+ "cell_brief_for_workers": "A0",
+ "charged_cpu_s": 5631.34,
+ "charged_wall_s": 6918.460056163371,
+ "completed_at_utc": "2026-11-12T16:25:24.994805+00:00",
+ "design": "vtr_mcml_v2",
+ "design_split": "development",
+ "episode_id": "dev_vtr_mcml_v2_A0_random_1_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 7.963,
+  "ffs": 15467.0,
+  "netlist_luts": 53214.0,
+  "packed_luts": 44587.0,
+  "tns_ns": -65097.824,
+  "wns_ns": -13.403
+ },
+ "final_state_id": "332c7957708ff0553d14864d35935a4d709b22e9426f018fcb906f9c059d7a29",
+ "llm": null,
+ "new_real_runs": 1,
+ "policy_version": "1.0-frozen-seed-1",
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "campaign-result-v1",
+ "scope": "development",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "tier": 3,
+ "validation_status": "pass"
+}

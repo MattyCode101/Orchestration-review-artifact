@@ -1,0 +1,17 @@
+SLACK	-1.371
+REQUIREMENT	1.600
+DATAPATH_DELAY	2.919
+DATAPATH_LOGIC_DELAY	1.445
+DATAPATH_NET_DELAY	1.474
+LOGIC_LEVELS	14
+SKEW	-0.041
+STARTPOINT_PIN	finn_design_i/MatrixVectorActivation_7/inst/grp_Matrix_Vector_Activate_Batch_fu_92/add_ln840_23_reg_4631_reg[3]/C
+ENDPOINT_PIN	finn_design_i/MatrixVectorActivation_7/inst/grp_Matrix_Vector_Activate_Batch_fu_92/accu_V_1_fu_412_reg[13]/D
+CELLS	16	FDRE 2 LUT2 4 CARRY8 6 LUT3 1 LUT4 2 LUT5 1
+TILE_SPAN	X 77-80	Y 220-225
+PBLOCK	none
+UTIL_LUT	74637
+UTIL_FF	45923
+UTIL_BRAM	24.5
+UTIL_DSP	0
+UTIL_URAM	0

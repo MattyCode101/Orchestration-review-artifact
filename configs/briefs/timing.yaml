@@ -1,0 +1,19 @@
+id: brief_t
+objective:
+  metric: wns_ns
+  direction: max
+terms:
+  - id: packed_lut_cap
+    metric: packed_luts
+    comparison: "<="
+    factor: 1.01
+    offset: 0.0
+budget_runs: 6
+require_routed: true
+max_drc_errors: 0
+require_constraint_match: true
+require_clock_match: true
+equivalence_policy: final_only
+equivalence_vectors: 200
+equivalence_strength: weak
+

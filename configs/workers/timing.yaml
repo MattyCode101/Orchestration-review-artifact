@@ -1,0 +1,11 @@
+id: timing
+version: provisional-v0
+objective: {metric: wns_ns, direction: max}
+recipe_set_id: timing
+default_attempts: 2
+accepted_settings: [preserve_placement, max_runs]
+guard_modes: {packed_luts: selects_within}
+may_replace: true
+accepts_stage: routed
+returns_stage: routed
+

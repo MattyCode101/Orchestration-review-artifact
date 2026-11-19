@@ -1,0 +1,44 @@
+schema_version: 1
+common:
+  start_state: B2
+  budget: {recipe_runs: 6}
+  final_pick: best brief-valid state visited; ties broken by the better non-objective metric, then by fewer runs; if none, the start (no change)
+  validity:
+    - fully_routed
+    - zero_route_and_drc_errors
+    - constraint_fingerprint_equals_start
+    - clock_digest_equals_start
+    - no_leftover_dont_touch_or_fixed_loc_bel
+    - amd_simulation_pass
+  metrics: {timing: wns_ns, area: packed_clb_luts}
+  reporting:
+    timing_gain: fmax_percent
+    area_gain: lut_cut_percent
+    also: tns_ns, netlist_lut_cells, ffs
+  noise: flagged only, never used to accept or reject
+briefs:
+  T0:
+    role: main
+    objective: {metric: wns_ns, direction: maximise}
+    limit: {metric: packed_clb_luts, rule: "<= start"}
+  A0:
+    role: main
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limit: {metric: wns_ns, rule: ">= start"}
+  T:
+    role: control
+    objective: {metric: wns_ns, direction: maximise}
+    limit: {metric: packed_clb_luts, rule: "<= 1.01 * start"}
+  A:
+    role: control
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limit: {metric: wns_ns, rule: ">= start - 0.100"}
+  # P0 added 2026-11-06 as a dated addition. T0, A0, T and A above are unchanged.
+  P0:
+    role: secondary
+    objective: {metric: dynamic_power_w, direction: minimise}
+    limits:
+      - {metric: wns_ns, rule: ">= start"}
+      - {metric: packed_clb_luts, rule: "<= start"}
+excluded:
+  B: failed the pre-declared addition rule on training data (notes/brief_tightness_training.md)

@@ -1,0 +1,20 @@
+# Contextual-bandit policy, round 2: declared settings (O1, the authors' decisions of Thursday 12 Nov 2026).
+# Declared before any evaluation of round 2 and not tuned afterwards. The same values are quoted in
+# notes/bandit_policy_plan_r2.md, which is hashed before the first evaluation. Every number not listed here is the
+# round-1 value of configs/policies/bandit.yaml.
+schema_version: bandit-settings-r2-v1
+settings:
+  rho: 0.5               # round 1, unchanged
+  flat_penalty: 3.0      # round 1, unchanged (used by no round-2 label: the reward is the credited gain)
+  alpha: 1.0             # round 1, unchanged
+  ridge: 1.0             # round 1, unchanged
+  stop_threshold: 0.0    # decision of 12 Nov: the learned policy is the main design with stop threshold 0
+  repair_feature: true   # decision of 12 Nov: context feature "an unpicked state has a larger goal gain than the best valid state and breaks a limit"
+  observe_empty: true    # decision of 12 Nov: "no recipes available" removes that worker and scope for that state; the episode goes on
+base_choice: best_or_latest   # the main design of round 1 (best valid state, or the latest result when that differs)
+reward: credited              # the main design of round 1 (change in the credited gain)
+labels:                  # the learned policy and the 2 x 2 attribution of its two additions; nothing else is evaluated
+  learned:   {repair_feature: true,  observe_empty: true}     # the policy
+  obs_only:  {repair_feature: false, observe_empty: true}
+  feat_only: {repair_feature: true,  observe_empty: false}
+  r1_stop0:  {repair_feature: false, observe_empty: false}    # round-1 main with stop threshold 0: must reproduce the round-1 result

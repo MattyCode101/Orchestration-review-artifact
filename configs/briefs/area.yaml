@@ -1,0 +1,19 @@
+id: brief_a
+objective:
+  metric: packed_luts
+  direction: min
+terms:
+  - id: wns_floor
+    metric: wns_ns
+    comparison: ">="
+    factor: 1.0
+    offset: -0.1
+budget_runs: 6
+require_routed: true
+max_drc_errors: 0
+require_constraint_match: true
+require_clock_match: true
+equivalence_policy: final_only
+equivalence_vectors: 200
+equivalence_strength: weak
+

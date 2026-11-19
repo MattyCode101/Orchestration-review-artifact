@@ -1,0 +1,14 @@
+data_scope,row,design,brief,repeat,status,reason
+TEST,bandit,rosetta_digit-recognition,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TEST,bandit,corescore_500_mod,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TEST,bandit,vexriscv_re-place_v2,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TEST,bandit,fir_symmetric_systolic,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TEST,bandit,fir_systolic_transposed,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TRAINING,bandit,vexriscv_re-place,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TRAINING,bandit,logicnets_jscl,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TRAINING,bandit,rosetta_spam-filter,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TRAINING,bandit,rosetta_3d-rendering,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+TRAINING,bandit,finn_radioml,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+VALIDATION,bandit,t2_cordic_s,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+VALIDATION,bandit,vtr_mcml_v2,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable
+VALIDATION,bandit,amd_mini-isp,W2R,1,not run (blocked),frozen bandit has no W2R prior: configs/policies/bandit_test_frozen.yaml lists W2R as not_applicable

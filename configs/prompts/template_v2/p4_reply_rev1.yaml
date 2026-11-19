@@ -1,0 +1,26 @@
+# Template v2, package P4, revision 1 (the one revision the stop rule allows; P4 was rejected on the bank).
+# Why: P4 met the regret rule (-1.34 noise bands against P1+P2+P3, 95% interval -3.44 to -0.05) and the token and
+# parse-failure targets, but failed its forecast target: forecast direction accuracy 35.2% against a majority
+# baseline of 53.8% (optimistic forecasts; "nothing selectable" never forecast). It also lost P3's effect: with the
+# structured reply, physical facts were cited in 1.1% of replies against 34.0% without P4.
+# What changes (nothing else): the forecast instruction starts from the matching experience line, and P3's
+# physical_facts field is kept as its own field of the structured reply when P3 is on.
+package: P4r
+revises: P4
+changes: [20, "decision 8", "forecast", "revision 1"]
+edits:
+  - change: 20
+    after: "Reply format\n"
+    new: "Reply in the structured output format you are given: one JSON object whose fields come in this order.\n{{REPLY_FIELDS}}\n{{ATTEMPTS_RULE}} The mandate and the forecast must be present exactly when the action is INVOKE_WORKER and null when the action is STOP.\n"
+texts:
+  reasoning: "your reasoning in free text, written first, under 80 words"
+  evidence: "the lines your decision rests on, each cited by its label: a saved state (its alias), an experience line (worker and placement setting) or the brief"
+  evidence_physical: ""
+  physical_facts: "the physical facts that bear on this choice, each with its saved state, if any (there may be none)"
+  options: "at least two options you considered (a mandate, or stopping), each with its expected effect on the goal and on each limit"
+  strategy: "the strategy, one of the listed values"
+  conflict_check: "whether the chosen setting could undo gains already made on the base state, under 40 words"
+  rationale: "why you chose this option, under 200 characters"
+  action: "INVOKE_WORKER or STOP"
+  mandate: "the worker call, or null when you stop"
+  forecast: "the change you expect from this call on the goal and on each limit (the worker's selected result against its base state), or nothing selectable; null when you stop. Start from the experience line of the chosen worker and placement setting, its most frequent outcome (including nothing selectable when limits are respected), and depart from it only for a concrete reason in the saved states"

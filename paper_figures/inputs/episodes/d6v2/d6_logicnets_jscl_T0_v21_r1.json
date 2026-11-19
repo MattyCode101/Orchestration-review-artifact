@@ -1,0 +1,100 @@
+{
+ "approach": "v21",
+ "brief": "T0",
+ "cache_hits": 4,
+ "charged_cpu_s": 32.63,
+ "charged_wall_s": 1907.4455523900688,
+ "completed_at_utc": "2026-11-12T23:28:00.784957+00:00",
+ "descriptions_served": {
+  "cache": 2,
+  "live": 0,
+  "v3": 1
+ },
+ "design": "logicnets_jscl",
+ "episode_id": "d6_logicnets_jscl_T0_v21_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 3.578,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -439.935,
+  "wns_ns": -0.465
+ },
+ "final_state_id": "ae8df4aa0589f658cf46828bad82905c710b8896b407696d463c42f439053375",
+ "finished_at_utc": "2026-11-12T23:28:00+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1376,
+   "prompt": 7103,
+   "thoughts": 0,
+   "total": 8479
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 2,
+  "empty_calls": 0,
+  "mandates": 2,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 2,
+  "stop_after_second_ask": false,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.263,
+  "packed_luts": 37.0,
+  "wns_ns": 0.779
+ },
+ "policy_version": "template_v2.1-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 4,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "r1",
+ "task": {
+  "approach": "v21",
+  "brief": "T0",
+  "design": "logicnets_jscl",
+  "episode_id": "d6_logicnets_jscl_T0_v21_r1",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": 0,
+  "tag": "r1",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

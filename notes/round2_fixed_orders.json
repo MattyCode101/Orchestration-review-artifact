@@ -1,0 +1,66 @@
+{
+ "chosen": {
+  "A": "BA",
+  "A0": "BA",
+  "L2R": "ABC",
+  "P0": "CBA",
+  "T": "BA",
+  "T0": "BA",
+  "W2R": "ABC"
+ },
+ "declared_before_launch": true,
+ "evidence_TRAINING": {
+  "L2R": {
+   "chosen": "ABC",
+   "mean_fraction_of_ceiling_TRAINING": {
+    "ABC": 0.4102,
+    "ACB": 0.3056,
+    "BAC": 0.3041,
+    "BCA": 0.3041,
+    "CAB": 0.1954,
+    "CBA": 0.3041
+   }
+  },
+  "P0": {
+   "chosen": "CBA",
+   "mean_fraction_of_ceiling_TRAINING": {
+    "ABC": 0.0,
+    "ACB": 0.0,
+    "BAC": 0.0769,
+    "BCA": 0.0769,
+    "CAB": 0.2,
+    "CBA": 0.2264
+   }
+  },
+  "W2R": {
+   "chosen": "ABC",
+   "mean_fraction_of_ceiling_TRAINING": {
+    "ABC": 0.2528,
+    "ACB": 0.1824,
+    "BAC": 0.1485,
+    "BCA": 0.1485,
+    "CAB": 0.1452,
+    "CBA": 0.1625
+   }
+  }
+ },
+ "rule": "T0, A0, T, A: fixed_BA as in D6-v2. W2R, L2R, P0: the best of the six frozen worker orders on the five TRAINING designs by mean (max(improvement, 0) / ceiling improvement), power-readiness pass A4; ties by order name.",
+ "schema_version": "round2-fixed-orders-v1",
+ "source_file_sha256": {
+  "data/power_readiness_2026-11-11/A4/cell_finn_radioml_L2R.json": "eea3229db7f69cfde5bf16f541f35f25f9c82bedcbb717d5985e6fadf1ddb93a",
+  "data/power_readiness_2026-11-11/A4/cell_finn_radioml_P0.json": "aaad85754de09361f75cb5506d5e415a08f5cea988b000a3e69bcd44a3c357d7",
+  "data/power_readiness_2026-11-11/A4/cell_finn_radioml_W2R.json": "aaca9c573cb64bd9a0ebe82a752bd34acf00948a9438773a24318c28db175abf",
+  "data/power_readiness_2026-11-11/A4/cell_logicnets_jscl_L2R.json": "0b6736a9ff18d31a0c8095c454ce5c792dd358dea9f3d41207fdf1c799b48090",
+  "data/power_readiness_2026-11-11/A4/cell_logicnets_jscl_P0.json": "789aaaa95ec44fa3147545efb8cd81608a0fe564156f3c01560cce208cb43f85",
+  "data/power_readiness_2026-11-11/A4/cell_logicnets_jscl_W2R.json": "cd2304216fd25f878269b21ac345508d0e2f7e91df1acc9dcbf0b144eb9a1609",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_3d-rendering_L2R.json": "7862830447164f226521b8afacb2c11fd988a0c1e1aaabb83f5ef6024a49616b",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_3d-rendering_P0.json": "4208582aa554e754136a9822500deeba34b66d96074bffe99e3c35b90dfde0b3",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_3d-rendering_W2R.json": "15573519069b78ca7c2873aab972f4b1e3ef3dd71a12772e7a660961eaf9b273",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_spam-filter_L2R.json": "f00fa21212dc4689ee0cf13de91508a6d1ecfc194905c21ca4fb381f7dd40db6",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_spam-filter_P0.json": "83bfad1abad7727630eca6d4ba503c77186079be7c3f4914999552f671688186",
+  "data/power_readiness_2026-11-11/A4/cell_rosetta_spam-filter_W2R.json": "2402a025553507e490c980afc804f96bfad9a69f54ce6d7185ce687981ffaf1f",
+  "data/power_readiness_2026-11-11/A4/cell_vexriscv_re-place_L2R.json": "c48737c26ff4c8d87e7bbb0d46facdb045eaaa44a477550a6f9d3c42968185f5",
+  "data/power_readiness_2026-11-11/A4/cell_vexriscv_re-place_P0.json": "238832d4903fdc55e2cd850ed0e9c11189b377087395100cb3dbc892f2fb01f8",
+  "data/power_readiness_2026-11-11/A4/cell_vexriscv_re-place_W2R.json": "549319d9a2cda888ecf16df853b8479a46684c23c26bdab431e501612ac93918"
+ }
+}

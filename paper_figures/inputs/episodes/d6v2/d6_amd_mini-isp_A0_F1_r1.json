@@ -1,0 +1,98 @@
+{
+ "approach": "F1",
+ "brief": "A0",
+ "cache_hits": 3,
+ "charged_cpu_s": 2339.17,
+ "charged_wall_s": 1958.0908998064697,
+ "completed_at_utc": "2026-11-12T23:48:41.701064+00:00",
+ "descriptions_served": null,
+ "design": "amd_mini-isp",
+ "episode_id": "d6_amd_mini-isp_A0_F1_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.523,
+  "ffs": 4489.0,
+  "netlist_luts": 3169.0,
+  "packed_luts": 3029.0,
+  "tns_ns": -684.602,
+  "wns_ns": -0.9
+ },
+ "final_state_id": "d9c0e825a62fcd44381a175061fc75314c40dd6ecc424267242b92e2e5e17c72",
+ "finished_at_utc": "2026-11-12T23:48:41+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 4,
+  "fallbacks": 0,
+  "model_calls": 4,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 827,
+   "prompt": 9355,
+   "thoughts": 0,
+   "total": 10182
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 1,
+  "placement_kept": 2,
+  "respect_limits": 4,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 3,
+ "noise": {
+  "dynamic_power_w": 0.011,
+  "packed_luts": 31.0,
+  "wns_ns": 0.047
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-fd4d3843f6-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3202.0,
+  "packed_luts": 3059.0,
+  "tns_ns": -327.374,
+  "wns_ns": -0.904
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r1",
+ "task": {
+  "approach": "F1",
+  "brief": "A0",
+  "design": "amd_mini-isp",
+  "episode_id": "d6_amd_mini-isp_A0_F1_r1",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "seed": 0,
+  "tag": "r1",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

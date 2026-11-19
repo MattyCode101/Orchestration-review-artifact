@@ -1,0 +1,33 @@
+{
+ "approach": "random_1",
+ "brief": "W2R",
+ "cache_hits": 1,
+ "cell_brief_for_workers": "P0",
+ "charged_cpu_s": 1120.48,
+ "charged_wall_s": 1210.8101496882737,
+ "completed_at_utc": "2026-11-12T15:38:36.939035+00:00",
+ "design": "vtr_mcml_v2",
+ "design_split": "development",
+ "episode_id": "dev_vtr_mcml_v2_W2R_random_1_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 8.317,
+  "ffs": 15546.0,
+  "netlist_luts": 55765.0,
+  "packed_luts": 45648.0,
+  "tns_ns": -70025.938,
+  "wns_ns": -13.017
+ },
+ "final_state_id": "e316637464d9d887ad2e9f547a363ae0748ef4125f7db044234b519bf91d4c47",
+ "llm": null,
+ "new_real_runs": 0,
+ "policy_version": "1.0-frozen-seed-1-relevant",
+ "run_no": 0,
+ "runs_used": 1,
+ "schema_version": "campaign-result-v1",
+ "scope": "development",
+ "stop_reason": "no_recipes_available",
+ "tag": "x",
+ "tier": 3,
+ "validation_status": "pass"
+}

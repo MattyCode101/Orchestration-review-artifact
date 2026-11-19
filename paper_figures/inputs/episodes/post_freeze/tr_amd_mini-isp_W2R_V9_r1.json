@@ -1,0 +1,104 @@
+{
+ "approach": "V9",
+ "brief": "W2R",
+ "cache_hits": 6,
+ "charged_cpu_s": 410.53000000000003,
+ "charged_wall_s": 2450.40835686028,
+ "completed_at_utc": "2026-11-16T10:32:43.318957+00:00",
+ "descriptions_served": {
+  "cache": 0,
+  "live": 0,
+  "v3": 0
+ },
+ "design": "amd_mini-isp",
+ "episode_id": "tr_amd_mini-isp_W2R_V9_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3199.0,
+  "packed_luts": 3056.0,
+  "tns_ns": -326.972,
+  "wns_ns": -0.904
+ },
+ "final_state_id": "2ef4b27a8379d2fedbd5a02274d7f07b02e5941f95d0a7b5b192c75ab8d01e13",
+ "finished_at_utc": "2026-11-16T10:32:43+00:00",
+ "group": "VALIDATION",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 4,
+  "fallbacks": 0,
+  "model_calls": 4,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1767,
+   "prompt": 7757,
+   "thoughts": 0,
+   "total": 9524
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 0,
+  "placement_kept": 2,
+  "respect_limits": 4,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "area",
+   "timing",
+   "power"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.011,
+  "packed_luts": 31.0,
+  "wns_ns": 0.047
+ },
+ "policy_version": "template_v2.2_V9-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1-v22a-EpHrcsTU",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "tr-result-v1",
+ "scope": "dev",
+ "start_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3202.0,
+  "packed_luts": 3059.0,
+  "tns_ns": -327.374,
+  "wns_ns": -0.904
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r1",
+ "task": {
+  "approach": "V9",
+  "brief": "W2R",
+  "design": "amd_mini-isp",
+  "episode_id": "tr_amd_mini-isp_W2R_V9_r1",
+  "group": "VALIDATION",
+  "model": "gemini-3.1-flash-lite",
+  "scope": "dev",
+  "seed": 0,
+  "tag": "r1",
+  "temperature": 0.3,
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

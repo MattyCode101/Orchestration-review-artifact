@@ -1,0 +1,36 @@
+{
+ "files": {
+  "area.yaml": "2d1433bc31e5e7a3a930115aaf6f2bf65c7af8b03aa5f0161b5fcf7793903975",
+  "power.yaml": "b9fb2053373cbacec7316038db742fe14b948ea1d834c5c97b90b95bc3fb273d",
+  "recipes.yaml": "118292622fdd850b2ca52630ca948525f69c5f156d9e2d5575bc08f099e80c96",
+  "timing.yaml": "44284346ab8ad1f077a9f331c0927a0cd2a0dfee7354b01aabf3c123ba2ca82b"
+ },
+ "provenance": {
+  "cache_snapshot_keys_sha256": "a4d8982ec94154e43decc39cb5aa819927f7dc5da4e2e91cfcb9f1e692b85c9e",
+  "designs": [
+   "vexriscv_re-place",
+   "logicnets_jscl",
+   "rosetta_spam-filter",
+   "rosetta_3d-rendering",
+   "finn_radioml"
+  ],
+  "final_model_sha256": {
+   "area": "bab0120208195f6cb0e0cc2782c0936901058676743354aed8639257e41b3b06",
+   "timing": "eb1cc3f9eeef0ec939fb23a266d98b4d6c86e865013ac5cf7a39c0a751afd932"
+  },
+  "generator_sha256": {
+   "orch/analysis/profiles.py": "ba7d99632af6f7178d2afc6fddd5c595cf0ac6d2beb8b7b96557d2db07727895",
+   "scripts/saturday_profiles.py": "eb4b7331cb6649a4ea3b99a8ef73a1f2aa8a84c4e5e5c1e15eb923f8f8656f82"
+  },
+  "meter_version": "0dd0cf9424bbb7ab20dc5cf981bc35068c4ba08612ecd0f6c46098e6bf880bbe",
+  "oracle_miss_reasons": {
+   "not_in_snapshot": 35
+  },
+  "outputs_with_stored_amd_pass": 92,
+  "outputs_without_amd_record_accepted": 143,
+  "training_designs_only": true,
+  "worker_c_ranking_sha256": "4d851baaa59a013599a2dc3f62ef5cd268ab43c8989f3f48c4b298a52050ae04"
+ },
+ "schema_version": "behaviour-profile-v1",
+ "written_at_utc": "2026-11-06T21:37:42+00:00"
+}

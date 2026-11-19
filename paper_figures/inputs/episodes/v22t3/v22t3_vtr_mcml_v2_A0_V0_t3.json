@@ -1,0 +1,99 @@
+{
+ "approach": "V0",
+ "brief": "A0",
+ "cache_hits": 3,
+ "charged_cpu_s": 9424.8,
+ "charged_wall_s": 4883.012620322406,
+ "completed_at_utc": "2026-11-14T14:19:29.497412+00:00",
+ "descriptions_served": null,
+ "design": "vtr_mcml_v2",
+ "episode_id": "v22t3_vtr_mcml_v2_A0_V0_t3",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 7.963,
+  "ffs": 15467.0,
+  "netlist_luts": 53214.0,
+  "packed_luts": 44587.0,
+  "tns_ns": -65097.824,
+  "wns_ns": -13.403
+ },
+ "final_state_id": "332c7957708ff0553d14864d35935a4d709b22e9426f018fcb906f9c059d7a29",
+ "finished_at_utc": "2026-11-14T14:19:29+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 5,
+  "fallbacks": 0,
+  "model_calls": 5,
+  "noted_asks": 1,
+  "repairs": 0,
+  "tokens": {
+   "completion": 903,
+   "prompt": 12390,
+   "thoughts": 0,
+   "total": 13293
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 3,
+  "stop_after_second_ask": true,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 1,
+  "workers": [
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 2,
+ "noise": {
+  "dynamic_power_w": 0.012,
+  "packed_luts": 10.0,
+  "wns_ns": 0.47
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-fd4d3843f6-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 5,
+ "schema_version": "v22-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 8.319,
+  "ffs": 15546.0,
+  "netlist_luts": 55791.0,
+  "packed_luts": 45673.0,
+  "tns_ns": -70243.43,
+  "wns_ns": -13.421
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "t3",
+ "task": {
+  "approach": "V0",
+  "brief": "A0",
+  "design": "vtr_mcml_v2",
+  "episode_id": "v22t3_vtr_mcml_v2_A0_V0_t3",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "scored_cell": true,
+  "seed": 5,
+  "sub": "2",
+  "tag": "t3",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

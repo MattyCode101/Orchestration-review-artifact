@@ -1,0 +1,76 @@
+# briefs_round2_final.yaml  FROZEN 2026-11-13 (test-run preparation) from the draft configs/briefs_round2.yaml.
+# Read by orch/contract/briefs_round2.py only (hash-checked against notes/round2_briefs_freeze.sha256). Nothing here changes a frozen file:
+# the frozen loader orch/contract/brief_text.py still reads configs/briefs.yaml (T0, A0, T, A, P0), and the blocks below for those five
+# briefs are byte copies of it, re-checked by the round-2 loader on every load.
+# Seven briefs, budget 6 recipe runs, start = B2:
+#   T0  main     maximise WNS            hold packed LUTs (<= start)
+#   A0  main     minimise packed LUTs    hold WNS (>= start)
+#   T   control  maximise WNS            packed LUTs <= 1.01 * start      (looser control of T0)
+#   A   control  minimise packed LUTs    WNS >= start - 0.100 ns          (looser control of A0)
+#   W2R          maximise WNS            hold packed LUTs (<= start) and power (<= start + band)
+#   L2R          minimise packed LUTs    hold WNS (>= start) and power (<= start + band)
+#   P0           minimise dynamic power  hold WNS (>= start) and packed LUTs (<= start)
+# schema_version and common: byte copy of configs/briefs.yaml lines 1-18.
+schema_version: 1
+common:
+  start_state: B2
+  budget: {recipe_runs: 6}
+  final_pick: best brief-valid state visited; ties broken by the better non-objective metric, then by fewer runs; if none, the start (no change)
+  validity:
+    - fully_routed
+    - zero_route_and_drc_errors
+    - constraint_fingerprint_equals_start
+    - clock_digest_equals_start
+    - no_leftover_dont_touch_or_fixed_loc_bel
+    - amd_simulation_pass
+  metrics: {timing: wns_ns, area: packed_clb_luts}
+  reporting:
+    timing_gain: fmax_percent
+    area_gain: lut_cut_percent
+    also: tns_ns, netlist_lut_cells, ffs
+  noise: flagged only, never used to accept or reject
+round2:
+  final_pick: the best brief-valid state visited that has an AMD simulation PASS against the start checkpoint (B2); ties by the better non-objective metric, then fewer runs; if none, the start (no change)
+  power_limit:
+    rule: "dynamic_power_w <= start + power_band"
+    inclusive: true
+    power_band: the design's dynamic_power_w band in W (noise file value, whole mW as recorded), added as the offset of a '<=' term with factor 1.0
+    band_source: configs/noise_round2_test.yaml for the five TEST designs (copy of configs/noise_round2.yaml plus recorded round-1 values; see its header); configs/noise_round2.yaml for the training and development designs that have an entry
+    wns_and_lut_limits: stay strict ("<= start" / ">= start"), as in round 1
+  p0_gain_inside_band: a P0 power gain that is not larger than the design's power band counts as no change (reporting rule; validity and the final pick are unchanged)
+  loader: orch/contract/briefs_round2.py
+briefs:
+  T0:
+    role: main
+    objective: {metric: wns_ns, direction: maximise}
+    limit: {metric: packed_clb_luts, rule: "<= start"}
+  A0:
+    role: main
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limit: {metric: wns_ns, rule: ">= start"}
+  T:
+    role: control
+    objective: {metric: wns_ns, direction: maximise}
+    limit: {metric: packed_clb_luts, rule: "<= 1.01 * start"}
+  A:
+    role: control
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limit: {metric: wns_ns, rule: ">= start - 0.100"}
+  W2R:
+    role: secondary
+    objective: {metric: wns_ns, direction: maximise}
+    limits:
+      - {metric: packed_clb_luts, rule: "<= start"}
+      - {metric: dynamic_power_w, rule: "<= start + power_band"}
+  L2R:
+    role: secondary
+    objective: {metric: packed_clb_luts, direction: minimise}
+    limits:
+      - {metric: wns_ns, rule: ">= start"}
+      - {metric: dynamic_power_w, rule: "<= start + power_band"}
+  P0:
+    role: secondary
+    objective: {metric: dynamic_power_w, direction: minimise}
+    limits:
+      - {metric: wns_ns, rule: ">= start"}
+      - {metric: packed_clb_luts, rule: "<= start"}

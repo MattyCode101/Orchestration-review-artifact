@@ -1,0 +1,101 @@
+{
+ "approach": "V0",
+ "brief": "A0",
+ "cache_hits": 5,
+ "charged_cpu_s": 1434.75,
+ "charged_wall_s": 4730.386957751587,
+ "completed_at_utc": "2026-11-14T13:07:24.385003+00:00",
+ "descriptions_served": null,
+ "design": "t2_cordic_s",
+ "episode_id": "v22t3_t2_cordic_s_A0_V0_t1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.237,
+  "ffs": 756.0,
+  "netlist_luts": 736.0,
+  "packed_luts": 727.0,
+  "tns_ns": -54.004,
+  "wns_ns": -0.222
+ },
+ "final_state_id": "638d429b12084ae37babcb38b645d626765ab0a0df7fa8882b0d2624720466b9",
+ "finished_at_utc": "2026-11-14T13:07:24+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 5,
+  "fallbacks": 0,
+  "model_calls": 5,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 996,
+   "prompt": 12496,
+   "thoughts": 0,
+   "total": 13492
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 5,
+  "empty_calls": 1,
+  "mandates": 5,
+  "nothing_selected_calls": 0,
+  "placement_kept": 3,
+  "respect_limits": 5,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 1,
+ "noise": {
+  "dynamic_power_w": 0.008,
+  "packed_luts": 2.0,
+  "wns_ns": 0.033
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-fd4d3843f6-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "v22-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 0.25,
+  "ffs": 748.0,
+  "netlist_luts": 737.0,
+  "packed_luts": 730.0,
+  "tns_ns": -86.668,
+  "wns_ns": -0.416
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "t1",
+ "task": {
+  "approach": "V0",
+  "brief": "A0",
+  "design": "t2_cordic_s",
+  "episode_id": "v22t3_t2_cordic_s_A0_V0_t1",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "scored_cell": true,
+  "seed": 3,
+  "sub": "1",
+  "tag": "t1",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

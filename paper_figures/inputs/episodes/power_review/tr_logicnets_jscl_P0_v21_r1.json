@@ -1,0 +1,102 @@
+{
+ "approach": "v21",
+ "brief": "P0",
+ "cache_hits": 4,
+ "charged_cpu_s": 2240.11,
+ "charged_wall_s": 1534.6052901111543,
+ "completed_at_utc": "2026-11-13T22:12:35.847215+00:00",
+ "descriptions_served": {
+  "cache": 0,
+  "live": 4,
+  "v3": 1
+ },
+ "design": "logicnets_jscl",
+ "episode_id": "tr_logicnets_jscl_P0_v21_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "final_state_id": "d7671ae14d9a3800dc416a2eb29494a2378e4119efdcac4ecde9eb28c58e8fa4",
+ "finished_at_utc": "2026-11-13T22:12:35+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1328,
+   "prompt": 7519,
+   "thoughts": 0,
+   "total": 8847
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 2,
+  "empty_calls": 0,
+  "mandates": 2,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 2,
+  "stop_after_second_ask": false,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 0,
+  "workers": [
+   "power",
+   "power"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.263,
+  "packed_luts": 37.0,
+  "wns_ns": 0.779
+ },
+ "policy_version": "template_v2.1-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 4,
+ "schema_version": "tr-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "r1",
+ "task": {
+  "approach": "v21",
+  "brief": "P0",
+  "design": "logicnets_jscl",
+  "episode_id": "tr_logicnets_jscl_P0_v21_r1",
+  "group": "TRAINING",
+  "model": "gemini-3.1-flash-lite",
+  "scope": "train",
+  "seed": 0,
+  "tag": "r1",
+  "temperature": 0.3,
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

@@ -1,0 +1,27 @@
+# Template v2.1, frozen 2026-11-12 (the authors' decision 1 after D1-v2; post-hoc amendment notes/template_v2.1_amendment.md):
+# template v2 (P1 + P2 + P3) plus P4 revision 1 (P4r: the structured reply with reasoning, evidence, physical_facts,
+# options, rationale and a forecast anchored on the experience line). Template v2 stays frozen as it is.
+# Policy: orch.policies.round2_harness.V21Policy (the frozen V2Policy plus the stop note and free-text truncation in
+# code) with orch.policies.v2_prompt.Variant("template_v2.1", ("P1", "P2", "P3", "P4r"), wording="W1"); load the
+# texts with orch.policies.v2_prompt.load_assets(project). Episodes: orch.episode_r2.run_episode_r2(options=ROUND2).
+name: template_v2.1
+packages: [P1, P2, P3, P4r]
+worker_wording: W1
+noise_view: categories
+template: configs/prompts/template_v2/assembled/orchestrator3_p1234r.txt
+template_sha256: ed30564abde76a5f3d1f36d6c0755fc17510a2121f58074f1168a481224d5f34
+package_files:
+  P1: configs/prompts/template_v2/p1_clarity.yaml
+  P2: configs/prompts/template_v2/p2_neutral.yaml
+  P3: configs/prompts/template_v2/p3_physical.yaml
+  P4r: configs/prompts/template_v2/p4_reply_rev1.yaml
+  wordings: configs/prompts/template_v2/worker_descriptions.yaml
+experience_calls: configs/experience/calls_v2.json
+view: {history: true, physical: "every saved state against the start and its parent, compact fields", experience: "pooled calls, leave-one-design-out (training designs; all training designs for a development design), lines from at least four designs"}
+reply: "structured output, sent as the response schema with the field list in the prompt: reasoning, evidence, physical_facts, options, rationale, action, mandate (placement: may change / must not change), forecast"
+harness: "V21Policy: listed workers and states, attempts within the remaining budget, the repeat rule (legal until the view shows no options left), the guards, free-text truncation (round2_harness.TEXT_LIMITS), the stop note when the loop asks again; run_episode_r2 with ROUND2: empty calls are observations, stop rule; the episode engine keeps budget, validity and the final pick"
+model: gemini-3.1-flash-lite
+temperature: 0.3
+seeds: [0, 1, 2]
+noise: configs/noise_round2.yaml
+amendment: notes/template_v2.1_amendment.md

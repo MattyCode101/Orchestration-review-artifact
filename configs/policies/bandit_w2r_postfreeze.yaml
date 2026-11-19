@@ -1,0 +1,37 @@
+declared: 'decision of Tue 17 Nov 2026: fill the missing Learned Bandit cell (three workers,
+  timing-first W2R, TEST) as a labelled post-freeze row; the prior is fitted on 17
+  Nov from TRAINING and VALIDATION call records only, with the procedure of the frozen
+  L2R and P0 priors; no frozen file is edited.'
+fit_designs:
+- amd_mini-isp
+- finn_radioml
+- logicnets_jscl
+- rosetta_3d-rendering
+- rosetta_spam-filter
+- t2_cordic_s
+- vexriscv_re-place
+- vtr_mcml_v2
+frozen_config_sha256: 376da80376e685a9f149eea5113049b1a72d98839f538f4f1f3e4d360b359555
+plan: notes/bandit_w2r_postfreeze_plan.md
+plan_sha256: 59e621b9c309f8e94bb96a700094455fd7d5b3c91c644647bd475e92c3bd6a8a
+post_freeze: true
+prior: data/bandit_2026-11-11/priors_postfreeze/feat_drop_W2R_all8plus.json
+prior_sha256: fc5eb0ac6dcc01834592a01d6885197760015dd085092f395f333221b58ca90d
+records:
+  development: ca1c9a9ecd07fe3d7f7fba6c6dd387469cf8374d4b0edbc7aa07a764efa977c9
+  training: 2fbee4cdc3f2311a29350f60931890980e0367aa38604fbdc092acd2e3a77e64
+  w2r_postfreeze: 7ecf5fc0528abe52fec1929cb28ea6d37850b7f6633c99c2b00a6647d7abd6a5
+samples: 935
+schema_version: bandit-w2r-postfreeze-v1
+sigma: 0.5
+signature:
+- wns_ns
+- max
+- - - dynamic_power_w
+    - <=
+    - 1.0
+    - 0.0
+  - - packed_luts
+    - <=
+    - 1.0
+    - 0.0

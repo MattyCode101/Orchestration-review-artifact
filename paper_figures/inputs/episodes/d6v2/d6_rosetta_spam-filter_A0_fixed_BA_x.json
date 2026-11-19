@@ -1,0 +1,83 @@
+{
+ "approach": "fixed_BA",
+ "brief": "A0",
+ "cache_hits": 6,
+ "charged_cpu_s": 5969.86,
+ "charged_wall_s": 4310.262492107227,
+ "completed_at_utc": "2026-11-12T23:26:42.531921+00:00",
+ "descriptions_served": null,
+ "design": "rosetta_spam-filter",
+ "episode_id": "d6_rosetta_spam-filter_A0_fixed_BA_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 1.777,
+  "ffs": 15644.0,
+  "netlist_luts": 2889.0,
+  "packed_luts": 4684.0,
+  "tns_ns": -1652.966,
+  "wns_ns": -0.629
+ },
+ "final_state_id": "c56c5d513c50fae5b65f85583181b5175e11027209684d83f660107bada16ea5",
+ "finished_at_utc": "2026-11-12T23:26:42+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 0,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 11.000300000000001,
+  "wns_ns": 0.075
+ },
+ "policy_version": "1.0-frozen",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 1.67,
+  "ffs": 13339.0,
+  "netlist_luts": 3018.0,
+  "packed_luts": 5366.0,
+  "tns_ns": -800.583,
+  "wns_ns": -0.675
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "fixed_BA",
+  "brief": "A0",
+  "design": "rosetta_spam-filter",
+  "episode_id": "d6_rosetta_spam-filter_A0_fixed_BA_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": null,
+  "tag": "x",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

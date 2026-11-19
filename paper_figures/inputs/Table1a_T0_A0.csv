@@ -1,0 +1,53 @@
+# source: Paper_Tables.md, Table 1a (final, 15 Nov evening: share_of_ceiling_pct is the recomputed ceiling of the mechanism note, share_of_section7_ceiling_pct the pre-recompute figure); data scope: TEST (5 designs, briefs T0 and A0, 7 headroom cells)
+row,key,repeats,brief_group,cells_with_headroom,share_mean_pct,share_median_pct,sd_over_repeats_pct,share_of_ceiling_pct,share_of_section7_ceiling_pct,ceiling_basis,cells_improved_beyond_noise,wtl_vs_V9_cells,wtl_vs_V9_matched
+"Exhaustive 3-step (reference, AMD-passed)",ref3,-,T0,3,100.000,100.000,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+"Exhaustive 3-step (reference, AMD-passed)",ref3,-,A0,4,100.000,100.000,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+"Exhaustive 3-step (reference, AMD-passed)",ref3,-,pooled,7,100.000,100.000,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+"Budget-matched ceiling, 6 runs (strict, recomputed; lower bound)",ceiling,-,T0,3,67.704,75.579,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+"Budget-matched ceiling, 6 runs (strict, recomputed; lower bound)",ceiling,-,A0,4,99.147,99.933,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+"Budget-matched ceiling, 6 runs (strict, recomputed; lower bound)",ceiling,-,pooled,7,85.671,96.721,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+Exhaustive 2-step,ref2,-,T0,3,58.593,61.677,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+Exhaustive 2-step,ref2,-,A0,4,74.336,98.672,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+Exhaustive 2-step,ref2,-,pooled,7,67.589,90.374,,,,"recomputed (mechanism note, Gap_Split csv)",,,
+Fixed order BA,fixed,1,T0,3,46.838,59.880,,66.416,70.794,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+Fixed order BA,fixed,1,A0,4,64.232,79.907,,64.991,86.655,"recomputed (mechanism note, Gap_Split csv)",3,0/3/1,0/9/3
+Fixed order BA,fixed,1,pooled,7,56.777,61.141,,65.602,78.725,"recomputed (mechanism note, Gap_Split csv)",5,0/6/1,0/18/3
+Grid,grid,1,T0,3,34.350,34.132,,49.349,53.069,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+Grid,grid,1,A0,4,15.167,1.078,,15.664,20.885,"recomputed (mechanism note, Gap_Split csv)",2,0/1/3,0/3/9
+Grid,grid,1,pooled,7,23.388,14.195,,30.100,36.977,"recomputed (mechanism note, Gap_Split csv)",4,0/4/3,0/12/9
+Beam (A+B),beam,1,T0,3,31.646,34.132,,49.993,52.625,"recomputed (mechanism note, Gap_Split csv)",2,1/2/0,3/6/0
+Beam (A+B),beam,1,A0,4,40.432,32.692,,41.248,54.998,"recomputed (mechanism note, Gap_Split csv)",2,0/2/2,0/6/6
+Beam (A+B),beam,1,pooled,7,36.666,34.132,,44.996,53.812,"recomputed (mechanism note, Gap_Split csv)",4,1/4/2,3/12/6
+Goal-repair v1,v1,1,T0,3,43.814,54.724,,60.320,64.321,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+Goal-repair v1,v1,1,A0,4,63.371,78.382,,64.212,85.616,"recomputed (mechanism note, Gap_Split csv)",3,0/3/1,0/9/3
+Goal-repair v1,v1,1,pooled,7,54.990,61.677,,62.544,74.969,"recomputed (mechanism note, Gap_Split csv)",5,0/6/1,0/18/3
+Goal-repair v2,v2,1,T0,3,45.003,58.289,,61.892,66.113,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+Goal-repair v2,v2,1,A0,4,65.019,80.037,,65.779,87.705,"recomputed (mechanism note, Gap_Split csv)",3,1/2/1,3/6/3
+Goal-repair v2,v2,1,pooled,7,56.440,61.677,,64.113,76.909,"recomputed (mechanism note, Gap_Split csv)",5,1/5/1,3/15/3
+Bandit,bandit,1,T0,3,20.431,15.508,,29.806,31.109,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+Bandit,bandit,1,A0,4,44.622,41.577,,45.458,60.611,"recomputed (mechanism note, Gap_Split csv)",2,1/2/1,3/6/3
+Bandit,bandit,1,pooled,7,34.254,15.508,,38.750,45.860,"recomputed (mechanism note, Gap_Split csv)",4,1/5/1,3/15/3
+Random (3 seeds),random,3,T0,3,33.192,37.136,12.462,44.548,47.373,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/8/1
+Random (3 seeds),random,3,A0,4,27.024,32.574,12.238,27.278,36.371,"recomputed (mechanism note, Gap_Split csv)",3,0/1/3,0/4/8
+Random (3 seeds),random,3,pooled,7,29.667,36.859,12.328,34.680,41.872,"recomputed (mechanism note, Gap_Split csv)",5,0/4/3,0/12/9
+LLM V9 (main),V9,3,T0,3,44.775,58.170,5.994,61.341,65.554,"recomputed (mechanism note, Gap_Split csv)",2,,
+LLM V9 (main),V9,3,A0,4,66.033,83.706,0.000,66.878,89.170,"recomputed (mechanism note, Gap_Split csv)",3,,
+LLM V9 (main),V9,3,pooled,7,56.922,61.677,2.569,64.505,77.362,"recomputed (mechanism note, Gap_Split csv)",5,,
+LLM F1-R1,F1-R1,3,T0,3,37.744,37.077,0.163,52.038,54.950,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+LLM F1-R1,F1-R1,3,A0,4,58.550,73.301,3.603,59.313,79.084,"recomputed (mechanism note, Gap_Split csv)",3,0/1/3,1/5/6
+LLM F1-R1,F1-R1,3,pooled,7,49.633,60.063,2.112,56.195,67.017,"recomputed (mechanism note, Gap_Split csv)",5,0/4/3,1/14/6
+LLM v2.1,v2.1,3,T0,3,34.446,43.313,10.050,49.053,52.288,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+LLM v2.1,v2.1,3,A0,4,53.762,59.290,10.487,54.588,72.784,"recomputed (mechanism note, Gap_Split csv)",3,0/3/1,0/10/2
+LLM v2.1,v2.1,3,pooled,7,45.484,43.313,5.371,52.216,62.536,"recomputed (mechanism note, Gap_Split csv)",5,0/6/1,0/19/2
+LLM V3,V3,3,T0,3,35.430,43.313,12.059,50.136,53.583,"recomputed (mechanism note, Gap_Split csv)",2,0/3/0,0/9/0
+LLM V3,V3,3,A0,4,59.872,71.509,10.508,60.706,80.941,"recomputed (mechanism note, Gap_Split csv)",3,0/3/1,0/11/1
+LLM V3,V3,3,pooled,7,49.397,48.782,9.685,56.176,67.262,"recomputed (mechanism note, Gap_Split csv)",5,0/6/1,0/20/1
+LLM V6,V6,3,T0,3,27.295,22.754,3.213,41.185,44.134,"recomputed (mechanism note, Gap_Split csv)",1,0/2/1,0/8/1
+LLM V6,V6,3,A0,4,48.625,50.134,10.488,49.079,65.438,"recomputed (mechanism note, Gap_Split csv)",3,0/2/2,0/8/4
+LLM V6,V6,3,pooled,7,39.483,44.088,5.590,45.696,54.786,"recomputed (mechanism note, Gap_Split csv)",4,0/4/3,0/16/5
+LLM GA-R1 (direct control),GA-R1,3,T0,3,40.827,37.077,1.037,60.215,63.128,"recomputed (mechanism note, Gap_Split csv)",2,1/2/0,3/6/0
+LLM GA-R1 (direct control),GA-R1,3,A0,4,50.020,61.578,2.685,50.691,67.588,"recomputed (mechanism note, Gap_Split csv)",3,0/1/3,0/3/9
+LLM GA-R1 (direct control),GA-R1,3,pooled,7,46.080,57.772,1.370,54.773,65.358,"recomputed (mechanism note, Gap_Split csv)",5,1/3/3,3/9/9
+"ChatGPT, V9 template",V9 (ChatGPT),1,T0,3,32.918,37.077,,39.241,42.154,"recomputed (mechanism note, Gap_Split csv)",1,0/2/1,0/2/1
+"ChatGPT, V9 template",V9 (ChatGPT),1,A0,4,66.033,83.706,,66.878,89.170,"recomputed (mechanism note, Gap_Split csv)",3,0/4/0,0/4/0
+"ChatGPT, V9 template",V9 (ChatGPT),1,pooled,7,51.841,61.677,,55.033,65.662,"recomputed (mechanism note, Gap_Split csv)",4,0/6/1,0/6/1

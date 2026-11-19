@@ -1,0 +1,27 @@
+# Template v2, package P2 (neutral framing): prompt-improvement changes 11 to 15.
+# Template edits below; code-rendered parts: the placement words "placement may change" and "placement must not
+# change" in cards, state list and experience (change 11), the reply schema without the strategy label and
+# conflict_check (changes 12 and 14), and the fixed experience lines (change 15 = build-review defects 1, 3, 4,
+# 5: orch/policies/v2_experience.py with configs/experience/calls_v2.json).
+package: P2
+changes: [11, 12, 13, 14, 15]
+edits:
+  - change: 11  # symmetric placement setting in the mandate definition
+    old: "whether the worker must preserve the existing placement"
+    new: "whether placement may change"
+  - change: 12  # protect-gains framing replaced by one neutral fact; same-length notes for both settings
+    old: "- Preserving the placement keeps earlier gains on that state safe but limits what the worker can change; on a state where nothing has been gained yet there is nothing to protect. Allowing re-placing lets the worker move the whole design, which can undo earlier gains and can change any metric."
+    new: "- Placement may change: the worker may move the whole design; this allows larger changes, in either direction, to any metric.\n- Placement must not change: the worker keeps the existing placement; this limits changes, in either direction, to every metric."
+  - change: 13  # principles as considerations with parallel phrasing; deletes the protect-gains principle (change 12)
+    between: ["Principles\n", "\nThe brief\n"]
+    new: "Considerations (guides, not rules)\n- Push: the worker whose objective matches the goal usually moves the goal most; check its experience lines.\n- Repair: when a saved state improves the goal but breaks a limit, the worker whose objective is that limit's metric can start from that state and try to bring the limit back.\n- Backtrack: an earlier saved state can be a better base when later states break limits or gained nothing beyond noise.\n- Stop: stopping leaves budget unused; it makes sense when no option you have not tried is likely to help.\n- Attempts: more attempts try more options in one call but spend more of the budget; experience lines show how often each worker and setting returns a usable result.\n"
+  - change: 14  # no strategy label in the reply
+    old: "Choose the strategy from: {{STRATEGIES}}. Keep state_diagnosis under {{MAX_DIAGNOSIS_WORDS}} words, conflict_check under {{MAX_CONFLICT_WORDS}} words and rationale_summary under {{MAX_RATIONALE_CHARS}} characters."
+    new: "Keep state_diagnosis under {{MAX_DIAGNOSIS_WORDS}} words and rationale_summary under {{MAX_RATIONALE_CHARS}} characters."
+  - change: 12  # no "could this undo gains" check in the reply
+    old: " In conflict_check, say whether the chosen setting could undo gains already made on the base state."
+    new: ""
+texts:
+  experience_header: "Past experience with the workers on other designs"
+  experience_intro: "Each line pools the calls of one worker with one placement setting, made on saved states of other designs with your brief's limits respected. It says how many calls and designs it rests on; a line resting on fewer than four designs is left out. Frequencies of changes are shares of the calls that returned a result."
+  experience_empty: "No line rests on four or more other designs for this brief, so no experience is shown."

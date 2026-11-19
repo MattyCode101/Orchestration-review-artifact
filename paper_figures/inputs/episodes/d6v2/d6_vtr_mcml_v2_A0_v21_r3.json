@@ -1,0 +1,102 @@
+{
+ "approach": "v21",
+ "brief": "A0",
+ "cache_hits": 4,
+ "charged_cpu_s": 5864.679999999999,
+ "charged_wall_s": 8663.034020951018,
+ "completed_at_utc": "2026-11-13T01:26:15.188835+00:00",
+ "descriptions_served": {
+  "cache": 5,
+  "live": 1,
+  "v3": 0
+ },
+ "design": "vtr_mcml_v2",
+ "episode_id": "d6_vtr_mcml_v2_A0_v21_r3",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 7.916,
+  "ffs": 15464.0,
+  "netlist_luts": 52696.0,
+  "packed_luts": 44084.0,
+  "tns_ns": -69019.664,
+  "wns_ns": -12.961
+ },
+ "final_state_id": "f6907c42682742f1062aee690a4e8485b7afe902d8e88c33cbfb78d5751db881",
+ "finished_at_utc": "2026-11-13T01:26:15+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 6,
+  "fallbacks": 0,
+  "model_calls": 6,
+  "noted_asks": 1,
+  "repairs": 0,
+  "tokens": {
+   "completion": 2997,
+   "prompt": 18597,
+   "thoughts": 0,
+   "total": 21594
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 1,
+  "mandates": 4,
+  "nothing_selected_calls": 0,
+  "placement_kept": 3,
+  "respect_limits": 4,
+  "stop_after_second_ask": true,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 1,
+  "workers": [
+   "area",
+   "timing",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 1,
+ "noise": {
+  "dynamic_power_w": 0.012,
+  "packed_luts": 10.0,
+  "wns_ns": 0.47
+ },
+ "policy_version": "template_v2.1-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 5,
+ "schema_version": "d6v2-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 8.319,
+  "ffs": 15546.0,
+  "netlist_luts": 55791.0,
+  "packed_luts": 45673.0,
+  "tns_ns": -70243.43,
+  "wns_ns": -13.421
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "r3",
+ "task": {
+  "approach": "v21",
+  "brief": "A0",
+  "design": "vtr_mcml_v2",
+  "episode_id": "d6_vtr_mcml_v2_A0_v21_r3",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "seed": 2,
+  "tag": "r3",
+  "tier": 3
+ },
+ "tier": 3,
+ "validation_status": "pass"
+}

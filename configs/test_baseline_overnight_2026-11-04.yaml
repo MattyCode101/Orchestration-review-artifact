@@ -1,0 +1,40 @@
+schema_version: test-baseline-overnight-v1
+test_data_root: data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04
+b2_source: data/exp_evening_2026-11-04/test_b2
+noise_source: data/exp_evening_2026-11-04/test_noise_family
+recipe_sets_source: configs/recipe_sets.yaml
+selected_workers: [timing, area]
+c0_recipe_id: C0_reroute
+candidate_order:
+  - rosetta_digit-recognition
+  - corescore_500_mod
+  - vexriscv_re-place_v2
+  - fir_symmetric_systolic
+  - fir_systolic_transposed
+  - rosetta_3d-rendering_v2
+  - amd_mini-isp_v2
+room_screen:
+  max_admitted: 5
+  control_variants: [n_repeat, n_thr4, n_unc0.001, n_unc0.002, n_unc0.003]
+  band_method: max_abs_control_minus_b2
+  require_all_five_controls_amd_pass: true
+  require_one_step_amd_pass: true
+  require_one_step_routed_and_zero_errors: true
+  require_b2_constraint_and_clock_digests: true
+  wns_improvement: candidate_wns_minus_b2_wns
+  packed_lut_improvement: b2_packed_luts_minus_candidate_packed_luts
+  admit_if: any_selected_one_step_strictly_exceeds_either_band
+  fewer_than_five_action: stop_before_d2_and_report
+resource_limits:
+  total_shared_tool_slots: 96
+  pause_new_tool_launch_if_load_1m_above: 180
+  pause_new_tool_launch_if_available_memory_bytes_below: 200000000000
+  max_in_flight_per_design: 16
+verification:
+  amd_vectors: 200
+  amd_precheck_vectors: 100
+  stop_design_on_amd_fail_unknown_meter_mismatch_or_constraint_change: true
+reporting:
+  allow_test_outcome_tables: false
+  allow_test_rankings_or_bests: false
+  screen_stdout: admitted_or_not_admitted_per_design_only

@@ -1,0 +1,154 @@
+schema_version: worker-features-v1
+frozen_at_utc: "2026-11-04T17:45:00Z"
+freeze_source: "reports/Feature_Freeze_and_Evening_Prompts.md#1"
+training:
+  allowed_data_root: data/sweeps/worker_fitting_train
+  designs:
+    - vexriscv_re-place
+    - rosetta_spam-filter
+    - rosetta_3d-rendering
+    - logicnets_jscl
+    - finn_radioml
+  edge_phases: [D1, D2, D3]
+  require_amd_pass: true
+  provisional_mode: physically_valid_and_label_all_provisional
+  deduplicate_by: [input_state_id, recipe_id]
+  design_weight: equal
+targets:
+  timing:
+    name: fmax_gain_pct
+    source: meter_evidence_only
+    parent_wns_path: [metrics, wns_ns, value]
+    child_wns_path: [metrics, wns_ns, value]
+    requirement_path: [wpath, requirement_ns]
+    expression: "100 * (Fmax_child - Fmax_parent) / Fmax_parent; Fmax = 1000 / (requirement_ns - WNS_ns)"
+  area:
+    name: packed_lut_cut_pct
+    source: meter_evidence_only
+    parent_luts_path: [metrics, packed_luts, value]
+    child_luts_path: [metrics, packed_luts, value]
+    expression: "100 * (packedLUT_parent - packedLUT_child) / packedLUT_parent"
+  zero_gain_when: [physically_invalid, amd_fail, no_output, output_identical_to_input]
+fitting:
+  standardization: design_weighted_mean_and_sd_over_training_input_states
+  z_clip: training_min_max
+  score: "beta_recipe + w_recipe * z_recipe_feature"
+  beta: design_weighted_mean_gain_pct_including_zero_gains
+  ridge_penalty_applies_to: w_only
+  penalty_grid: {min: 0.001, max: 1000.0, count: 13, spacing: log10}
+  penalty_selection: leave_one_design_out_design_weighted_mse
+  null_model: "w_recipe = 0 for every recipe"
+  feature_availability:
+    maximum_missing_fraction: 0.10
+    drop_if_constant: true
+    population: distinct_training_input_states
+  keep_or_drop:
+    unit: whole_worker
+    regret: best_realised_gain_minus_argmax_recipe_realised_gain
+    average: mean_per_design_then_mean_across_designs
+    require_average_strict_improvement_over_null: true
+    require_improved_folds_of_five: 3
+decision:
+  choice: argmax
+  tie_break: recipe_id_alphabetical
+  do_not_reapply_recipe_to_its_own_output_state: true
+  missing_feature: use_recipe_beta_and_flag_incomplete_measurement
+recipes:
+  LATCH.phys_opt:
+    worker: timing
+    feature: violation_depth
+    expected_sign: negative
+    expression: "0 if wns_ns >= 0 else -wns_ns / requirement_ns"
+    inputs:
+      wns_ns: [metrics, wns_ns, value]
+      requirement_ns: [wpath, requirement_ns]
+  LATCH.retime:
+    worker: timing
+    feature: worst_path_logic_levels
+    expected_sign: positive
+    expression: "worst_setup_path_logic_levels"
+    inputs:
+      logic_levels: [wpath, logic_levels]
+  LATCH.auto_pblock:
+    worker: timing
+    feature: worst_path_tile_span
+    expected_sign: positive
+    expression: "(x_max - x_min) + (y_max - y_min)"
+    inputs:
+      x_max: [wpath, tile_span, x_max]
+      x_min: [wpath, tile_span, x_min]
+      y_max: [wpath, tile_span, y_max]
+      y_min: [wpath, tile_span, y_min]
+  LATCH.hardblock_relocate:
+    worker: timing
+    feature: worst_path_route_share
+    expected_sign: positive
+    expression: "net_delay_ns / data_path_delay_ns"
+    inputs:
+      net_delay_ns: [wpath, net_delay_ns]
+      data_path_delay_ns: [wpath, data_path_delay_ns]
+  LATCH.memory_path_opt:
+    worker: timing
+    feature: soft_luts_per_hardblock
+    expected_sign: positive
+    expression: "logic_luts / max(1, bram_tiles + dsps + urams)"
+    inputs:
+      logic_luts: [probe, pblock_sizing_resources, luts]
+      bram_tiles: [probe, utilization_summary, "Block RAM Tile", used]
+      dsps: [probe, utilization_summary, DSPs, used]
+      urams: [probe, utilization_summary, URAM, used]
+  A_R_EA:
+    worker: area
+    feature: luts_per_ff
+    expected_sign: positive
+    expression: "logic_luts / clb_registers"
+    inputs:
+      logic_luts: [probe, pblock_sizing_resources, luts]
+      clb_registers: [probe, utilization_summary, "CLB Registers", used]
+  A_R_RSA_SRLM:
+    worker: area
+    feature: srl_share
+    expected_sign: positive
+    expression: "lut_as_shift_register / packed_clb_luts"
+    mapping_status: pending_telemetry_extension
+    inputs:
+      lut_as_shift_register: [probe, lut_as_shift_register]
+      packed_clb_luts: [metrics, packed_luts, value]
+  A_R_RSA_AREM:
+    worker: area
+    feature: small_lut_share
+    expected_sign: positive
+    expression: "(LUT1 + LUT2 + LUT3) / (LUT1 + LUT2 + LUT3 + LUT4 + LUT5 + LUT6)"
+    mapping_status: pending_telemetry_extension
+    inputs:
+      LUT1: [probe, lut_primitive_counts, LUT1]
+      LUT2: [probe, lut_primitive_counts, LUT2]
+      LUT3: [probe, lut_primitive_counts, LUT3]
+      LUT4: [probe, lut_primitive_counts, LUT4]
+      LUT5: [probe, lut_primitive_counts, LUT5]
+      LUT6: [probe, lut_primitive_counts, LUT6]
+  A_R_RSA_MED:
+    worker: area
+    feature: dup_driver_share
+    expected_sign: positive
+    expression: "dup_driver_count / netlist_lut_cells"
+    mapping_status: pending_optional_read_only_census
+    inputs:
+      dup_driver_count: [probe, dup_driver_count]
+      netlist_lut_cells: [metrics, netlist_luts, value]
+  A_E_DUPL_Q1000:
+    worker: area
+    feature: dup_driver_share
+    expected_sign: positive
+    expression: "dup_driver_count / netlist_lut_cells"
+    mapping_status: pending_optional_read_only_census
+    inputs:
+      dup_driver_count: [probe, dup_driver_count]
+      netlist_lut_cells: [metrics, netlist_luts, value]
+diagnostics:
+  dont_touch_share:
+    fitted: false
+    expression: "n_DONT_TOUCH / primitive_cell_count"
+    inputs:
+      n_DONT_TOUCH: [validity, v_props, n_DONT_TOUCH]
+      primitive_cell_count: [wpath, primitive_cell_count]

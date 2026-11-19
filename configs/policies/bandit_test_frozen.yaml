@@ -1,0 +1,135 @@
+# Frozen learned policy for the test runs (O1, Fri 13 Nov 2026). Read by orch/policies/bandit_frozen.py, which refuses any component whose hash differs.
+# Written by scripts/bandit_2026-11-11/bd_freeze_write.py --config. Do not edit: the hash list notes/bandit_test_freeze.sha256 covers this file.
+briefs:
+  A:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_A_all8.json
+    prior_sha256: c29d4089fb42da3f8de13d15803c602a605334759fc2e8c3385bd5be675fc3a2
+    samples: 905
+    sigma: 1.4142315744695488
+    signature:
+    - packed_luts
+    - min
+    - - - wns_ns
+        - '>='
+        - 1.0
+        - -0.1
+  A0:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_A0_all8.json
+    prior_sha256: 60ba43a45281e56d8a27f2828084710948ed7b802909eacaa363e2ee2872a5bb
+    samples: 925
+    sigma: 1.3457361959729435
+    signature:
+    - packed_luts
+    - min
+    - - - wns_ns
+        - '>='
+        - 1.0
+        - 0.0
+  L2R:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_L2R_all8.json
+    prior_sha256: fa88a84cb7c9fdce7656a7ff40b7cda7ad7d1aacc2cea3eea39a8cfd8e2214f2
+    samples: 922
+    sigma: 1.2091874852093103
+    signature:
+    - packed_luts
+    - min
+    - - - dynamic_power_w
+        - <=
+        - 1.0
+        - 0.0
+      - - wns_ns
+        - '>='
+        - 1.0
+        - 0.0
+  P0:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_P0_all8.json
+    prior_sha256: cf34023b7001293c8f6419247ce8467f79965f0cdcb727c4018c8ec541ca916f
+    samples: 911
+    sigma: 0.6931878417183862
+    signature:
+    - dynamic_power_w
+    - min
+    - - - packed_luts
+        - <=
+        - 1.0
+        - 0.0
+      - - wns_ns
+        - '>='
+        - 1.0
+        - 0.0
+  T:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_T_all8.json
+    prior_sha256: 7604c63dc6fb7df1b8d097bd8aa3da04e5dd8e13d3ce1a182354013e36334b60
+    samples: 897
+    sigma: 0.5
+    signature:
+    - wns_ns
+    - max
+    - - - packed_luts
+        - <=
+        - 1.01
+        - 0.0
+  T0:
+    prior: data/bandit_2026-11-11/priors_frozen/feat_drop_T0_all8.json
+    prior_sha256: 8b2cb130a198b66dd49681d94d938d8ec707e08991074abf56ade888e809ddc1
+    samples: 927
+    sigma: 0.5
+    signature:
+    - wns_ns
+    - max
+    - - - packed_luts
+        - <=
+        - 1.0
+        - 0.0
+code_sha256:
+  configs/policies/bandit_r2.yaml: 533da8d0f710cee705f6e3acbefe7a788b5e460a6bd2e40fc6e451248580b68c
+  orch/episode_r2.py: c69d3564232f61ec4cfd218d189de3939fe5d8386659664834f4a9cef9200a5c
+  orch/policies/bandit.py: 7e57e20003754cddbb4eb06ea5118ac6de3192f6e0c75c8120b740dd83dd8b25
+  orch/policies/bandit_r2.py: c7fca784a4f360efda25430e168c2f1a610c9ff344d108434ac0869ffffab8f9
+declared: 'decision of Fri 13 Nov 2026 (prompt B): the declared policy with no further change, fitted on the call records of all 5 training and 3 development designs, briefs T0 A0 T A L2R P0; W2R not applicable'
+fit:
+  designs:
+  - amd_mini-isp
+  - finn_radioml
+  - logicnets_jscl
+  - rosetta_3d-rendering
+  - rosetta_spam-filter
+  - t2_cordic_s
+  - vexriscv_re-place
+  - vtr_mcml_v2
+  development_record:
+    path: data/bandit_2026-11-11/calls/episodes_dev_v1.jsonl
+    sha256: ca1c9a9ecd07fe3d7f7fba6c6dd387469cf8374d4b0edbc7aa07a764efa977c9
+  fit_report: data/bandit_2026-11-11/priors_frozen/fit_report.json
+  fit_report_sha256: 3653dac97c8f80ad6bf98be5fc01ca9fb144852c4f3b682a882272dd107b0ca1
+  prior_files_digest: cf4a184e3ee15bc7610afd8e8ca3c71a4ac82eddce834fa05d0faca6b7ea9674
+  training_record:
+    path: data/bandit_2026-11-11/calls/episodes_v4.jsonl
+    sha256: 2fbee4cdc3f2311a29350f60931890980e0367aa38604fbdc092acd2e3a77e64
+loop:
+  module: orch/episode_r2.py
+  options:
+    empty_call_observation: true
+    max_consecutive_empty: 3
+    schema: loop-options-r2-v1
+    stop_note: Stop is available after two calls without gain beyond noise.
+    stop_rule: true
+not_applicable:
+  W2R: 'no prior was fitted for W2R (declared Fri 13 Nov 2026: not applicable); the runner skips this row and the paper says so'
+plan_note: notes/bandit_test_freeze_plan.md
+plan_sha256: ada88f97165c22fbee150a9fd93f8fd4032b8a2603df5460ae3cc236cdeb13f4
+policy:
+  base_choice: best_or_latest
+  id: bandit_linucb_r2
+  reward: credited
+  settings:
+    alpha: 1.0
+    flat_penalty: 3.0
+    observe_empty: true
+    repair_feature: true
+    rho: 0.5
+    ridge: 1.0
+    stop_threshold: 0.0
+  settings_sha256: 0d2ccdf3ab18fda42db386267a451cc6451600132ec8d4b557315149d87d12a1
+  settings_source: configs/policies/bandit_r2.yaml, label learned
+schema_version: bandit-test-freeze-v1

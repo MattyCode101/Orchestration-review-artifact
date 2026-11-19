@@ -1,0 +1,876 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date              : Wed Nov  4 19:03:58 2026
+| Host : build-host running 64-bit Linux
+| Command           : report_timing_summary -delay_type max -file data/exp_evening_2026-11-04/training_telemetry_v2/states/0306bc5776a7614b9eac5ecaa1cf8053f85725c723091f56eb6b7ff24ca4f350/attempts/af44ed1ebd674e559376ddfe836257fd/path_probe/probe.rpt
+| Design            : logicnet
+| Device            : xcvu3p-ffvc1517
+| Speed File        : -2  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations  
+---------  --------  -----------------------------  ----------  
+TIMING-18  Warning   Missing input or output delay  100         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (65)
+6. checking no_output_delay (35)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (65)
+-------------------------------
+ There are 65 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (35)
+--------------------------------
+ There are 35 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.591     -475.495                   1242                 1257        0.475        0.000                       0                  1321  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock             Waveform(ns)         Period(ns)      Frequency(MHz)
+-----             ------------         ----------      --------------
+clk_fpl26contest  {0.000 0.750}        1.500           666.667         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                 WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                 -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpl26contest       -0.591     -475.495                   1242                 1257        0.475        0.000                       0                  1321  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpl26contest
+  To Clock:  clk_fpl26contest
+
+Setup :         1242  Failing Endpoints,  Worst Slack       -0.591ns,  Total Violation     -475.495ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        0.475ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.591ns  (required time - arrival time)
+  Source:                 layer1_reg/data_out_reg[32]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer2_reg/data_out_reg[87]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.072ns  (logic 0.500ns (24.127%)  route 1.572ns (75.873%))
+  Logic Levels:           4  (LUT6=4)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.520 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.028     0.028    layer1_reg/clk
+    SLICE_X10Y21         FDRE                                         r  layer1_reg/data_out_reg[32]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y21         FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  layer1_reg/data_out_reg[32]/Q
+                         net (fo=261, routed)         0.640     0.747    layer1_inst/layer1_N29_inst/M1w[2]
+    SLICE_X20Y28         LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.099     0.846 f  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_23/O
+                         net (fo=3, routed)           0.149     0.995    layer1_inst/layer1_N29_inst/layer1_N29_net_15
+    SLICE_X20Y29         LUT6 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.099     1.094 r  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_27/O
+                         net (fo=1, routed)           0.233     1.327    layer1_inst/layer1_N29_inst/layer1_N29_net_25
+    SLICE_X22Y30         LUT6 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.100     1.427 f  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_36/O
+                         net (fo=2, routed)           0.099     1.526    layer1_inst/layer1_N29_inst/layer1_N29_net_40
+    SLICE_X23Y30         LUT6 (Prop_E6LUT_SLICEL_I3_O)
+                                                      0.123     1.649 r  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_51/O
+                         net (fo=6, routed)           0.451     2.100    layer2_reg/M2[87]
+    SLICE_X23Y60         FDRE                                         r  layer2_reg/data_out_reg[87]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.020     1.520    layer2_reg/clk
+    SLICE_X23Y60         FDRE                                         r  layer2_reg/data_out_reg[87]/C
+                         clock pessimism              0.000     1.520    
+                         clock uncertainty           -0.035     1.485    
+    SLICE_X23Y60         FDRE (Setup_BFF2_SLICEL_C_D)
+                                                      0.025     1.510    layer2_reg/data_out_reg[87]
+  -------------------------------------------------------------------
+                         required time                          1.510    
+                         arrival time                          -2.100    
+  -------------------------------------------------------------------
+                         slack                                 -0.591    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpl26contest
+Waveform(ns):       { 0.000 0.750 }
+Period(ns):         1.500
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location     Pin
+Min Period        n/a     FDRE/C   n/a            0.550         1.500       0.950      SLICE_X10Y9  layer0_reg/data_out_reg[0]/C
+Low Pulse Width   Slow    FDRE/C   n/a            0.275         0.750       0.475      SLICE_X10Y9  layer0_reg/data_out_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.275         0.750       0.475      SLICE_X10Y9  layer0_reg/data_out_reg[0]/C
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date              : Wed Nov  4 19:03:58 2026
+| Host : build-host running 64-bit Linux
+| Command           : report_timing -delay_type max -max_paths 5 -nworst 1 -append -file data/exp_evening_2026-11-04/training_telemetry_v2/states/0306bc5776a7614b9eac5ecaa1cf8053f85725c723091f56eb6b7ff24ca4f350/attempts/af44ed1ebd674e559376ddfe836257fd/path_probe/probe.rpt
+| Design            : logicnet
+| Device            : xcvu3p-ffvc1517
+| Speed File        : -2  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.591ns  (required time - arrival time)
+  Source:                 layer1_reg/data_out_reg[32]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer2_reg/data_out_reg[87]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.072ns  (logic 0.500ns (24.127%)  route 1.572ns (75.873%))
+  Logic Levels:           4  (LUT6=4)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.520 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.028     0.028    layer1_reg/clk
+    SLICE_X10Y21         FDRE                                         r  layer1_reg/data_out_reg[32]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y21         FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.079     0.107 r  layer1_reg/data_out_reg[32]/Q
+                         net (fo=261, routed)         0.640     0.747    layer1_inst/layer1_N29_inst/M1w[2]
+    SLICE_X20Y28         LUT6 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.099     0.846 f  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_23/O
+                         net (fo=3, routed)           0.149     0.995    layer1_inst/layer1_N29_inst/layer1_N29_net_15
+    SLICE_X20Y29         LUT6 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.099     1.094 r  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_27/O
+                         net (fo=1, routed)           0.233     1.327    layer1_inst/layer1_N29_inst/layer1_N29_net_25
+    SLICE_X22Y30         LUT6 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.100     1.427 f  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_36/O
+                         net (fo=2, routed)           0.099     1.526    layer1_inst/layer1_N29_inst/layer1_N29_net_40
+    SLICE_X23Y30         LUT6 (Prop_E6LUT_SLICEL_I3_O)
+                                                      0.123     1.649 r  layer1_inst/layer1_N29_inst/layer1_N29_LUT6_51/O
+                         net (fo=6, routed)           0.451     2.100    layer2_reg/M2[87]
+    SLICE_X23Y60         FDRE                                         r  layer2_reg/data_out_reg[87]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.020     1.520    layer2_reg/clk
+    SLICE_X23Y60         FDRE                                         r  layer2_reg/data_out_reg[87]/C
+                         clock pessimism              0.000     1.520    
+                         clock uncertainty           -0.035     1.485    
+    SLICE_X23Y60         FDRE (Setup_BFF2_SLICEL_C_D)
+                                                      0.025     1.510    layer2_reg/data_out_reg[87]
+  -------------------------------------------------------------------
+                         required time                          1.510    
+                         arrival time                          -2.100    
+  -------------------------------------------------------------------
+                         slack                                 -0.591    
+
+Slack (VIOLATED) :        -0.578ns  (required time - arrival time)
+  Source:                 layer1_reg/data_out_reg[43]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer2_reg/data_out_reg[53]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.059ns  (logic 0.354ns (17.197%)  route 1.705ns (82.803%))
+  Logic Levels:           3  (LUT6=3)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.520 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.029     0.029    layer1_reg/clk
+    SLICE_X12Y29         FDRE                                         r  layer1_reg/data_out_reg[43]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X12Y29         FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 f  layer1_reg/data_out_reg[43]/Q
+                         net (fo=258, routed)         0.555     0.663    layer1_inst/layer1_N17_inst/data_out[52]_i_9_0
+    SLICE_X11Y34         LUT6 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.088     0.751 f  layer1_inst/layer1_N17_inst/layer1_N17_LUT6_25/O
+                         net (fo=3, routed)           0.413     1.164    layer1_inst/layer1_N17_inst/layer1_N17_net_17
+    SLICE_X12Y33         LUT6 (Prop_A6LUT_SLICEL_I3_O)
+                                                      0.098     1.262 f  layer1_inst/layer1_N17_inst/layer1_N17_LUT6_40/O
+                         net (fo=1, routed)           0.089     1.351    layer1_inst/layer1_N17_inst/layer1_N17_net_43
+    SLICE_X12Y33         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.089     1.440 r  layer1_inst/layer1_N17_inst/layer1_N17_LUT6_41/O
+                         net (fo=6, routed)           0.647     2.088    layer2_reg/M2[53]
+    SLICE_X18Y59         FDRE                                         r  layer2_reg/data_out_reg[53]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.020     1.520    layer2_reg/clk
+    SLICE_X18Y59         FDRE                                         r  layer2_reg/data_out_reg[53]/C
+                         clock pessimism              0.000     1.520    
+                         clock uncertainty           -0.035     1.485    
+    SLICE_X18Y59         FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     1.510    layer2_reg/data_out_reg[53]
+  -------------------------------------------------------------------
+                         required time                          1.510    
+                         arrival time                          -2.088    
+  -------------------------------------------------------------------
+                         slack                                 -0.578    
+
+Slack (VIOLATED) :        -0.577ns  (required time - arrival time)
+  Source:                 layer2_reg/data_out_reg[111]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer3_reg/data_out_reg[78]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.060ns  (logic 0.536ns (26.018%)  route 1.524ns (73.982%))
+  Logic Levels:           5  (LUT2=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.007ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 1.521 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.028     0.028    layer2_reg/clk
+    SLICE_X20Y54         FDRE                                         r  layer2_reg/data_out_reg[111]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X20Y54         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.079     0.107 f  layer2_reg/data_out_reg[111]/Q
+                         net (fo=616, routed)         0.283     0.390    layer2_reg/data_out_reg[191]_0[59]
+    SLICE_X16Y58         LUT2 (Prop_A6LUT_SLICEM_I0_O)
+                                                      0.090     0.480 r  layer2_reg/myreg__paramete1_LUT2_12/O
+                         net (fo=21, routed)          0.654     1.134    layer2_reg/myreg__paramete1_net_209
+    SLICE_X2Y70          LUT5 (Prop_G6LUT_SLICEM_I3_O)
+                                                      0.090     1.224 f  layer2_reg/myreg__paramete1_LUT5_862/O
+                         net (fo=2, routed)           0.321     1.545    layer2_reg/myreg__paramete1_net_3925
+    SLICE_X2Y83          LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.051     1.596 f  layer2_reg/myreg__paramete1_LUT6_3700/O
+                         net (fo=1, routed)           0.049     1.645    layer2_reg/myreg__paramete1_net_3949
+    SLICE_X2Y83          LUT6 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.125     1.770 r  layer2_reg/myreg__paramete1_LUT6_3704/O
+                         net (fo=1, routed)           0.159     1.929    layer2_reg/myreg__paramete1_net_3953
+    SLICE_X2Y84          LUT6 (Prop_H6LUT_SLICEM_I5_O)
+                                                      0.101     2.030 r  layer2_reg/myreg__paramete1_LUT6_3705/O
+                         net (fo=1, routed)           0.058     2.088    layer3_reg/M3[24]
+    SLICE_X2Y84          FDRE                                         r  layer3_reg/data_out_reg[78]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.021     1.521    layer3_reg/clk
+    SLICE_X2Y84          FDRE                                         r  layer3_reg/data_out_reg[78]/C
+                         clock pessimism              0.000     1.521    
+                         clock uncertainty           -0.035     1.486    
+    SLICE_X2Y84          FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.025     1.511    layer3_reg/data_out_reg[78]
+  -------------------------------------------------------------------
+                         required time                          1.511    
+                         arrival time                          -2.088    
+  -------------------------------------------------------------------
+                         slack                                 -0.577    
+
+Slack (VIOLATED) :        -0.576ns  (required time - arrival time)
+  Source:                 layer1_reg/data_out_reg[33]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer2_reg/data_out_reg[153]_rep__1/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.056ns  (logic 0.595ns (28.938%)  route 1.461ns (71.062%))
+  Logic Levels:           4  (LUT6=4)
+  Clock Path Skew:        -0.010ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.520 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.030     0.030    layer1_reg/clk
+    SLICE_X16Y10         FDRE                                         r  layer1_reg/data_out_reg[33]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y10         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 r  layer1_reg/data_out_reg[33]/Q
+                         net (fo=261, routed)         0.471     0.579    layer1_inst/layer1_N51_inst/data_out_reg[153]_i_20_2
+    SLICE_X20Y22         LUT6 (Prop_G6LUT_SLICEL_I4_O)
+                                                      0.123     0.702 r  layer1_inst/layer1_N51_inst/layer1_N51_LUT6_46/O
+                         net (fo=1, routed)           0.103     0.805    layer1_inst/layer1_N51_inst/layer1_N51_net_33
+    SLICE_X20Y22         LUT6 (Prop_E6LUT_SLICEL_I4_O)
+                                                      0.147     0.952 r  layer1_inst/layer1_N51_inst/layer1_N51_LUT6_48/O
+                         net (fo=1, routed)           0.292     1.244    layer1_inst/layer1_N51_inst/layer1_N51_net_37
+    SLICE_X23Y23         LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.149     1.393 r  layer1_inst/layer1_N51_inst/layer1_N51_LUT6_52/O
+                         net (fo=2, routed)           0.101     1.494    layer1_inst/layer1_N51_inst/layer1_N51_net_41
+    SLICE_X23Y25         LUT6 (Prop_B6LUT_SLICEL_I5_O)
+                                                      0.098     1.592 r  layer1_inst/layer1_N51_inst/layer1_N51_LUT6_121/O
+                         net (fo=3, routed)           0.494     2.086    layer2_reg/data_out_reg[153]_rep__1_0
+    SLICE_X26Y49         FDRE                                         r  layer2_reg/data_out_reg[153]_rep__1/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.020     1.520    layer2_reg/clk
+    SLICE_X26Y49         FDRE                                         r  layer2_reg/data_out_reg[153]_rep__1/C
+                         clock pessimism              0.000     1.520    
+                         clock uncertainty           -0.035     1.485    
+    SLICE_X26Y49         FDRE (Setup_EFF_SLICEL_C_D)
+                                                      0.025     1.510    layer2_reg/data_out_reg[153]_rep__1
+  -------------------------------------------------------------------
+                         required time                          1.510    
+                         arrival time                          -2.086    
+  -------------------------------------------------------------------
+                         slack                                 -0.576    
+
+Slack (VIOLATED) :        -0.576ns  (required time - arrival time)
+  Source:                 layer0_reg/data_out_reg[20]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Destination:            layer1_reg/data_out_reg[81]_rep/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.750ns period=1.500ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.500ns  (clk_fpl26contest rise@1.500ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.056ns  (logic 0.537ns (26.122%)  route 1.519ns (73.878%))
+  Logic Levels:           4  (LUT6=4)
+  Clock Path Skew:        -0.010ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.520 - 1.500 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1320, unset)         0.030     0.030    layer0_reg/clk
+    SLICE_X11Y15         FDRE                                         r  layer0_reg/data_out_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y15         FDRE (Prop_EFF_SLICEM_C_Q)
+                                                      0.076     0.106 f  layer0_reg/data_out_reg[20]/Q
+                         net (fo=239, routed)         0.486     0.592    layer0_inst/layer0_N27_inst/data_out[82]_i_20_0
+    SLICE_X2Y13          LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.123     0.715 r  layer0_inst/layer0_N27_inst/layer0_N27_LUT6_27/O
+                         net (fo=2, routed)           0.059     0.774    layer0_inst/layer0_N27_inst/layer0_N27_net_25
+    SLICE_X2Y13          LUT6 (Prop_F6LUT_SLICEM_I5_O)
+                                                      0.148     0.922 f  layer0_inst/layer0_N27_inst/layer0_N27_LUT6_30/O
+                         net (fo=1, routed)           0.136     1.058    layer0_inst/layer0_N27_inst/layer0_N27_net_29
+    SLICE_X3Y15          LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.099     1.157 r  layer0_inst/layer0_N27_inst/layer0_N27_LUT6_31/O
+                         net (fo=1, routed)           0.152     1.309    layer0_inst/layer0_N27_inst/layer0_N27_net_32
+    SLICE_X2Y11          LUT6 (Prop_E6LUT_SLICEM_I5_O)
+                                                      0.091     1.400 r  layer0_inst/layer0_N27_inst/layer0_N27_LUT6_32/O
+                         net (fo=4, routed)           0.686     2.086    layer1_reg/data_out_reg[81]_rep_1
+    SLICE_X15Y35         FDRE                                         r  layer1_reg/data_out_reg[81]_rep/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.500     1.500 r  
+                                                      0.000     1.500 r  clk (IN)
+                         net (fo=1320, unset)         0.020     1.520    layer1_reg/clk
+    SLICE_X15Y35         FDRE                                         r  layer1_reg/data_out_reg[81]_rep/C
+                         clock pessimism              0.000     1.520    
+                         clock uncertainty           -0.035     1.485    
+    SLICE_X15Y35         FDRE (Setup_EFF_SLICEL_C_D)
+                                                      0.025     1.510    layer1_reg/data_out_reg[81]_rep
+  -------------------------------------------------------------------
+                         required time                          1.510    
+                         arrival time                          -2.086    
+  -------------------------------------------------------------------
+                         slack                                 -0.576    
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Nov  4 19:03:59 2026
+| Host : build-host running 64-bit Linux
+| Command      : report_utilization -append -file data/exp_evening_2026-11-04/training_telemetry_v2/states/0306bc5776a7614b9eac5ecaa1cf8053f85725c723091f56eb6b7ff24ca4f350/attempts/af44ed1ebd674e559376ddfe836257fd/path_probe/probe.rpt
+| Design       : logicnet
+| Device       : xcvu3p-ffvc1517-2-e
+| Speed File   : -2
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. CLB Logic
+1.1 Summary of Registers by Type
+2. CLB Logic Distribution
+3. BLOCKRAM
+4. ARITHMETIC
+5. I/O
+6. CLOCK
+7. ADVANCED
+8. CONFIGURATION
+9. Primitives
+10. Black Boxes
+11. Instantiated Netlists
+
+1. CLB Logic
+------------
+
++-------------------------+-------+-------+------------+-----------+-------+
+|        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
++-------------------------+-------+-------+------------+-----------+-------+
+| CLB LUTs                | 28225 |     0 |          0 |    394080 |  7.16 |
+|   LUT as Logic          | 28225 |     0 |          0 |    394080 |  7.16 |
+|   LUT as Memory         |     0 |     0 |          0 |    197280 |  0.00 |
+| CLB Registers           |  1321 |     0 |          0 |    788160 |  0.17 |
+|   Register as Flip Flop |  1321 |     0 |          0 |    788160 |  0.17 |
+|   Register as Latch     |     0 |     0 |          0 |    788160 |  0.00 |
+| CARRY8                  |     0 |     0 |          0 |     49260 |  0.00 |
+| F7 Muxes                |  3016 |     0 |          0 |    197040 |  1.53 |
+| F8 Muxes                |   967 |     0 |          0 |     98520 |  0.98 |
+| F9 Muxes                |     0 |     0 |          0 |     49260 |  0.00 |
++-------------------------+-------+-------+------------+-----------+-------+
+* Warning! LUT value is adjusted to account for LUT combining.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 1321  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. CLB Logic Distribution
+-------------------------
+
++--------------------------------------------+-------+-------+------------+-----------+-------+
+|                  Site Type                 |  Used | Fixed | Prohibited | Available | Util% |
++--------------------------------------------+-------+-------+------------+-----------+-------+
+| CLB                                        |  5080 |     0 |          0 |     49260 | 10.31 |
+|   CLBL                                     |  2490 |     0 |            |           |       |
+|   CLBM                                     |  2590 |     0 |            |           |       |
+| LUT as Logic                               | 28225 |     0 |          0 |    394080 |  7.16 |
+|   using O5 output only                     |    18 |       |            |           |       |
+|   using O6 output only                     | 27657 |       |            |           |       |
+|   using O5 and O6                          |   550 |       |            |           |       |
+| LUT as Memory                              |     0 |     0 |          0 |    197280 |  0.00 |
+|   LUT as Distributed RAM                   |     0 |     0 |            |           |       |
+|     using O5 output only                   |     0 |       |            |           |       |
+|     using O6 output only                   |     0 |       |            |           |       |
+|     using O5 and O6                        |     0 |       |            |           |       |
+|   LUT as Shift Register                    |     0 |     0 |            |           |       |
+|     using O5 output only                   |     0 |       |            |           |       |
+|     using O6 output only                   |     0 |       |            |           |       |
+|     using O5 and O6                        |     0 |       |            |           |       |
+| CLB Registers                              |  1321 |     0 |          0 |    788160 |  0.17 |
+|   Register driven from within the CLB      |   692 |       |            |           |       |
+|   Register driven from outside the CLB     |   629 |       |            |           |       |
+|     LUT in front of the register is unused |   383 |       |            |           |       |
+|     LUT in front of the register is used   |   246 |       |            |           |       |
+| Unique Control Sets                        |     1 |       |          0 |     98520 | <0.01 |
++--------------------------------------------+-------+-------+------------+-----------+-------+
+* * Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
+
+
+3. BLOCKRAM
+-----------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| Block RAM Tile |    0 |     0 |          0 |       720 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |          0 |       720 |  0.00 |
+|   RAMB18       |    0 |     0 |          0 |      1440 |  0.00 |
+| URAM           |    0 |     0 |          0 |       320 |  0.00 |
++----------------+------+-------+------------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
+
+
+4. ARITHMETIC
+-------------
+
++-----------+------+-------+------------+-----------+-------+
+| Site Type | Used | Fixed | Prohibited | Available | Util% |
++-----------+------+-------+------------+-----------+-------+
+| DSPs      |    0 |     0 |          0 |      2280 |  0.00 |
++-----------+------+-------+------------+-----------+-------+
+
+
+5. I/O
+------
+
++------------------+------+-------+------------+-----------+-------+
+|     Site Type    | Used | Fixed | Prohibited | Available | Util% |
++------------------+------+-------+------------+-----------+-------+
+| Bonded IOB       |    0 |     0 |          0 |       520 |  0.00 |
+|   HPIOB_M        |    0 |     0 |          0 |       240 |  0.00 |
+|   HPIOB_S        |    0 |     0 |          0 |       240 |  0.00 |
+|   HPIOB_SNGL     |    0 |     0 |          0 |        40 |  0.00 |
+| HPIOBDIFFINBUF   |    0 |     0 |          0 |       240 |  0.00 |
+| HPIOBDIFFOUTBUF  |    0 |     0 |          0 |       240 |  0.00 |
+| BITSLICE_CONTROL |    0 |     0 |          0 |        80 |  0.00 |
+| BITSLICE_RX_TX   |    0 |     0 |          0 |      3120 |  0.00 |
+| BITSLICE_TX      |    0 |     0 |          0 |        80 |  0.00 |
+| RIU_OR           |    0 |     0 |          0 |        40 |  0.00 |
++------------------+------+-------+------------+-----------+-------+
+
+
+6. CLOCK
+--------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| BUFGCE     |    0 |     0 |          0 |       240 |  0.00 |
+| BUFGCE_DIV |    0 |     0 |          0 |        40 |  0.00 |
+| BUFG_GT    |    0 |     0 |          0 |       240 |  0.00 |
+| BUFGCTRL*  |    0 |     0 |          0 |        80 |  0.00 |
+| PLL        |    0 |     0 |          0 |        20 |  0.00 |
+| MMCM       |    0 |     0 |          0 |        10 |  0.00 |
++------------+------+-------+------------+-----------+-------+
+* Note: Each used BUFGCTRL counts as two GLOBAL CLOCK BUFFERs. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
+
+
+7. ADVANCED
+-----------
+
++-----------------+------+-------+------------+-----------+-------+
+|    Site Type    | Used | Fixed | Prohibited | Available | Util% |
++-----------------+------+-------+------------+-----------+-------+
+| CMACE4          |    0 |     0 |          0 |         3 |  0.00 |
+| GTYE4_CHANNEL   |    0 |     0 |          0 |        40 |  0.00 |
+| GTYE4_COMMON    |    0 |     0 |          0 |        10 |  0.00 |
+| ILKNE4          |    0 |     0 |          0 |         3 |  0.00 |
+| OBUFDS_GTE4     |    0 |     0 |          0 |        20 |  0.00 |
+| OBUFDS_GTE4_ADV |    0 |     0 |          0 |        20 |  0.00 |
+| PCIE40E4        |    0 |     0 |          0 |         2 |  0.00 |
+| SYSMONE4        |    0 |     0 |          0 |         1 |  0.00 |
++-----------------+------+-------+------------+-----------+-------+
+
+
+8. CONFIGURATION
+----------------
+
++-------------+------+-------+------------+-----------+-------+
+|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
++-------------+------+-------+------------+-----------+-------+
+| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
+| DNA_PORTE2  |    0 |     0 |          0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
+| FRAME_ECCE4 |    0 |     0 |          0 |         1 |  0.00 |
+| ICAPE3      |    0 |     0 |          0 |         2 |  0.00 |
+| MASTER_JTAG |    0 |     0 |          0 |         1 |  0.00 |
+| STARTUPE3   |    0 |     0 |          0 |         1 |  0.00 |
++-------------+------+-------+------------+-----------+-------+
+
+
+9. Primitives
+-------------
+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LUT6     | 21109 |                 CLB |
+| LUT5     |  4538 |                 CLB |
+| MUXF7    |  3016 |                 CLB |
+| LUT4     |  1381 |                 CLB |
+| FDRE     |  1321 |            Register |
+| LUT3     |  1122 |                 CLB |
+| MUXF8    |   967 |                 CLB |
+| LUT2     |   580 |                 CLB |
+| LUT1     |    45 |                 CLB |
++----------+-------+---------------------+
+
+
+10. Black Boxes
+---------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+11. Instantiated Netlists
+-------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Nov  4 19:03:59 2026
+| Host : build-host running 64-bit Linux
+| Command      : report_high_fanout_nets -max_nets 20 -append -file data/exp_evening_2026-11-04/training_telemetry_v2/states/0306bc5776a7614b9eac5ecaa1cf8053f85725c723091f56eb6b7ff24ca4f350/attempts/af44ed1ebd674e559376ddfe836257fd/path_probe/probe.rpt
+| Design       : logicnet
+| Device       : xcvu3p
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++------------------------------------+--------+-------------+
+| Net Name                           | Fanout | Driver Type |
++------------------------------------+--------+-------------+
+| rst                                |   1321 | PORT        |
+| layer5_reg/M5w[31]                 |    706 | FDRE        |
+| layer1_reg/M1w[76]                 |    637 | FDRE        |
+| layer5_reg/M5w[42]                 |    620 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[59] |    616 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[20] |    573 | FDRE        |
+| layer5_reg/M5w[43]                 |    551 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[60] |    541 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[19] |    515 | FDRE        |
+| layer2_reg/M2w[132]                |    495 | FDRE        |
+| layer1_reg/M1w[51]                 |    486 | FDRE        |
+| layer1_reg/M1w[11]                 |    482 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[85] |    447 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[17] |    440 | FDRE        |
+| layer1_reg/M1w[9]                  |    435 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[35] |    426 | FDRE        |
+| layer2_reg/data_out_reg[191]_0[16] |    425 | FDRE        |
+| layer1_reg/M1w[93]                 |    415 | FDRE        |
+| layer2_reg/M2w[51]                 |    403 | FDRE        |
+| layer0_reg/M0w[0]                  |    397 | FDRE        |
++------------------------------------+--------+-------------+
+
+

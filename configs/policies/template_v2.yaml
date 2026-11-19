@@ -1,0 +1,23 @@
+# Template v2, frozen 2026-11-12 by the D1-v2 stop rule (notes/template_v2_plan.md and template_v2_plan_rev1.md):
+# the best accepted combination is P1 + P2 + P3 on the round-1 wording. P4 (structured reply with reasoning,
+# options and forecast) was rejected on its forecast target, and its one revision (P4r) on its token target;
+# both are kept as files for the record and are not part of template v2.
+# Build the policy with orch.policies.v2_policy.V2Policy and orch.policies.v2_prompt.Variant("template_v2",
+# ("P1", "P2", "P3"), wording="W1"); load the texts with orch.policies.v2_prompt.load_assets(project).
+name: template_v2
+packages: [P1, P2, P3]
+worker_wording: W1
+noise_view: categories
+template: configs/prompts/template_v2/assembled/orchestrator3_p123.txt
+template_sha256: 13045c6beceb99903a69ffed061e583bb40190ffe389932c98e9ec087db81e5a
+package_files:
+  P1: configs/prompts/template_v2/p1_clarity.yaml
+  P2: configs/prompts/template_v2/p2_neutral.yaml
+  P3: configs/prompts/template_v2/p3_physical.yaml
+  wordings: configs/prompts/template_v2/worker_descriptions.yaml
+experience_calls: configs/experience/calls_v2.json
+view: {history: true, physical: "every saved state against the start and its parent, compact fields", experience: "pooled calls, leave-one-design-out, lines from at least four designs"}
+reply: "one JSON object, schema written into the prompt and sent as the response schema: state_diagnosis, physical_facts, rationale_summary, action, mandate (placement: may change / must not change)"
+harness: "V2Policy enforces listed workers and states, attempts within the remaining budget, the repeat rule (legal until the view shows no options left) and the guards; the episode engine keeps budget, validity and the final pick"
+model: gemini-3.1-flash-lite
+model_settings_note: "as configs/policies/llm_r1.yaml (max_output_tokens 2048, 2 repair turns); the bank evaluation used temperature 0.3 with seeds 0 to 2"

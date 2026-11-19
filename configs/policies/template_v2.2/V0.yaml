@@ -1,0 +1,13 @@
+# Template v2.2 grid variant V0: round-1 wording F1-R1 (the existing F1Policy; not a switch set).
+# Not a switch set: the round-1 prompt, built as the D6-v2 campaign built it (scripts/d6v2_2026-11-12/d6_common.make_policy,
+# approach F1: configs/policies/llm.yaml configuration F1, template configs/prompts/orchestrator_v2.txt = R1, policy
+# orch.policies.round2_harness.F1Policy).
+name: template_v2.2_V0
+variant: V0
+reference: F1-R1
+campaign_config: configs/campaign/campaign.yaml
+model: gemini-3.1-flash-lite
+temperature: 0.3
+seeds: [0, 1, 2]
+noise: configs/noise_round2.yaml
+loop: orch.episode_r2.run_episode_r2 with ROUND2 (both options on)

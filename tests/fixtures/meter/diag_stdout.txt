@@ -1,0 +1,88 @@
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sat Oct 31 17:37:10 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source diag_lut.tcl
+# set dcp [lindex $argv 0]
+# open_checkpoint $dcp
+Command: open_checkpoint benchmarks/fpl26_B2_default-reimpl_2026-10-24/vexriscv_re-place_B2.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1710.125 ; gain = 0.000 ; free physical = 492868 ; free virtual = 1398561
+INFO: [Device 21-403] Loading part xcvu3p-ffvc1517-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2744.570 ; gain = 0.000 ; free physical = 442806 ; free virtual = 1348500
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2744.570 ; gain = 0.000 ; free physical = 442058 ; free virtual = 1347751
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 431009 ; free virtual = 1336702
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430967 ; free virtual = 1336660
+Read PlaceDB: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430800 ; free virtual = 1336493
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430795 ; free virtual = 1336488
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430736 ; free virtual = 1336429
+Read Physdb Files: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430727 ; free virtual = 1336420
+Restored from archive | CPU: 0.230000 secs | Memory: 5.132103 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.19 . Memory (MB): peak = 3063.887 ; gain = 0.000 ; free physical = 430726 ; free virtual = 1336419
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3321.098 ; gain = 0.000 ; free physical = 419425 ; free virtual = 1325118
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.1 (64-bit) build 6140274
+open_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 3321.133 ; gain = 1611.008 ; free physical = 418932 ; free virtual = 1324626
+# set luts [get_cells -hier -filter {REF_NAME =~ LUT*}]
+# puts "RL_DIAG n_lut_cells [llength $luts]"
+RL_DIAG n_lut_cells 1953
+# foreach r {LUT1 LUT2 LUT3 LUT4 LUT5 LUT6 LUT6_2} {
+#   puts "RL_DIAG n_$r [llength [get_cells -hier -filter "REF_NAME == $r"]]"
+# }
+RL_DIAG n_LUT1 9
+RL_DIAG n_LUT2 179
+RL_DIAG n_LUT3 280
+RL_DIAG n_LUT4 353
+RL_DIAG n_LUT5 326
+RL_DIAG n_LUT6 806
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME == LUT6_2}'.
+RL_DIAG n_LUT6_2 0
+# puts "RL_DIAG bel_5lut [llength [get_cells -hier -filter {REF_NAME =~ LUT* && BEL =~ *5LUT}]]"
+RL_DIAG bel_5lut 125
+# puts "RL_DIAG bel_6lut [llength [get_cells -hier -filter {REF_NAME =~ LUT* && BEL =~ *6LUT}]]"
+RL_DIAG bel_6lut 1828
+# set props [list_property [lindex $luts 0]]
+# puts "RL_DIAG lut_props $props"
+RL_DIAG lut_props ADDER_THRESHOLD ADV_USEFUL_SKEW AIE.COLOCATED_MEMORIES AIE.COLOCATED_NODES AIE.NOT_COLOCATED_MEMORIES AIE.NOT_COLOCATED_NODES AIE.RESERVED_MEMORY.BANK AIE.RESERVED_MEMORY.COLUMN AIE.RESERVED_MEMORY.OFFSET AIE.RESERVED_MEMORY.ROW AIE.RUNTIME AIE.TILE.COLUMN AIE.TILE.NAME AIE.TILE.ROW ASYNC_REG AUTOPIPELINE_MODULE BEL BLI BLKNM BLOCK_SYNTH.ADDER_THRESHOLD BLOCK_SYNTH.CASCADE_HEIGHT BLOCK_SYNTH.COMPARATOR_THRESHOLD BLOCK_SYNTH.CONTROL_SET_THRESHOLD BLOCK_SYNTH.EXTRACT_PARTITION BLOCK_SYNTH.FLATTEN_HIERARCHY BLOCK_SYNTH.FLATTEN_INSIDE_PARTITION BLOCK_SYNTH.FSM_EXTRACTION BLOCK_SYNTH.KEEP_EQUIVALENT_REGISTER BLOCK_SYNTH.LOGIC_COMPACTION BLOCK_SYNTH.LUT_CASCADE BLOCK_SYNTH.LUT_COMBINING BLOCK_SYNTH.MAX_LUT_INPUT BLOCK_SYNTH.MUXF_MAPPING BLOCK_SYNTH.POST_MAP_CONTROL_SET_THRESHOLD BLOCK_SYNTH.PRESERVE_BOUNDARY BLOCK_SYNTH.RAM_DECOMP BLOCK_SYNTH.RAM_STYLE BLOCK_SYNTH.RETIMING BLOCK_SYNTH.ROM_MAPPING BLOCK_SYNTH.RW_ADDR_COLLISION BLOCK_SYNTH.SHREG_MIN_SIZE BLOCK_SYNTH.SRL_STYLE BLOCK_SYNTH.STRATEGY BLOCK_SYNTH.USER_PROVIDED BUFG CARRY_REMAP CASCADE_HEIGHT CELL_BLOAT_FACTOR CLASS CLOCK_LOW_FANOUT CLOCK_REGION CONTROL_SET_REMAP CONVERT_BRAM8 DCI_VALUE DELAY_BYPASS DONT_PARTITION DONT_TOUCH DSP_FOLDING DSP_REG_OPT EQUIVALENT_DRIVER_GROUP EQUIVALENT_DRIVER_OPT ESSENTIAL_CLASSIFICATION_VALUE EXTRACT_ENABLE EXTRACT_RESET FILE_NAME FORCE_MAX_FANOUT FSM_ENCODED_STATES FSM_ENCODING FSM_SAFE_STATE HBLKNM HD.ISOLATED HD.ISOLATED_EXEMPT HD.PLATFORM_WRAPPER HD.RECONFIGURABLE HD.RECONFIGURABLE_CONTAINER HD.RECONFIG_PLATFORM HD.TANDEM HIERARCHICALNAME HLUTNM H_SET ID IMR INIT INIT_VAL IOB IOBDELAY IOB_TRI_REG IODELAY_GROUP IPROGRAMMING IS_BEL_FIXED IS_BLACKBOX IS_BOUNDARY_INST IS_CLOCK_GATED IS_DEBUGGABLE IS_ENCRYPTED IS_LOC_FIXED IS_MATCHED IS_ORIG_CELL IS_PRIMITIVE IS_REUSED IS_SEQUENTIAL KEEP KEEP_HIERARCHY KEEP_PRSHELL_DISCONNECT LIB_CELL LINE_NUMBER LOC LOCK_PINS LOOKAHEAD8_REMAP LOPT_BUFG_MISC LUTNM LUT_DECOMPOSE LUT_REMAP MACRO_NAME MAX_FANOUT MAX_FANOUT_MODE MEM.ADDRESS_BEGIN MEM.ADDRESS_END MEM.ADDRESS_SPACE MEM.ADDRESS_SPACE_BEGIN MEM.ADDRESS_SPACE_DATA_LSB MEM.ADDRESS_SPACE_DATA_MSB MEM.ADDRESS_SPACE_DATA_WIDTH MEM.ADDRESS_SPACE_END MEM.ADDRESS_SPACE_WORD_WIDTH MEM.CORE_MEMORY_WIDTH MEM.DATA_LSB MEM.DATA_MSB MEM.ENDIANNESS MEM.PORTA.ADDRESS_BEGIN MEM.PORTA.ADDRESS_END MEM.PORTA.DATA_BIT_LAYOUT MEM.PORTA.DATA_LSB MEM.PORTA.DATA_MSB MEM.PORTB.ADDRESS_BEGIN MEM.PORTB.ADDRESS_END MEM.PORTB.DATA_BIT_LAYOUT MEM.PORTB.DATA_LSB MEM.PORTB.DATA_MSB METHODOLOGY_DRC_VIOS MIG_FLOORPLAN_MODE MUXF_REMAP NAME NODELAY OPROGRAMMING OPT_MODIFIED ORIG_CELL_NAME ORIG_REF_NAME PARENT PBLOCK PHASESHIFT_MODE PHYSOPT_MARK_INST PHYSOPT_RETIMING_BACKWARD PHYSOPT_RETIMING_FORWARD PHYS_OPT_MODIFIED PHYS_OPT_SKIPPED PHYS_SRL2PIPELINE POWER_OPTED_CE PRIMITIVE_COUNT PRIMITIVE_GROUP PRIMITIVE_LEVEL PRIMITIVE_SUBGROUP PRIMITIVE_TYPE PRSHELL_OK_FOR_IMPL PRSHELL_SKIP_IP PSIP_RETIMING_BACKWARD PSIP_RETIMING_FORWARD PWR_MODE RAM_DECOMP RAM_STYLE RDADDR_COLLISION_HWCONFIG REF_NAME REG_TO_SRL RETIMING_BACKWARD RETIMING_FORWARD REUSE_STATUS RLOC ROM_STYLE RPM RPM_GRID RTL_RAM_BITS RTL_RAM_NAME RTL_RAM_STYLE RTL_RAM_TYPE RW_ADDR_COLLISION SCOPED_NAME SDX_FEATURE_ROM SETUP_SLACK SEU_PROTECTED SHREG_EXTRACT SIM_COLLISION_CHECK SITE SLR SLR_INDEX SOFT_HLUTNM SOFT_MACRO.CLUSTER SOFT_MACRO.COORDINATE SRL_STAGES_TO_REG_INPUT SRL_STAGES_TO_REG_OUTPUT SRL_STYLE SRL_TO_REG STATUS TDM_COUNTER_CELL TDM_GROUP_CELL TDM_KEEP TRANSIENT_FILTER TYPE USER_CLUSTER USER_LAGUNA USER_RAM_AVERAGE_ACTIVITY USER_SKIP_OBFUSCATION USER_SLL_REG USER_SLR_ASSIGNMENT USE_DSP USE_DSP48 USE_LUTNM USE_RLOC XBLKNM XPM_CDC XSTLIB ram_addr_begin ram_addr_end ram_offset ram_slice_begin ram_slice_end syn_keep
+# foreach p $props {
+#   if {[string match -nocase *LUTNM* $p]} {
+#     if {[catch {set n [llength [get_cells -hier -filter "REF_NAME =~ LUT* && $p != \"\""]]} err]} {
+#       puts "RL_DIAG n_$p ERROR $err"
+#     } else {
+#       puts "RL_DIAG n_$p $n"
+#     }
+#   }
+# }
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME =~ LUT* && HLUTNM != ""}'.
+RL_DIAG n_HLUTNM 0
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME =~ LUT* && LUTNM != ""}'.
+RL_DIAG n_LUTNM 0
+RL_DIAG n_SOFT_HLUTNM 26
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {REF_NAME =~ LUT* && USE_LUTNM != ""}'.
+RL_DIAG n_USE_LUTNM 0
+# close_design
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 31 17:37:31 2026...

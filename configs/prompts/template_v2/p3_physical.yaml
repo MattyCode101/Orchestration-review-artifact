@@ -1,0 +1,13 @@
+# Template v2, package P3 (physical attention): prompt-improvement changes 16 to 19.
+# Code-rendered parts: every saved state described against the start and against its parent (change 17) and the
+# compact field set with worst-path fields gated (change 18 = build-review defect 8): orch/policies/v2_physical.py.
+# The purpose sentence (change 16) is the text below; the reply question (change 19) is the edit below when the
+# round-1 reply format is in use, and the evidence field of P4 otherwise (p4_reply.yaml).
+package: P3
+changes: [16, 17, 18, 19]
+edits:
+  - change: 19
+    old: "The mandate must be present exactly when the action is INVOKE_WORKER and null when the action is STOP."
+    new: "The mandate must be present exactly when the action is INVOKE_WORKER and null when the action is STOP. In physical_facts, name the physical facts that bear on this choice, if any (there may be none)."
+texts:
+  physical_intro: "Use these facts to compare saved states and to judge how deep a limit break is (for example failing endpoints and total negative slack) before choosing a base state or a repair. The start is described in full; every other saved state by what changed meaningfully against the start and against its parent."

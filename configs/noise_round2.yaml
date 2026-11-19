@@ -1,0 +1,45 @@
+# Round-2 noise bands (the authors' decision 7, 2026-11-12): configs/noise.yaml plus configs/noise_development.yaml,
+# entries copied verbatim (no design is in both files). configs/noise.yaml is frozen and untouched.
+# Sources: configs/noise.yaml sha256 402b90dd6f97de76a134905059cdac1d8de934cc2d752879f86b4c9b515755a2; configs/noise_development.yaml sha256 f7a91d7d9390d378481fb43f5c76a8e30c05068115159ee74df9a5e51147416e.
+# Same schema (load with orch.config.load_noise). Round-2 runs (D6-v2 onwards) use this file.
+bands:
+  rosetta_3d-rendering:
+    wns_ns: {value: 0.113, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:34,195,206,215,225,234"}
+    packed_luts: {value: 0.00043, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:34,195,206,215,225,234"}
+  corescore_500_mod:
+    wns_ns: {value: 0.034, basis: ns, relative: false, samples: 4, source: "R1/report.md:81-99; R1/results.csv:30,191,203,222"}
+    packed_luts: {value: 0.00006, basis: fraction_of_start, relative: true, samples: 4, source: "R1/results.csv:30,191,203,222"}
+  rosetta_spam-filter:
+    wns_ns: {value: 0.075, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:37,198,209,218,228,237"}
+    packed_luts: {value: 0.00205, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:37,198,209,218,228,237"}
+  vexriscv_re-place:
+    wns_ns: {value: 0.140, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:38,199,210,219,229,238"}
+    packed_luts: {value: 0.00369, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:38,199,210,219,229,238"}
+  vexriscv_re-place_v2:
+    wns_ns: {value: 0.057, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:39,200,211,220,230,239"}
+    packed_luts: {value: 0.00548, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:39,200,211,220,230,239"}
+  finn_radioml:
+    wns_ns: {value: 0.081, basis: ns, relative: false, samples: 4, source: "R1/report.md:81-99; R1/results.csv:31,192,204,223"}
+    packed_luts: {value: 0.00008, basis: fraction_of_start, relative: true, samples: 4, source: "R1/results.csv:31,192,204,223"}
+  vtr_mcml:
+    wns_ns: {value: 0.354, basis: ns, relative: false, samples: 4, source: "R1/report.md:81-99; R1/results.csv:40,201,212,231"}
+    packed_luts: {value: 0.00011, basis: fraction_of_start, relative: true, samples: 4, source: "R1/results.csv:40,201,212,231"}
+  rosetta_digit-recognition:
+    wns_ns: {value: 0.496, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:35,196,207,216,226,235"}
+    packed_luts: {value: 0.00156, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:35,196,207,216,226,235"}
+  t2_cordic_s:
+    wns_ns: {value: 0.033, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+    packed_luts: {value: 2.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+    dynamic_power_w: {value: 0.008, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+  vtr_mcml_v2:
+    wns_ns: {value: 0.47, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+    packed_luts: {value: 10.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+    dynamic_power_w: {value: 0.012, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+  amd_mini-isp:
+    wns_ns: {value: 0.047, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}
+    packed_luts: {value: 31.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}
+    dynamic_power_w: {value: 0.011, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}
+  logicnets_jscl:
+    wns_ns: {value: 0.779, basis: ns, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}
+    packed_luts: {value: 37.0, basis: packed_luts, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}
+    dynamic_power_w: {value: 0.263, basis: W, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}

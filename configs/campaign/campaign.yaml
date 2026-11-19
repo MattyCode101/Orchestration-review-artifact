@@ -1,0 +1,19 @@
+# Campaign configuration (names, files, prices). Hashed into the freeze list.
+# The model is NOT set here: it is the single value `model` in the file named by llm_yaml.
+schema_version: campaign-config-v1
+llm_yaml: configs/policies/llm.yaml
+prompt_revisions:
+  R0: configs/prompts/orchestrator_v1.txt
+  R1: configs/prompts/orchestrator_v2.txt
+llm_cells:
+  F1-R1: {kind: orchestrator, config: F1, revision: R1}
+  F1-R0: {kind: orchestrator, config: F1, revision: R0}
+  E0-R1: {kind: orchestrator, config: E0, revision: R1}
+  GA-R1: {kind: general}
+v2_parameters: {repair_attempts: 1, repair_preserve_placement: false, gentle_step: true, after_failed_repair: rollback}
+# List price recorded in notes/decisions.md (Decision (c) outcome), US$ per million tokens.
+# Thinking tokens are charged as output.
+price: {input_per_million: 0.25, output_per_million: 1.50}
+test_designs: [rosetta_digit-recognition, corescore_500_mod, vexriscv_re-place_v2, fir_symmetric_systolic, fir_systolic_transposed]
+test_noise_file: data/exp_evening_2026-11-04/test_b2/overnight_baseline_2026-11-04/noise_bands_2026-11-04.json
+test_power_noise_file: data/scratch_saturday_2026-11-07/test_power_noise_bands.json

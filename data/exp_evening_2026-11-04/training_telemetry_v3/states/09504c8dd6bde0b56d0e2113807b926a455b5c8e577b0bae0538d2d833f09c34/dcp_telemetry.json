@@ -1,0 +1,341 @@
+{
+  "fake": false,
+  "metrics": {
+    "dynamic_power_w": {
+      "basis": "routed_estimated",
+      "method": "run3_vectorless_report_power",
+      "unit": "W",
+      "value": 1.579
+    },
+    "ffs": {
+      "basis": "routed",
+      "method": "run3_report_utilization",
+      "unit": "count",
+      "value": 12684.0
+    },
+    "netlist_luts": {
+      "basis": "routed",
+      "method": "run3_diag_lut_census",
+      "unit": "count",
+      "value": 2933.0
+    },
+    "packed_luts": {
+      "basis": "routed",
+      "method": "run3_report_utilization",
+      "unit": "count",
+      "value": 5247.0
+    },
+    "tns_ns": {
+      "basis": "routed",
+      "method": "run3_timing_summary",
+      "unit": "ns",
+      "value": -818.318
+    },
+    "wns_ns": {
+      "basis": "routed",
+      "method": "run3_timing_summary",
+      "unit": "ns",
+      "value": -0.664
+    }
+  },
+  "probe": {
+    "critical_path_features": {
+      "data_path_delay_ns": 2.244,
+      "dominant_path_type": "mixed",
+      "logic_delay_ns": 0.943,
+      "max_logic_levels": 8,
+      "route_delay_ns": 1.301,
+      "route_delay_ratio": 0.579768
+    },
+    "diagnostic_missing_reasons": {},
+    "fanout": {
+      "max_fanout": 1920,
+      "num_high_fanout_nets": 20
+    },
+    "hardblock_resource_pressure": {
+      "Block RAM Tile": {
+        "available": 720,
+        "fixed": 0,
+        "used": 3,
+        "utilization_pct": 0.42
+      },
+      "DSPs": {
+        "available": 2280,
+        "fixed": 0,
+        "used": 224,
+        "utilization_pct": 9.82
+      },
+      "URAM": {
+        "available": 320,
+        "fixed": 0,
+        "used": 0,
+        "utilization_pct": 0.0
+      }
+    },
+    "lut_as_shift_register": 533,
+    "lut_primitive_counts": {
+      "LUT1": 37,
+      "LUT2": 1427,
+      "LUT3": 415,
+      "LUT4": 441,
+      "LUT5": 137,
+      "LUT6": 476
+    },
+    "pblock_sizing_resources": {
+      "brams": 3,
+      "brams_1_5x": 4,
+      "dsps": 224,
+      "dsps_1_5x": 336,
+      "ffs": 12684,
+      "ffs_1_5x": 19026,
+      "luts": 2538,
+      "luts_1_5x": 3807,
+      "urams": 0,
+      "urams_1_5x": 0
+    },
+    "route_vs_logic_delay_hint": "mixed",
+    "timing": {
+      "failing_endpoints": 6514,
+      "tns_ns": -818.318,
+      "wns_ns": -0.664
+    },
+    "utilization_summary": {
+      "Block RAM Tile": {
+        "available": 720,
+        "fixed": 0,
+        "used": 3,
+        "utilization_pct": 0.42
+      },
+      "CLB LUTs": {
+        "available": 394080,
+        "fixed": 0,
+        "used": 5247,
+        "utilization_pct": 1.33
+      },
+      "CLB Registers": {
+        "available": 788160,
+        "fixed": 0,
+        "used": 12684,
+        "utilization_pct": 1.61
+      },
+      "DSPs": {
+        "available": 2280,
+        "fixed": 0,
+        "used": 224,
+        "utilization_pct": 9.82
+      },
+      "URAM": {
+        "available": 320,
+        "fixed": 0,
+        "used": 0,
+        "utilization_pct": 0.0
+      }
+    }
+  },
+  "provenance": {
+    "contract_run_id": "training-telemetry-09504c8dd6bd",
+    "env_script_sha256": "d1bbef7588350a20c64d5b2cff2bd2a883b7f67657422c52ffbacfcec19bdc91",
+    "evidence_id": "42b76ca703af14289e10b608374b0849eaa0650a8ace741004900c34d2c3e788",
+    "evidence_origin": "supplied",
+    "extractor_sha256": "6a0f1f0c287a710bbd565a377826b9007a0ee39ce29a7a307934629705827112",
+    "input_copy": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/input/input.dcp",
+    "input_sha256_after": "09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34",
+    "input_sha256_before": "09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34",
+    "latch_commit": "a722b1ecacfe10f549d66efd7f56a0e35c608a97",
+    "latch_report_parser_sha256": "ff3e71b796b3855155107151f71a38acb5bd509635839ab9bdd7bfbb8fd8ae51",
+    "latch_timing_parser_sha256": "87c2762d5a5092b09bb42d6e996ba27df6ac2755b296d7172d56667586f87b4c",
+    "latch_util_parser_sha256": "cb07384aeacb1334c0b2fc80767c919a034755d79bd7d3b2ca0b024240d02428",
+    "meter_report_path": "data/sweeps/worker_fitting_train/runs/run_105e0fb46f984139af1157f562e11645/meter/measure/reports",
+    "meter_version": "e11abbe86bd48e7cfd070dd6d9adeda1424517642cd6c1e09c7e29a727947a8f",
+    "private_input_sha256_after": "09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34",
+    "probe_report_sha256": "8d57adab369460bb8705611d06b189c2fab1ac95624196d46986cc8761013569",
+    "probe_template_sha256": "926ebb426ae29b4ba90b135f1fb561f95dcb76da7831306d04dc5cf3d3044e55",
+    "rendered_probe_sha256": "51aad1e5a49d6a2ca6b394c3fa706b6739a77a98f3fe8af7a7700ebf256684c1",
+    "runner": {
+      "attempts": [
+        {
+          "exit_code": 0,
+          "failure_reason": null,
+          "index": 1,
+          "status": "ok",
+          "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/path_probe/stderr.attempt-1.txt",
+          "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/path_probe/stdout.attempt-1.txt",
+          "wall_s": 43.70291594788432
+        }
+      ],
+      "exit_code": 0,
+      "peak_memory_bytes": 3112058880,
+      "process_group_kills": 0,
+      "run_id": "training-telemetry-09504c8dd6bd",
+      "status": "ok",
+      "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/path_probe/stderr.txt",
+      "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/path_probe/stdout.txt",
+      "tag": "CONTRACT_RUN_ID=b9659df6c79f480ea2e0c3af94bd0566",
+      "tag_sweep_kills": 0,
+      "wall_s": 43.70857574418187
+    },
+    "source_dcp": "data/sweeps/worker_fitting_train/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/design.dcp",
+    "vivado_version": "2025.1",
+    "wpath": {
+      "copied_script": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/wpath.tcl",
+      "output_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/wpath.tsv",
+      "output_sha256": "24e4a09bcb520c73d9dc495b02a2f3076b3b244ce2dca0420552859097a9e5f1",
+      "runner": {
+        "attempts": [
+          {
+            "exit_code": 0,
+            "failure_reason": null,
+            "index": 1,
+            "status": "ok",
+            "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/stderr.attempt-1.txt",
+            "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/stdout.attempt-1.txt",
+            "wall_s": 59.65198806487024
+          }
+        ],
+        "exit_code": 0,
+        "peak_memory_bytes": 3114303488,
+        "process_group_kills": 0,
+        "run_id": "training-telemetry-09504c8dd6bd-wpath",
+        "status": "ok",
+        "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/stderr.txt",
+        "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath/stdout.txt",
+        "tag": "CONTRACT_RUN_ID=deb17b83fd7048bf84c4019c88d15823",
+        "tag_sweep_kills": 0,
+        "wall_s": 59.66111439280212
+      },
+      "source_relative_path": "paper_analysis/scripts/wpath.tcl",
+      "source_tcl_sha256": "0215cf6d819878cc24841d4667a56120e6399ace93d739e9e3490d17ac53299a"
+    },
+    "wpath2": {
+      "copied_script": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/wpath2.tcl",
+      "output_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/wpath2.tsv",
+      "output_sha256": "b7affcc3e65b47c2a2197342b3ad90789a0b0e0d4cad5c7a7da81fcce2de93b7",
+      "runner": {
+        "attempts": [
+          {
+            "exit_code": 0,
+            "failure_reason": null,
+            "index": 1,
+            "status": "ok",
+            "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/stderr.attempt-1.txt",
+            "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/stdout.attempt-1.txt",
+            "wall_s": 60.212027130648494
+          }
+        ],
+        "exit_code": 0,
+        "peak_memory_bytes": 3110653952,
+        "process_group_kills": 0,
+        "run_id": "training-telemetry-09504c8dd6bd-wpath2",
+        "status": "ok",
+        "stderr_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/stderr.txt",
+        "stdout_path": "data/exp_evening_2026-11-04/training_telemetry_v3/states/09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34/attempts/441fc3f414444c7eb58566491219f329/wpath2/stdout.txt",
+        "tag": "CONTRACT_RUN_ID=844efc99832f4d7c9daf58cfbbb2595e",
+        "tag_sweep_kills": 0,
+        "wall_s": 60.21883701905608
+      },
+      "source_relative_path": "paper_analysis/scripts/wpath2.tcl",
+      "source_tcl_sha256": "341f9f813143e74e891d5c18692d2b1d2b8865feda990ce85b9ee7d55a6ee0b2"
+    }
+  },
+  "schema_version": "dcp-telemetry-v1",
+  "state_sha256": "09504c8dd6bde0b56d0e2113807b926a455b5c8e577b0bae0538d2d833f09c34",
+  "validity": {
+    "clock_digest": "474ee6f7cd0f79e1059a4b350f4017b918fbde3baf9294eae3e435e77692b383",
+    "constraint_fingerprint": "f6ef0145a507d6cc5e58f3f73dec578da23e7d009c36787b6e35968fcd577e2a",
+    "drc_errors": 0,
+    "route_errors": 0,
+    "routed": true,
+    "v_props": {
+      "n_DONT_TOUCH": 0,
+      "n_IS_BEL_FIXED": 0,
+      "n_IS_LOC_FIXED": 0
+    }
+  },
+  "wpath": {
+    "clock_skew_ns": -0.01,
+    "data_path_delay_ns": 2.244,
+    "endpoint_pin": "grp_dataflow_parent_loop_proc_fu_200/dataflow_in_loop_TRAINING_INST_U0/compute4_U0/grp_compute4_Pipeline_DOT_fu_343/add_ln45_14_reg_3172_reg[31]/D",
+    "logic_delay_ns": 0.943,
+    "logic_levels": 8,
+    "net_delay_ns": 1.301,
+    "path_cells": {
+      "composition": {
+        "CARRY8": 4,
+        "FDRE": 2,
+        "LUT3": 2,
+        "LUT4": 2
+      },
+      "count": 10
+    },
+    "pblocks": [
+      {
+        "detail_fields": [
+          "cells 58",
+          "ranges DSP48E2_X0Y4:DSP48E2_X6Y119 SLICE_X0Y9:SLICE_X7Y299 SLICE_X8Y60:SLICE_X8Y239 SLICE_X9Y9:SLICE_X18Y299 SLICE_X19Y60:SLICE_X19Y239 SLICE_X20Y9:SLICE_X32Y299 SLICE_X33Y60:SLICE_X33Y239 SLICE_X34Y9:SLICE_X46Y299 SLICE_X47Y60:SLICE_X47Y239 SLICE_X48Y9:SLICE_X50Y299 RAMB18_X0Y4:RAMB18_X3Y119 URAM288_X0Y4:URAM288_X0Y79 RAMB36_X0Y2:RAMB36_X3Y59"
+        ],
+        "name": "pblock_auto"
+      }
+    ],
+    "primitive_cell_count": 25580,
+    "requirement_ns": 1.6,
+    "slack_ns": -0.664,
+    "startpoint_clock": "clk_fpl26contest",
+    "startpoint_pin": "grp_dataflow_parent_loop_proc_fu_200/dataflow_in_loop_TRAINING_INST_U0/compute4_U0/grp_compute4_Pipeline_DOT_fu_343/term_reg_3082_reg[8]/C",
+    "tile_span": {
+      "dx": 0,
+      "dy": 4,
+      "x_max": 13,
+      "x_min": 13,
+      "y_max": 101,
+      "y_min": 97
+    },
+    "unparsed_records": [],
+    "utilization_counts": {}
+  },
+  "wpath2": {
+    "clock_skew_ns": -0.01,
+    "data_path_delay_ns": 2.244,
+    "endpoint_pin": "grp_dataflow_parent_loop_proc_fu_200/dataflow_in_loop_TRAINING_INST_U0/compute4_U0/grp_compute4_Pipeline_DOT_fu_343/add_ln45_14_reg_3172_reg[31]/D",
+    "logic_delay_ns": 0.943,
+    "logic_levels": 8,
+    "net_delay_ns": 1.301,
+    "path_cells": {
+      "composition": {
+        "CARRY8": 4,
+        "FDRE": 2,
+        "LUT3": 2,
+        "LUT4": 2
+      },
+      "count": 10
+    },
+    "pblocks": [
+      {
+        "detail_fields": [
+          "ranges DSP48E2_X0Y4:DSP48E2_X6Y119 SLICE_X0Y9:SLICE_X7Y299 SLICE_X8Y60:SLICE_X8Y239 SLICE_X9Y9:SLICE_X18Y299 SLICE_X19Y60:SLICE_X19Y239 SLICE_X20Y9:SLICE_X32Y299 SLICE_X33Y60:SLICE_X33Y239 SLICE_X34Y9:SLICE_X46Y299 SLICE_X47Y60:SLICE_X47Y239 SLICE_X48Y9:SLICE_X50Y299 RAMB18_X0Y4:RAMB18_X3Y119 URAM288_X0Y4:URAM288_X0Y79 RAMB36_X0Y2:RAMB36_X3Y59"
+        ],
+        "name": "pblock_auto"
+      }
+    ],
+    "primitive_cell_count": null,
+    "requirement_ns": 1.6,
+    "slack_ns": -0.664,
+    "startpoint_clock": null,
+    "startpoint_pin": "grp_dataflow_parent_loop_proc_fu_200/dataflow_in_loop_TRAINING_INST_U0/compute4_U0/grp_compute4_Pipeline_DOT_fu_343/term_reg_3082_reg[8]/C",
+    "tile_span": {
+      "dx": null,
+      "dy": null,
+      "x_max": 13,
+      "x_min": 13,
+      "y_max": 101,
+      "y_min": 97
+    },
+    "unparsed_records": [],
+    "utilization_counts": {
+      "brams": 3,
+      "dsps": 224,
+      "ffs": 12684,
+      "luts": 5247,
+      "urams": 0
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# Worker C recipe set and order, added 2026-11-06 as its own file because
+# configs/recipe_sets.yaml keeps an empty power list that completed-campaign
+# launch guards and tests assert. Order = validity-weighted mean dynamic-power
+# saving over the 176 training phase-a edges, equal weight per design, no
+# features (data/scratch_friday_2026-11-06/worker_c_ranking.json).
+# P_PRE_ALL re-places placement (registry replaces: true).
+signed_off: true
+worker_sets:
+  power:
+    - P_ROUTE_HIGHDELAY
+    - P_POST_ALL
+    - P_POST_BRAM
+    - P_PRE_ALL
+selection_note: "The authors' 2026-11-06 worker C directive: four power recipes ranked by validity-weighted average power gain, no features, two attempts by default."

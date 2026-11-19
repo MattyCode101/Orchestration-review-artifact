@@ -1,0 +1,25 @@
+{
+  "beta_pct_by_recipe": {
+    "A_E_DUPL_Q1000": 0.04611160159049254,
+    "A_R_EA": 1.4865753700244793,
+    "A_R_RSA_AREM": 2.2481811829463054,
+    "A_R_RSA_MED": 1.8126443934678151,
+    "A_R_RSA_SRLM": 2.6451893106950894
+  },
+  "created_at_utc": "2026-11-04T18:33:02.462330+00:00",
+  "feature_spec_sha256": "d2f47ed3c9ac708c8f50c1b68fd66254118b04af02d564fc409d900d48d8086d",
+  "journal_event_count": 774,
+  "journal_snapshot_sha256": "7b9f112a5ddececfa33a570198bec2c208dc60ab95b92745d4ef23554eac26cd",
+  "schema_version": "worker-null-v1-provisional",
+  "selected_recipe_id": "A_R_RSA_SRLM",
+  "status": "PROVISIONAL",
+  "target": "packed_lut_cut_pct",
+  "training_designs": [
+    "vexriscv_re-place",
+    "rosetta_spam-filter",
+    "rosetta_3d-rendering",
+    "logicnets_jscl",
+    "finn_radioml"
+  ],
+  "worker": "area"
+}

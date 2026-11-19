@@ -1,0 +1,84 @@
+{
+ "approach": "v2",
+ "brief": "W2R",
+ "cache_hits": 6,
+ "charged_cpu_s": 53.3,
+ "charged_wall_s": 3317.0612261723727,
+ "completed_at_utc": "2026-11-13T22:02:32.269759+00:00",
+ "descriptions_served": null,
+ "design": "logicnets_jscl",
+ "episode_id": "tr_logicnets_jscl_W2R_v2_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 3.579,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -444.4,
+  "wns_ns": -0.463
+ },
+ "final_state_id": "78d9e4c8a682f5e84065078d8e378b4b0a44d03539ff777044adb88c0a6734a9",
+ "finished_at_utc": "2026-11-13T22:02:32+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 0,
+  "placement_kept": 2,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "timing",
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.263,
+  "packed_luts": 37.0,
+  "wns_ns": 0.779
+ },
+ "policy_version": "1.0-frozen+ra1-rp0-g1-rollback",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "tr-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 3.577,
+  "ffs": 1655.0,
+  "netlist_luts": 31367.0,
+  "packed_luts": 30748.0,
+  "tns_ns": -446.354,
+  "wns_ns": -0.494
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "v2",
+  "brief": "W2R",
+  "design": "logicnets_jscl",
+  "episode_id": "tr_logicnets_jscl_W2R_v2_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "tag": "x",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

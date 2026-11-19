@@ -1,0 +1,33 @@
+{
+ "approach": "v2",
+ "brief": "T0",
+ "cache_hits": 3,
+ "cell_brief_for_workers": "T0",
+ "charged_cpu_s": 329.28,
+ "charged_wall_s": 5156.413720710203,
+ "completed_at_utc": "2026-11-12T15:18:23.460287+00:00",
+ "design": "t2_cordic_s",
+ "design_split": "development",
+ "episode_id": "dev_t2_cordic_s_T0_v2_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.228,
+  "ffs": 755.0,
+  "netlist_luts": 736.0,
+  "packed_luts": 725.0,
+  "tns_ns": -32.293,
+  "wns_ns": -0.193
+ },
+ "final_state_id": "d5db2aa1067957fa0a60c84ffc5b3a3a4121e9c0fd23600145cc386cd36dea57",
+ "llm": null,
+ "new_real_runs": 2,
+ "policy_version": "1.0-frozen+ra1-rp0-g1-rollback",
+ "run_no": 0,
+ "runs_used": 5,
+ "schema_version": "campaign-result-v1",
+ "scope": "development",
+ "stop_reason": "policy_stop",
+ "tag": "x",
+ "tier": 1,
+ "validation_status": "pass"
+}

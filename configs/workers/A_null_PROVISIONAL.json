@@ -1,0 +1,25 @@
+{
+  "beta_pct_by_recipe": {
+    "LATCH.auto_pblock": 1.430586097438983,
+    "LATCH.hardblock_relocate": 1.9262378450982558,
+    "LATCH.memory_path_opt": 1.5600179461789063,
+    "LATCH.phys_opt": 1.3313468398783792,
+    "LATCH.retime": 1.1453992308188776
+  },
+  "created_at_utc": "2026-11-04T18:33:02.462330+00:00",
+  "feature_spec_sha256": "d2f47ed3c9ac708c8f50c1b68fd66254118b04af02d564fc409d900d48d8086d",
+  "journal_event_count": 774,
+  "journal_snapshot_sha256": "7b9f112a5ddececfa33a570198bec2c208dc60ab95b92745d4ef23554eac26cd",
+  "schema_version": "worker-null-v1-provisional",
+  "selected_recipe_id": "LATCH.hardblock_relocate",
+  "status": "PROVISIONAL",
+  "target": "fmax_gain_pct",
+  "training_designs": [
+    "vexriscv_re-place",
+    "rosetta_spam-filter",
+    "rosetta_3d-rendering",
+    "logicnets_jscl",
+    "finn_radioml"
+  ],
+  "worker": "timing"
+}

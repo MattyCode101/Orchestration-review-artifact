@@ -1,0 +1,16 @@
+signed_off: true
+worker_sets:
+  timing:
+    - LATCH.phys_opt
+    - LATCH.retime
+    - LATCH.auto_pblock
+    - LATCH.hardblock_relocate
+    - LATCH.memory_path_opt
+  area:
+    - A_R_EA
+    - A_R_RSA_SRLM
+    - A_R_RSA_AREM
+    - A_R_RSA_MED
+    - A_E_DUPL_Q1000
+  power: []
+selection_note: "The authors' explicit train-only worker-fitting directive, 2026-11-04; source reports/Recipe_and_Benchmark_Selection.md"

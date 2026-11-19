@@ -1,0 +1,3 @@
+# Tier 3 (decisions of 2026-11-14 11:30): the one line that states what the situation lines of S'2 are counted from.
+# It is placed after the header of the situation section (orch/policies/v22_tier3.py situation_texts_llm).
+population: "The calls counted below are from earlier LLM-orchestrated runs on other designs."

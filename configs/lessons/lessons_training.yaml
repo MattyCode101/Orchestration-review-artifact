@@ -1,0 +1,125 @@
+schema_version: lessons-v1
+generator: scripts/saturday_lessons.py
+source_note: notes/orchestrator_lessons_training.md
+source_note_sha256: 3a67d66ca195c9ad278968750d44e2dedefad7541367404b8de5a78b5c65a90a
+training_designs_only: true
+lessons:
+- id: T0-1
+  brief: T0
+  source_design: rosetta_3d-rendering
+  text: 'In an earlier case (goal: better timing; the logic-size limit may not grow) the best known result
+    came from these calls in order: the area worker with re-placing allowed (the result stayed inside
+    the limit); then the timing worker with placement preserved (the result stayed inside the limit);
+    then the area worker with placement preserved (the result stayed inside the limit). Every step stayed
+    within the limit, and the best known result needed both kinds of worker. Takeaway: Use both kinds
+    of worker in one trajectory rather than committing to the brief''s own worker alone.'
+- id: T0-2
+  brief: T0
+  source_design: vexriscv_re-place
+  text: 'In an earlier case (goal: better timing; the logic-size limit may not grow) the best known result
+    came from these calls in order: the area worker with re-placing allowed (the result stayed inside
+    the limit); then the timing worker with re-placing allowed (the objective improved but the limit was
+    broken); then the area worker with re-placing allowed (the result stayed inside the limit). An early
+    step improved the objective but broke the limit. A policy that rolls back after every limit break
+    would have thrown this path away. Takeaway: Keep the limit-breaking intermediate and spend the next
+    call on the other worker, whose objective is the metric that was broken, so that the limit is recovered.'
+- id: T0-3
+  brief: T0
+  source_design: rosetta_spam-filter
+  text: 'In an earlier case (goal: better timing; the logic-size limit may not grow) the best known result
+    came from these calls in order: the timing worker with placement preserved (the result stayed inside
+    the limit); then the area worker with re-placing allowed (the result stayed inside the limit); then
+    the timing worker with re-placing allowed (the result stayed inside the limit). Every step stayed
+    within the limit, and the best known result needed both kinds of worker. Takeaway: Use both kinds
+    of worker in one trajectory rather than committing to the brief''s own worker alone.'
+- id: A0-1
+  brief: A0
+  source_design: rosetta_spam-filter
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may not fall below its start)
+    the best known result came from these calls in order: the area worker with re-placing allowed (the
+    objective improved but the limit was broken); then the area worker with re-placing allowed (the objective
+    improved but the limit was broken); then the area worker with re-placing allowed (the result stayed
+    inside the limit). An early step improved the objective but broke the limit. A policy that rolls back
+    after every limit break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate
+    and call the same worker again from it; the next result recovered the limit and went further.'
+- id: A0-2
+  brief: A0
+  source_design: finn_radioml
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may not fall below its start)
+    the best known result came from these calls in order: the area worker with re-placing allowed (the
+    objective improved but the limit was broken); then the area worker with re-placing allowed (the objective
+    improved but the limit was broken); then the area worker with re-placing allowed (the objective improved
+    but the limit was broken); then the area worker with re-placing allowed (the result stayed inside
+    the limit). An early step improved the objective but broke the limit. A policy that rolls back after
+    every limit break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate
+    and call the same worker again from it; the next result recovered the limit and went further.'
+- id: A0-3
+  brief: A0
+  source_design: logicnets_jscl
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may not fall below its start)
+    the best known result came from these calls in order: the area worker with re-placing allowed (the
+    objective improved but the limit was broken); then the area worker with re-placing allowed (the objective
+    improved but the limit was broken); then the timing worker with placement preserved (the result stayed
+    inside the limit). An early step improved the objective but broke the limit. A policy that rolls back
+    after every limit break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate
+    and spend the next call on the other worker, whose objective is the metric that was broken, so that
+    the limit is recovered.'
+- id: T-1
+  brief: T
+  source_design: rosetta_3d-rendering
+  text: 'In an earlier case (goal: better timing; the logic-size limit may grow only slightly) the best
+    known result came from these calls in order: the area worker with re-placing allowed (the result stayed
+    inside the limit); then the timing worker with placement preserved (the result stayed inside the limit);
+    then the area worker with placement preserved (the result stayed inside the limit). Every step stayed
+    within the limit, and the best known result needed both kinds of worker. Takeaway: Use both kinds
+    of worker in one trajectory rather than committing to the brief''s own worker alone.'
+- id: T-2
+  brief: T
+  source_design: vexriscv_re-place
+  text: 'In an earlier case (goal: better timing; the logic-size limit may grow only slightly) the best
+    known result came from these calls in order: the area worker with re-placing allowed (the result stayed
+    inside the limit); then the timing worker with re-placing allowed (the result stayed inside the limit);
+    then the area worker with re-placing allowed (the result stayed inside the limit). Every step stayed
+    within the limit, and the best known result needed both kinds of worker. Takeaway: Use both kinds
+    of worker in one trajectory rather than committing to the brief''s own worker alone.'
+- id: T-3
+  brief: T
+  source_design: rosetta_spam-filter
+  text: 'In an earlier case (goal: better timing; the logic-size limit may grow only slightly) the best
+    known result came from these calls in order: the timing worker with placement preserved (the result
+    stayed inside the limit); then the area worker with re-placing allowed (the result stayed inside the
+    limit); then the timing worker with re-placing allowed (the result stayed inside the limit). Every
+    step stayed within the limit, and the best known result needed both kinds of worker. Takeaway: Use
+    both kinds of worker in one trajectory rather than committing to the brief''s own worker alone.'
+- id: A-1
+  brief: A
+  source_design: rosetta_spam-filter
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may fall only slightly below
+    its start) the best known result came from these calls in order: the area worker with re-placing allowed
+    (the objective improved but the limit was broken); then the area worker with re-placing allowed (the
+    result stayed inside the limit); then the timing worker with re-placing allowed (the result stayed
+    inside the limit). An early step improved the objective but broke the limit. A policy that rolls back
+    after every limit break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate
+    and call the same worker again from it; the next result recovered the limit and went further.'
+- id: A-2
+  brief: A
+  source_design: finn_radioml
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may fall only slightly below
+    its start) the best known result came from these calls in order: the area worker with re-placing allowed
+    (the objective improved but the limit was broken); then the area worker with re-placing allowed (the
+    result stayed inside the limit); then the area worker with re-placing allowed (the result stayed inside
+    the limit); then the area worker with placement preserved (the result stayed inside the limit). An
+    early step improved the objective but broke the limit. A policy that rolls back after every limit
+    break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate and call the
+    same worker again from it; the next result recovered the limit and went further.'
+- id: A-3
+  brief: A
+  source_design: logicnets_jscl
+  text: 'In an earlier case (goal: fewer lookup tables; the timing limit may fall only slightly below
+    its start) the best known result came from these calls in order: the area worker with re-placing allowed
+    (the objective improved but the limit was broken); then the area worker with re-placing allowed (the
+    result stayed inside the limit); then the area worker with placement preserved (the result stayed
+    inside the limit); then the area worker with placement preserved (the result stayed inside the limit).
+    An early step improved the objective but broke the limit. A policy that rolls back after every limit
+    break would have thrown this path away. Takeaway: Keep the limit-breaking intermediate and call the
+    same worker again from it; the next result recovered the limit and went further.'

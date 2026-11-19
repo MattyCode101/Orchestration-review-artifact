@@ -1,0 +1,103 @@
+{
+ "approach": "V9",
+ "brief": "L2R",
+ "cache_hits": 4,
+ "charged_cpu_s": 65.29,
+ "charged_wall_s": 2309.569076258689,
+ "completed_at_utc": "2026-11-16T10:42:36.144144+00:00",
+ "descriptions_served": {
+  "cache": 0,
+  "live": 0,
+  "v3": 0
+ },
+ "design": "vexriscv_re-place",
+ "episode_id": "tr_vexriscv_re-place_L2R_V9_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.265,
+  "ffs": 1229.0,
+  "netlist_luts": 1896.0,
+  "packed_luts": 1831.0,
+  "tns_ns": -498.802,
+  "wns_ns": -0.759
+ },
+ "final_state_id": "95aba6521386471024ab0c49e6da392b979b737f1434a7b1cff767805c83a2b3",
+ "finished_at_utc": "2026-11-16T10:42:36+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1430,
+   "prompt": 6404,
+   "thoughts": 0,
+   "total": 7834
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 2,
+  "placement_kept": 0,
+  "respect_limits": 3,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 2,
+ "noise": {
+  "dynamic_power_w": 0.003,
+  "packed_luts": 6.9925500000000005,
+  "wns_ns": 0.14
+ },
+ "policy_version": "template_v2.2_V9-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1-v22a-EpHrcsTU",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "tr-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 0.263,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -498.982,
+  "wns_ns": -0.785
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r1",
+ "task": {
+  "approach": "V9",
+  "brief": "L2R",
+  "design": "vexriscv_re-place",
+  "episode_id": "tr_vexriscv_re-place_L2R_V9_r1",
+  "group": "TRAINING",
+  "model": "gemini-3.1-flash-lite",
+  "scope": "train",
+  "seed": 0,
+  "tag": "r1",
+  "temperature": 0.3,
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

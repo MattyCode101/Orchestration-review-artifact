@@ -1,0 +1,27 @@
+# gemini-4-argon with prompt wording R0 (the first wording): the wording-sensitivity cell of the stronger-model test.
+# Identical to llm_argon_r1.yaml except for the two template lines. NOT the default; see that file for the sources,
+# the parameters and the prices.
+provider: gemini
+model: gemini-4-argon
+temperature: null
+seed: null
+max_output_tokens: 16384
+thinking_budget: null
+thinking_level: medium
+timeout_ms: 240000
+max_repair_turns: 2
+rate_limit_per_minute: 100
+bridge:
+  python: tools/llm_bridge/.venv/bin/python
+  script: tools/llm_bridge/call.py
+templates:
+  orchestrator: configs/prompts/orchestrator_v1.txt
+  general_agent: configs/prompts/general_agent_v1.txt
+profiles_dir: configs/profiles
+lessons: configs/lessons/lessons_training.yaml
+configurations:
+  F0: {mode: fuzzy, profiles: false, lessons: false}
+  F1: {mode: fuzzy, profiles: true, lessons: false}
+  E0: {mode: exact, profiles: false, lessons: false}
+  E1: {mode: exact, profiles: true, lessons: false}
+  F2: {mode: fuzzy, profiles: true, lessons: true, dropped: true}

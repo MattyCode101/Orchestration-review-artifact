@@ -1,0 +1,40 @@
+# Round-2 LLM orchestrator: model settings of the R1 file plus the feature configurations of the
+# Wednesday-night section 7 ablation (training designs). The model, temperature, seed, token limit,
+# repair turns, rate limit and bridge are byte-for-byte those of configs/policies/llm_r1.yaml, so the
+# recorded round-1 F1 (L0) is the same model and decoding. The profile text is off in every
+# configuration: from L3 on, the experience section replaces it (leave-one-design-out); L1 and L2 carry
+# no experience at all.
+#
+#   history           provenance of every state and the exact brief metrics with their categories
+#   physical          description groups shown: timing, utilisation, power (any subset)
+#   experience        "off", "fuzzy" (frequency word plus evidence word) or "count"
+#   experience_source "lodo" (the evaluated design is left out) or "all" (the leakage check)
+#   criterion_only    planned on the criterion briefs A0 and T0 only (the description sub-ablation)
+provider: gemini
+model: gemini-3.1-flash-lite
+temperature: 0.0
+seed: 0
+max_output_tokens: 2048
+thinking_budget: null
+timeout_ms: 60000
+max_repair_turns: 2
+rate_limit_per_minute: 60
+bridge:
+  python: tools/llm_bridge/.venv/bin/python
+  script: tools/llm_bridge/call.py
+templates:
+  orchestrator: configs/prompts/orchestrator2_v1.txt
+  general_agent: configs/prompts/general_agent_v2.txt
+profiles_dir: configs/profiles
+lessons: configs/lessons/lessons_training.yaml
+experience_calls: configs/experience/calls_ab.json
+configurations:
+  L1: {history: true, physical: [], experience: "off", experience_source: lodo}
+  L2: {history: true, physical: [timing, utilisation, power], experience: "off", experience_source: lodo}
+  L3: {history: true, physical: [timing, utilisation, power], experience: fuzzy, experience_source: lodo}
+  L3c: {history: true, physical: [timing, utilisation, power], experience: count, experience_source: lodo}
+  L1e: {history: true, physical: [], experience: fuzzy, experience_source: lodo}
+  L3-t: {history: true, physical: [timing], experience: fuzzy, experience_source: lodo, criterion_only: true}
+  L3-u: {history: true, physical: [utilisation], experience: fuzzy, experience_source: lodo, criterion_only: true}
+  L3-p: {history: true, physical: [power], experience: fuzzy, experience_source: lodo, criterion_only: true}
+  L3-all: {history: true, physical: [timing, utilisation, power], experience: fuzzy, experience_source: all}

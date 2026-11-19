@@ -1,0 +1,33 @@
+# gemini-4-argon with prompt wording R1: the stronger-model test on the training designs (Saturday night,
+# 2026-11-07). NOT the default; configs/policies/llm.yaml stays on gemini-3.1-flash-lite. the authors apply the
+# switch decision on Sunday.
+# Documentation read on 2026-11-07 (Gemini API, aistudio.google.com/docs): the models page lists gemini-4-argon as
+# Stable and as the flagship reasoning model; its latest-model page says to remove temperature, top_p, top_k and
+# candidate_count from requests ("sampling parameters are ignored") and names thinking_level with the values
+# low, medium and high, default medium. Thinking tokens count toward max_output_tokens and are billed as output.
+# Prices (pricing page, paid tier, standard): US$2 per million input and US$10 per million output through
+# 2026-11-30; US$4 and US$20 from 2026-12-01. The spend cap and prices are given to the stage driver by environment.
+provider: gemini
+model: gemini-4-argon
+temperature: null          # left out of the request; with no sampling control the model is treated as stochastic
+seed: null                 # the documentation names no seed
+max_output_tokens: 16384   # includes thinking tokens
+thinking_budget: null
+thinking_level: medium     # the documented default
+timeout_ms: 240000
+max_repair_turns: 2
+rate_limit_per_minute: 100
+bridge:
+  python: tools/llm_bridge/.venv/bin/python
+  script: tools/llm_bridge/call.py
+templates:
+  orchestrator: configs/prompts/orchestrator_v2.txt
+  general_agent: configs/prompts/general_agent_v2.txt
+profiles_dir: configs/profiles
+lessons: configs/lessons/lessons_training.yaml
+configurations:
+  F0: {mode: fuzzy, profiles: false, lessons: false}
+  F1: {mode: fuzzy, profiles: true, lessons: false}
+  E0: {mode: exact, profiles: false, lessons: false}
+  E1: {mode: exact, profiles: true, lessons: false}
+  F2: {mode: fuzzy, profiles: true, lessons: true, dropped: true}

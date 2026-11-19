@@ -1,0 +1,114 @@
+{
+ "approach": "F1-R1",
+ "brief": "P0",
+ "cache_hits": 4,
+ "charged_cpu_s": 1051.58,
+ "charged_wall_s": 3823.266648672521,
+ "completed_at_utc": "2026-11-13T22:32:10.970531+00:00",
+ "descriptions_served": null,
+ "design": "t2_cordic_s",
+ "episode_id": "tr_t2_cordic_s_P0_F1-R1_r1",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.235,
+  "ffs": 748.0,
+  "netlist_luts": 732.0,
+  "packed_luts": 727.0,
+  "tns_ns": -43.553,
+  "wns_ns": -0.225
+ },
+ "final_state_id": "11f9c11d77f304b8602a54f5822807034534db655ce6c82a57ef7239f34523fa",
+ "finished_at_utc": "2026-11-13T22:32:10+00:00",
+ "group": "VALIDATION",
+ "llm": {
+  "kind": "orchestrator",
+  "model": "gemini-3.1-flash-lite",
+  "profile_sha256": {
+   "area": "2d1433bc31e5e7a3a930115aaf6f2bf65c7af8b03aa5f0161b5fcf7793903975",
+   "power": "b9fb2053373cbacec7316038db742fe14b948ea1d834c5c97b90b95bc3fb273d",
+   "timing": "44284346ab8ad1f077a9f331c0927a0cd2a0dfee7354b01aabf3c123ba2ca82b"
+  },
+  "template": "configs/prompts/orchestrator_v2.txt",
+  "template_sha256": "c94f81ac34079803cbf89951979ffcd513fc32ca519ad30b887a50151abd7682",
+  "workers_seen": [
+   "area",
+   "power",
+   "timing"
+  ]
+ },
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 601,
+   "prompt": 7460,
+   "thoughts": 0,
+   "total": 8061
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 3,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "power",
+   "power",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 2,
+ "noise": {
+  "dynamic_power_w": 0.008,
+  "packed_luts": 2.0,
+  "wns_ns": 0.033
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-d7e4eeed3f-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "tr-result-v1",
+ "scope": "dev",
+ "start_metrics": {
+  "dynamic_power_w": 0.25,
+  "ffs": 748.0,
+  "netlist_luts": 737.0,
+  "packed_luts": 730.0,
+  "tns_ns": -86.668,
+  "wns_ns": -0.416
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r1",
+ "task": {
+  "approach": "F1-R1",
+  "brief": "P0",
+  "design": "t2_cordic_s",
+  "episode_id": "tr_t2_cordic_s_P0_F1-R1_r1",
+  "group": "VALIDATION",
+  "model": "gemini-3.1-flash-lite",
+  "scope": "dev",
+  "seed": 0,
+  "tag": "r1",
+  "temperature": 0.3,
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

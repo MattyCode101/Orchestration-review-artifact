@@ -1,0 +1,102 @@
+{
+ "approach": "V1",
+ "brief": "T0",
+ "cache_hits": 4,
+ "charged_cpu_s": 32.98,
+ "charged_wall_s": 1808.1149379666895,
+ "completed_at_utc": "2026-11-14T13:53:18.294308+00:00",
+ "descriptions_served": {
+  "cache": 1,
+  "live": 0,
+  "v3": 0
+ },
+ "design": "amd_mini-isp",
+ "episode_id": "v22t3_amd_mini-isp_T0_V1_t3",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3202.0,
+  "packed_luts": 3059.0,
+  "tns_ns": -327.374,
+  "wns_ns": -0.904
+ },
+ "final_state_id": "83bf1c34fcdb22fcd2396237d4b66b5924b73bdb965a5659776e7eb8fd303818",
+ "finished_at_utc": "2026-11-14T13:53:18+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 3,
+  "fallbacks": 0,
+  "model_calls": 3,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 1384,
+   "prompt": 6291,
+   "thoughts": 0,
+   "total": 7675
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 2,
+  "empty_calls": 0,
+  "mandates": 2,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 2,
+  "stop_after_second_ask": false,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "dynamic_power_w": 0.011,
+  "packed_luts": 31.0,
+  "wns_ns": 0.047
+ },
+ "policy_version": "template_v2.2_V1-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1-v22a-EPHrcstu",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 4,
+ "schema_version": "v22-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 0.537,
+  "ffs": 4486.0,
+  "netlist_luts": 3202.0,
+  "packed_luts": 3059.0,
+  "tns_ns": -327.374,
+  "wns_ns": -0.904
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "t3",
+ "task": {
+  "approach": "V1",
+  "brief": "T0",
+  "design": "amd_mini-isp",
+  "episode_id": "v22t3_amd_mini-isp_T0_V1_t3",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "scored_cell": false,
+  "seed": 5,
+  "sub": "2",
+  "tag": "t3",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

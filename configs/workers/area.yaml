@@ -1,0 +1,11 @@
+id: area
+version: provisional-v0
+objective: {metric: packed_luts, direction: min}
+recipe_set_id: area
+default_attempts: 2
+accepted_settings: [preserve_placement, max_runs]
+guard_modes: {wns_ns: selects_within}
+may_replace: true
+accepts_stage: routed
+returns_stage: routed
+

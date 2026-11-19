@@ -1,0 +1,158 @@
+# Freeze candidate for Sunday: development side, FINAL version of 2026-11-08 (it replaces the 2026-11-08T01:05 candidate).
+# Generated 2026-11-08T19:19:45+00:00 by scripts/satnight_freeze_candidate.py. NOT SIGNED.
+# Verify with: sha256sum -c notes/freeze_candidate_sunday.sha256 (the comment lines give one harmless 'improperly formatted' warning).
+# Coverage: scripts/sunday_import_closure.py --list <this file> --list <the experimentation freeze draft> names every project file
+#   the campaign entry points import that is in neither list (nothing at FINAL). Files opened by name at run time are listed by hand.
+#
+# Named LLM cells (SHA-256 of the resolved definition, the model excluded; set hash below):
+#   F1-R1  f68cea7014f8b6e687abd7cb79fd8c7eb92d4d9b29ebf341f7013eee0f3009fe  template configs/prompts/orchestrator_v2.txt
+#   F1-R0  67b8d3cfe0967851e1f25ab1cbbd2233818d55a5893c84a64888aad2158ac150  template configs/prompts/orchestrator_v1.txt
+#   E0-R1  ce724b147208958229a1b0a623c78b559524a76d7d65b2bae23a9e0211295828  template configs/prompts/orchestrator_v2.txt
+#   GA-R1  44475333e4361d5cf2f04a4b9d882699aa9b6a13819872e53f72bc08eb8cce4e  template configs/prompts/general_agent_v2.txt
+#   set  e0e2219527f2deff045b1a5b3c720497f615053233f1d98afb16d358cecdb0fc
+#   F2 (fuzzy view, profiles, lessons) is dropped: refused by load_variants and by the stage driver.
+# Rule-based policies: v1 = g01 = RepairLoopPolicy() as piloted (repair_attempts=1, repair_preserve_placement=True,
+#   gentle_step=True, after_failed_repair=rollback); v2 = g05 = RepairLoopPolicy(repair_attempts=1,
+#   repair_preserve_placement=False, gentle_step=True, after_failed_repair=rollback), one knob from v1 (notes/repair_loop_v2_selection.md).
+# Bridge: tools/llm_bridge, google-genai 2.34.0, Python 3.12.12.
+# Models: gemini-3.1-flash-lite (default and fallback; temperature 0.0, seed 0, max_output_tokens 2048) and
+#   gemini-4-argon (temperature and seed omitted, thinking_level medium, max_output_tokens 16384). Only one is used.
+# Telemetry extraction for worker B: DcpTelemetryExtractor, Vivado 2025.1; the files that define it are listed below.
+
+# briefs
+9d4ae92f3dd4ccaff322b23a700196cf85aab1e5c4e83cfaa916fae9df39d878  configs/briefs.yaml
+e1c3f7e6b10f047c5468fd2bec595afe1d1c9ece70e858a6b590cee1a33c3cbe  configs/briefs/area.yaml
+793434ef5c880115c321214ff9769fd76b25c31fda348597be73994a8aa4eb1b  configs/briefs/timing.yaml
+54185eb7ccd5b929224c39a688e14c052d0f6d3f52d9aa785e271c10dfaf4c37  orch/contract/brief_text.py
+8cee9a1d34fcc0f3ab99956c0b3517f3d9ef52afa684ebc0e761b67d763de41c  orch/contract/views.py
+
+# rule-based policies (v1 = repair_loop as piloted; v2 = g05; fixed, random and single-specialist baselines)
+c3205a547574ee00a51d1f48c8ca650357c74797a4d21cdcc2157fa82d1f7b41  orch/policies/base.py
+f4feebe88ef7de530bddb5fb34240456b43670b6e139c645bc27c7a9071666df  orch/policies/repair_loop.py
+460c6d62721a4e725a0c477ea2fa07f7a94360d51a415acaef368bf8d3f18a81  orch/policies/relevant_workers.py
+c2761eadf3ed94df770748da03663f7c85b89ce045c36671c0e5f5ef330891c9  orch/policies/training_baselines.py
+f7f6c01fe4108d675ef7756dfba5670c44c819383e1a26ec46c400bc536dc78a  orch/policies/random_policy.py
+f441cd7f7a853da792d367e70800f367f3a7e15b2f9848f2dfc4f7df6f2549ba  orch/policies/trivial.py
+0c195e93a0d5868a60330e17fe2407eb4258cf08eb8f8e5e84c7c081e0947d38  notes/repair_loop_v2_selection.md
+
+# LLM templates R0 and R1 (orchestrator and general agent)
+9b60f0d06b7ae447b8e1508fe7876d6f627f8054d6666076c8e2d5a244ac3c27  configs/prompts/orchestrator_v1.txt
+c94f81ac34079803cbf89951979ffcd513fc32ca519ad30b887a50151abd7682  configs/prompts/orchestrator_v2.txt
+8433ea99866064fd6756cbf155a5e3a0196536dc22bd48061b901f5ba7121413  configs/prompts/general_agent_v1.txt
+f4a6ad91320fa9b0aec6f15ee38e9cc29eeb9d7ff41f393452e743bb33de52d5  configs/prompts/general_agent_v2.txt
+
+# named LLM cells F1-R1, F1-R0, E0-R1, GA-R1 and their code
+556428e5d8d5f35ef152732d0ed9e4b542815a7e5641af1c8f7001b0bc205a92  configs/policies/llm_variants.yaml
+ef05224805f6a1d0eaff0f3a75890af45e1a68984b59a770ae6ed4dbbde5765a  orch/baselines/llm_variants.py
+308d9a42e7136a2469724e4280801c500e492495d0cb01e95afb0181d196a0ae  orch/policies/llm.py
+7c04d656ab2a787624fadff34d51b0005688e6343aec1c664c3ea580475fa540  orch/policies/llm_client.py
+db6b2e0dcea0290ea6a3c0486a5302936903b15c61291cc821806ef0cec8d653  orch/policies/llm_prompt.py
+25b681f923e27d1b2e0359e2670c48c353cee6aba6742c6445a2ed8173ee4629  orch/policies/llm_schemas.py
+e16280d890afd9e76d9e40acf63e3a27c503e94d452747f12310c7c805ee9019  orch/policies/llm_view.py
+d24f1dbae37683ff042cc680f27228eb4bce9c674115a733f2efe09cd1cdb047  orch/policies/llm_ledger.py
+2c75a8aeaf3923bf448cc2a9aa92adb663774e809373bcbe5ecb605ca362bd71  orch/baselines/general_agent.py
+6c980c21a7a6441232654ebcfadaaff99211c0be314acead2a7bf388cfa448e4  orch/baselines/direct_recipe_worker.py
+ba7d99632af6f7178d2afc6fddd5c595cf0ac6d2beb8b7b96557d2db07727895  orch/analysis/profiles.py
+
+# behaviour profiles (training designs only)
+093e2eee301e761ce12c571c35b52017f750892e713bd6f0f155cad187c24c46  configs/profiles/manifest.json
+44284346ab8ad1f077a9f331c0927a0cd2a0dfee7354b01aabf3c123ba2ca82b  configs/profiles/timing.yaml
+2d1433bc31e5e7a3a930115aaf6f2bf65c7af8b03aa5f0161b5fcf7793903975  configs/profiles/area.yaml
+b9fb2053373cbacec7316038db742fe14b948ea1d834c5c97b90b95bc3fb273d  configs/profiles/power.yaml
+118292622fdd850b2ca52630ca948525f69c5f156d9e2d5575bc08f099e80c96  configs/profiles/recipes.yaml
+
+# model configurations (flash-lite is the default and the fallback; only one is used)
+cac4329103c51d7105a8085f0b000d411a270690cbd4a38c447468059234d09c  configs/policies/llm.yaml
+cac4329103c51d7105a8085f0b000d411a270690cbd4a38c447468059234d09c  configs/policies/llm_r1.yaml
+3cd46b3046ebd7d543b2b87c2e2fde6e6a39e5cfebb6eeb4767168c64b804867  configs/policies/llm_r0.yaml
+291db162e6fea31150735bd624d8f535108adfed9b5b7b002a73110ce8af6e12  configs/policies/llm_argon_r1.yaml
+6086f32dfb0c02f3ef620dcfb26294c40c2aeae50c88664a00a8e2d4d77ef3cd  configs/policies/llm_argon_r0.yaml
+
+# bridge and SDK
+35c437aebedbaafa97e36fd83d35e37826f71729d26f0b0975ab2fcd04f6e527  tools/llm_bridge/call.py
+d8d2323a742272647a6f25a987bd0809179e99570652ba6de3348bb2e613b382  tools/llm_bridge/requirements.lock
+
+# worker B provider and the extraction it reuses
+46a28f0c526cb498becfe0b4b24849c2b0c7a0c0321b4e8ece06003b34eb8a59  orch/workers/live_telemetry.py
+6a0f1f0c287a710bbd565a377826b9007a0ee39ce29a7a307934629705827112  orch/engine/dcp_parser.py
+d1bbef7588350a20c64d5b2cff2bd2a883b7f67657422c52ffbacfcec19bdc91  recipes/support/env.sh
+0215cf6d819878cc24841d4667a56120e6399ace93d739e9e3490d17ac53299a  recipes/support/wpath.tcl
+341f9f813143e74e891d5c18692d2b1d2b8865feda990ce85b9ee7d55a6ee0b2  recipes/support/wpath2.tcl
+d2f47ed3c9ac708c8f50c1b68fd66254118b04af02d564fc409d900d48d8086d  configs/worker_features.yaml
+bab0120208195f6cb0e0cc2782c0936901058676743354aed8639257e41b3b06  configs/workers/B_fit.json
+eb1cc3f9eeef0ec939fb23a266d98b4d6c86e865013ac5cf7a39c0a751afd932  configs/workers/A_fit.json
+a10945c354c3d50346388f2fc8f8dfda43e175c9de9e807f8fc20ad659e1695e  orch/analysis/fit_workers.py
+fb43192ff4ac0a46aac0a0446059716b5137c029c1388f5a89d8dfca51bac13d  orch/workers/fitted.py
+a526c71c58f679af8f74b9c8a1262ac353de8bbdf9398b823365f925d7d7bfba  orch/workers/telemetry.py
+3e9a1c68a0b0141d145e6d77b1d371882c0ca3bcf1b6f380dae2a5e795f4e024  orch/workers/base.py
+04074f425079fc98b9ab1409f0e893745af354ab9c6aaf4177f3607722d9af4e  configs/workers/timing.yaml
+b6b517a40e69a8587cf025317889a0de38806f0c95994236c816942c965790cb  configs/workers/area.yaml
+e21db49162d92c94988047f7652e34365be54b094064129fa09f7ac3305239ce  configs/workers/power.yaml
+0affc6e419859022e8323accca71d253ecb17931f73268b58dcb055c75705449  configs/recipe_sets.yaml
+98482d5de14fd732a06acd470f8e8e3897ab15898b31d0277cb49caa20dfb09d  configs/power_recipe_set.yaml
+
+# validity change (no more DONT_TOUCH, fixed LOC or fixed BEL cells than the start state)
+0308d200fb8eaf5e50d2049107272bf366d643b69175a97377acd39160e357fe  orch/engine/start_properties.py
+179f385724207b14e4098f765ea06f34410960985b7af7080cc6d2b4086b9a51  scripts/thursday_night_pilot.py
+e5e041c640854a1fce8e83f2f4723c2af71eea8c3b4262576bc7a33198a9a020  scripts/thursday_night_pilot_report.py
+c9bef85fc37c87c6bc547e91851e13b37cf557db5181dc6ea80ee25cbfdd0bc7  scripts/thursday_overnight_pilot_report.py
+c76bd5776eb5105316f75754a8a6149fb95bc5b06408beff4d81b6f15a59910d  scripts/friday_ceiling_exact.py
+e51784421fed7da8ad29dd50b5c91f7dec4637e5d307da110d31ebdf27f2f6bb  scripts/saturday_profiles.py
+d32e75aa6e0edfa63f6a9ba214a815891380f472a8e909a045f76d7649aa5290  orch/analysis/orchestrator_ceiling.py
+c390d0d99fab83f9bae639bd2328f7be54394ab27228e6d918dd8a768b6bd2be  scripts/satnight_validity_audit.py
+
+# engine, episode and gate
+bd843f1590e213b20c837ccb996fb9219724a2ad886ba3d6608a99e1d559d6b3  orch/episode.py
+6c1cb1668f1386acfb8c7c1820cbdfaf675bb41eee13dfc93181976ea3b9b90f  orch/engine/gate.py
+39afe3fc1bf675c1924d8533ee2f016af6507a0eb78b0433c00712fced80e119  orch/engine/apply.py
+d00c2862b7c5f9f06dcaff6c52df0705ac8d1a10e108bdb3986c96ec92352f8f  orch/engine/runner.py
+a3d99ababeb7c2e9bf657dd169e8c12644eb11d5812c5474cf22c81d83d0e90a  orch/engine/store.py
+ac8b962ec59b500c84b2fa356699977c29fa9dc4b9a5bd03e4bb24a36a314217  orch/engine/journal.py
+d61ace9937e1678bc7a51bc4522a966b7a7906a27ab7f92d54f5a9ac8e5a5bff  orch/engine/cache.py
+712d7ee211e21676be64c8a7e657c5647476313ca0a376aa97e80d935e71dc76  orch/engine/meter.py
+fd9cd0a5c037e33fdccbc81353b575e69d27b686cbab0421bd0e62139444eb0c  orch/engine/meter_parsers.py
+6ccb1920123413f98bae6a1e7bf7814f1043f6df4aaaa09f1c9b43178da40ca7  orch/engine/real_backend.py
+5f7b7541431256d455c96f6d6a6418125ec98e8dac0411abae222c70031bf1cb  orch/engine/jobtag.py
+9413f39b9d7316083ddd19e02baddaaf4c6c3a08995e8cbe82bcd6503102edfc  orch/runtime.py
+5b0440c9814b046bdabb9c361c07429621589915af1a470f9c1d141926891819  orch/contract/models.py
+
+# other project files the campaign and its analysis import (found by scripts/sunday_import_closure.py; the nine empty package markers included)
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/analysis/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/baselines/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/contract/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/engine/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/policies/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/recipes/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/recipes/adapters/__init__.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  orch/workers/__init__.py
+129925ac42274e18addab8490c6f20f45bfe0c2b5313df43d9f0a4d477480133  orch/config.py
+0ad1666370d2afc26c5b9611fddef8100dc7c05a799763416b5a7924a47e0fa9  orch/interfaces.py
+4b38b30c74cd4cd7487cdeeda1760cbde915dfa7ec80f8647e25adc62118a950  orch/analysis/lessons.py
+b5a8d6e607e5a33a11f62a23e67e19fad0c1586f9037cdc8631c59b948829eae  orch/analysis/report.py
+6e68f090d96939f45242ce7f93f684b3d9124aeebb1581244798e6b67cee1715  orch/baselines/exhaustive.py
+2f5850652a58f0c5b3cbbc499e06a7896aa27ebab6890000c3e78795577fd135  scripts/friday_sweep.py
+28935df355efc294fb04fbb33c30bf53d0a49dcf2b04b2dfc9508f10234e1d93  scripts/friday_sweep_select.py
+b9de6af1b8e567a782c83e86a5553af0beb7722ac7d32d476f684fe582a9e905  scripts/friday_analysis.py
+ac80df5d9657ee9595f0d9055ee66bfbebc67a484e9d83bfb5ccc3b771a69800  scripts/friday_p0.py
+2b6a6b1561bc704974b95d1a832257ee9fd38f46a5bff291bab6daa469fc98a4  scripts/saturday_sweep_ta.py
+2436b39432d8935f0d88fa056ea414078605a42330a90b5596308859298803a3  scripts/thursday_overnight_power.py
+5aca58e781414d7fc72088745d20b79b45bb58039c6848cf5f2d3652791415bb  scripts/thursday_overnight_power_report.py
+
+# stage drivers and tests of the development side
+0ec81d67b6f9f057923c70d6a4e9ab5cec1fcaeefe1a4e25774e7b7bc5323eda  scripts/saturday_llm.py
+8b6960d8fa5cba4af37b56c7709d5d04840b8d1cc027758b757cdba4144f0070  scripts/saturday_llm_report.py
+a940339279ea13434a8bdaa69ca28c6a34c88ca8209572f571ae5359b3822a42  scripts/satnight_report.py
+498045f94a7a76bc20e0205e49429b363e2c2b5dd3ab35c458a816d9d761a132  scripts/satnight_telemetry_equivalence.py
+a1248311bb772688d0cbe83051d20b17fed74000e1c76c307b2e630f8670aec6  scripts/satnight_telemetry_test_smoke.py
+961f9ff4c6781977f01fc93201df2c05fbdea05d0a0fdbe94792b35025c4b21c  scripts/satnight_telemetry_diff_detail.py
+d20af210f75957060af50cbd5e17d50f2372e707be79ae44825d88af56e2087f  scripts/satnight_freeze_candidate.py
+5caea02b0007a50295a4c411e454385709db9432f890d856b4031e0714eb01e8  scripts/sunday_import_closure.py
+8e9b6627f8f66907f004b957257de0dc16e0900dfdfab2aa085f001dc3b9adbe  tests/test_start_properties.py
+7ed2451fe9f54089927010d25489d7324687260a900a152565b4ef6956029905  tests/test_live_telemetry.py
+57c17be3cf7297dac2d55c2d2f182822fc9334cb0bb6cdb25858f5b3e3370214  tests/test_llm_variants.py
+689fe388592b2c1fa4f8590f65327222deb1ce2e9147df36827d8e49135e04ed  tests/test_llm_ledger.py
+7afe1e44b047f6c4bb51b59dbcdcd9d27ec4eb98c539ac8db08642235ac4f5fa  tests/test_saturday_llm_driver.py
+0414c9068e733c7d11aa908d7f07eb1bda07f7147ef23156b0c70b00db5511b4  tests/test_satnight_report.py
+547dae1c4584af565e215d4eb163da070635cadae06b992de0028f0630c543e3  tests/test_infrastructure_failures.py
+898e37b1e3314615b1f0fa6c3a039fd14e5063b479dcd6f11ecbce5326239b44  tests/test_sunday_import_closure.py

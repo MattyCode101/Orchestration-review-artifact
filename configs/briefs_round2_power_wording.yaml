@@ -1,0 +1,15 @@
+# Approved wording for the round-2 briefs with a power limit and a power band: W2R and L2R. New file, written Sat 14 Nov 2026 (test-run
+# preparation); no frozen file is edited. The sentence below is added by scripts/test_r2_2026-11-13/tr_policies.py (power_sentence,
+# render_banded) after the hard limits, in both layouts; the file is read only if its hash equals its entry in notes/round2_briefs_freeze.sha256.
+schema_version: 1
+approved_by: the authors (decisions on the reports of the first Friday-night queues, Sat 14 Nov 2026 11:30)
+applies_to: [W2R, L2R]
+not_applied_to: [T0, A0, T, A, P0]          # the frozen briefs, P0 included, are rendered by the frozen functions, unchanged
+sentence_after_hard_limits: "A change in dynamic power smaller than the band counts as no change."
+placement: >-
+  One line of its own directly after the Hard limits line, in both layouts. Round-1 layout (F1-R1, GA-R1): after the line ending
+  "compare against the B2 start measurement." and before "Final pick:". Template v2 layout (v2.1, v2.2 variants): after the Hard limits line
+  and before "Final pick:".
+unchanged: >-
+  Each layout keeps its own noise sentence (round-1 layout: "Noise: flag only; never use it to accept or reject."; the v2 layout has none, the
+  noise rule is in its vocabulary block). No worker guidance is added: there is no power-specific wording in any template.

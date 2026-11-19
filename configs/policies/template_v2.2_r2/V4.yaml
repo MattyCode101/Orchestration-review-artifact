@@ -1,0 +1,31 @@
+# Template v2.2 variant V4 (revision 2): v2.1 with R (relative context).
+# Independent switches on top of the frozen template v2.1 (orch/policies/v22_*.py). Nothing frozen is edited.
+name: template_v2.2_V4
+variant: V4
+schema: template-v22-variant-v2
+base: template_v2.1
+base_definition: configs/policies/template_v2.1.yaml
+base_definition_sha256: 8a4a471329cb6f0c8bc6651d017f77491df9ae7e39c7c1923bc9a16b1504c5de
+switches:
+  E: true
+  P: true
+  H: full
+  R: true
+  C: false
+  S: false
+  S2: false
+  U: false
+switch_texts: configs/prompts/template_v22/switch_texts.yaml
+situation_table: configs/experience/situations_v22.json
+situation_rule: leave one design out; one row per (design, brief, base state, worker, placement setting); a line needs at
+  least 3 other designs, else 'no evidence for this situation'; no design is named
+model: gemini-3.1-flash-lite
+temperature: 0.3
+seeds:
+- 0
+- 1
+- 2
+noise: configs/noise_round2.yaml
+loop: orch.episode_r2.run_episode_r2 with ROUND2 (both options on)
+wording_schema_truncation: as template v2.1 (orch.policies.round2_harness TEXT_LIMITS); no power-specific wording
+note: v2.1 with R (relative context)

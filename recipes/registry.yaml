@@ -1,0 +1,711 @@
+schema_version: registry-v0-provisional
+source_catalogue: external/weekend_run3_2026-10-31/recipes/catalogue.json
+source_catalogue_sha256: f61ed7d46a18e07fb334718a38c062eea6ba26089251c2d12314137b6f5fc441
+tool_versions:
+  vivado: vivado v2025.1 build 6140274
+  latch: LATCH c53a8bf5f24159d527eb4508dc3cdda6144ca2aa
+  jre_tcl: 11.0.16.1
+  jre_latch: 21.0.1
+recipes:
+- id: C0_reroute
+  worker: control
+  kind: tcl
+  script: recipes/tcl/C0_reroute.tcl
+  replaces: false
+  cause: 're-entrant route_design on the routed input: the final step every LATCH recipe runs'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/C0_reroute.tcl
+  source_sha256: 56bd87bc24e2d46fd9a0dd59c68044e28fd9bc3cdaaa611ea6be7a2a8676381e
+  timeout_s: 10800
+- id: A_E_DUPL
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_E_DUPL.tcl
+  replaces: false
+  cause: 'new: merge exact duplicate LUTs on the routed design, re-entrant route_design'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_E_DUPL.tcl
+  source_sha256: 99aeb3f12f6c8f344dafda8328098e4c03f711a44584d0cac6b8b4d14b603425
+  timeout_s: 10800
+- id: A_E_DUPLF
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_E_DUPLF.tcl
+  replaces: false
+  cause: 'new: merge exact duplicate LUTs and FFs on the routed design, re-entrant route_design'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_E_DUPLF.tcl
+  source_sha256: a7eb15e579867d4a1641a97bffcc548450cb44e3424687ef6d1e289018a0be68
+  timeout_s: 10800
+- id: A_E_DUPL_Q1000
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_E_DUPL_Q1000.tcl
+  replaces: false
+  cause: 'new: A_E_DUPL, skipping duplicates that touch the worst 1000 setup paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_E_DUPL_Q1000.tcl
+  source_sha256: 51e151613ba4110fa39e74e6a1f459e1904bfec6d73583881fe39ca85a351ccc
+  timeout_s: 10800
+- id: A_E_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_E_MED.tcl
+  replaces: false
+  cause: 'new: merge equivalent drivers on the ROUTED design, then re-entrant route_design (no un-place, no un-route)'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_E_MED.tcl
+  source_sha256: f7360a1ef4f4183792ef16cb0b603d9e87311caec8c24db3c36c493a4cf55347
+  timeout_s: 10800
+- id: A_E_MED_P
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_E_MED_P.tcl
+  replaces: true
+  cause: 'new: as A_E_MED with a re-entrant place_design in between (for any cells left unplaced)'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_E_MED_P.tcl
+  source_sha256: 8b20fb7aa9e15f42cb5644f81a8f098bad035a9be4c504ca1dbf2d023278b9f6
+  timeout_s: 10800
+- id: A_I_EA_REM_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_EA_REM_MED.tcl
+  replaces: true
+  cause: 'new: incremental A_R_EA_REM_MED'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_EA_REM_MED.tcl
+  source_sha256: f8261956ed4ffc68af15466e4fb72f459ab4394208c5a3d9279a79ab4fd901b9
+  timeout_s: 10800
+- id: A_I_EA_REM_MED_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_EA_REM_MED_F.tcl
+  replaces: true
+  cause: 'new: incremental A_R_EA_REM_MED with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_EA_REM_MED_F.tcl
+  source_sha256: ac1e029511b63c93b60aade4d6dace61b8185a5058b316ed684a36d7bb8679c3
+  timeout_s: 10800
+- id: A_I_Q100_EA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_Q100_EA_REM.tcl
+  replaces: true
+  cause: 'new: incremental A_Q100_EA_REM'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_Q100_EA_REM.tcl
+  source_sha256: 466a17afc687c0b77066f034b5b5a692080cd47d2cbc2435856e07f8d628451c
+  timeout_s: 10800
+- id: A_I_Q100_EA_REM_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_Q100_EA_REM_F.tcl
+  replaces: true
+  cause: 'new: incremental A_Q100_EA_REM with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_Q100_EA_REM_F.tcl
+  source_sha256: a53b8c7892ec5c6c0db29f5b9b963541a22952e7b473242cc12a842d4379c167
+  timeout_s: 10800
+- id: A_I_Q100_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_Q100_RSA.tcl
+  replaces: true
+  cause: 'new: incremental A_Q100_RSA (worst 100 paths'' cells kept out of resynthesis, so they match the reference)'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_Q100_RSA.tcl
+  source_sha256: 54f9665c3105f818f69f38cf71ddfb24430e9b690b29390a947cff6ea33336bf
+  timeout_s: 10800
+- id: A_I_Q100_RSA_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_Q100_RSA_F.tcl
+  replaces: true
+  cause: 'new: incremental A_Q100_RSA (worst 100 paths'' cells kept out of resynthesis, so they match the reference) with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_Q100_RSA_F.tcl
+  source_sha256: 2237167ef252130042f1e660f1c472b094207cc41c2da0e82c00fc3d1dad691d
+  timeout_s: 10800
+- id: A_I_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA.tcl
+  source_sha256: 1e76f430b020e6cd58aaacfe4862ae4d4544d66b9307e4f426027dd74e9a4b03
+  timeout_s: 10800
+- id: A_I_RSA_AREM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_AREM.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_AREM'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_AREM.tcl
+  source_sha256: d00c7d871af57b35f4cd3895bd065b4c0a4bfaee99d27483aab37a9d3175b968
+  timeout_s: 10800
+- id: A_I_RSA_AREM_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_AREM_F.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_AREM with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_AREM_F.tcl
+  source_sha256: 5338ebf1b139c40f66beb6b7e82ba35cb8e274de2fd96735c7c04e673586524a
+  timeout_s: 10800
+- id: A_I_RSA_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_F.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_F.tcl
+  source_sha256: 3d11531b7b7b18a813fe593d32ab0c37bb6c7fe5448491addb7a8ead9f78d6ba
+  timeout_s: 10800
+- id: A_I_RSA_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_MED.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_MED'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_MED.tcl
+  source_sha256: 50801607d048ec54f7c40b1318e763cd16d9815194fe846208986449f5f03538
+  timeout_s: 10800
+- id: A_I_RSA_MED_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_MED_F.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_MED with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_MED_F.tcl
+  source_sha256: eb960932246e65d607181df88dfd344efb786f42c1fddf2066988b90548f1f39
+  timeout_s: 10800
+- id: A_I_RSA_SRLM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_SRLM.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_SRLM'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_SRLM.tcl
+  source_sha256: b4d466f98f064b0fd5c329b66e4a5bbc153504564024f134ba21d7580a79db9f
+  timeout_s: 10800
+- id: A_I_RSA_SRLM_F
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_SRLM_F.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_SRLM with -force_incr'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_SRLM_F.tcl
+  source_sha256: 14aa46de2e96ddd58e4ea97cf93d982bbd81788b6ee2448ca19003ed83b9cdcc
+  timeout_s: 10800
+- id: A_I_RSA_SRLM_R
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_SRLM_R.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_SRLM, opt''d design re-opened before the read'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_SRLM_R.tcl
+  source_sha256: 1ddd493f976fe7e2b64d2a3902ae6518e027665da00dc32d7caa081366635ac7
+  timeout_s: 10800
+- id: A_I_RSA_SRLM_W
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_RSA_SRLM_W.tcl
+  replaces: true
+  cause: 'new: incremental A_R_RSA_SRLM, fresh reference copy'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_RSA_SRLM_W.tcl
+  source_sha256: b4f6ace21c2d01ceae8a41a72436a2c13754168bf215232f1a66760885f5dc8f
+  timeout_s: 10800
+- id: A_I_SRLM_R
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_SRLM_R.tcl
+  replaces: true
+  cause: 'new: incremental A_R_SRLM, opt''d design re-opened before the read'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_SRLM_R.tcl
+  source_sha256: ee267e2d3ba4c0fcd831741e2ece8438d616bc9c7edf89fbf41013e2f68b0fde
+  timeout_s: 10800
+- id: A_I_SRLM_W
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_I_SRLM_W.tcl
+  replaces: true
+  cause: 'new: incremental A_R_SRLM, fresh reference copy'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_I_SRLM_W.tcl
+  source_sha256: c55843f465afeb9357787da7cf4f243e99ec850a9ab223327e3e06f26ff13323
+  timeout_s: 10800
+- id: A_K_EA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_K_EA.tcl
+  replaces: true
+  cause: new stage variant
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_K_EA.tcl
+  source_sha256: c0c90cd738c69fe1131666d02752d83077342d51da66b6e0b1ae768628d7a6aa
+  timeout_s: 10800
+- id: A_K_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_K_MED.tcl
+  replaces: true
+  cause: new stage variant
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_K_MED.tcl
+  source_sha256: aaa8ddc2d58781c29833d4bf1fc67c5746ffb5fc3ec78e430608ad30123c1b02
+  timeout_s: 10800
+- id: A_K_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_K_RSA.tcl
+  replaces: true
+  cause: new stage variant (ug904:p60-61 re-entrancy)
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_K_RSA.tcl
+  source_sha256: 515a303c25a5a28f9b45c43432e18d8207167827188bcfe18652ba26aa993bbd
+  timeout_s: 10800
+- id: A_Q1000_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_Q1000_RSA.tcl
+  replaces: true
+  cause: 'new: protect the worst 1000 paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_Q1000_RSA.tcl
+  source_sha256: 077806ab9e80dc24ba9f1daade5a435b1ab1e76dd46a5fa6d0c44fe08df0cbc4
+  timeout_s: 10800
+- id: A_Q100_EA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_Q100_EA_REM.tcl
+  replaces: true
+  cause: 'new: protect the worst 100 paths'' cells from ExploreArea + remap'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_Q100_EA_REM.tcl
+  source_sha256: 0fd53494ef4fa15367f48368c0d076d94e74179457b07a14a0ea685aeb9c44c9
+  timeout_s: 10800
+- id: A_Q100_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_Q100_RSA.tcl
+  replaces: true
+  cause: 'new: protect the worst 100 paths'' cells from resynthesis'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_Q100_RSA.tcl
+  source_sha256: bfb50a67760d8f805878a28628dcd7f6c450c363f4ce6016bed1046c04566ac1
+  timeout_s: 10800
+- id: A_Q10_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_Q10_RSA.tcl
+  replaces: true
+  cause: 'new: protect the worst 10 paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_Q10_RSA.tcl
+  source_sha256: 96c651fa56f9728b0c1abcbf407e0a2253bdcaa8c4358d922af05c8304887641
+  timeout_s: 10800
+- id: A_Q300_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_Q300_RSA.tcl
+  replaces: true
+  cause: 'new: protect the worst 300 paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_Q300_RSA.tcl
+  source_sha256: e3e3c3275a83627e5e99dc2feb0424146f9c9b6fb65c3508852a19bdd403b0c9
+  timeout_s: 10800
+- id: A_QF1000_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_QF1000_RSA.tcl
+  replaces: true
+  cause: 'new: protect AND keep the placement of the worst 1000 paths'' cells; re-place the rest'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_QF1000_RSA.tcl
+  source_sha256: 367a84433475e43ad879742361d7276bbc42cf9c334d76fb2d68dbf1ff416200
+  timeout_s: 10800
+- id: A_QF100_EA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_QF100_EA_REM.tcl
+  replaces: true
+  cause: 'new: protect and keep in place the worst 100 paths'' cells; ExploreArea + remap on the rest'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_QF100_EA_REM.tcl
+  source_sha256: c7ff62310c69e835d3634df0e32f0c771d703d5f3cdb4dffede59eed536486cb
+  timeout_s: 10800
+- id: A_QF100_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_QF100_RSA.tcl
+  replaces: true
+  cause: 'new: protect and keep in place the worst 100 paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_QF100_RSA.tcl
+  source_sha256: fc613753651fa2810770ae342fb236f0aa0fbc479386bedfb7e36a2b46e7689e
+  timeout_s: 10800
+- id: A_QF300_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_QF300_RSA.tcl
+  replaces: true
+  cause: 'new: protect and keep in place the worst 300 paths'' cells'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_QF300_RSA.tcl
+  source_sha256: e3fefc666704905715b017257525ca0713f06eece67f010feeb77ec38d11f058
+  timeout_s: 10800
+- id: A_R_AREM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_AREM.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_AREM.tcl
+  source_sha256: 136be87fe4a6c5aabb1ea79e9703acd77610bd6694309c927ea745b9eb771b7f
+  timeout_s: 10800
+- id: A_R_CSM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_CSM.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_CSM.tcl
+  source_sha256: 88a61581b51c74280516183ad64ec22df51dd5e631730e0b578f5ef579cd9b94
+  timeout_s: 10800
+- id: A_R_EA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA.tcl
+  source_sha256: 32b37c06ef56d6eef450526e145b643126d21ac8f69deb24410696780a3ebce0
+  timeout_s: 10800
+- id: A_R_EA2
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA2.tcl
+  replaces: true
+  cause: 'new: ExploreArea twice'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA2.tcl
+  source_sha256: 1ff135965524dc86ea1c720b20485389ac7fc5eabbaa4208f0717b75c63f26e9
+  timeout_s: 10800
+- id: A_R_EA_AREM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA_AREM.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA_AREM.tcl
+  source_sha256: 184fac7a278e2713bbe6b8558425bb4a8c884d19d018acfb46855a19ba417c36
+  timeout_s: 10800
+- id: A_R_EA_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA_MED.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA_MED.tcl
+  source_sha256: 04241b0a43ae508fc2a350f81c61a848cb4fbf7810322bed3b3e527761a3f741
+  timeout_s: 10800
+- id: A_R_EA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA_REM.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA_REM.tcl
+  source_sha256: 54c74107714a77e0e824df911747fa6dc6270c259e22a463f5e63a792d0d6960
+  timeout_s: 10800
+- id: A_R_EA_REM_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA_REM_MED.tcl
+  replaces: true
+  cause: 'new: three passes'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA_REM_MED.tcl
+  source_sha256: 95e8de608b5d480c81dd0d806038755928cecbf4a8db132f8b24cbac8eb31635
+  timeout_s: 10800
+- id: A_R_EA_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EA_RSA.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EA_RSA.tcl
+  source_sha256: 755584b17b6d54bb9928d9a6532d8c832fb983bd777f6e6a9f28f7c0af851548
+  timeout_s: 10800
+- id: A_R_ESA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_ESA.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_ESA.tcl
+  source_sha256: f1a11095dca33c0e9d085510bef17677af5ca404c6c5415dc44c6118eb8a8ce9
+  timeout_s: 10800
+- id: A_R_ESA_AREM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_ESA_AREM.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_ESA_AREM.tcl
+  source_sha256: 11df7db89f36184781d1515dfa2d53aa976cdca2125a471dfaffa95f8e72680e
+  timeout_s: 10800
+- id: A_R_ESA_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_ESA_MED.tcl
+  replaces: true
+  cause: 'new: two opt_design passes'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_ESA_MED.tcl
+  source_sha256: 4d44e84f91ba23f9a78d410b65c94e1d47629473d956cfd51496278e85c9561f
+  timeout_s: 10800
+- id: A_R_ESA_POPT
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_ESA_POPT.tcl
+  replaces: true
+  cause: ug904:p316-322 strategy Power_ExploreArea
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_ESA_POPT.tcl
+  source_sha256: 7741143aa67208a31b9965b3667fc5d310fda5c7171049de1ca45fa3c778b799
+  timeout_s: 10800
+- id: A_R_ESA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_ESA_REM.tcl
+  replaces: true
+  cause: ug904:p61 sequence
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_ESA_REM.tcl
+  source_sha256: 476de648719bd769d4b8da1498cca9c4609a5be50fc2d4d6ab3f0cb64a4f216f
+  timeout_s: 10800
+- id: A_R_EWR
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_EWR.tcl
+  replaces: true
+  cause: ug904:p316-321 strategy Area_ExploreWithRemap
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_EWR.tcl
+  source_sha256: d056b5b0e0c30f5dfe6f8607c9933555eff63008cb5710413910f236d9d8a251
+  timeout_s: 10800
+- id: A_R_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_MED.tcl
+  replaces: true
+  cause: run 1 lever; reverses replication
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_MED.tcl
+  source_sha256: d3b3998667075a2684cbd37a5606ea3838d642e74ef32f55ba6572e0b8964ca7
+  timeout_s: 10800
+- id: A_R_RA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RA.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RA.tcl
+  source_sha256: a88fed01ea50d3a4ae35b2b878dc7aa6dea08fa0d9e2056521e1662ba2deda19
+  timeout_s: 10800
+- id: A_R_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_REM.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_REM.tcl
+  source_sha256: 668492ba5b5d70ff5e3e4dbfcd15d12b35130e00e921de60e52b321559959899
+  timeout_s: 10800
+- id: A_R_RSA
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA.tcl
+  source_sha256: d3ab7533a4375bd4d8db263d06176c95f7a690ca45f553a03089efe644638eeb
+  timeout_s: 10800
+- id: A_R_RSA2
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA2.tcl
+  replaces: true
+  cause: 'new: iterate resynthesis'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA2.tcl
+  source_sha256: 8343f9563f82057f7b0646e5640326e3623a549c5dd6fd470ac52d139b43c1e5
+  timeout_s: 10800
+- id: A_R_RSA_AREM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_AREM.tcl
+  replaces: true
+  cause: new combination
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_AREM.tcl
+  source_sha256: 53f8e0ea2b23e449ac0da4e348300b4d5e3b11cb0f84ce07beed75a8236eaa78
+  timeout_s: 10800
+- id: A_R_RSA_END
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_END.tcl
+  replaces: true
+  cause: 'new: area resynthesis + the placer directive that packed CLBs densest in run 1'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_END.tcl
+  source_sha256: 7a9c00eba20ced5d870714134e65d211b38b0e34ef01c5bae4f7c0e39381626a
+  timeout_s: 10800
+- id: A_R_RSA_MED
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_MED.tcl
+  replaces: true
+  cause: new combination
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_MED.tcl
+  source_sha256: 4f2c3cfc7ab9fbc791d32e9a93251713e24abbe8ab9a08971039a25b6273b651
+  timeout_s: 10800
+- id: A_R_RSA_MED_CSM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_MED_CSM.tcl
+  replaces: true
+  cause: new combination
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_MED_CSM.tcl
+  source_sha256: 432ce4f9ff8c8fd74aaebed80c10489b934d445af898ddbd9274f80cceb8a15d
+  timeout_s: 10800
+- id: A_R_RSA_NOPSIP
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_NOPSIP.tcl
+  replaces: true
+  cause: 'new: resynthesis + no placer physical synthesis (no PSIP replication; run 1 o_place_no_psip)'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_NOPSIP.tcl
+  source_sha256: 6af50f9ca4450a1757c11c40c0d37609791a2448cedb963b0ef24483d0606352
+  timeout_s: 10800
+- id: A_R_RSA_PEX
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_PEX.tcl
+  replaces: true
+  cause: 'new: resynthesis + placer Explore'
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_PEX.tcl
+  source_sha256: 59de77e8e719944237abbe00b333a9c2cc0f9f7fff056e2b23e708b68b0655fd
+  timeout_s: 10800
+- id: A_R_RSA_REM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_REM.tcl
+  replaces: true
+  cause: new combination
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_REM.tcl
+  source_sha256: cdc837290b7cc6addf5cebefd612b39d71ad4a62e6beb8540103576b3eeccebc
+  timeout_s: 10800
+- id: A_R_RSA_SRLM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_RSA_SRLM.tcl
+  replaces: true
+  cause: new combination
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_RSA_SRLM.tcl
+  source_sha256: 556fe128563061b94fac20711f3695adf76a2e55a5312602fd97ad5e47b5718c
+  timeout_s: 10800
+- id: A_R_SRLM
+  worker: area
+  kind: tcl
+  script: recipes/tcl/A_R_SRLM.tcl
+  replaces: true
+  cause: run 1 lever (srl_manual)
+  source: external/weekend_run3_2026-10-31/recipes/tcl/A_R_SRLM.tcl
+  source_sha256: 3b92161ab2cc2855130d32ff9f6d9d7f4b9db0a43cf15052fec65689daa7396a
+  timeout_s: 10800
+- id: P_POST_ALL
+  worker: power
+  kind: tcl
+  script: recipes/tcl/P_POST_ALL.tcl
+  replaces: false
+  cause: run 1 lever
+  source: external/weekend_run4_power_2026-11-01/recipes/tcl/P_POST_ALL.tcl
+  source_sha256: 3cc856c5fc1c78352b03f691941617f57883791aa8cbee37a17ebf0903f8bc78
+  timeout_s: 10800
+- id: P_POST_BRAM
+  worker: power
+  kind: tcl
+  script: recipes/tcl/P_POST_BRAM.tcl
+  replaces: false
+  cause: run 1 lever
+  source: external/weekend_run4_power_2026-11-01/recipes/tcl/P_POST_BRAM.tcl
+  source_sha256: d069f2cd7d7f99286491b5f2abd11f780dacdb30733aa6b7adc532e8e76263e2
+  timeout_s: 10800
+- id: P_POST_REG
+  worker: power
+  kind: tcl
+  script: recipes/tcl/P_POST_REG.tcl
+  replaces: false
+  cause: run 1 lever
+  source: external/weekend_run4_power_2026-11-01/recipes/tcl/P_POST_REG.tcl
+  source_sha256: 1fe98061b87c580ba741a593808f8272b0af5e8ba857cf619e75a82a0884434c
+  timeout_s: 10800
+- id: LATCH.phys_opt
+  worker: timing
+  kind: latch
+  flow: phys_opt
+  replaces: false
+  cause: LATCH default flow phys_opt
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.auto_pblock
+  worker: timing
+  kind: latch
+  flow: auto_pblock
+  replaces: true
+  cause: LATCH default flow auto_pblock
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.lut_cone
+  worker: timing
+  kind: latch
+  flow: lut_cone
+  replaces: false
+  cause: LATCH default flow lut_cone
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.retime
+  worker: timing
+  kind: latch
+  flow: retime
+  replaces: false
+  cause: LATCH default flow retime
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.congestion_spread
+  worker: timing
+  kind: latch
+  flow: congestion_spread
+  replaces: false
+  cause: LATCH default flow congestion_spread
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.memory_path_opt
+  worker: timing
+  kind: latch
+  flow: memory_path_opt
+  replaces: true
+  cause: LATCH default flow memory_path_opt
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.hardblock_relocate
+  worker: timing
+  kind: latch
+  flow: hardblock_relocate
+  replaces: true
+  cause: LATCH default flow hardblock_relocate
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: LATCH.net_swap
+  worker: timing
+  kind: latch
+  flow: net_swap
+  replaces: false
+  cause: LATCH default flow net_swap
+  source: external/weekend_run3_2026-10-31/code/latch_job.sh:21-22; Weekend_Run3_Area_Report.md:312-316
+  source_sha256: 438f68c790a938380cb4c51cf1070bc3e961ca0d2cfa5a57311eb48f3a57c524
+  timeout_s: 7200
+- id: P_PRE_ALL
+  worker: power
+  kind: tcl
+  script: recipes/tcl/P_PRE_ALL.tcl
+  replaces: true
+  cause: run 1 lever
+  source: external/weekend_run4_power_2026-11-01/recipes/tcl/P_PRE_ALL.tcl
+  source_sha256: ac899b44a86aa2672b5ba56e1b83030d20a0beaaf8a3948b98cd8304bf970edf
+  timeout_s: 10800
+- id: P_ROUTE_HIGHDELAY
+  worker: power
+  kind: tcl
+  script: recipes/tcl/P_ROUTE_HIGHDELAY.tcl
+  replaces: false
+  cause: run 4 empirical HigherDelayCost route lever
+  source: external/weekend_run4_power_2026-11-01/recipes/tcl/P_ROUTE_HIGHDELAY.tcl
+  source_sha256: 5b0810b31bd4fee613314997398b3143be64f13e946b8df090c0766ee134ed69
+  timeout_s: 10800

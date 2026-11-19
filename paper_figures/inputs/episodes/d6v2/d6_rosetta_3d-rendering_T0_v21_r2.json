@@ -1,0 +1,101 @@
+{
+ "approach": "v21",
+ "brief": "T0",
+ "cache_hits": 5,
+ "charged_cpu_s": 638.81,
+ "charged_wall_s": 8034.862832125276,
+ "completed_at_utc": "2026-11-13T01:28:59.155664+00:00",
+ "descriptions_served": {
+  "cache": 2,
+  "live": 1,
+  "v3": 2
+ },
+ "design": "rosetta_3d-rendering",
+ "episode_id": "d6_rosetta_3d-rendering_T0_v21_r2",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 2.249,
+  "ffs": 5355.0,
+  "netlist_luts": 4869.0,
+  "packed_luts": 13937.0,
+  "tns_ns": -62586.434,
+  "wns_ns": -2.304
+ },
+ "final_state_id": "f492ac3b578f699327e06a97aefd3016b77b52084f1325bde94d6915e5a2ed25",
+ "finished_at_utc": "2026-11-13T01:28:59+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 4,
+  "fallbacks": 0,
+  "model_calls": 4,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 2075,
+   "prompt": 10292,
+   "thoughts": 0,
+   "total": 12367
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 2,
+  "placement_kept": 2,
+  "respect_limits": 4,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "timing",
+   "area",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 1,
+ "noise": {
+  "packed_luts": 6.004519999999999,
+  "wns_ns": 0.113
+ },
+ "policy_version": "template_v2.1-v2-67300e587a8d-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 2.104,
+  "ffs": 5355.0,
+  "netlist_luts": 4891.0,
+  "packed_luts": 13964.0,
+  "tns_ns": -69686.586,
+  "wns_ns": -2.385
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "r2",
+ "task": {
+  "approach": "v21",
+  "brief": "T0",
+  "design": "rosetta_3d-rendering",
+  "episode_id": "d6_rosetta_3d-rendering_T0_v21_r2",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": 1,
+  "tag": "r2",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

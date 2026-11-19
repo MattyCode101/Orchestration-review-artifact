@@ -1,0 +1,84 @@
+{
+ "approach": "random_1",
+ "brief": "T0",
+ "cache_hits": 6,
+ "charged_cpu_s": 7.449999999999999,
+ "charged_wall_s": 2195.3973154295236,
+ "completed_at_utc": "2026-11-13T00:18:05.613660+00:00",
+ "descriptions_served": null,
+ "design": "vexriscv_re-place",
+ "episode_id": "d6_vexriscv_re-place_T0_random_1_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.262,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -482.143,
+  "wns_ns": -0.736
+ },
+ "final_state_id": "98cd570abf81430904ca1409369c5cb5a6badf4d3f1f55742bdd21c4300a5faa",
+ "finished_at_utc": "2026-11-13T00:18:05+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 0,
+  "placement_kept": 2,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "area",
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 6.9925500000000005,
+  "wns_ns": 0.14
+ },
+ "policy_version": "1.0-frozen-seed-1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 0.263,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -498.982,
+  "wns_ns": -0.785
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "random_1",
+  "brief": "T0",
+  "design": "vexriscv_re-place",
+  "episode_id": "d6_vexriscv_re-place_T0_random_1_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": null,
+  "tag": "x",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

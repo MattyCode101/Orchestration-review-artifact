@@ -1,0 +1,1448 @@
+{
+ "calls": [
+  {
+   "changes": {
+    "ffs": "small_gain",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "small_gain",
+    "netlist_luts": "small_gain",
+    "packed_luts": "large_gain",
+    "power": "small_gain",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "small_gain",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "small_gain",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "small_loss"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "small_loss"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "large_gain",
+    "power": "small_gain",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "small_loss"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "small_loss"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_loss",
+    "wns": "large_loss"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "small_loss"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_loss",
+    "wns": "small_loss"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_loss",
+    "wns": "large_loss"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_loss",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "small_loss"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "small_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_gain",
+    "packed_luts": "large_gain",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "area"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_loss",
+    "packed_luts": "within_noise",
+    "power": "small_gain",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "small_gain",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "small_loss",
+    "packed_luts": "small_loss",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "power": "within_noise"
+   },
+   "design": "logicnets_jscl",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "small_loss",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "small_gain",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "small_loss",
+    "packed_luts": "small_gain",
+    "power": "small_loss",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "small_gain",
+    "wns": "large_gain"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_gain",
+    "netlist_luts": "within_noise",
+    "packed_luts": "small_loss",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "small_loss",
+    "power": "within_noise",
+    "wns": "large_gain"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": true,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "small_loss",
+    "packed_luts": "large_loss",
+    "power": "large_loss",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "small_loss",
+    "netlist_luts": "within_noise",
+    "packed_luts": "large_gain",
+    "power": "large_gain",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "small_loss",
+    "packed_luts": "large_loss",
+    "power": "large_loss",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "large_loss",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "large_loss",
+    "wns": "small_gain"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_false",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "vexriscv_re-place",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "power": "within_noise"
+   },
+   "design": "logicnets_jscl",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_spam-filter",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_loss",
+    "packed_luts": "small_loss",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "large_loss",
+    "packed_luts": "large_loss",
+    "power": "within_noise",
+    "wns": "small_gain"
+   },
+   "design": "rosetta_3d-rendering",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "within_noise",
+    "wns": "within_noise"
+   },
+   "design": "finn_radioml",
+   "no_change": true,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "large_loss",
+    "wns": "small_gain"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "large_loss",
+    "wns": "small_gain"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  },
+  {
+   "changes": {
+    "ffs": "within_noise",
+    "netlist_luts": "within_noise",
+    "packed_luts": "within_noise",
+    "power": "large_loss",
+    "wns": "small_gain"
+   },
+   "design": "finn_radioml",
+   "no_change": false,
+   "scope": "preserve_placement_true",
+   "valid": true,
+   "worker": "timing"
+  }
+ ],
+ "provenance": {
+  "bases": {
+   "finn_radioml": {
+    "area": {
+     "candidates": 8,
+     "full_coverage": 6
+    },
+    "timing": {
+     "candidates": 8,
+     "full_coverage": 6
+    }
+   },
+   "logicnets_jscl": {
+    "area": {
+     "candidates": 6,
+     "full_coverage": 0
+    },
+    "timing": {
+     "candidates": 6,
+     "full_coverage": 1
+    }
+   },
+   "rosetta_3d-rendering": {
+    "area": {
+     "candidates": 10,
+     "full_coverage": 6
+    },
+    "timing": {
+     "candidates": 10,
+     "full_coverage": 6
+    }
+   },
+   "rosetta_spam-filter": {
+    "area": {
+     "candidates": 9,
+     "full_coverage": 6
+    },
+    "timing": {
+     "candidates": 9,
+     "full_coverage": 6
+    }
+   },
+   "vexriscv_re-place": {
+    "area": {
+     "candidates": 9,
+     "full_coverage": 6
+    },
+    "timing": {
+     "candidates": 9,
+     "full_coverage": 7
+    }
+   }
+  },
+  "cache_snapshot_keys_sha256": "a4d8982ec94154e43decc39cb5aa819927f7dc5da4e2e91cfcb9f1e692b85c9e",
+  "calls_per_worker_scope_design": {
+   "area|preserve_placement_false|finn_radioml": 6,
+   "area|preserve_placement_false|rosetta_3d-rendering": 6,
+   "area|preserve_placement_false|rosetta_spam-filter": 6,
+   "area|preserve_placement_false|vexriscv_re-place": 6,
+   "area|preserve_placement_true|finn_radioml": 6,
+   "area|preserve_placement_true|rosetta_3d-rendering": 5,
+   "area|preserve_placement_true|rosetta_spam-filter": 5,
+   "area|preserve_placement_true|vexriscv_re-place": 5,
+   "timing|preserve_placement_false|finn_radioml": 6,
+   "timing|preserve_placement_false|logicnets_jscl": 1,
+   "timing|preserve_placement_false|rosetta_3d-rendering": 6,
+   "timing|preserve_placement_false|rosetta_spam-filter": 6,
+   "timing|preserve_placement_false|vexriscv_re-place": 7,
+   "timing|preserve_placement_true|finn_radioml": 6,
+   "timing|preserve_placement_true|logicnets_jscl": 1,
+   "timing|preserve_placement_true|rosetta_3d-rendering": 6,
+   "timing|preserve_placement_true|rosetta_spam-filter": 6,
+   "timing|preserve_placement_true|vexriscv_re-place": 7
+  },
+  "default_attempts": 2,
+  "designs": [
+   "vexriscv_re-place",
+   "logicnets_jscl",
+   "rosetta_spam-filter",
+   "rosetta_3d-rendering",
+   "finn_radioml"
+  ],
+  "generator": "scripts/feature_ablation_2026-11-12/fa_calls.py",
+  "meter_version": "0dd0cf9424bbb7ab20dc5cf981bc35068c4ba08612ecd0f6c46098e6bf880bbe",
+  "observation_generator": "scripts/saturday_profiles.py::ab_observations (round-1 profile generator)",
+  "oracle_miss_reasons": {
+   "not_in_snapshot": 35
+  },
+  "skipped": {
+   "area:preserve_placement_true:no_recipe": 3
+  },
+  "training_designs_only": true
+ },
+ "schema_version": "r2-experience-calls-v1"
+}

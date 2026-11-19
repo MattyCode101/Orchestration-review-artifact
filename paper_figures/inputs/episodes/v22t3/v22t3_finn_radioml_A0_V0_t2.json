@@ -1,0 +1,99 @@
+{
+ "approach": "V0",
+ "brief": "A0",
+ "cache_hits": 5,
+ "charged_cpu_s": 2438.73,
+ "charged_wall_s": 4262.21953395009,
+ "completed_at_utc": "2026-11-14T13:26:13.927670+00:00",
+ "descriptions_served": null,
+ "design": "finn_radioml",
+ "episode_id": "v22t3_finn_radioml_A0_V0_t2",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 5.435,
+  "ffs": 45884.0,
+  "netlist_luts": 86801.0,
+  "packed_luts": 74605.0,
+  "tns_ns": -21502.893,
+  "wns_ns": -1.306
+ },
+ "final_state_id": "260f2556f0f90bfc3a4bc85326b7011806d6922c433b6134ec4c44ebdbc64b0b",
+ "finished_at_utc": "2026-11-14T13:26:13+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 5,
+  "fallbacks": 0,
+  "model_calls": 5,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 940,
+   "prompt": 12414,
+   "thoughts": 0,
+   "total": 13354
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 1,
+  "mandates": 4,
+  "nothing_selected_calls": 2,
+  "placement_kept": 3,
+  "respect_limits": 4,
+  "stop_after_second_ask": false,
+  "stop_reason": "policy_stop",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 6.3516,
+  "wns_ns": 0.081
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-fd4d3843f6-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 5,
+ "schema_version": "v22-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 5.452,
+  "ffs": 45871.0,
+  "netlist_luts": 94506.0,
+  "packed_luts": 79395.0,
+  "tns_ns": -20782.242,
+  "wns_ns": -1.347
+ },
+ "status": "done",
+ "stop_reason": "policy_stop",
+ "tag": "t2",
+ "task": {
+  "approach": "V0",
+  "brief": "A0",
+  "design": "finn_radioml",
+  "episode_id": "v22t3_finn_radioml_A0_V0_t2",
+  "group": "TRAINING",
+  "scope": "train",
+  "scored_cell": true,
+  "seed": 4,
+  "sub": "2",
+  "tag": "t2",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

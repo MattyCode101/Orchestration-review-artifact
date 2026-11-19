@@ -1,0 +1,7 @@
+# source: Paper_Tables_Engineering.md, part 1; computed by tr_eng_test.py from the released TEST episode results (cells.json, episodes.json, refs.json, graph4.json) and the recomputed ceilings of the tables note; data scope: TEST (5 designs); start metrics of the B2 checkpoint
+design,wns_ps,packed_luts,dynamic_power_mw,tns_ns,netlist_luts,ffs
+corescore,-1204,105957,13364,-6583.25,121963,119833
+fir_symmetric,-353,681,2068,-913.371,701,22612
+fir_transposed,-346,603,525,-64.555,647,7466
+rosetta_digit,-1095,22389,1111,-5840.76,24197,23915
+vexriscv_v2,-935,2190,239,-987.915,2137,1678

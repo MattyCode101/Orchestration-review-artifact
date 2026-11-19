@@ -1,0 +1,83 @@
+{
+ "approach": "fixed_BA",
+ "brief": "A0",
+ "cache_hits": 6,
+ "charged_cpu_s": 912.1099999999999,
+ "charged_wall_s": 2145.2852395344526,
+ "completed_at_utc": "2026-11-12T23:08:02.946672+00:00",
+ "descriptions_served": null,
+ "design": "vexriscv_re-place",
+ "episode_id": "d6_vexriscv_re-place_A0_fixed_BA_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.261,
+  "ffs": 1228.0,
+  "netlist_luts": 1857.0,
+  "packed_luts": 1788.0,
+  "tns_ns": -587.577,
+  "wns_ns": -0.77
+ },
+ "final_state_id": "095ead4f0d33a7a86fed2e534ffce6c3b044fd4c2d34b5fc978bd018eda0efb7",
+ "finished_at_utc": "2026-11-12T23:08:02+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 3,
+  "empty_calls": 0,
+  "mandates": 3,
+  "nothing_selected_calls": 0,
+  "placement_kept": 0,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "timing",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 6.9925500000000005,
+  "wns_ns": 0.14
+ },
+ "policy_version": "1.0-frozen",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 0.263,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -498.982,
+  "wns_ns": -0.785
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "fixed_BA",
+  "brief": "A0",
+  "design": "vexriscv_re-place",
+  "episode_id": "d6_vexriscv_re-place_A0_fixed_BA_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": null,
+  "tag": "x",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

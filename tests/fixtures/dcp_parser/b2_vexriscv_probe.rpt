@@ -1,0 +1,868 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date              : Wed Nov  4 11:48:03 2026
+| Host : build-host running 64-bit Linux
+| Command           : report_timing_summary -delay_type max -file data/dcp_parser_b2/extraction/path_probe/probe.rpt
+| Design            : VexRiscv
+| Device            : xcvu3p-ffvc1517
+| Speed File        : -2  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                                 Violations  
+---------  --------  ------------------------------------------  ----------  
+SYNTH-6    Warning   Timing of a RAM block might be sub-optimal  4           
+TIMING-18  Warning   Missing input or output delay               258         
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (115)
+6. checking no_output_delay (136)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (115)
+--------------------------------
+ There are 115 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (136)
+---------------------------------
+ There are 136 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.785     -498.982                   1875                 3565        0.001        0.000                       0                  1329  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock             Waveform(ns)         Period(ns)      Frequency(MHz)
+-----             ------------         ----------      --------------
+clk_fpl26contest  {0.000 0.785}        1.570           636.943         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                 WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                 -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpl26contest       -0.785     -498.982                   1875                 3565        0.001        0.000                       0                  1329  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpl26contest
+  To Clock:  clk_fpl26contest
+
+Setup :         1875  Failing Endpoints,  Worst Slack       -0.785ns,  Total Violation     -498.982ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        0.001ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.785ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port0_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.290ns  (logic 1.158ns (50.575%)  route 1.132ns (49.425%))
+  Logic Levels:           2  (LUT3=1 RAMD32=1)
+  Clock Path Skew:        -0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 1.591 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.076ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.076     0.076    IBusCachedPlugin_cache/clk
+    RAMB36_X2Y16         RAMB36E2                                     r  IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y16         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKBWRCLK_DOUTBDOUT[0])
+                                                      0.967     1.043 r  IBusCachedPlugin_cache/banks_0_reg_bram_1/DOUTBDOUT[0]
+                         net (fo=2, routed)           0.395     1.438    IBusCachedPlugin_cache/IBusCachedPlugin_cache_io_cpu_fetch_data[18]
+    SLICE_X24Y75         LUT3 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.089     1.527 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r1_0_31_0_13_i_17/O
+                         net (fo=34, routed)          0.347     1.875    RegFilePlugin_regFile_reg_r1_0_31_14_27/ADDRE3
+    SLICE_X24Y74         RAMD32 (Prop_E5LUT_SLICEM_RADR3_O)
+                                                      0.102     1.977 r  RegFilePlugin_regFile_reg_r1_0_31_14_27/RAME/O
+                         net (fo=1, routed)           0.389     2.366    RegFilePlugin_regFile_spinal_port00[22]
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.021     1.591    clk
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[22]/C
+                         clock pessimism              0.000     1.591    
+                         clock uncertainty           -0.035     1.556    
+    SLICE_X24Y75         FDRE (Setup_FFF_SLICEM_C_D)
+                                                      0.025     1.581    RegFilePlugin_regFile_spinal_port0_reg[22]
+  -------------------------------------------------------------------
+                         required time                          1.581    
+                         arrival time                          -2.366    
+  -------------------------------------------------------------------
+                         slack                                 -0.785    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpl26contest
+Waveform(ns):       { 0.000 0.785 }
+Period(ns):         1.570
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         1.570       0.001      RAMB36_X2Y15  IBusCachedPlugin_predictor_history_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         0.785       0.243      RAMB36_X2Y15  IBusCachedPlugin_predictor_history_reg/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         0.785       0.243      RAMB36_X2Y15  IBusCachedPlugin_predictor_history_reg/CLKARDCLK
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date              : Wed Nov  4 11:48:03 2026
+| Host : build-host running 64-bit Linux
+| Command           : report_timing -delay_type max -max_paths 5 -nworst 1 -append -file data/dcp_parser_b2/extraction/path_probe/probe.rpt
+| Design            : VexRiscv
+| Device            : xcvu3p-ffvc1517
+| Speed File        : -2  PRODUCTION 1.28 03-30-2022
+| Design State      : Routed
+| Temperature Grade : E
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.785ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port0_reg[22]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.290ns  (logic 1.158ns (50.575%)  route 1.132ns (49.425%))
+  Logic Levels:           2  (LUT3=1 RAMD32=1)
+  Clock Path Skew:        -0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 1.591 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.076ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.076     0.076    IBusCachedPlugin_cache/clk
+    RAMB36_X2Y16         RAMB36E2                                     r  IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y16         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKBWRCLK_DOUTBDOUT[0])
+                                                      0.967     1.043 r  IBusCachedPlugin_cache/banks_0_reg_bram_1/DOUTBDOUT[0]
+                         net (fo=2, routed)           0.395     1.438    IBusCachedPlugin_cache/IBusCachedPlugin_cache_io_cpu_fetch_data[18]
+    SLICE_X24Y75         LUT3 (Prop_B6LUT_SLICEM_I2_O)
+                                                      0.089     1.527 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r1_0_31_0_13_i_17/O
+                         net (fo=34, routed)          0.347     1.875    RegFilePlugin_regFile_reg_r1_0_31_14_27/ADDRE3
+    SLICE_X24Y74         RAMD32 (Prop_E5LUT_SLICEM_RADR3_O)
+                                                      0.102     1.977 r  RegFilePlugin_regFile_reg_r1_0_31_14_27/RAME/O
+                         net (fo=1, routed)           0.389     2.366    RegFilePlugin_regFile_spinal_port00[22]
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.021     1.591    clk
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[22]/C
+                         clock pessimism              0.000     1.591    
+                         clock uncertainty           -0.035     1.556    
+    SLICE_X24Y75         FDRE (Setup_FFF_SLICEM_C_D)
+                                                      0.025     1.581    RegFilePlugin_regFile_spinal_port0_reg[22]
+  -------------------------------------------------------------------
+                         required time                          1.581    
+                         arrival time                          -2.366    
+  -------------------------------------------------------------------
+                         slack                                 -0.785    
+
+Slack (VIOLATED) :        -0.772ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port1_reg[20]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.276ns  (logic 1.096ns (48.155%)  route 1.180ns (51.845%))
+  Logic Levels:           2  (LUT3=1 RAMD32=1)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.590 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.076ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.076     0.076    IBusCachedPlugin_cache/clk
+    RAMB36_X2Y16         RAMB36E2                                     r  IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y16         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKBWRCLK_DOUTBDOUT[5])
+                                                      0.901     0.977 r  IBusCachedPlugin_cache/banks_0_reg_bram_1/DOUTBDOUT[5]
+                         net (fo=2, routed)           0.516     1.493    IBusCachedPlugin_cache/IBusCachedPlugin_cache_io_cpu_fetch_data[23]
+    SLICE_X24Y75         LUT3 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.098     1.591 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r2_0_31_0_13_i_2/O
+                         net (fo=34, routed)          0.348     1.939    RegFilePlugin_regFile_reg_r2_0_31_14_27/ADDRD3
+    SLICE_X25Y73         RAMD32 (Prop_D5LUT_SLICEM_RADR3_O)
+                                                      0.097     2.036 r  RegFilePlugin_regFile_reg_r2_0_31_14_27/RAMD/O
+                         net (fo=1, routed)           0.316     2.352    RegFilePlugin_regFile_spinal_port10[20]
+    SLICE_X26Y73         FDRE                                         r  RegFilePlugin_regFile_spinal_port1_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.020     1.590    clk
+    SLICE_X26Y73         FDRE                                         r  RegFilePlugin_regFile_spinal_port1_reg[20]/C
+                         clock pessimism              0.000     1.590    
+                         clock uncertainty           -0.035     1.555    
+    SLICE_X26Y73         FDRE (Setup_HFF_SLICEL_C_D)
+                                                      0.025     1.580    RegFilePlugin_regFile_spinal_port1_reg[20]
+  -------------------------------------------------------------------
+                         required time                          1.580    
+                         arrival time                          -2.352    
+  -------------------------------------------------------------------
+                         slack                                 -0.772    
+
+Slack (VIOLATED) :        -0.761ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/io_cpu_fetch_data_regNextWhen_reg[16]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port0_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.312ns  (logic 0.651ns (28.161%)  route 1.661ns (71.839%))
+  Logic Levels:           7  (LUT3=1 LUT5=1 LUT6=4 RAMD32=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.590 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.029     0.029    IBusCachedPlugin_cache/clk
+    SLICE_X23Y69         FDRE                                         r  IBusCachedPlugin_cache/io_cpu_fetch_data_regNextWhen_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y69         FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     0.108 r  IBusCachedPlugin_cache/io_cpu_fetch_data_regNextWhen_reg[16]/Q
+                         net (fo=9, routed)           0.269     0.377    IBusCachedPlugin_cache/io_cpu_decode_data[10]
+    SLICE_X23Y70         LUT6 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.099     0.476 f  IBusCachedPlugin_cache/decode_to_execute_RS1[31]_i_10/O
+                         net (fo=1, routed)           0.043     0.519    IBusCachedPlugin_cache/decode_to_execute_RS1[31]_i_10_n_0
+    SLICE_X23Y70         LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.097     0.616 f  IBusCachedPlugin_cache/decode_to_execute_RS1[31]_i_6/O
+                         net (fo=2, routed)           0.277     0.893    IBusCachedPlugin_cache/decode_to_execute_RS1[31]_i_6_n_0
+    SLICE_X25Y71         LUT6 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.053     0.946 r  IBusCachedPlugin_cache/banks_0_reg_bram_0_i_41/O
+                         net (fo=1, routed)           0.093     1.039    IBusCachedPlugin_cache/banks_0_reg_bram_0_i_41_n_0
+    SLICE_X25Y74         LUT6 (Prop_B6LUT_SLICEM_I3_O)
+                                                      0.037     1.076 r  IBusCachedPlugin_cache/banks_0_reg_bram_0_i_14/O
+                         net (fo=3, routed)           0.153     1.229    IBusCachedPlugin_cache/banks_0_reg_bram_0_i_14_n_0
+    SLICE_X24Y75         LUT6 (Prop_D6LUT_SLICEM_I0_O)
+                                                      0.051     1.280 r  IBusCachedPlugin_cache/io_cpu_fetch_data_regNextWhen[31]_i_4/O
+                         net (fo=22, routed)          0.154     1.433    IBusCachedPlugin_cache/FSM_sequential_IBusCachedPlugin_injector_port_state_reg[0]
+    SLICE_X24Y75         LUT3 (Prop_E6LUT_SLICEM_I1_O)
+                                                      0.100     1.533 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r1_0_31_0_13_i_19/O
+                         net (fo=34, routed)          0.338     1.872    RegFilePlugin_regFile_reg_r1_0_31_0_13/ADDRD1
+    SLICE_X24Y73         RAMD32 (Prop_D5LUT_SLICEM_RADR1_O)
+                                                      0.135     2.007 r  RegFilePlugin_regFile_reg_r1_0_31_0_13/RAMD/O
+                         net (fo=1, routed)           0.334     2.341    RegFilePlugin_regFile_spinal_port00[6]
+    SLICE_X23Y72         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.020     1.590    clk
+    SLICE_X23Y72         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[6]/C
+                         clock pessimism              0.000     1.590    
+                         clock uncertainty           -0.035     1.555    
+    SLICE_X23Y72         FDRE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     1.580    RegFilePlugin_regFile_spinal_port0_reg[6]
+  -------------------------------------------------------------------
+                         required time                          1.580    
+                         arrival time                          -2.341    
+  -------------------------------------------------------------------
+                         slack                                 -0.761    
+
+Slack (VIOLATED) :        -0.755ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port0_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.258ns  (logic 1.043ns (46.181%)  route 1.215ns (53.819%))
+  Logic Levels:           2  (LUT3=1 RAMD32=1)
+  Clock Path Skew:        -0.056ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 1.590 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.076ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.076     0.076    IBusCachedPlugin_cache/clk
+    RAMB36_X2Y16         RAMB36E2                                     r  IBusCachedPlugin_cache/banks_0_reg_bram_1/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y16         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKBWRCLK_DOUTBDOUT[1])
+                                                      0.919     0.995 r  IBusCachedPlugin_cache/banks_0_reg_bram_1/DOUTBDOUT[1]
+                         net (fo=2, routed)           0.489     1.484    IBusCachedPlugin_cache/IBusCachedPlugin_cache_io_cpu_fetch_data[19]
+    SLICE_X23Y75         LUT3 (Prop_D6LUT_SLICEL_I2_O)
+                                                      0.050     1.534 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r1_0_31_0_13_i_16/O
+                         net (fo=34, routed)          0.412     1.945    RegFilePlugin_regFile_reg_r1_0_31_0_13/ADDRF4
+    SLICE_X24Y73         RAMD32 (Prop_F5LUT_SLICEM_RADR4_O)
+                                                      0.074     2.019 r  RegFilePlugin_regFile_reg_r1_0_31_0_13/RAMF/O
+                         net (fo=1, routed)           0.315     2.334    RegFilePlugin_regFile_spinal_port00[10]
+    SLICE_X23Y72         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.020     1.590    clk
+    SLICE_X23Y72         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[10]/C
+                         clock pessimism              0.000     1.590    
+                         clock uncertainty           -0.035     1.555    
+    SLICE_X23Y72         FDRE (Setup_CFF_SLICEL_C_D)
+                                                      0.025     1.580    RegFilePlugin_regFile_spinal_port0_reg[10]
+  -------------------------------------------------------------------
+                         required time                          1.580    
+                         arrival time                          -2.334    
+  -------------------------------------------------------------------
+                         slack                                 -0.755    
+
+Slack (VIOLATED) :        -0.747ns  (required time - arrival time)
+  Source:                 IBusCachedPlugin_cache/banks_0_reg_bram_0/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Destination:            RegFilePlugin_regFile_spinal_port0_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpl26contest  {rise@0.000ns fall@0.785ns period=1.570ns})
+  Path Group:             clk_fpl26contest
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            1.570ns  (clk_fpl26contest rise@1.570ns - clk_fpl26contest rise@0.000ns)
+  Data Path Delay:        2.252ns  (logic 1.039ns (46.140%)  route 1.213ns (53.860%))
+  Logic Levels:           2  (LUT3=1 RAMD32=1)
+  Clock Path Skew:        -0.055ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 1.591 - 1.570 ) 
+    Source Clock Delay      (SCD):    0.076ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpl26contest rise edge)
+                                                      0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1352, unset)         0.076     0.076    IBusCachedPlugin_cache/clk
+    RAMB36_X2Y13         RAMB36E2                                     r  IBusCachedPlugin_cache/banks_0_reg_bram_0/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y13         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKBWRCLK_DOUTPBDOUTP[1])
+                                                      0.892     0.968 r  IBusCachedPlugin_cache/banks_0_reg_bram_0/DOUTPBDOUTP[1]
+                         net (fo=2, routed)           0.460     1.428    IBusCachedPlugin_cache/IBusCachedPlugin_cache_io_cpu_fetch_data[17]
+    SLICE_X23Y75         LUT3 (Prop_A6LUT_SLICEL_I2_O)
+                                                      0.035     1.463 r  IBusCachedPlugin_cache/RegFilePlugin_regFile_reg_r1_0_31_0_13_i_18/O
+                         net (fo=34, routed)          0.378     1.841    RegFilePlugin_regFile_reg_r1_0_31_14_27/ADDRG2
+    SLICE_X24Y74         RAMD32 (Prop_G5LUT_SLICEM_RADR2_O)
+                                                      0.112     1.953 r  RegFilePlugin_regFile_reg_r1_0_31_14_27/RAMG/O
+                         net (fo=1, routed)           0.375     2.328    RegFilePlugin_regFile_spinal_port00[26]
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpl26contest rise edge)
+                                                      1.570     1.570 r  
+                                                      0.000     1.570 r  clk (IN)
+                         net (fo=1352, unset)         0.021     1.591    clk
+    SLICE_X24Y75         FDRE                                         r  RegFilePlugin_regFile_spinal_port0_reg[26]/C
+                         clock pessimism              0.000     1.591    
+                         clock uncertainty           -0.035     1.556    
+    SLICE_X24Y75         FDRE (Setup_GFF_SLICEM_C_D)
+                                                      0.025     1.581    RegFilePlugin_regFile_spinal_port0_reg[26]
+  -------------------------------------------------------------------
+                         required time                          1.581    
+                         arrival time                          -2.328    
+  -------------------------------------------------------------------
+                         slack                                 -0.747    
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Nov  4 11:48:03 2026
+| Host : build-host running 64-bit Linux
+| Command      : report_utilization -append -file data/dcp_parser_b2/extraction/path_probe/probe.rpt
+| Design       : VexRiscv
+| Device       : xcvu3p-ffvc1517-2-e
+| Speed File   : -2
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. CLB Logic
+1.1 Summary of Registers by Type
+2. CLB Logic Distribution
+3. BLOCKRAM
+4. ARITHMETIC
+5. I/O
+6. CLOCK
+7. ADVANCED
+8. CONFIGURATION
+9. Primitives
+10. Black Boxes
+11. Instantiated Netlists
+
+1. CLB Logic
+------------
+
++----------------------------+------+-------+------------+-----------+-------+
+|          Site Type         | Used | Fixed | Prohibited | Available | Util% |
++----------------------------+------+-------+------------+-----------+-------+
+| CLB LUTs                   | 1895 |     0 |          0 |    394080 |  0.48 |
+|   LUT as Logic             | 1855 |     0 |          0 |    394080 |  0.47 |
+|   LUT as Memory            |   40 |     0 |          0 |    197280 |  0.02 |
+|     LUT as Distributed RAM |   40 |     0 |            |           |       |
+|     LUT as Shift Register  |    0 |     0 |            |           |       |
+| CLB Registers              | 1231 |     0 |          0 |    788160 |  0.16 |
+|   Register as Flip Flop    | 1231 |     0 |          0 |    788160 |  0.16 |
+|   Register as Latch        |    0 |     0 |          0 |    788160 |  0.00 |
+| CARRY8                     |   48 |     0 |          0 |     49260 |  0.10 |
+| F7 Muxes                   |   30 |     0 |          0 |    197040 |  0.02 |
+| F8 Muxes                   |    0 |     0 |          0 |     98520 |  0.00 |
+| F9 Muxes                   |    0 |     0 |          0 |     49260 |  0.00 |
++----------------------------+------+-------+------------+-----------+-------+
+* Warning! LUT value is adjusted to account for LUT combining.
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 5     |          Yes |           - |          Set |
+| 92    |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 1134  |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. CLB Logic Distribution
+-------------------------
+
++--------------------------------------------+------+-------+------------+-----------+-------+
+|                  Site Type                 | Used | Fixed | Prohibited | Available | Util% |
++--------------------------------------------+------+-------+------------+-----------+-------+
+| CLB                                        |  324 |     0 |          0 |     49260 |  0.66 |
+|   CLBL                                     |  151 |     0 |            |           |       |
+|   CLBM                                     |  173 |     0 |            |           |       |
+| LUT as Logic                               | 1855 |     0 |          0 |    394080 |  0.47 |
+|   using O5 output only                     |   27 |       |            |           |       |
+|   using O6 output only                     | 1730 |       |            |           |       |
+|   using O5 and O6                          |   98 |       |            |           |       |
+| LUT as Memory                              |   40 |     0 |          0 |    197280 |  0.02 |
+|   LUT as Distributed RAM                   |   40 |     0 |            |           |       |
+|     using O5 output only                   |    0 |       |            |           |       |
+|     using O6 output only                   |    0 |       |            |           |       |
+|     using O5 and O6                        |   40 |       |            |           |       |
+|   LUT as Shift Register                    |    0 |     0 |            |           |       |
+|     using O5 output only                   |    0 |       |            |           |       |
+|     using O6 output only                   |    0 |       |            |           |       |
+|     using O5 and O6                        |    0 |       |            |           |       |
+| CLB Registers                              | 1231 |     0 |          0 |    788160 |  0.16 |
+|   Register driven from within the CLB      |  659 |       |            |           |       |
+|   Register driven from outside the CLB     |  572 |       |            |           |       |
+|     LUT in front of the register is unused |  118 |       |            |           |       |
+|     LUT in front of the register is used   |  454 |       |            |           |       |
+| Unique Control Sets                        |   28 |       |          0 |     98520 |  0.03 |
++--------------------------------------------+------+-------+------------+-----------+-------+
+* * Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
+
+
+3. BLOCKRAM
+-----------
+
++-------------------+------+-------+------------+-----------+-------+
+|     Site Type     | Used | Fixed | Prohibited | Available | Util% |
++-------------------+------+-------+------------+-----------+-------+
+| Block RAM Tile    |    6 |     0 |          0 |       720 |  0.83 |
+|   RAMB36/FIFO*    |    3 |     0 |          0 |       720 |  0.42 |
+|     RAMB36E2 only |    3 |       |            |           |       |
+|   RAMB18          |    6 |     0 |          0 |      1440 |  0.42 |
+|     RAMB18E2 only |    6 |       |            |           |       |
+| URAM              |    0 |     0 |          0 |       320 |  0.00 |
++-------------------+------+-------+------------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
+
+
+4. ARITHMETIC
+-------------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| DSPs           |    4 |     0 |          0 |      2280 |  0.18 |
+|   DSP48E2 only |    4 |       |            |           |       |
++----------------+------+-------+------------+-----------+-------+
+
+
+5. I/O
+------
+
++------------------+------+-------+------------+-----------+-------+
+|     Site Type    | Used | Fixed | Prohibited | Available | Util% |
++------------------+------+-------+------------+-----------+-------+
+| Bonded IOB       |    0 |     0 |          0 |       520 |  0.00 |
+|   HPIOB_M        |    0 |     0 |          0 |       240 |  0.00 |
+|   HPIOB_S        |    0 |     0 |          0 |       240 |  0.00 |
+|   HPIOB_SNGL     |    0 |     0 |          0 |        40 |  0.00 |
+| HPIOBDIFFINBUF   |    0 |     0 |          0 |       240 |  0.00 |
+| HPIOBDIFFOUTBUF  |    0 |     0 |          0 |       240 |  0.00 |
+| BITSLICE_CONTROL |    0 |     0 |          0 |        80 |  0.00 |
+| BITSLICE_RX_TX   |    0 |     0 |          0 |      3120 |  0.00 |
+| BITSLICE_TX      |    0 |     0 |          0 |        80 |  0.00 |
+| RIU_OR           |    0 |     0 |          0 |        40 |  0.00 |
++------------------+------+-------+------------+-----------+-------+
+
+
+6. CLOCK
+--------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| BUFGCE     |    0 |     0 |          0 |       240 |  0.00 |
+| BUFGCE_DIV |    0 |     0 |          0 |        40 |  0.00 |
+| BUFG_GT    |    0 |     0 |          0 |       240 |  0.00 |
+| BUFGCTRL*  |    0 |     0 |          0 |        80 |  0.00 |
+| PLL        |    0 |     0 |          0 |        20 |  0.00 |
+| MMCM       |    0 |     0 |          0 |        10 |  0.00 |
++------------+------+-------+------------+-----------+-------+
+* Note: Each used BUFGCTRL counts as two GLOBAL CLOCK BUFFERs. This table does not include global clocking resources, only buffer cell usage. See the Clock Utilization Report (report_clock_utilization) for detailed accounting of global clocking resource availability.
+
+
+7. ADVANCED
+-----------
+
++-----------------+------+-------+------------+-----------+-------+
+|    Site Type    | Used | Fixed | Prohibited | Available | Util% |
++-----------------+------+-------+------------+-----------+-------+
+| CMACE4          |    0 |     0 |          0 |         3 |  0.00 |
+| GTYE4_CHANNEL   |    0 |     0 |          0 |        40 |  0.00 |
+| GTYE4_COMMON    |    0 |     0 |          0 |        10 |  0.00 |
+| ILKNE4          |    0 |     0 |          0 |         3 |  0.00 |
+| OBUFDS_GTE4     |    0 |     0 |          0 |        20 |  0.00 |
+| OBUFDS_GTE4_ADV |    0 |     0 |          0 |        20 |  0.00 |
+| PCIE40E4        |    0 |     0 |          0 |         2 |  0.00 |
+| SYSMONE4        |    0 |     0 |          0 |         1 |  0.00 |
++-----------------+------+-------+------------+-----------+-------+
+
+
+8. CONFIGURATION
+----------------
+
++-------------+------+-------+------------+-----------+-------+
+|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
++-------------+------+-------+------------+-----------+-------+
+| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
+| DNA_PORTE2  |    0 |     0 |          0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
+| FRAME_ECCE4 |    0 |     0 |          0 |         1 |  0.00 |
+| ICAPE3      |    0 |     0 |          0 |         2 |  0.00 |
+| MASTER_JTAG |    0 |     0 |          0 |         1 |  0.00 |
+| STARTUPE3   |    0 |     0 |          0 |         1 |  0.00 |
++-------------+------+-------+------------+-----------+-------+
+
+
+9. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| FDRE     | 1134 |            Register |
+| LUT6     |  806 |                 CLB |
+| LUT4     |  353 |                 CLB |
+| LUT5     |  326 |                 CLB |
+| LUT3     |  280 |                 CLB |
+| LUT2     |  179 |                 CLB |
+| FDCE     |   92 |            Register |
+| RAMD32   |   68 |                 CLB |
+| CARRY8   |   48 |                 CLB |
+| MUXF7    |   30 |                 CLB |
+| RAMS32   |   12 |                 CLB |
+| LUT1     |    9 |                 CLB |
+| RAMB18E2 |    6 |            BLOCKRAM |
+| FDPE     |    5 |            Register |
+| DSP48E2  |    4 |          Arithmetic |
+| RAMB36E2 |    3 |            BLOCKRAM |
++----------+------+---------------------+
+
+
+10. Black Boxes
+---------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+11. Instantiated Netlists
+-------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Wed Nov  4 11:48:04 2026
+| Host : build-host running 64-bit Linux
+| Command      : report_high_fanout_nets -max_nets 20 -append -file data/dcp_parser_b2/extraction/path_probe/probe.rpt
+| Design       : VexRiscv
+| Device       : xcvu3p
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+High Fan-out Nets Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------------------+--------+-------------+
+| Net Name                                                                      | Fanout | Driver Type |
++-------------------------------------------------------------------------------+--------+-------------+
+| dataCache_1/when_MulDivIterativePlugin_l126_1                                 |    266 | LUT4        |
+| dataCache_1/when_CsrPlugin_l1259_3                                            |    203 | LUT4        |
+| dataCache_1/when_CsrPlugin_l1259_1                                            |    177 | LUT6        |
+| execute_arbitration_isValid                                                   |    169 | FDCE        |
+| decode_to_execute_SRC1_CTRL[0]                                                |    134 | FDRE        |
+| decode_to_execute_SRC1_CTRL[1]                                                |    134 | FDRE        |
+| memory_arbitration_isValid_reg_n_0                                            |    101 | FDCE        |
+| writeBack_arbitration_isValid                                                 |    100 | FDCE        |
+| execute_DBusCachedPlugin_size[0]                                              |     97 | FDRE        |
+| reset                                                                         |     90 | PORT        |
+| decode_to_execute_SHIFT_CTRL[1]                                               |     88 | FDRE        |
+| execute_to_memory_IS_DIV                                                      |     84 | FDRE        |
+| IBusCachedPlugin_cache/IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_ready |     82 | LUT6        |
+| lastStageRegFileWrite_payload_address[0]                                      |     80 | LUT2        |
+| lastStageRegFileWrite_payload_address[2]                                      |     80 | LUT2        |
+| lastStageRegFileWrite_payload_address[3]                                      |     80 | LUT2        |
+| lastStageRegFileWrite_payload_address[4]                                      |     80 | LUT2        |
+| dataCache_1/lastStageRegFileWrite_valid                                       |     80 | LUT5        |
+| lastStageRegFileWrite_payload_address[1]                                      |     80 | LUT2        |
+| _zz_IBusCachedPlugin_iBusRsp_stages_1_output_m2sPipe_valid_reg_n_0            |     75 | FDCE        |
++-------------------------------------------------------------------------------+--------+-------------+
+
+

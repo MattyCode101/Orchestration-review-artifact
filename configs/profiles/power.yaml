@@ -1,0 +1,95 @@
+common:
+  cache_snapshot_keys_sha256: a4d8982ec94154e43decc39cb5aa819927f7dc5da4e2e91cfcb9f1e692b85c9e
+  designs:
+  - vexriscv_re-place
+  - logicnets_jscl
+  - rosetta_spam-filter
+  - rosetta_3d-rendering
+  - finn_radioml
+  final_model_sha256:
+    area: bab0120208195f6cb0e0cc2782c0936901058676743354aed8639257e41b3b06
+    timing: eb1cc3f9eeef0ec939fb23a266d98b4d6c86e865013ac5cf7a39c0a751afd932
+  generator_sha256:
+    orch/analysis/profiles.py: ba7d99632af6f7178d2afc6fddd5c595cf0ac6d2beb8b7b96557d2db07727895
+    scripts/saturday_profiles.py: eb4b7331cb6649a4ea3b99a8ef73a1f2aa8a84c4e5e5c1e15eb923f8f8656f82
+  meter_version: 0dd0cf9424bbb7ab20dc5cf981bc35068c4ba08612ecd0f6c46098e6bf880bbe
+  oracle_miss_reasons:
+    not_in_snapshot: 35
+  outputs_with_stored_amd_pass: 92
+  outputs_without_amd_record_accepted: 143
+  training_designs_only: true
+  worker_c_ranking_sha256: 4d851baaa59a013599a2dc3f62ef5cd268ab43c8989f3f48c4b298a52050ae04
+generator: orch/analysis/profiles.py
+kind: worker
+objective: power
+provenance:
+  bases:
+    finn_radioml: 8
+    logicnets_jscl: 8
+    rosetta_3d-rendering: 10
+    rosetta_spam-filter: 9
+    vexriscv_re-place: 9
+  default_attempts: 2
+  designs:
+  - vexriscv_re-place
+  - logicnets_jscl
+  - rosetta_spam-filter
+  - rosetta_3d-rendering
+  - finn_radioml
+  observations: 88
+  skipped: {}
+schema_version: behaviour-profile-v1
+settings:
+  preserve_placement_false:
+    calls: 44
+    designs: 5
+    invalid_rate: 0.0
+    metrics:
+      ffs:
+        within_noise: 1.0
+      netlist_luts:
+        large_loss: 0.0625
+        within_noise: 0.9375
+      packed_luts:
+        large_loss: 0.0625
+        within_noise: 0.9375
+      power:
+        large_gain: 0.2
+        small_gain: 0.1333
+        within_noise: 0.6667
+      wns:
+        small_gain: 0.0556
+        small_loss: 0.1715
+        within_noise: 0.7729
+    no_change_rate: 0.5822
+  preserve_placement_true:
+    calls: 44
+    designs: 5
+    invalid_rate: 0.0
+    metrics:
+      ffs:
+        within_noise: 1.0
+      netlist_luts:
+        large_loss: 0.0625
+        within_noise: 0.9375
+      packed_luts:
+        large_loss: 0.0625
+        within_noise: 0.9375
+      power:
+        large_gain: 0.2
+        small_gain: 0.1333
+        within_noise: 0.6667
+      wns:
+        small_gain: 0.0556
+        small_loss: 0.1715
+        within_noise: 0.7729
+    no_change_rate: 0.5822
+text: "  preserve_placement=true: goal within_noise often, large_gain sometimes, small_gain\
+  \ rarely; ffs within_noise usually; netlist_luts within_noise usually; packed_luts\
+  \ within_noise usually; wns within_noise usually, small_loss sometimes; no change\
+  \ often; invalid rarely.\n  preserve_placement=false: goal within_noise often, large_gain\
+  \ sometimes, small_gain rarely; ffs within_noise usually; netlist_luts within_noise\
+  \ usually; packed_luts within_noise usually; wns within_noise usually, small_loss\
+  \ sometimes; no change often; invalid rarely."
+text_sha256: 767403a6584dec2ec176aee9ec1fcc71b4847896aec60b65f5c45bd40802b26b
+worker: power

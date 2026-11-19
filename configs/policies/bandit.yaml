@@ -1,0 +1,19 @@
+# Contextual-bandit policy: declared settings (O1, development side, 2026-11-11).
+# Declared before any evaluation and not tuned afterwards. The same values are quoted in notes/bandit_policy_plan.md,
+# which is hashed before the first evaluation.
+schema_version: bandit-settings-v2
+settings:
+  rho: 0.5               # share of an unvalidated (limit-breaking) gain credited while a run remains to repair it; neutral midpoint
+  flat_penalty: 3.0      # flat reward only: log2(1 + band) units, the size of a clearly-above-noise gain (about 7 bands)
+  alpha: 1.0             # exploration weight on sigma x sqrt(x' A^-1 x); sigma is the pooled residual spread of the prior fit
+  ridge: 1.0             # ridge lambda of the per-arm regression
+  stop_threshold: 1.0    # stop when no arm's upper bound reaches one noise band (log2(1 + 1) = 1)
+variants:                # base_choice x reward; main is the declared policy, the others are the 2 x 2 ablation
+  main:        {base_choice: best_or_latest, reward: credited}
+  literal:     {base_choice: best_only,      reward: flat}
+  base_only:   {base_choice: best_or_latest, reward: flat}
+  reward_only: {base_choice: best_only,      reward: credited}
+sensitivity:             # declared checks on the main variant, reported next to it, never used to select anything
+  rho: [0.25, 0.75]
+  alpha: [0.5, 2.0]
+  stop_threshold: [0.0]

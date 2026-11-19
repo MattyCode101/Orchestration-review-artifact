@@ -1,0 +1,85 @@
+{
+ "approach": "random_2",
+ "brief": "T0",
+ "cache_hits": 4,
+ "charged_cpu_s": 3533.57,
+ "charged_wall_s": 7353.75032308884,
+ "completed_at_utc": "2026-11-13T01:24:38.934780+00:00",
+ "descriptions_served": null,
+ "design": "finn_radioml",
+ "episode_id": "d6_finn_radioml_T0_random_2_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 5.461,
+  "ffs": 45933.0,
+  "netlist_luts": 86759.0,
+  "packed_luts": 78185.0,
+  "tns_ns": -22078.17,
+  "wns_ns": -1.32
+ },
+ "final_state_id": "6424b5f33bca53e277b7bbfcf090c33e358e9388803149d8b0944dab2f610440",
+ "finished_at_utc": "2026-11-13T01:24:38+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 5,
+  "empty_calls": 1,
+  "mandates": 5,
+  "nothing_selected_calls": 0,
+  "placement_kept": 2,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area",
+   "timing",
+   "timing"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 2,
+ "noise": {
+  "packed_luts": 6.3516,
+  "wns_ns": 0.081
+ },
+ "policy_version": "1.0-frozen-seed-2",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 5.452,
+  "ffs": 45871.0,
+  "netlist_luts": 94506.0,
+  "packed_luts": 79395.0,
+  "tns_ns": -20782.242,
+  "wns_ns": -1.347
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "random_2",
+  "brief": "T0",
+  "design": "finn_radioml",
+  "episode_id": "d6_finn_radioml_T0_random_2_x",
+  "group": "TRAINING",
+  "scope": "train",
+  "seed": null,
+  "tag": "x",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

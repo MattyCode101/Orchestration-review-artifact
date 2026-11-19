@@ -1,0 +1,86 @@
+{
+ "approach": "random_0",
+ "brief": "A0",
+ "cache_hits": 5,
+ "charged_cpu_s": 2531.05,
+ "charged_wall_s": 7927.081273550168,
+ "completed_at_utc": "2026-11-12T23:36:20.348511+00:00",
+ "descriptions_served": null,
+ "design": "vtr_mcml_v2",
+ "episode_id": "d6_vtr_mcml_v2_A0_random_0_x",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 8.332,
+  "ffs": 15547.0,
+  "netlist_luts": 55791.0,
+  "packed_luts": 45667.0,
+  "tns_ns": -73005.312,
+  "wns_ns": -12.863
+ },
+ "final_state_id": "67a091a7ad037ca8086483f228595dfbce9ff191cf6b49fc02df69a8fd11d5b2",
+ "finished_at_utc": "2026-11-12T23:36:20+00:00",
+ "group": "DEVELOPMENT",
+ "llm": null,
+ "llm_stats": null,
+ "loop": {
+  "calls": 5,
+  "empty_calls": 0,
+  "mandates": 5,
+  "nothing_selected_calls": 0,
+  "placement_kept": 1,
+  "respect_limits": 0,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "timing",
+   "timing",
+   "timing",
+   "timing",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 1,
+ "noise": {
+  "dynamic_power_w": 0.012,
+  "packed_luts": 10.0,
+  "wns_ns": 0.47
+ },
+ "policy_version": "1.0-frozen-seed-0",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "d6v2-result-v1",
+ "scope": "development",
+ "start_metrics": {
+  "dynamic_power_w": 8.319,
+  "ffs": 15546.0,
+  "netlist_luts": 55791.0,
+  "packed_luts": 45673.0,
+  "tns_ns": -70243.43,
+  "wns_ns": -13.421
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "x",
+ "task": {
+  "approach": "random_0",
+  "brief": "A0",
+  "design": "vtr_mcml_v2",
+  "episode_id": "d6_vtr_mcml_v2_A0_random_0_x",
+  "group": "DEVELOPMENT",
+  "scope": "dev",
+  "seed": null,
+  "tag": "x",
+  "tier": 1
+ },
+ "tier": 1,
+ "validation_status": "pass"
+}

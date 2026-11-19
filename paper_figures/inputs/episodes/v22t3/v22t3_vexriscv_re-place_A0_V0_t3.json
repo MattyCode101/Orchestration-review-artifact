@@ -1,0 +1,99 @@
+{
+ "approach": "V0",
+ "brief": "A0",
+ "cache_hits": 6,
+ "charged_cpu_s": 1351.13,
+ "charged_wall_s": 1887.0973163321614,
+ "completed_at_utc": "2026-11-14T13:46:30.436178+00:00",
+ "descriptions_served": null,
+ "design": "vexriscv_re-place",
+ "episode_id": "v22t3_vexriscv_re-place_A0_V0_t3",
+ "final_brief_valid": true,
+ "final_metrics": {
+  "dynamic_power_w": 0.271,
+  "ffs": 1228.0,
+  "netlist_luts": 1867.0,
+  "packed_luts": 1819.0,
+  "tns_ns": -578.475,
+  "wns_ns": -0.756
+ },
+ "final_state_id": "b82f1cd1af564822fceaae6b06d367d786827ba22c59f32338bcd7d3c88fb01d",
+ "finished_at_utc": "2026-11-14T13:46:30+00:00",
+ "group": "TRAINING",
+ "llm": null,
+ "llm_stats": {
+  "decision_records": 4,
+  "fallbacks": 0,
+  "model_calls": 4,
+  "noted_asks": 0,
+  "repairs": 0,
+  "tokens": {
+   "completion": 836,
+   "prompt": 9418,
+   "thoughts": 0,
+   "total": 10254
+  },
+  "truncated_decisions": 0
+ },
+ "loop": {
+  "calls": 4,
+  "empty_calls": 0,
+  "mandates": 4,
+  "nothing_selected_calls": 1,
+  "placement_kept": 1,
+  "respect_limits": 4,
+  "stop_after_second_ask": false,
+  "stop_reason": "budget_exhausted",
+  "stop_rule_firings": 0,
+  "workers": [
+   "area",
+   "area",
+   "area",
+   "area"
+  ]
+ },
+ "loop_options": {
+  "empty_call_observation": true,
+  "max_consecutive_empty": 3,
+  "schema": "loop-options-r2-v1",
+  "stop_note": "Stop is available after two calls without gain beyond noise.",
+  "stop_rule": true
+ },
+ "new_real_runs": 0,
+ "noise": {
+  "packed_luts": 6.9925500000000005,
+  "wns_ns": 0.14
+ },
+ "policy_version": "F1-fuzzy-c94f81ac34-fd4d3843f6-nolessons-gemini-3.1-flash-lite-r2h1",
+ "resumed": false,
+ "run_no": 0,
+ "runs_used": 6,
+ "schema_version": "v22-result-v1",
+ "scope": "train",
+ "start_metrics": {
+  "dynamic_power_w": 0.263,
+  "ffs": 1231.0,
+  "netlist_luts": 1953.0,
+  "packed_luts": 1895.0,
+  "tns_ns": -498.982,
+  "wns_ns": -0.785
+ },
+ "status": "done",
+ "stop_reason": "budget_exhausted",
+ "tag": "t3",
+ "task": {
+  "approach": "V0",
+  "brief": "A0",
+  "design": "vexriscv_re-place",
+  "episode_id": "v22t3_vexriscv_re-place_A0_V0_t3",
+  "group": "TRAINING",
+  "scope": "train",
+  "scored_cell": true,
+  "seed": 5,
+  "sub": "2",
+  "tag": "t3",
+  "tier": 2
+ },
+ "tier": 2,
+ "validation_status": "pass"
+}

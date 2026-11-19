@@ -1,0 +1,40 @@
+# Round-2 noise bands for the power review (the authors' decision, Fri 13 Nov 2026 21:45): the five TRAINING and three VALIDATION designs, all three bands.
+# Copied line for line from configs/noise_round2.yaml (sha256 88e342d3e9ca56c369a3451e6123cde7064519edd7dfc6d08db6721b4a3607eb) except the four dynamic_power_w entries marked NEW,
+# which are the recorded design-wide power noise bands of the power studies (nothing invented):
+#   band_w = recorded_N_pct / 100 x b2_power_w, rounded to whole mW (rule of scripts/power_readiness_2026-11-11/pr_briefs_draft.py),
+#   recorded_N_pct and b2_power_w from data/power_mediation_2026-11-10/noise_table.json (sha256 46905cc9cc39399bee836dc4cd50a1a11262f3d80df27f6b66ffdc5c6354ca2c),
+#   each cross-checked against power_band_mw of data/power_readiness_2026-11-11/final_A4.json (sha256 68a7ff800d9ef4a2f640f5cc3191e1161161ab2d72ead4df28a89d144f649a26); written by scripts/test_r2_2026-11-13/tr_noise_trainpower.py.
+# Same schema as configs/noise.yaml (load with orch.config.load_noise). Used only by the power-review queue (TR_QUEUE=power).
+bands:
+  vexriscv_re-place:
+    wns_ns: {value: 0.140, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:38,199,210,219,229,238"}
+    packed_luts: {value: 0.00369, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:38,199,210,219,229,238"}
+    dynamic_power_w: {value: 0.003, basis: W, relative: false, samples: 4, source: "NEW: data/power_mediation_2026-11-10/noise_table.json (sha256 46905cc9cc39399b...) designs.vexriscv_re-place: recorded_N_pct 1.1407 x b2_power_w 0.263 / 100 = 0.00300 W, whole mW; equals power_band_mw 3.0 of data/power_readiness_2026-11-11/final_A4.json"}
+  logicnets_jscl:
+    wns_ns: {value: 0.779, basis: ns, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}
+    packed_luts: {value: 37.0, basis: packed_luts, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}
+    dynamic_power_w: {value: 0.263, basis: W, relative: false, samples: 6, source: "external/weekend_run4_power_2026-11-01/results/prior/run3_an1_noise_bands.csv row logicnets_jscl (range_wns, range_lut, range_p_dynamic; sha256 b37b453bd873564bc972292f5fef73cbda59988cfda21142f561cfcace887b98)"}
+  rosetta_spam-filter:
+    wns_ns: {value: 0.075, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:37,198,209,218,228,237"}
+    packed_luts: {value: 0.00205, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:37,198,209,218,228,237"}
+    dynamic_power_w: {value: 0.077, basis: W, relative: false, samples: 4, source: "NEW: data/power_mediation_2026-11-10/noise_table.json (sha256 46905cc9cc39399b...) designs.rosetta_spam-filter: recorded_N_pct 4.6108 x b2_power_w 1.67 / 100 = 0.07700 W, whole mW; equals power_band_mw 77.0 of data/power_readiness_2026-11-11/final_A4.json"}
+  rosetta_3d-rendering:
+    wns_ns: {value: 0.113, basis: ns, relative: false, samples: 6, source: "R1/report.md:81-99; R1/results.csv:34,195,206,215,225,234"}
+    packed_luts: {value: 0.00043, basis: fraction_of_start, relative: true, samples: 6, source: "R1/results.csv:34,195,206,215,225,234"}
+    dynamic_power_w: {value: 0.103, basis: W, relative: false, samples: 4, source: "NEW: data/power_mediation_2026-11-10/noise_table.json (sha256 46905cc9cc39399b...) designs.rosetta_3d-rendering: recorded_N_pct 4.8954 x b2_power_w 2.104 / 100 = 0.10300 W, whole mW; equals power_band_mw 103.0 of data/power_readiness_2026-11-11/final_A4.json"}
+  finn_radioml:
+    wns_ns: {value: 0.081, basis: ns, relative: false, samples: 4, source: "R1/report.md:81-99; R1/results.csv:31,192,204,223"}
+    packed_luts: {value: 0.00008, basis: fraction_of_start, relative: true, samples: 4, source: "R1/results.csv:31,192,204,223"}
+    dynamic_power_w: {value: 0.002, basis: W, relative: false, samples: 4, source: "NEW: data/power_mediation_2026-11-10/noise_table.json (sha256 46905cc9cc39399b...) designs.finn_radioml: recorded_N_pct 0.0367 x b2_power_w 5.452 / 100 = 0.00200 W, whole mW; equals power_band_mw 2.0 of data/power_readiness_2026-11-11/final_A4.json"}
+  t2_cordic_s:
+    wns_ns: {value: 0.033, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+    packed_luts: {value: 2.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+    dynamic_power_w: {value: 0.008, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/t2_cordic_s/bands.json band_effective (sha256 e7c7e0d237785027d2dfe65095260113169fc6d9c425ffc69a2f7a4ab1230631)"}
+  vtr_mcml_v2:
+    wns_ns: {value: 0.47, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+    packed_luts: {value: 10.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+    dynamic_power_w: {value: 0.012, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/vtr_mcml_v2/bands.json band_effective (sha256 2a54df6581001789b20df0c2f1311d1740e27a52fd5f467351864bd9a7c5f48e)"}
+  amd_mini-isp:
+    wns_ns: {value: 0.047, basis: ns, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}
+    packed_luts: {value: 31.0, basis: packed_luts, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}
+    dynamic_power_w: {value: 0.011, basis: W, relative: false, samples: 5, source: "benchmark screen data/noise/amd_mini-isp/bands.json band_effective (sha256 c702a5cc755e30b0312cebed613a29a4ffabaf09ca7a8e3cf7d10f36467e41a1)"}

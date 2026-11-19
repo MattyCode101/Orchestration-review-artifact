@@ -1,0 +1,65 @@
+# Template v2.2 switch texts (new file; template v2.1 and its package files are untouched).
+#
+# template_edits and reply_text_edits are exact-once replacements applied to the frozen template v2.1 text and to the
+# P4r field descriptions only when a switch is off. `when` names the switch state the edit needs; E is true when any
+# experience content (the single-call lines E or the two-call patterns S) stays in the prompt.
+# The sections below the edits are the wording of the three new sections (R, C, S).
+#
+# No power-specific wording anywhere in this file.
+
+template_edits:
+  - when: {E: false, P: true}
+    old: "every saved state with its exact goal and limit values and how they changed, measured physical facts about each saved state, and experience with the workers on other designs."
+    new: "every saved state with its exact goal and limit values and how they changed, and measured physical facts about each saved state."
+  - when: {E: true, P: false}
+    old: "every saved state with its exact goal and limit values and how they changed, measured physical facts about each saved state, and experience with the workers on other designs."
+    new: "every saved state with its exact goal and limit values and how they changed, and experience with the workers on other designs."
+  - when: {E: false, P: false}
+    old: "every saved state with its exact goal and limit values and how they changed, measured physical facts about each saved state, and experience with the workers on other designs."
+    new: "and every saved state with its exact goal and limit values and how they changed."
+  - when: {E: false}
+    old: "; check its experience lines."
+    new: "."
+  - when: {E: false}
+    old: "; experience lines show how often each worker and setting returns a usable result."
+    new: "."
+  # U (unanchored worker choice): the Push consideration, which anchors the choice on the goal's own worker, becomes neutral.
+  # U needs experience content in the prompt, so it never meets the E-off edit of the same bullet above.
+  - when: {U: true}
+    old: "- Push: the worker whose objective matches the goal usually moves the goal most; check its experience lines."
+    new: "- Any worker can move the goal: check what each worker and setting did to the goal in this situation."
+
+reply_text_edits:
+  - when: {E: false}
+    key: evidence
+    old: "a saved state (its alias), an experience line (worker and placement setting) or the brief"
+    new: "a saved state (its alias) or the brief"
+  - when: {E: false}
+    key: forecast
+    old: " Start from the experience line of the chosen worker and placement setting, its most frequent outcome (including nothing selectable when limits are respected), and depart from it only for a concrete reason in the saved states"
+    new: ""
+
+relative:
+  header: "Relative context"
+  intro_all: "Each metric is also stated against an anchor you can judge: WNS as a share of the clock requirement of the worst path at the start ({period} ns), packed LUTs as a share of the device and of the start, dynamic power as a share of the start."
+  intro_no_period: "Each metric is also stated against an anchor you can judge: packed LUTs as a share of the device and of the start, dynamic power as a share of the start."
+
+candidates:
+  header: "Candidate next calls"
+  intro: "The calls below were generated from the saved states above by fixed rules. They are listed in no particular order, each with the experience line of its worker and placement setting. They are options to weigh, not instructions: you may choose one as it stands, change any setting, write a different mandate, or stop."
+  no_line: "no line rests on four or more other designs for this brief."
+
+situation:
+  header: "Past experience in the situation of this decision"
+  intro: "Each line follows the calls of one worker with one placement setting, made on other designs in the same situation as your current decision, with your brief's limits respected. It says how many calls and designs it rests on; a line resting on fewer than three designs reads no evidence for this situation. Frequencies of changes are shares of the calls that returned a result, with a change judged in noise bands against the base state of the call; a repair line gives the share of all its calls that restored the limit and kept a goal gain of at least one band."
+  no_evidence: "no evidence for this situation"
+  opening: "Situation: no call has been made yet. Calls from the start state:"
+  start_no_gain: "Situation: no saved state has gained a noise band on the goal and met every limit, and none that gained breaks a limit. Calls from the start state:"
+  repair: "Situation: a saved state gained on the goal but breaks a limit ({states}). Calls from a state that gained on the goal and broke a limit, by how deep the limit was broken in the base state:"
+  repair_bucket: "Limit broken by {bucket} in the base state:"
+  push: "Situation: {alias} gained on the goal and meets every limit. Calls from a state that had gained on the goal and met every limit:"
+
+sequence:
+  header: "Past experience with two calls in a row on other designs"
+  intro: "Each line follows one two-call pattern on saved states of other designs under your brief, and says how many sequences and designs it rests on; a pattern resting on fewer than three designs is left out. A goal gain or a restored limit is judged in noise bands against the start."
+  empty: "No two-call pattern rests on three or more other designs for this brief, so none is shown."

@@ -1,0 +1,7 @@
+open_checkpoint {dcp}
+report_timing_summary -delay_type max -file {out}/probe.rpt
+report_timing -delay_type max -max_paths 5 -nworst 1 -append -file {out}/probe.rpt
+report_utilization -append -file {out}/probe.rpt
+report_high_fanout_nets -max_nets 20 -append -file {out}/probe.rpt
+close_design
+exit

@@ -1,0 +1,761 @@
+data_scope,row,design,brief,repeat,cell_has_headroom,goal_gain,gain_unit,share_of_reference_pct,reference_gain,noise_band
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,A,1,True,637.0000,LUTs,81.2500,784.0000,6.3574
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,A0,1,True,464.0000,LUTs,62.5337,742.0000,6.3574
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,L2R,1,True,464.0000,LUTs,62.6181,741.0000,6.3574
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,T,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,T0,1,True,0.0000,ps,0.0000,472.0000,34.0000
+TEST,"V9, Qwen3.5-397B (a)",corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,T0,1,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,T,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,T0,1,True,127.0000,ps,76.0479,167.0000,56.0000
+TEST,"V9, Qwen3.5-397B (a)",fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,A,1,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,L2R,1,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,T,1,True,256.0000,ps,45.6328,561.0000,496.0000
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,T0,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"V9, Qwen3.5-397B (a)",rosetta_digit-recognition,W2R,1,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Qwen3.5-397B (a)",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V11, Gemini (b)",corescore_500_mod,L2R,1,True,543.0000,LUTs,73.2794,741.0000,6.3574
+TEST,"V11, Gemini (b)",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V11, Gemini (b)",corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V11, Gemini (b)",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V11, Gemini (b)",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V11, Gemini (b)",fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V11, Gemini (b)",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V11, Gemini (b)",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V11, Gemini (b)",fir_systolic_transposed,W2R,1,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V11, Gemini (b)",rosetta_digit-recognition,L2R,1,True,26.0000,LUTs,3.8806,670.0000,34.9268
+TEST,"V11, Gemini (b)",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V11, Gemini (b)",rosetta_digit-recognition,W2R,1,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,"V11, Gemini (b)",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V11, Gemini (b)",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V11, Gemini (b)",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V3, Gemini (b)",corescore_500_mod,L2R,1,True,428.0000,LUTs,57.7598,741.0000,6.3574
+TEST,"V3, Gemini (b)",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V3, Gemini (b)",corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V3, Gemini (b)",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V3, Gemini (b)",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V3, Gemini (b)",fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V3, Gemini (b)",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V3, Gemini (b)",fir_systolic_transposed,P0,1,True,5.0000,mW,83.3333,6.0000,3.0000
+TEST,"V3, Gemini (b)",fir_systolic_transposed,W2R,1,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V3, Gemini (b)",rosetta_digit-recognition,L2R,1,True,0.0000,LUTs,0.0000,670.0000,34.9268
+TEST,"V3, Gemini (b)",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V3, Gemini (b)",rosetta_digit-recognition,W2R,1,True,405.0000,ps,79.8817,507.0000,496.0000
+TEST,"V3, Gemini (b)",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V3, Gemini (b)",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V3, Gemini (b)",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V6, Gemini (b)",corescore_500_mod,L2R,1,True,543.0000,LUTs,73.2794,741.0000,6.3574
+TEST,"V6, Gemini (b)",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V6, Gemini (b)",corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V6, Gemini (b)",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V6, Gemini (b)",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V6, Gemini (b)",fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V6, Gemini (b)",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V6, Gemini (b)",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V6, Gemini (b)",fir_systolic_transposed,W2R,1,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V6, Gemini (b)",rosetta_digit-recognition,L2R,1,True,26.0000,LUTs,3.8806,670.0000,34.9268
+TEST,"V6, Gemini (b)",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V6, Gemini (b)",rosetta_digit-recognition,W2R,1,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,"V6, Gemini (b)",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V6, Gemini (b)",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V6, Gemini (b)",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A,1,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A,2,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A,3,True,541.0000,LUTs,69.0051,784.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A0,1,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A0,2,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,A0,3,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,L2R,1,True,596.0000,LUTs,80.4318,741.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,L2R,2,True,543.0000,LUTs,73.2794,741.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,L2R,3,True,543.0000,LUTs,73.2794,741.0000,6.3574
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,P0,2,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,P0,3,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T,2,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T,3,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T0,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T0,2,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,T0,3,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,W2R,2,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",corescore_500_mod,W2R,3,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A,2,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A,3,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A0,2,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,A0,3,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,L2R,2,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,L2R,3,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,P0,2,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,P0,3,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T,2,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T,3,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T0,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T0,2,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,T0,3,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,W2R,1,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,W2R,2,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_symmetric_systolic,W2R,3,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A,2,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A,3,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A0,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,A0,3,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,L2R,1,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,L2R,2,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,L2R,3,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,P0,2,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,P0,3,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T,1,True,127.0000,ps,76.0479,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T,3,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T0,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,T0,3,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,W2R,1,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,W2R,2,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",fir_systolic_transposed,W2R,3,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A,2,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A,3,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A0,2,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,A0,3,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,L2R,1,True,37.0000,LUTs,5.5224,670.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,L2R,2,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,L2R,3,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,P0,2,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,P0,3,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T,1,True,232.0000,ps,41.3547,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T,2,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T,3,True,256.0000,ps,45.6328,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T0,1,True,365.0000,ps,65.0624,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T0,2,True,209.0000,ps,37.2549,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,T0,3,True,405.0000,ps,72.1925,561.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,W2R,1,True,365.0000,ps,71.9921,507.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,W2R,2,True,405.0000,ps,79.8817,507.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",rosetta_digit-recognition,W2R,3,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A,2,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A,3,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A0,2,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,A0,3,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,L2R,2,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,L2R,3,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,P0,2,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,P0,3,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T0,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,T0,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,W2R,2,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, Gemini, mean of 3 repeats",vexriscv_re-place_v2,W2R,3,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,A,1,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,A0,1,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,L2R,1,True,596.0000,LUTs,80.4318,741.0000,6.3574
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,T,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,T0,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, Gemini, repeat 1",corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,T0,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, Gemini, repeat 1",fir_symmetric_systolic,W2R,1,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,L2R,1,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,T,1,True,127.0000,ps,76.0479,167.0000,56.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, Gemini, repeat 1",fir_systolic_transposed,W2R,1,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,A,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,L2R,1,True,37.0000,LUTs,5.5224,670.0000,34.9268
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,T,1,True,232.0000,ps,41.3547,561.0000,496.0000
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,T0,1,True,365.0000,ps,65.0624,561.0000,496.0000
+TEST,"V9, Gemini, repeat 1",rosetta_digit-recognition,W2R,1,True,365.0000,ps,71.9921,507.0000,496.0000
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, Gemini, repeat 1",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,A,1,True,741.0000,LUTs,94.5153,784.0000,6.3574
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,A0,1,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,L2R,1,True,464.0000,LUTs,62.6181,741.0000,6.3574
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,T,1,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,T0,1,True,0.0000,ps,0.0000,472.0000,34.0000
+TEST,"V9, ChatGPT, repeat 1",corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,A,1,True,34.0000,LUTs,79.0698,43.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,T0,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, ChatGPT, repeat 1",fir_symmetric_systolic,W2R,1,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,T,1,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, ChatGPT, repeat 1",fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,A,1,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,L2R,1,True,434.0000,LUTs,64.7761,670.0000,34.9268
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,T,1,True,275.0000,ps,49.0196,561.0000,496.0000
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,T0,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"V9, ChatGPT, repeat 1",rosetta_digit-recognition,W2R,1,True,308.0000,ps,60.7495,507.0000,496.0000
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,A,1,True,158.0000,LUTs,92.9412,170.0000,12.0012
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeat 1",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,A,1,True,568.0000,LUTs,72.4490,784.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,A,2,True,464.0000,LUTs,59.1837,784.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,A,3,True,464.0000,LUTs,59.1837,784.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,A0,1,True,464.0000,LUTs,62.5337,742.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,A0,2,True,500.0000,LUTs,67.3854,742.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,A0,3,True,373.0000,LUTs,50.2695,742.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,L2R,1,True,373.0000,LUTs,50.3374,741.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,L2R,2,True,373.0000,LUTs,50.3374,741.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,L2R,3,True,373.0000,LUTs,50.3374,741.0000,6.3574
+TEST,"F1-R1, Gemini",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,P0,2,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,P0,3,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T,1,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T,2,True,68.0000,ps,14.4068,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T,3,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T0,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T0,2,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,T0,3,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,W2R,2,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"F1-R1, Gemini",corescore_500_mod,W2R,3,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A,2,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A,3,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A0,2,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,A0,3,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,L2R,2,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,L2R,3,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,P0,2,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,P0,3,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T,2,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T,3,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T0,1,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T0,2,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,T0,3,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,W2R,1,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,W2R,2,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"F1-R1, Gemini",fir_symmetric_systolic,W2R,3,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A,2,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A,3,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A0,2,True,68.0000,LUTs,65.3846,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,A0,3,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,L2R,1,True,68.0000,LUTs,65.3846,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,L2R,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,L2R,3,True,68.0000,LUTs,65.3846,104.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,P0,2,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,P0,3,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T,2,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T,3,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T0,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,T0,3,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,W2R,2,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"F1-R1, Gemini",fir_systolic_transposed,W2R,3,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A,2,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A,3,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A0,1,True,641.0000,LUTs,80.8323,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A0,2,True,679.0000,LUTs,85.6242,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,A0,3,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,L2R,1,True,0.0000,LUTs,0.0000,670.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,L2R,2,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,L2R,3,True,0.0000,LUTs,0.0000,670.0000,34.9268
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,P0,2,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,P0,3,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T,2,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T,3,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T0,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T0,2,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,T0,3,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,W2R,1,True,208.0000,ps,41.0256,507.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,W2R,2,True,208.0000,ps,41.0256,507.0000,496.0000
+TEST,"F1-R1, Gemini",rosetta_digit-recognition,W2R,3,True,208.0000,ps,41.0256,507.0000,496.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A,2,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A,3,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A0,2,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,A0,3,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,L2R,2,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,L2R,3,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,P0,2,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,P0,3,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T0,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,T0,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,W2R,2,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"F1-R1, Gemini",vexriscv_re-place_v2,W2R,3,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"v2.1, Gemini",corescore_500_mod,A,1,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,A,2,True,429.0000,LUTs,54.7194,784.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,A,3,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,A0,1,True,1.0000,LUTs,0.1348,742.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,A0,2,True,0.0000,LUTs,0.0000,742.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,A0,3,True,541.0000,LUTs,72.9111,742.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,L2R,1,True,543.0000,LUTs,73.2794,741.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,L2R,2,True,0.0000,LUTs,0.0000,741.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,L2R,3,True,0.0000,LUTs,0.0000,741.0000,6.3574
+TEST,"v2.1, Gemini",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"v2.1, Gemini",corescore_500_mod,P0,2,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"v2.1, Gemini",corescore_500_mod,P0,3,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T,1,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T,2,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T,3,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T0,1,True,68.0000,ps,14.4068,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T0,2,True,69.0000,ps,14.6186,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,T0,3,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,W2R,2,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"v2.1, Gemini",corescore_500_mod,W2R,3,True,112.0000,ps,49.1228,228.0000,34.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A,2,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A,3,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A0,2,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,A0,3,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,L2R,2,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,L2R,3,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,P0,2,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,P0,3,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T,2,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T,3,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T0,1,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T0,2,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,T0,3,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,W2R,2,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"v2.1, Gemini",fir_symmetric_systolic,W2R,3,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A,2,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A,3,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A0,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,A0,3,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,L2R,1,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,L2R,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,L2R,3,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,P0,2,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,P0,3,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T,3,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T0,1,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T0,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,T0,3,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,W2R,2,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"v2.1, Gemini",fir_systolic_transposed,W2R,3,True,57.0000,ps,55.3398,103.0000,56.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A,2,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A,3,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A0,2,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,A0,3,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,L2R,1,True,26.0000,LUTs,3.8806,670.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,L2R,2,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,L2R,3,True,0.0000,LUTs,0.0000,670.0000,34.9268
+TEST,"v2.1, Gemini",rosetta_digit-recognition,P0,1,False,1.0000,mW,0.4878,205.0000,300.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,P0,2,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,P0,3,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T,2,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T,3,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T0,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T0,2,True,347.0000,ps,61.8538,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,T0,3,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,W2R,1,True,405.0000,ps,79.8817,507.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,W2R,2,True,405.0000,ps,79.8817,507.0000,496.0000
+TEST,"v2.1, Gemini",rosetta_digit-recognition,W2R,3,True,405.0000,ps,79.8817,507.0000,496.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A,2,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A,3,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A0,2,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,A0,3,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,L2R,2,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,L2R,3,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,P0,2,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,P0,3,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T0,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,T0,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,W2R,2,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"v2.1, Gemini",vexriscv_re-place_v2,W2R,3,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,goal-repair v2,corescore_500_mod,A,1,True,627.0000,LUTs,79.9745,784.0000,6.3574
+TEST,goal-repair v2,corescore_500_mod,A0,1,True,544.0000,LUTs,73.3154,742.0000,6.3574
+TEST,goal-repair v2,corescore_500_mod,L2R,1,True,544.0000,LUTs,73.4143,741.0000,6.3574
+TEST,goal-repair v2,corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,goal-repair v2,corescore_500_mod,T,1,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,goal-repair v2,corescore_500_mod,T0,1,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,goal-repair v2,corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,goal-repair v2,fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,goal-repair v2,fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,goal-repair v2,fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,goal-repair v2,fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,goal-repair v2,fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,goal-repair v2,fir_symmetric_systolic,T0,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,goal-repair v2,fir_symmetric_systolic,W2R,1,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,goal-repair v2,fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,goal-repair v2,fir_systolic_transposed,A0,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,goal-repair v2,fir_systolic_transposed,L2R,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,goal-repair v2,fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,goal-repair v2,fir_systolic_transposed,T,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,goal-repair v2,fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,goal-repair v2,fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,goal-repair v2,rosetta_digit-recognition,A,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,goal-repair v2,rosetta_digit-recognition,A0,1,True,688.0000,LUTs,86.7591,793.0000,34.9268
+TEST,goal-repair v2,rosetta_digit-recognition,L2R,1,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,goal-repair v2,rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,goal-repair v2,rosetta_digit-recognition,T,1,True,362.0000,ps,64.5276,561.0000,496.0000
+TEST,goal-repair v2,rosetta_digit-recognition,T0,1,True,327.0000,ps,58.2888,561.0000,496.0000
+TEST,goal-repair v2,rosetta_digit-recognition,W2R,1,True,327.0000,ps,64.4970,507.0000,496.0000
+TEST,goal-repair v2,vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,goal-repair v2,vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,goal-repair v2,vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,goal-repair v2,vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,goal-repair v2,vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,goal-repair v2,vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,goal-repair v2,vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,fixed order,corescore_500_mod,A,1,True,543.0000,LUTs,69.2602,784.0000,6.3574
+TEST,fixed order,corescore_500_mod,A0,1,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,fixed order,corescore_500_mod,L2R,1,True,16.0000,LUTs,2.1592,741.0000,6.3574
+TEST,fixed order,corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,fixed order,corescore_500_mod,T,1,True,92.0000,ps,19.4915,472.0000,34.0000
+TEST,fixed order,corescore_500_mod,T0,1,True,92.0000,ps,19.4915,472.0000,34.0000
+TEST,fixed order,corescore_500_mod,W2R,1,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,fixed order,fir_symmetric_systolic,A,1,True,0.0000,LUTs,0.0000,43.0000,3.0000
+TEST,fixed order,fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,fixed order,fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,fixed order,fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,fixed order,fir_symmetric_systolic,T,1,False,0.0000,ps,0.0000,32.0000,234.0000
+TEST,fixed order,fir_symmetric_systolic,T0,1,False,0.0000,ps,0.0000,32.0000,234.0000
+TEST,fixed order,fir_symmetric_systolic,W2R,1,False,0.0000,ps,0.0000,40.0000,234.0000
+TEST,fixed order,fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,fixed order,fir_systolic_transposed,A0,1,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,fixed order,fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,fixed order,fir_systolic_transposed,P0,1,True,5.0000,mW,83.3333,6.0000,3.0000
+TEST,fixed order,fir_systolic_transposed,T,1,True,100.0000,ps,59.8802,167.0000,56.0000
+TEST,fixed order,fir_systolic_transposed,T0,1,True,100.0000,ps,59.8802,167.0000,56.0000
+TEST,fixed order,fir_systolic_transposed,W2R,1,True,32.0000,ps,31.0680,103.0000,56.0000
+TEST,fixed order,rosetta_digit-recognition,A,1,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,fixed order,rosetta_digit-recognition,A0,1,True,687.0000,LUTs,86.6330,793.0000,34.9268
+TEST,fixed order,rosetta_digit-recognition,L2R,1,True,670.0000,LUTs,100.0000,670.0000,34.9268
+TEST,fixed order,rosetta_digit-recognition,P0,1,False,0.0000,mW,0.0000,205.0000,300.0000
+TEST,fixed order,rosetta_digit-recognition,T,1,True,343.0000,ps,61.1408,561.0000,496.0000
+TEST,fixed order,rosetta_digit-recognition,T0,1,True,343.0000,ps,61.1408,561.0000,496.0000
+TEST,fixed order,rosetta_digit-recognition,W2R,1,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,fixed order,vexriscv_re-place_v2,A,1,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,fixed order,vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,fixed order,vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,fixed order,vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,fixed order,vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,fixed order,vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,fixed order,vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A,1,True,741.0000,LUTs,94.5153,784.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A,2,True,741.0000,LUTs,94.5153,784.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A,3,True,741.0000,LUTs,94.5153,784.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A0,1,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A0,2,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,A0,3,True,543.0000,LUTs,73.1806,742.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,L2R,1,True,464.0000,LUTs,62.6181,741.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,L2R,2,True,464.0000,LUTs,62.6181,741.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,L2R,3,True,464.0000,LUTs,62.6181,741.0000,6.3574
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,P0,1,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,P0,2,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,P0,3,True,124.0000,mW,99.2000,125.0000,54.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T,1,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T,2,True,67.0000,ps,14.1949,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T,3,True,71.0000,ps,15.0424,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T0,1,True,0.0000,ps,0.0000,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T0,2,True,92.0000,ps,19.4915,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,T0,3,True,0.0000,ps,0.0000,472.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,W2R,1,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,W2R,2,True,67.0000,ps,29.3860,228.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",corescore_500_mod,W2R,3,True,71.0000,ps,31.1404,228.0000,34.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A,1,True,34.0000,LUTs,79.0698,43.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A,2,True,34.0000,LUTs,79.0698,43.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A,3,True,34.0000,LUTs,79.0698,43.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A0,1,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A0,2,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,A0,3,True,0.0000,LUTs,0.0000,36.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,L2R,1,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,L2R,2,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,L2R,3,False,0.0000,LUTs,,0.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,P0,1,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,P0,2,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,P0,3,False,14.0000,mW,100.0000,14.0000,22.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T,2,False,0.0000,ps,0.0000,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T,3,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T0,1,False,27.0000,ps,84.3750,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T0,2,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,T0,3,False,29.0000,ps,90.6250,32.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,W2R,1,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,W2R,2,False,27.0000,ps,67.5000,40.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_symmetric_systolic,W2R,3,False,29.0000,ps,72.5000,40.0000,234.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A,1,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A,2,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A,3,True,104.0000,LUTs,100.0000,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A0,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A0,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,A0,3,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,L2R,1,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,L2R,2,True,98.0000,LUTs,94.2308,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,L2R,3,True,101.0000,LUTs,97.1154,104.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,P0,1,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,P0,2,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,P0,3,True,0.0000,mW,0.0000,6.0000,3.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T,1,True,57.0000,ps,34.1317,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T,2,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T,3,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T0,1,True,103.0000,ps,61.6766,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T0,2,True,127.0000,ps,76.0479,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,T0,3,True,166.0000,ps,99.4012,167.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,W2R,1,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,W2R,2,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",fir_systolic_transposed,W2R,3,True,103.0000,ps,100.0000,103.0000,56.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A,1,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A,2,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A,3,True,764.0000,LUTs,96.3430,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A0,1,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A0,2,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,A0,3,True,767.0000,LUTs,96.7213,793.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,L2R,1,True,434.0000,LUTs,64.7761,670.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,L2R,2,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,L2R,3,True,36.0000,LUTs,5.3731,670.0000,34.9268
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,P0,1,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,P0,2,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,P0,3,False,4.0000,mW,1.9512,205.0000,300.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T,1,True,275.0000,ps,49.0196,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T,2,True,362.0000,ps,64.5276,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T,3,True,362.0000,ps,64.5276,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T0,1,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T0,2,True,208.0000,ps,37.0766,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,T0,3,True,161.0000,ps,28.6988,561.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,W2R,1,True,308.0000,ps,60.7495,507.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,W2R,2,True,208.0000,ps,41.0256,507.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",rosetta_digit-recognition,W2R,3,True,307.0000,ps,60.5523,507.0000,496.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A,1,True,158.0000,LUTs,92.9412,170.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A,2,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A,3,True,0.0000,LUTs,0.0000,170.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A0,1,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A0,2,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,A0,3,False,0.0000,LUTs,,0.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,L2R,1,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,L2R,2,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,L2R,3,False,0.0000,LUTs,0.0000,3.0000,12.0012
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,P0,1,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,P0,2,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,P0,3,True,0.0000,mW,0.0000,3.0000,1.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T0,1,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T0,2,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,T0,3,False,0.0000,ps,,0.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,W2R,1,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,W2R,2,False,0.0000,ps,0.0000,18.0000,57.0000
+TEST,"V9, ChatGPT, repeats 1 to 3 (d)",vexriscv_re-place_v2,W2R,3,False,0.0000,ps,0.0000,18.0000,57.0000
+VALIDATION,"V9, Gemini (this run)",amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"V9, Gemini (this run)",amd_mini-isp,P0,1,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,"V9, Gemini (this run)",amd_mini-isp,W2R,1,True,0.0000,ps,0.0000,54.0000,47.0000
+TRAINING,"V9, Gemini (this run)",finn_radioml,L2R,1,True,4848.0000,LUTs,66.6300,7276.0000,6.3516
+TRAINING,"V9, Gemini (this run)",finn_radioml,P0,1,True,0.0000,mW,0.0000,630.0000,2.0000
+TRAINING,"V9, Gemini (this run)",finn_radioml,W2R,1,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,"V9, Gemini (this run)",logicnets_jscl,L2R,1,True,0.0000,LUTs,0.0000,2727.0000,37.0000
+TRAINING,"V9, Gemini (this run)",logicnets_jscl,P0,1,True,0.0000,mW,0.0000,314.0000,263.0000
+TRAINING,"V9, Gemini (this run)",logicnets_jscl,W2R,1,False,29.0000,ps,82.8571,35.0000,779.0000
+TRAINING,"V9, Gemini (this run)",rosetta_3d-rendering,L2R,1,True,0.0000,LUTs,0.0000,564.0000,6.0045
+TRAINING,"V9, Gemini (this run)",rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"V9, Gemini (this run)",rosetta_3d-rendering,W2R,1,True,29.0000,ps,4.5741,634.0000,113.0000
+TRAINING,"V9, Gemini (this run)",rosetta_spam-filter,L2R,1,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,"V9, Gemini (this run)",rosetta_spam-filter,P0,1,True,0.0000,mW,0.0000,91.0000,77.0000
+TRAINING,"V9, Gemini (this run)",rosetta_spam-filter,W2R,1,True,39.0000,ps,41.9355,93.0000,75.0000
+VALIDATION,"V9, Gemini (this run)",t2_cordic_s,L2R,1,True,7.0000,LUTs,100.0000,7.0000,2.0000
+VALIDATION,"V9, Gemini (this run)",t2_cordic_s,P0,1,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,"V9, Gemini (this run)",t2_cordic_s,W2R,1,True,0.0000,ps,0.0000,255.0000,33.0000
+TRAINING,"V9, Gemini (this run)",vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9926
+TRAINING,"V9, Gemini (this run)",vexriscv_re-place,P0,1,True,0.0000,mW,0.0000,8.0000,3.0000
+TRAINING,"V9, Gemini (this run)",vexriscv_re-place,W2R,1,False,49.0000,ps,38.5827,127.0000,140.0000
+VALIDATION,"V9, Gemini (this run)",vtr_mcml_v2,L2R,1,True,1121.0000,LUTs,70.2821,1595.0000,10.0000
+VALIDATION,"V9, Gemini (this run)",vtr_mcml_v2,P0,1,True,77.0000,mW,6.0156,1280.0000,12.0000
+VALIDATION,"V9, Gemini (this run)",vtr_mcml_v2,W2R,1,True,24.0000,ps,2.3301,1030.0000,470.0000
+VALIDATION,"F1-R1, Gemini",amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,fixed order,amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"v2.1, Gemini",amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,goal-repair v2,amd_mini-isp,L2R,1,True,30.0000,LUTs,50.0000,60.0000,31.0000
+VALIDATION,"F1-R1, Gemini",amd_mini-isp,P0,1,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,fixed order,amd_mini-isp,P0,1,True,38.0000,mW,79.1667,48.0000,11.0000
+VALIDATION,"v2.1, Gemini",amd_mini-isp,P0,1,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,goal-repair v2,amd_mini-isp,P0,1,True,23.0000,mW,47.9167,48.0000,11.0000
+VALIDATION,"F1-R1, Gemini",amd_mini-isp,W2R,1,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,fixed order,amd_mini-isp,W2R,1,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,"v2.1, Gemini",amd_mini-isp,W2R,1,True,4.0000,ps,7.4074,54.0000,47.0000
+VALIDATION,goal-repair v2,amd_mini-isp,W2R,1,True,0.0000,ps,0.0000,54.0000,47.0000
+TRAINING,"F1-R1, Gemini",finn_radioml,L2R,1,True,4846.0000,LUTs,66.6025,7276.0000,6.3516
+TRAINING,fixed order,finn_radioml,L2R,1,True,0.0000,LUTs,0.0000,7276.0000,6.3516
+TRAINING,"v2.1, Gemini",finn_radioml,L2R,1,True,4846.0000,LUTs,66.6025,7276.0000,6.3516
+TRAINING,goal-repair v2,finn_radioml,L2R,1,True,112.0000,LUTs,1.5393,7276.0000,6.3516
+TRAINING,"F1-R1, Gemini",finn_radioml,P0,1,True,0.0000,mW,0.0000,630.0000,2.0000
+TRAINING,fixed order,finn_radioml,P0,1,True,0.0000,mW,0.0000,630.0000,2.0000
+TRAINING,"v2.1, Gemini",finn_radioml,P0,1,True,0.0000,mW,0.0000,630.0000,2.0000
+TRAINING,goal-repair v2,finn_radioml,P0,1,True,0.0000,mW,0.0000,630.0000,2.0000
+TRAINING,"F1-R1, Gemini",finn_radioml,W2R,1,False,39.0000,ps,52.0000,75.0000,81.0000
+TRAINING,fixed order,finn_radioml,W2R,1,False,0.0000,ps,0.0000,75.0000,81.0000
+TRAINING,"v2.1, Gemini",finn_radioml,W2R,1,False,29.0000,ps,38.6667,75.0000,81.0000
+TRAINING,goal-repair v2,finn_radioml,W2R,1,False,23.0000,ps,30.6667,75.0000,81.0000
+TRAINING,"F1-R1, Gemini",logicnets_jscl,L2R,1,True,0.0000,LUTs,0.0000,2727.0000,37.0000
+TRAINING,fixed order,logicnets_jscl,L2R,1,True,0.0000,LUTs,0.0000,2727.0000,37.0000
+TRAINING,"v2.1, Gemini",logicnets_jscl,L2R,1,True,0.0000,LUTs,0.0000,2727.0000,37.0000
+TRAINING,goal-repair v2,logicnets_jscl,L2R,1,True,0.0000,LUTs,0.0000,2727.0000,37.0000
+TRAINING,"F1-R1, Gemini",logicnets_jscl,P0,1,True,0.0000,mW,0.0000,314.0000,263.0000
+TRAINING,fixed order,logicnets_jscl,P0,1,True,0.0000,mW,0.0000,314.0000,263.0000
+TRAINING,"v2.1, Gemini",logicnets_jscl,P0,1,True,0.0000,mW,0.0000,314.0000,263.0000
+TRAINING,goal-repair v2,logicnets_jscl,P0,1,True,0.0000,mW,0.0000,314.0000,263.0000
+TRAINING,"F1-R1, Gemini",logicnets_jscl,W2R,1,False,29.0000,ps,82.8571,35.0000,779.0000
+TRAINING,fixed order,logicnets_jscl,W2R,1,False,0.0000,ps,0.0000,35.0000,779.0000
+TRAINING,"v2.1, Gemini",logicnets_jscl,W2R,1,False,26.0000,ps,74.2857,35.0000,779.0000
+TRAINING,goal-repair v2,logicnets_jscl,W2R,1,False,31.0000,ps,88.5714,35.0000,779.0000
+TRAINING,"F1-R1, Gemini",rosetta_3d-rendering,L2R,1,True,0.0000,LUTs,0.0000,564.0000,6.0045
+TRAINING,fixed order,rosetta_3d-rendering,L2R,1,True,305.0000,LUTs,54.0780,564.0000,6.0045
+TRAINING,"v2.1, Gemini",rosetta_3d-rendering,L2R,1,True,0.0000,LUTs,0.0000,564.0000,6.0045
+TRAINING,goal-repair v2,rosetta_3d-rendering,L2R,1,True,0.0000,LUTs,0.0000,564.0000,6.0045
+TRAINING,"F1-R1, Gemini",rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,fixed order,rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"v2.1, Gemini",rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,goal-repair v2,rosetta_3d-rendering,P0,1,False,70.0000,mW,100.0000,70.0000,103.0000
+TRAINING,"F1-R1, Gemini",rosetta_3d-rendering,W2R,1,True,115.0000,ps,18.1388,634.0000,113.0000
+TRAINING,fixed order,rosetta_3d-rendering,W2R,1,True,324.0000,ps,51.1041,634.0000,113.0000
+TRAINING,"v2.1, Gemini",rosetta_3d-rendering,W2R,1,True,0.0000,ps,0.0000,634.0000,113.0000
+TRAINING,goal-repair v2,rosetta_3d-rendering,W2R,1,True,17.0000,ps,2.6814,634.0000,113.0000
+TRAINING,"F1-R1, Gemini",rosetta_spam-filter,L2R,1,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,fixed order,rosetta_spam-filter,L2R,1,True,673.0000,LUTs,97.6778,689.0000,11.0003
+TRAINING,"v2.1, Gemini",rosetta_spam-filter,L2R,1,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,goal-repair v2,rosetta_spam-filter,L2R,1,True,680.0000,LUTs,98.6938,689.0000,11.0003
+TRAINING,"F1-R1, Gemini",rosetta_spam-filter,P0,1,True,0.0000,mW,0.0000,91.0000,77.0000
+TRAINING,fixed order,rosetta_spam-filter,P0,1,True,12.0000,mW,13.1868,91.0000,77.0000
+TRAINING,"v2.1, Gemini",rosetta_spam-filter,P0,1,True,0.0000,mW,0.0000,91.0000,77.0000
+TRAINING,goal-repair v2,rosetta_spam-filter,P0,1,True,0.0000,mW,0.0000,91.0000,77.0000
+TRAINING,"F1-R1, Gemini",rosetta_spam-filter,W2R,1,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,fixed order,rosetta_spam-filter,W2R,1,True,51.0000,ps,54.8387,93.0000,75.0000
+TRAINING,"v2.1, Gemini",rosetta_spam-filter,W2R,1,True,0.0000,ps,0.0000,93.0000,75.0000
+TRAINING,goal-repair v2,rosetta_spam-filter,W2R,1,True,50.0000,ps,53.7634,93.0000,75.0000
+VALIDATION,"F1-R1, Gemini",t2_cordic_s,L2R,1,True,3.0000,LUTs,42.8571,7.0000,2.0000
+VALIDATION,fixed order,t2_cordic_s,L2R,1,True,5.0000,LUTs,71.4286,7.0000,2.0000
+VALIDATION,"v2.1, Gemini",t2_cordic_s,L2R,1,True,3.0000,LUTs,42.8571,7.0000,2.0000
+VALIDATION,goal-repair v2,t2_cordic_s,L2R,1,True,7.0000,LUTs,100.0000,7.0000,2.0000
+VALIDATION,"F1-R1, Gemini",t2_cordic_s,P0,1,True,15.0000,mW,60.0000,25.0000,8.0000
+VALIDATION,fixed order,t2_cordic_s,P0,1,True,25.0000,mW,100.0000,25.0000,8.0000
+VALIDATION,"v2.1, Gemini",t2_cordic_s,P0,1,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,goal-repair v2,t2_cordic_s,P0,1,True,1.0000,mW,4.0000,25.0000,8.0000
+VALIDATION,"F1-R1, Gemini",t2_cordic_s,W2R,1,True,186.0000,ps,72.9412,255.0000,33.0000
+VALIDATION,fixed order,t2_cordic_s,W2R,1,True,186.0000,ps,72.9412,255.0000,33.0000
+VALIDATION,"v2.1, Gemini",t2_cordic_s,W2R,1,True,210.0000,ps,82.3529,255.0000,33.0000
+VALIDATION,goal-repair v2,t2_cordic_s,W2R,1,True,223.0000,ps,87.4510,255.0000,33.0000
+TRAINING,"F1-R1, Gemini",vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9926
+TRAINING,fixed order,vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9926
+TRAINING,"v2.1, Gemini",vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9926
+TRAINING,goal-repair v2,vexriscv_re-place,L2R,1,True,64.0000,LUTs,53.3333,120.0000,6.9926
+TRAINING,"F1-R1, Gemini",vexriscv_re-place,P0,1,True,0.0000,mW,0.0000,8.0000,3.0000
+TRAINING,fixed order,vexriscv_re-place,P0,1,True,0.0000,mW,0.0000,8.0000,3.0000
+TRAINING,"v2.1, Gemini",vexriscv_re-place,P0,1,True,0.0000,mW,0.0000,8.0000,3.0000
+TRAINING,goal-repair v2,vexriscv_re-place,P0,1,True,0.0000,mW,0.0000,8.0000,3.0000
+TRAINING,"F1-R1, Gemini",vexriscv_re-place,W2R,1,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,fixed order,vexriscv_re-place,W2R,1,False,26.0000,ps,20.4724,127.0000,140.0000
+TRAINING,"v2.1, Gemini",vexriscv_re-place,W2R,1,False,49.0000,ps,38.5827,127.0000,140.0000
+TRAINING,goal-repair v2,vexriscv_re-place,W2R,1,False,49.0000,ps,38.5827,127.0000,140.0000
+VALIDATION,"F1-R1, Gemini",vtr_mcml_v2,L2R,1,True,1625.0000,LUTs,101.8809,1595.0000,10.0000
+VALIDATION,fixed order,vtr_mcml_v2,L2R,1,True,888.0000,LUTs,55.6740,1595.0000,10.0000
+VALIDATION,"v2.1, Gemini",vtr_mcml_v2,L2R,1,True,1121.0000,LUTs,70.2821,1595.0000,10.0000
+VALIDATION,goal-repair v2,vtr_mcml_v2,L2R,1,True,1086.0000,LUTs,68.0878,1595.0000,10.0000
+VALIDATION,"F1-R1, Gemini",vtr_mcml_v2,P0,1,True,123.0000,mW,9.6094,1280.0000,12.0000
+VALIDATION,fixed order,vtr_mcml_v2,P0,1,True,303.0000,mW,23.6719,1280.0000,12.0000
+VALIDATION,"v2.1, Gemini",vtr_mcml_v2,P0,1,True,118.0000,mW,9.2188,1280.0000,12.0000
+VALIDATION,goal-repair v2,vtr_mcml_v2,P0,1,True,0.0000,mW,0.0000,1280.0000,12.0000
+VALIDATION,"F1-R1, Gemini",vtr_mcml_v2,W2R,1,True,805.0000,ps,78.1553,1030.0000,470.0000
+VALIDATION,fixed order,vtr_mcml_v2,W2R,1,True,559.0000,ps,54.2718,1030.0000,470.0000
+VALIDATION,"v2.1, Gemini",vtr_mcml_v2,W2R,1,True,24.0000,ps,2.3301,1030.0000,470.0000
+VALIDATION,goal-repair v2,vtr_mcml_v2,W2R,1,True,264.0000,ps,25.6311,1030.0000,470.0000

@@ -1,0 +1,11 @@
+id: power
+version: friday-2026-11-06
+objective: {metric: dynamic_power_w, direction: min}
+recipe_set_id: power
+default_attempts: 2
+accepted_settings: [preserve_placement, max_runs]
+guard_modes: {wns_ns: selects_within, packed_luts: selects_within}
+may_replace: true
+accepts_stage: routed
+returns_stage: routed
+

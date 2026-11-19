@@ -1,0 +1,18 @@
+# secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+*.token
+credentials*
+secrets*
+id_rsa*
+# python and test scratch
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.uv_cache/
+data/test_tmp_pytest/
+# outputs of the table scripts are regenerated
+paper_figures/out/

@@ -1,0 +1,18 @@
+# The named LLM cells of the test campaign (decision of 2026-11-07, decisions (a) and (e)). Each is a fixed pairing of a
+# prompt wording (revision) with a configuration of configs/policies/llm.yaml; orch/baselines/llm_variants.py
+# resolves it and hashes it together with the template and profile files it reads. The model is NOT part of a
+# variant: it is the single value `model` of the model file, and it is hashed with that file.
+schema_version: llm-variants-v1
+model_file: configs/policies/llm.yaml
+revisions:
+  R0: {orchestrator: configs/prompts/orchestrator_v1.txt, general_agent: configs/prompts/general_agent_v1.txt}
+  R1: {orchestrator: configs/prompts/orchestrator_v2.txt, general_agent: configs/prompts/general_agent_v2.txt}
+variants:
+  F1-R1: {kind: orchestrator, configuration: F1, revision: R1, role: main}
+  F1-R0: {kind: orchestrator, configuration: F1, revision: R0, role: wording-sensitivity}
+  E0-R1: {kind: orchestrator, configuration: E0, revision: R1, role: declared ablation, never a candidate}
+  GA-R1: {kind: general, revision: R1, role: general agent}
+dropped:
+  F2: >-
+    The lessons block lowered the A0+T0 share on the final prompt (-16.3 points against F1) and gained only 1.8
+    points on the first prompt: a negative training result, reported and not used.

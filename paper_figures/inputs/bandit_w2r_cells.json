@@ -1,0 +1,711 @@
+{
+ "cells": [
+  {
+   "amd_validation": "pass",
+   "band_ns": 0.496,
+   "cache_hits": 5,
+   "calls": [
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 0,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -764.0,
+      "power_mw": 1458,
+      "wns_ps": -54
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|keep|1|latest",
+     "attempts": 1,
+     "i": 1,
+     "preserve": true,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -764.0,
+      "power_mw": 1439,
+      "wns_ps": -43
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 2,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -421.0,
+      "power_mw": 1597,
+      "wns_ps": -64
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 3,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -407.0,
+      "power_mw": -130,
+      "wns_ps": 87
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|free|1|best",
+     "attempts": 1,
+     "i": 4,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -407.0,
+      "power_mw": -130,
+      "wns_ps": 14
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 5,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -407.0,
+      "power_mw": -131,
+      "wns_ps": 37
+     },
+     "worker": "power"
+    }
+   ],
+   "charged_cpu_h": 1.3915555555555557,
+   "charged_wall_h": 0.7783272505768886,
+   "design": "rosetta_digit-recognition",
+   "episode_id": "tr_rosetta_digit-recognition_W2R_bandit_pf1",
+   "final_brief_valid_journal": true,
+   "final_luts": 21982.0,
+   "final_power_w": 0.981,
+   "final_state": "29dc3a6c523b1abd169af35746c50e8bc5b242537f327f487b8155fbef7f954c",
+   "final_wns_ns": -1.008,
+   "gain_ps": 86.99999999999997,
+   "head": true,
+   "limits_rederived": {
+    "packed_luts_le_start": true,
+    "power_le_start_plus_band": true
+   },
+   "loop": {
+    "calls": 6,
+    "empty_calls": 0,
+    "mandates": 6,
+    "nothing_selected_calls": 0,
+    "placement_kept": 1,
+    "respect_limits": 0,
+    "stop_after_second_ask": false,
+    "stop_reason": "budget_exhausted",
+    "stop_rule_firings": 0,
+    "workers": [
+     "area",
+     "power",
+     "area",
+     "area",
+     "power",
+     "power"
+    ]
+   },
+   "new_real_runs": 1,
+   "policy_version": "2.0-main-0d2ccdf3-fc5eb0ac",
+   "power_band_w": 0.3,
+   "ref_ns": 0.507,
+   "resumed": false,
+   "runs_used": 6,
+   "start_luts": 22389.0,
+   "start_power_w": 1.111,
+   "start_wns_ns": -1.095,
+   "status": "done",
+   "stop_reason": "budget_exhausted",
+   "workers": [
+    "area",
+    "power",
+    "area",
+    "area",
+    "power",
+    "power"
+   ]
+  },
+  {
+   "amd_validation": "pass",
+   "band_ns": 0.034,
+   "cache_hits": 5,
+   "calls": [
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 0,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -428.0,
+      "power_mw": 16,
+      "wns_ps": -16
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 1,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -373.0,
+      "power_mw": -3,
+      "wns_ps": -49
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|keep|1|latest",
+     "attempts": 1,
+     "i": 2,
+     "preserve": true,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -373.0,
+      "power_mw": -109,
+      "wns_ps": -38
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 3,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -373.0,
+      "power_mw": -105,
+      "wns_ps": -46
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 4,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -416.0,
+      "power_mw": -51,
+      "wns_ps": -62
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 5,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -416.0,
+      "power_mw": -161,
+      "wns_ps": -12
+     },
+     "worker": "power"
+    }
+   ],
+   "charged_cpu_h": 3.7885277777777775,
+   "charged_wall_h": 1.7186847481876613,
+   "design": "corescore_500_mod",
+   "episode_id": "tr_corescore_500_mod_W2R_bandit_pf1",
+   "final_brief_valid_journal": true,
+   "final_luts": 105957.0,
+   "final_power_w": 13.364,
+   "final_state": "85b7470eff50093d10c3b06e3e458f10488effe9ef1f9e563948edabea1b258f",
+   "final_wns_ns": -1.204,
+   "gain_ps": 0.0,
+   "head": true,
+   "limits_rederived": {
+    "packed_luts_le_start": true,
+    "power_le_start_plus_band": true
+   },
+   "loop": {
+    "calls": 6,
+    "empty_calls": 0,
+    "mandates": 6,
+    "nothing_selected_calls": 0,
+    "placement_kept": 1,
+    "respect_limits": 0,
+    "stop_after_second_ask": false,
+    "stop_reason": "budget_exhausted",
+    "stop_rule_firings": 0,
+    "workers": [
+     "area",
+     "area",
+     "power",
+     "power",
+     "area",
+     "power"
+    ]
+   },
+   "new_real_runs": 1,
+   "policy_version": "2.0-main-0d2ccdf3-fc5eb0ac",
+   "power_band_w": 0.054,
+   "ref_ns": 0.22799999999999998,
+   "resumed": false,
+   "runs_used": 6,
+   "start_luts": 105957.0,
+   "start_power_w": 13.364,
+   "start_wns_ns": -1.204,
+   "status": "done",
+   "stop_reason": "budget_exhausted",
+   "workers": [
+    "area",
+    "area",
+    "power",
+    "power",
+    "area",
+    "power"
+   ]
+  },
+  {
+   "amd_validation": "pass",
+   "band_ns": 0.057,
+   "cache_hits": 3,
+   "calls": [
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 0,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -141.0,
+      "power_mw": -11,
+      "wns_ps": -359
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|keep|1|latest",
+     "attempts": 1,
+     "i": 1,
+     "preserve": true,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -141.0,
+      "power_mw": -12,
+      "wns_ps": -312
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 2,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -141.0,
+      "power_mw": -12,
+      "wns_ps": -347
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "power|keep|2|latest",
+     "attempts": 2,
+     "i": 3,
+     "preserve": true,
+     "recipe_runs": 2,
+     "selected": {
+      "luts": -141.0,
+      "power_mw": -13,
+      "wns_ps": -350
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "area|free|1|latest",
+     "attempts": 1,
+     "i": 4,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -140.0,
+      "power_mw": -6,
+      "wns_ps": -497
+     },
+     "worker": "area"
+    }
+   ],
+   "charged_cpu_h": 0.4749777777777777,
+   "charged_wall_h": 0.39781907924088755,
+   "design": "vexriscv_re-place_v2",
+   "episode_id": "tr_vexriscv_re-place_v2_W2R_bandit_pf1",
+   "final_brief_valid_journal": true,
+   "final_luts": 2190.0,
+   "final_power_w": 0.239,
+   "final_state": "8e5c5a6968f01a06aef124e2d17fffe920f559f76227ff77ba5c99b4525b8272",
+   "final_wns_ns": -0.935,
+   "gain_ps": 0.0,
+   "head": false,
+   "limits_rederived": {
+    "packed_luts_le_start": true,
+    "power_le_start_plus_band": true
+   },
+   "loop": {
+    "calls": 5,
+    "empty_calls": 0,
+    "mandates": 5,
+    "nothing_selected_calls": 0,
+    "placement_kept": 2,
+    "respect_limits": 0,
+    "stop_after_second_ask": false,
+    "stop_reason": "budget_exhausted",
+    "stop_rule_firings": 0,
+    "workers": [
+     "area",
+     "power",
+     "power",
+     "power",
+     "area"
+    ]
+   },
+   "new_real_runs": 3,
+   "policy_version": "2.0-main-0d2ccdf3-fc5eb0ac",
+   "power_band_w": 0.001,
+   "ref_ns": 0.018000000000000016,
+   "resumed": false,
+   "runs_used": 6,
+   "start_luts": 2190.0,
+   "start_power_w": 0.239,
+   "start_wns_ns": -0.935,
+   "status": "done",
+   "stop_reason": "budget_exhausted",
+   "workers": [
+    "area",
+    "power",
+    "power",
+    "power",
+    "area"
+   ]
+  },
+  {
+   "amd_validation": "pass",
+   "band_ns": 0.234,
+   "cache_hits": 6,
+   "calls": [
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 0,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -10.0,
+      "power_mw": 116,
+      "wns_ps": -212
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|keep|1|latest",
+     "attempts": 1,
+     "i": 1,
+     "preserve": true,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -10.0,
+      "power_mw": 105,
+      "wns_ps": -320
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 2,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -4.0,
+      "power_mw": 82,
+      "wns_ps": -232
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 3,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -34.0,
+      "power_mw": 26,
+      "wns_ps": -217
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 4,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": 0.0,
+      "power_mw": -6,
+      "wns_ps": -140
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 5,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": 0.0,
+      "power_mw": -13,
+      "wns_ps": -401
+     },
+     "worker": "power"
+    }
+   ],
+   "charged_cpu_h": 2.5555611111111114,
+   "charged_wall_h": 1.1799256843002512,
+   "design": "fir_symmetric_systolic",
+   "episode_id": "tr_fir_symmetric_systolic_W2R_bandit_pf1",
+   "final_brief_valid_journal": true,
+   "final_luts": 681.0,
+   "final_power_w": 2.068,
+   "final_state": "a8cbdb23cdcc3c71e26e03e2c74a1aa43c42d9ee79eef37ae8fbe374e976e9ec",
+   "final_wns_ns": -0.353,
+   "gain_ps": 0.0,
+   "head": false,
+   "limits_rederived": {
+    "packed_luts_le_start": true,
+    "power_le_start_plus_band": true
+   },
+   "loop": {
+    "calls": 6,
+    "empty_calls": 0,
+    "mandates": 6,
+    "nothing_selected_calls": 0,
+    "placement_kept": 1,
+    "respect_limits": 0,
+    "stop_after_second_ask": false,
+    "stop_reason": "budget_exhausted",
+    "stop_rule_firings": 0,
+    "workers": [
+     "area",
+     "power",
+     "area",
+     "area",
+     "area",
+     "power"
+    ]
+   },
+   "new_real_runs": 0,
+   "policy_version": "2.0-main-0d2ccdf3-fc5eb0ac",
+   "power_band_w": 0.022,
+   "ref_ns": 0.03999999999999998,
+   "resumed": false,
+   "runs_used": 6,
+   "start_luts": 681.0,
+   "start_power_w": 2.068,
+   "start_wns_ns": -0.353,
+   "status": "done",
+   "stop_reason": "budget_exhausted",
+   "workers": [
+    "area",
+    "power",
+    "area",
+    "area",
+    "area",
+    "power"
+   ]
+  },
+  {
+   "amd_validation": "pass",
+   "band_ns": 0.056,
+   "cache_hits": 6,
+   "calls": [
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 0,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -68.0,
+      "power_mw": -3,
+      "wns_ps": -25
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|keep|1|latest",
+     "attempts": 1,
+     "i": 1,
+     "preserve": true,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -68.0,
+      "power_mw": -2,
+      "wns_ps": -29
+     },
+     "worker": "power"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 2,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -98.0,
+      "power_mw": -6,
+      "wns_ps": -11
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 3,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -68.0,
+      "power_mw": -3,
+      "wns_ps": -9
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "area|free|1|best",
+     "attempts": 1,
+     "i": 4,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -68.0,
+      "power_mw": -3,
+      "wns_ps": -25
+     },
+     "worker": "area"
+    },
+    {
+     "arm": "power|free|1|latest",
+     "attempts": 1,
+     "i": 5,
+     "preserve": false,
+     "recipe_runs": 1,
+     "selected": {
+      "luts": -68.0,
+      "power_mw": -2,
+      "wns_ps": -29
+     },
+     "worker": "power"
+    }
+   ],
+   "charged_cpu_h": 1.5649583333333332,
+   "charged_wall_h": 0.7745682503841818,
+   "design": "fir_systolic_transposed",
+   "episode_id": "tr_fir_systolic_transposed_W2R_bandit_pf1",
+   "final_brief_valid_journal": true,
+   "final_luts": 603.0,
+   "final_power_w": 0.525,
+   "final_state": "20329fc34fdfb2da036cf221da9c27af33a7c735bb5421fc0e93ce6744f49020",
+   "final_wns_ns": -0.346,
+   "gain_ps": 0.0,
+   "head": true,
+   "limits_rederived": {
+    "packed_luts_le_start": true,
+    "power_le_start_plus_band": true
+   },
+   "loop": {
+    "calls": 6,
+    "empty_calls": 0,
+    "mandates": 6,
+    "nothing_selected_calls": 0,
+    "placement_kept": 1,
+    "respect_limits": 0,
+    "stop_after_second_ask": false,
+    "stop_reason": "budget_exhausted",
+    "stop_rule_firings": 0,
+    "workers": [
+     "area",
+     "power",
+     "area",
+     "area",
+     "area",
+     "power"
+    ]
+   },
+   "new_real_runs": 0,
+   "policy_version": "2.0-main-0d2ccdf3-fc5eb0ac",
+   "power_band_w": 0.003,
+   "ref_ns": 0.10299999999999998,
+   "resumed": false,
+   "runs_used": 6,
+   "start_luts": 603.0,
+   "start_power_w": 0.525,
+   "start_wns_ns": -0.346,
+   "status": "done",
+   "stop_reason": "budget_exhausted",
+   "workers": [
+    "area",
+    "power",
+    "area",
+    "area",
+    "area",
+    "power"
+   ]
+  }
+ ],
+ "summary": {
+  "all_amd_pass": true,
+  "all_valid": true,
+  "caps_job_h_used": 1.8647259947063073,
+  "caps_new_runs_used": 5,
+  "cost_15_tasks": {
+   "job_hours_per_task": 0.8939759268678933,
+   "new_runs_per_task": 2.2,
+   "tasks": 15,
+   "tool_runs_per_task": 6.0
+  },
+  "cost_old_10_tasks": {
+   "job_hours_per_task": "0.8560313890328528",
+   "new_runs_per_task": "2.8",
+   "tasks": "10",
+   "tool_runs_per_task": "6.0"
+  },
+  "gain_ps_mean_all5": 17.399999999999995,
+  "gain_ps_mean_head_designs": 28.99999999999999,
+  "head_designs": [
+   "rosetta_digit-recognition",
+   "corescore_500_mod",
+   "fir_systolic_transposed"
+  ],
+  "job_h_charged_total": 4.849325012689871,
+  "new_runs_total": 5,
+  "w2r_tasks": {
+   "job_h_per_task": 0.9698650025379741,
+   "new_runs_per_task": 1.0,
+   "tool_runs_per_task": 6.0
+  }
+ }
+}

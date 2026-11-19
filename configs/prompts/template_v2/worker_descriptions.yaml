@@ -1,0 +1,16 @@
+# Worker description wordings for the cards (prompt-improvement change 7, the authors' decisions 2 and 3: say what the
+# workers do while treating them as black boxes; test two or three wordings on the decision bank).
+# W1 is change 7 as written; W2 names the objective only (no mechanism); W3 describes mechanisms in more detail.
+# No recipe names, no design names; checked by tests/test_v2_prompt.py.
+W1:
+  timing: "It makes changes aimed at the worst timing paths, optionally re-placing the design."
+  area: "It makes changes that reduce logic usage, optionally re-placing the design."
+  power: "It makes changes aimed at switching activity and routing, mostly keeping the placement."
+W2:
+  timing: "It works on the design to raise the slack of the worst path."
+  area: "It works on the design to lower the packed LUT count."
+  power: "It works on the design to lower dynamic power."
+W3:
+  timing: "It restructures, replicates or re-times logic on the slowest paths, or moves blocks closer together; some of its options re-place the whole design, others keep the placement."
+  area: "It merges, removes or remaps logic so that fewer LUTs are needed; some of its options re-place the whole design, others keep the placement."
+  power: "It re-routes or re-optimises nets to reduce switching activity; most of its options keep the placement."
